@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A77BC626-501E-C99C-4227-3469B691920C" name="FORMA_PREDMETU">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>54171AE2-4635-F4C9-AB35-1B802F70A3FE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STUDIJNI_PLAN_ID" id="D80C3AF7-BF2E-31AD-AD38-44B0A782C51F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>438DF038-4BBA-37D1-8142-6BFBC02C4AD3</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FC44CE2-3854-501B-803C-FF5644CC083B" referredColumn="1409665F-CEEB-69B9-3ECF-04E1B631AC7D"/>
+</associations>
+</Column>
+<Column name="PREDMET_ID" id="CF700973-1C97-F4F9-ADD4-E5E886457B6A">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>169B56BD-BE41-A83A-A3F6-C22B0FBEA591</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62EB6DA1-D890-F798-FCC4-39EDDA7FBA5B" referredColumn="661A5CFF-7612-C901-6828-BF37A78A9A96"/>
+</associations>
+</Column>
+<Column name="FORMA_VYUKY_ID" id="DBA0CED5-6108-0AE5-DB8F-73DD89CBB652">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>DF138812-9608-5F54-6CC5-1FDA32E1DFEA</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FABCA1D1-5BA2-3E1C-09DC-381C2FEFA53E" referredColumn="9DB2197A-C788-1381-9EAC-0DE72D3F9702"/>
+</associations>
+</Column>
+<Column name="KATEGORIE_PREDMETU_ID" id="EED7A39D-B17F-4002-7989-D28959D69D12">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>8E5E2AFF-489B-512E-8736-3BF9B96F64AE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1E0F922-F294-EBBD-A90E-7590A4B07A7F" referredColumn="929BA5BD-7362-761E-BE98-6BABB3F1AE59"/>
+</associations>
+</Column>
+<Column name="DOPORUCENY_ROCNIK_ID" id="DFC8DCDD-1177-9DEF-E62C-5948E86CC63A">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>FBD4C1F3-E1A5-FD78-7D14-0C2274011007</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="512F341C-EA2B-E4E6-2195-85EE28A4B5EE" referredColumn="29DB584E-A508-9A80-DBCD-C38147CC6EDB"/>
+</associations>
+</Column>
+<Column name="FORMA_PREDMETU_ID" id="2BF29879-2F74-4A70-1869-41A9EFEFE696">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72CD0F50-851F-6754-E1D6-A333879427C2" name="FORMA_PREDMETU_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="2BF29879-2F74-4A70-1869-41A9EFEFE696"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8AE990E1-DD40-5D58-64E4-1A62543A5D62" name="FORMA_PREDMETU_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>49A9BF7B-D571-B847-B72E-DBE60C8F53EE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF700973-1C97-F4F9-ADD4-E5E886457B6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0E08058-6C1D-F4F7-2FF4-DB58654D5A5F" name="FORMA_PREDMETU_STUDIJNI_PLAN_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>AAF05D17-43CA-C0D7-F736-F2B5BB1F4724</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D80C3AF7-BF2E-31AD-AD38-44B0A782C51F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C95A92F-01D0-F919-0D55-C662C5E7BF9B" name="FORMA_PREDMETU_FORMA_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>40720E0D-6501-CA59-7493-76549C9FA264</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBA0CED5-6108-0AE5-DB8F-73DD89CBB652"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54147ADC-A031-EE7A-F548-60BE8CB547A8" name="FORMA_PREDMETU_KATEGORIE_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>5ACE0D2E-D79B-4CAB-BEE2-DF057A20A60E</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EED7A39D-B17F-4002-7989-D28959D69D12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="428CA049-6317-FF2D-5CBB-D39F77ED7644" name="FORMA_PREDMETU_DOPORUCENY_ROCNIK_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>A6165FCF-B4CA-25BA-AA00-289126E71EF3</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFC8DCDD-1177-9DEF-E62C-5948E86CC63A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

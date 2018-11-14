@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B5B76602-41A1-8EAF-99AD-0923A7E2DADA" name="STUDIJNI_OBOR">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 20:20:57 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="A2C73ED3-4075-4544-A881-C5945EB62635">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 20:21:08 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID3" id="54B5007D-9CFF-506C-BA1D-BB382A38EDF5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 20:21:54 UTC</createdTime>
+<generatorID>747E5CEB-FA9E-D881-82E6-B8280E508F0F</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<referedAttribute>6493F862-44F1-2A66-5D56-9726FD9EB8FA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazev" id="E6DDC559-9A15-9E38-74C8-718193A48CA7">
+<createdBy>st52512</createdBy>
+<createdTime>2018-03-21 06:56:49 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zkratka" id="C9DF511A-3674-1CFB-FE8D-D0EA4B771EF9">
+<createdBy>st52512</createdBy>
+<createdTime>2018-03-21 06:57:18 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1D58FB6E-797D-AD4A-9FF8-A189A4ECBBE5" name="STUDIJNI_OBOR PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 20:21:30 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A2C73ED3-4075-4544-A881-C5945EB62635</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

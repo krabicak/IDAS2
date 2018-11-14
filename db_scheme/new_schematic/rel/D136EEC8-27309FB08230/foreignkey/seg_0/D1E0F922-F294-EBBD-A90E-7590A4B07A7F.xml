@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1E0F922-F294-EBBD-A90E-7590A4B07A7F" containerWithKeyObject="A77BC626-501E-C99C-4227-3469B691920C" localFKIndex="54147ADC-A031-EE7A-F548-60BE8CB547A8" name="FORMA_PREDMETU_KATEGORIE_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>5ACE0D2E-D79B-4CAB-BEE2-DF057A20A60E</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>KATEGORIE_PREDMETU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1087CF8D-7203-7979-12EB-A0A5BA2628EF</referredTableID>
+<keyObject>4C6CE3AC-DE51-5593-C131-F6EB0CE1FE28</keyObject>
+<referredKeyID>4C6CE3AC-DE51-5593-C131-F6EB0CE1FE28</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9153E19A-CB3E-352D-825E-D5D20AF01906" name="STUDIJNI_PLAN">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>BAE5EA24-8538-1B30-38B9-2AA10CBB03A2</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1409665F-CEEB-69B9-3ECF-04E1B631AC7D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>9B43C712-B62C-3EB6-AF9A-50D309CB5894</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STUDIJNI_OBOR_ID" id="ED56DFFD-2DBC-5B37-D197-F35BB438962D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>8CCE0453-CF5F-2EFC-D349-AB7D588207D7</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9300D95F-3042-7D40-20FE-638110CA0DFE" referredColumn="928F7886-4E52-6D12-694B-D031E8A806D9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B498EA4C-FAF5-A514-235C-766A6D5BA400" name="STUDIJNI_PLAN_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>6763B448-19FE-49B3-7014-BDDE40845A29</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1409665F-CEEB-69B9-3ECF-04E1B631AC7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8971503A-7A20-EC5A-C044-3091C0E0EE2C" name="STUDIJNI_PLAN_STUDIJNI_OBOR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>D603E611-2B0C-101B-DF05-5802E5EF238C</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED56DFFD-2DBC-5B37-D197-F35BB438962D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

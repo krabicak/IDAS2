@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4DED4F83-3DB7-8BF1-50C3-6CA68464DB73" name="DOPORUCENY_ROCNIK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:43:15 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="F1023339-C93E-2DC2-8882-CD3B28395A2C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:43:24 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cislo_rocniku" id="5DB3B5A9-8043-7A5D-DEA4-DB817768C193">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:43:40 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8F5E2778-89CD-D6B7-A417-ACF1E0256D1E" name="DOPORUCENY_ROCNIK PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:43:38 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F1023339-C93E-2DC2-8882-CD3B28395A2C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

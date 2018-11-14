@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="186A173B-BBE2-1B96-E438-1BF291902967" name="SEMESTR">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:41:50 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="D48D13B7-AB59-FD4B-DC5C-021971F43D80">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:41:58 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazev_semestru" id="AB1D58D2-C437-8A76-F238-A2BA5F05C88A">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:42:10 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D50B19D3-D3B6-3C53-B3BF-F5B03100F20D" name="SEMESTR PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:42:09 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D48D13B7-AB59-FD4B-DC5C-021971F43D80</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

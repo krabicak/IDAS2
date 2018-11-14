@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BAE5EA24-8538-1B30-38B9-2AA10CBB03A2" name="STUDIJNI_PLAN">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:13:35 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="9B43C712-B62C-3EB6-AF9A-50D309CB5894">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:13:50 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="8CCE0453-CF5F-2EFC-D349-AB7D588207D7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:14:56 UTC</createdTime>
+<generatorID>D603E611-2B0C-101B-DF05-5802E5EF238C</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<referedAttribute>A2C73ED3-4075-4544-A881-C5945EB62635</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6763B448-19FE-49B3-7014-BDDE40845A29" name="STUDIJNI_PLAN PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:14:06 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9B43C712-B62C-3EB6-AF9A-50D309CB5894</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

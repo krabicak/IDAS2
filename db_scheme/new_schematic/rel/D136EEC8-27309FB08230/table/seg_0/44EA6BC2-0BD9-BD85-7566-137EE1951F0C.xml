@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44EA6BC2-0BD9-BD85-7566-137EE1951F0C" name="PREDMET">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>DC1FC738-E2D8-654C-2ECD-DC2C57664005</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="661A5CFF-7612-C901-6828-BF37A78A9A96">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>08212EF5-2B1F-70D9-9A08-F5D233669B77</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazev" id="1CE06FF6-892B-FA4C-E9EF-66BC9031578C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>173AF89C-6B83-00E3-7A92-9FF3CD0498CB</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zkratka" id="22FF4218-A3F1-D1DB-47D8-C6B67430DC15">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>91F5A514-017B-F6F1-D29D-BF83050C0C71</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rozsah_hodin" id="C7B0DEFB-E225-8797-CB0D-999EB92094D5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>C4B7CD74-76A3-CA30-4423-7EDBD9A055DD</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZAKONCENI_PREDMETU_ID" id="26E2B220-9CAA-7428-F261-C75DDFD01765">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>50A50E62-EE79-67AC-7858-5BC70D6E6528</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A743A478-000A-2950-EB07-7A96651577E7" referredColumn="71230B12-BFD6-8213-DA38-13700487E623"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="25B307B7-7D70-1233-3ABE-FD6C2B4CAE27" name="PREDMET_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>41723CBC-E205-A295-D794-5977DD3DE50D</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="661A5CFF-7612-C901-6828-BF37A78A9A96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B224E5EC-5622-9E09-2CC6-001D2BA39193" name="PREDMET_ZAKONCENI_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>7D3AB16E-8B34-E9E6-79D1-6F67F9D262DE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26E2B220-9CAA-7428-F261-C75DDFD01765"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_43" directorySegmentName="seg_0" id="34139814-378D-7EBC-D389-77BC64AB8E42">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:21:49 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>186A173B-BBE2-1B96-E438-1BF291902967</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>54171AE2-4635-F4C9-AB35-1B802F70A3FE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

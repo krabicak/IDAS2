@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEAFA03F-BC98-03E8-EBBF-07CB16205298" name="VYUKOVA_AKCE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>9C5160A7-A7B2-6FDE-8F16-5957DCE00543</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="E80F22E8-52BC-61FF-8A4B-FF27A05145F0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="max_studentu" id="95C0225E-EB9E-A345-3DFB-8625C03256FC">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>BB7385FE-2E20-CFD4-8D73-3EE283AE5EB4</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZPUSOB_VYUKY_ID" id="237F7C3F-E1B3-4CC7-7EC6-A10A3AACB28E">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>C18E03FE-F6A9-641A-AE1A-832AB8661F58</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0EC64F93-111A-B604-93AA-4BD0E626F30B" referredColumn="133194E1-504B-3D68-0374-350D3D09C5B8"/>
+</associations>
+</Column>
+<Column name="VYUCUJICI_ID" id="66ABCEF4-8500-B797-BB5B-C8136E49D3FF">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>65D2AEEF-184D-59A3-1E83-B61877923A88</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF664916-7105-2B7C-F1DA-F4D35267B7C2" referredColumn="A61940AD-251A-A3B9-38DE-C676F9CCF1B6"/>
+</associations>
+</Column>
+<Column name="cas_pocatku_vyuky" id="8E501353-3947-254C-6686-DFC317CAF6A8">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>020736C0-B590-ECFD-019A-80ACBABAFB68</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cas_konce_vyuky" id="369552A7-B34C-27AE-FF15-7D5C8A0CA4BA">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>61C2A3BF-7DF8-4D5E-93CA-A47B57A7B220</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FORMA_PREDMETU_FORMA_PREDMETU_ID" id="340C3159-AC22-BD45-558A-9FC9C91C09B1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="684BC61C-4CAD-BBA4-D170-3503925A96BB" referredColumn="2BF29879-2F74-4A70-1869-41A9EFEFE696"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ACFD4F04-2AD6-91B4-2CC6-33CF8325A3F1" name="VYUKOVA_AKCE_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>7EB0170E-EC88-E1B1-618E-B321E8BE7206</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E80F22E8-52BC-61FF-8A4B-FF27A05145F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF3DAC88-6A48-C142-B558-F6FD24745BA0" name="VYUKOVA_AKCE_VYUCUJICI_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>B9BF0112-4734-7942-BFA3-5D47D5005A6F</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66ABCEF4-8500-B797-BB5B-C8136E49D3FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4DD4EF42-5C71-782B-665F-27C5E30AE1AD" name="VYUKOVA_AKCE_FORMA_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>1D5184E6-B433-CBAA-C9D7-178EAE5CDB8A</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="340C3159-AC22-BD45-558A-9FC9C91C09B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F5A5C3F-73D5-1F38-3EB9-7E06BC78B243" name="VYUKOVA_AKCE_ZPUSOB_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:31:00 UTC</createdTime>
+<generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="237F7C3F-E1B3-4CC7-7EC6-A10A3AACB28E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

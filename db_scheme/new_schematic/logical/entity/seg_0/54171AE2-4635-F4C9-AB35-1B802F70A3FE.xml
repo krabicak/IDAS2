@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="54171AE2-4635-F4C9-AB35-1B802F70A3FE" name="FORMA_PREDMETU">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:15:15 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="438DF038-4BBA-37D1-8142-6BFBC02C4AD3">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:16:50 UTC</createdTime>
+<generatorID>AAF05D17-43CA-C0D7-F736-F2B5BB1F4724</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9B43C712-B62C-3EB6-AF9A-50D309CB5894</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="169B56BD-BE41-A83A-A3F6-C22B0FBEA591">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:17:58 UTC</createdTime>
+<generatorID>49A9BF7B-D571-B847-B72E-DBE60C8F53EE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<referedAttribute>08212EF5-2B1F-70D9-9A08-F5D233669B77</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="DF138812-9608-5F54-6CC5-1FDA32E1DFEA">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:18:55 UTC</createdTime>
+<generatorID>40720E0D-6501-CA59-7493-76549C9FA264</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<referedAttribute>AE2B2925-0D3C-8A93-CFC8-3FD3793F853E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID3" id="8E5E2AFF-489B-512E-8736-3BF9B96F64AE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:19:09 UTC</createdTime>
+<generatorID>5ACE0D2E-D79B-4CAB-BEE2-DF057A20A60E</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<referedAttribute>CE0CAB5D-C9A6-D1F3-4025-B336F3FC985C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID4" id="FBD4C1F3-E1A5-FD78-7D14-0C2274011007">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:19:14 UTC</createdTime>
+<generatorID>A6165FCF-B4CA-25BA-AA00-289126E71EF3</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F1023339-C93E-2DC2-8882-CD3B28395A2C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

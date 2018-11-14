@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9C5160A7-A7B2-6FDE-8F16-5957DCE00543" name="VYUKOVA_AKCE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:33:48 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:01 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="max_studentu" id="BB7385FE-2E20-CFD4-8D73-3EE283AE5EB4">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:11 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="C18E03FE-F6A9-641A-AE1A-832AB8661F58">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:48:10 UTC</createdTime>
+<generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<referedAttribute>B64EAFF1-B319-0A9D-2D03-0DEA41507231</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID3" id="65D2AEEF-184D-59A3-1E83-B61877923A88">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 21:35:30 UTC</createdTime>
+<generatorID>B9BF0112-4734-7942-BFA3-5D47D5005A6F</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>460831BA-31DD-5EA6-2BA3-52EA50DE23AB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cas_pocatku_vyuky" id="020736C0-B590-ECFD-019A-80ACBABAFB68">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:27:11 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cas_konce_vyuky" id="61C2A3BF-7DF8-4D5E-93CA-A47B57A7B220">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:28:34 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7EB0170E-EC88-E1B1-618E-B321E8BE7206" name="VYUKOVA_AKCE PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:09 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

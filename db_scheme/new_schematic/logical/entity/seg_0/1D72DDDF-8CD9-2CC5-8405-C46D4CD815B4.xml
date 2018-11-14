@@ -1,0 +1,169 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4" name="VYUCUJICI">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:31:44 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="460831BA-31DD-5EA6-2BA3-52EA50DE23AB">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:31:57 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jmeno" id="8F253731-8168-9FB4-F88C-65C5555D51C9">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:32:09 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prijmeni" id="6AC9FE43-C422-3F8B-601E-F201453C913C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:32:22 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titul_pred" id="1EA7F49D-2DC2-1DC8-4378-9826F4DE15E0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:32:37 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="titul_za" id="C7C12C36-574F-D79A-4B33-DE9742E410E3">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:32:43 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="031D8508-20E2-2D8A-9080-D021FB25A879">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:33:13 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mobil" id="1B7EC19B-E69A-2A06-961E-30D48A1B25F1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:33:24 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="A0BD516A-1D20-10DA-08AA-F49F255CE5A5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:33:36 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="0B6C3C36-C1BF-6D75-659C-7E060EF0EFE6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:47:18 UTC</createdTime>
+<generatorID>6FA28242-4EC4-160A-6B20-1FDCD4C7F7D9</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6493F862-44F1-2A66-5D56-9726FD9EB8FA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="heslo" id="7AB09DCF-4326-8945-BB99-485D4C41AF72">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-12 22:36:48 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="151CAF8E-B6AF-5D4E-ADFB-B2C662CEC2E0" name="VYUCUJICI PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:32:06 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>460831BA-31DD-5EA6-2BA3-52EA50DE23AB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

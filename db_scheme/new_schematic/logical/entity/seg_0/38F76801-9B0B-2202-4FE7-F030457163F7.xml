@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="38F76801-9B0B-2202-4FE7-F030457163F7" name="PRACOVISTE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:36:39 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="6493F862-44F1-2A66-5D56-9726FD9EB8FA">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:36:48 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazev" id="2F3BEA23-7C06-7DF0-A6B5-EE3B92C82DE1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:37:04 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zkratka" id="F284CF02-4C64-318A-3AED-3311B9386558">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:37:17 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="64B09F38-07B4-BE1D-09BB-E18B23E5543E">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:47:25 UTC</createdTime>
+<generatorID>F3ED2CB4-B526-51F9-177A-A038CAFBFE39</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<referedAttribute>E6DEEB47-4CF6-CD6D-CA57-1FA038E465DE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8BB6E482-CB34-C76B-8546-12E73BFE940E" name="PRACOVISTE PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:36:58 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6493F862-44F1-2A66-5D56-9726FD9EB8FA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

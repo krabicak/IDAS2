@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7EA248F6-2325-91A0-BBBB-656CB20B68A3" name="ZPUSOB_VYUKY">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:32 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="B64EAFF1-B319-0A9D-2D03-0DEA41507231">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:44 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazev_zpusobu" id="5B7B1E26-C104-247D-BB6B-7B93F67083A2">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:56 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A289289E-07BE-E6C3-EFB9-EF46A981D4A9" name="ZPUSOB_VYUKY PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-03-20 19:34:54 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B64EAFF1-B319-0A9D-2D03-0DEA41507231</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
