@@ -45,6 +45,6 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
     <property name="hibernate.connection.url">jdbc:oracle:thin:@fei-sql1.upceucebny.cz:1521:IDAS12</property>
     <property name="hibernate.connection.username">C##ST52512</property>
-    <property name="hibernate.connection.password">h123H123</property>
+    <property name="hibernate.connection.password">password</property>
   </session-factory>
 </hibernate-configuration>
