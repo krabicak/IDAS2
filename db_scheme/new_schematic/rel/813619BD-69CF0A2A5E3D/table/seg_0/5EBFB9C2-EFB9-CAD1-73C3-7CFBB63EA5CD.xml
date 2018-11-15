@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5EBFB9C2-EFB9-CAD1-73C3-7CFBB63EA5CD" name="STUDIJNI_OBOR">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>B5B76602-41A1-8EAF-99AD-0923A7E2DADA</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="AE7A646D-2977-4B1F-2DB3-747DBD69F510">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>A2C73ED3-4075-4544-A881-C5945EB62635</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRACOVISTE_ID" id="9D58B417-83F0-B7F4-D027-4D18BF2231F5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>54B5007D-9CFF-506C-BA1D-BB382A38EDF5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41ED73CD-06C9-CCEB-8902-02C5F9906040" referredColumn="09412BAC-827A-46A7-144B-2194A1ED6C32"/>
+</associations>
+</Column>
+<Column name="nazev" id="BF3B609F-633E-F20A-46E6-E1133A95957B">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>E6DDC559-9A15-9E38-74C8-718193A48CA7</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zkratka" id="AAD593A7-6628-B964-AE5E-94F041047BB0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>C9DF511A-3674-1CFB-FE8D-D0EA4B771EF9</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4C16081-0776-3E36-793B-FD7E2EEDD129" name="STUDIJNI_OBOR_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>1D58FB6E-797D-AD4A-9FF8-A189A4ECBBE5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE7A646D-2977-4B1F-2DB3-747DBD69F510"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="28009DE4-DEC0-FD1C-AB8F-AA611A9E95BA" name="STUDIJNI_OBOR_PRACOVISTE_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>747E5CEB-FA9E-D881-82E6-B8280E508F0F</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D58B417-83F0-B7F4-D027-4D18BF2231F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

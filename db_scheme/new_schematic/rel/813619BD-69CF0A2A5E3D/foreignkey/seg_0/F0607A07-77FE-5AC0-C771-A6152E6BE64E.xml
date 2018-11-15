@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F0607A07-77FE-5AC0-C771-A6152E6BE64E" containerWithKeyObject="A157266C-E754-E9B2-0BD3-847C2FACADC1" localFKIndex="BBE7D14B-2924-750B-9F4A-05A296E03E38" name="VYUKOVA_AKCE_DNY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>24B26539-4F60-9F3D-6983-815B6906B018</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>DNY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F14C5A16-B32F-48CD-4957-6AAE08A256CE</referredTableID>
+<keyObject>657DF29B-1D2F-93E1-D4F3-D48F6C9EB078</keyObject>
+<referredKeyID>657DF29B-1D2F-93E1-D4F3-D48F6C9EB078</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>zkratka</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

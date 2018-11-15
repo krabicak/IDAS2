@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="629A3D42-FC39-7E73-7D48-C2CAAE30C65A" containerWithKeyObject="3A23FA45-847F-7D79-8D9B-126AF9E36152" localFKIndex="6538BAEC-110B-BF1C-1B38-7FFC85D60C87" name="Relation_27_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:24:00 UTC</createdTime>
+<generatorID>F5F10AFF-0AC5-5B85-3D89-895A09BE0CAC</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>PREDMET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BA33140B-45E3-AF78-87E2-E22F3A6C771C</referredTableID>
+<keyObject>F472D78D-0432-F692-85BE-0FC0216CB510</keyObject>
+<referredKeyID>F472D78D-0432-F692-85BE-0FC0216CB510</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
