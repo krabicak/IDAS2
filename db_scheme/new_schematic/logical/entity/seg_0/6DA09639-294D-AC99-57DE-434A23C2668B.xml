@@ -3,6 +3,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:44:22 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -12,19 +15,26 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="CE0CAB5D-C9A6-D1F3-4025-B336F3FC985C">
+<Attribute name="zkratka" id="CE0CAB5D-C9A6-D1F3-4025-B336F3FC985C">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:44:39 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nazev_kategorie" id="01602F21-D3AA-B2FB-A476-7235BF74A070">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:44:54 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
@@ -37,6 +47,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:44:52 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>CE0CAB5D-C9A6-D1F3-4025-B336F3FC985C</attributeRef>

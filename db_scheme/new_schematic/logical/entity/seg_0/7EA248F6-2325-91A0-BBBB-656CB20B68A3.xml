@@ -4,7 +4,7 @@
 <createdTime>2018-03-20 19:34:32 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,24 +15,25 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="B64EAFF1-B319-0A9D-2D03-0DEA41507231">
+<Attribute name="zkrata" id="B64EAFF1-B319-0A9D-2D03-0DEA41507231">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:44 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nazev_zpusobu" id="5B7B1E26-C104-247D-BB6B-7B93F67083A2">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:56 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,9 +47,8 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:54 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="false"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

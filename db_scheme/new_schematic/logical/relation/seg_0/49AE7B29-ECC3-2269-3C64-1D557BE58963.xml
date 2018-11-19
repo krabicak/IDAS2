@@ -4,16 +4,16 @@
 <createdTime>2018-11-12 22:26:55 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <sourcePk>6561130D-B501-D9F7-2B48-0A5D3215A63C</sourcePk>
 <targetPk>7EB0170E-EC88-E1B1-618E-B321E8BE7206</targetPk>
 <identifying>false</identifying>
-<optionalSource>true</optionalSource>
-<optionalTarget>false</optionalTarget>
-<sourceCardinality>*</sourceCardinality>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
 <sourceEntity>2FA27215-6415-FB5D-AE96-0E84A9947734</sourceEntity>
-<targetCardinalityString>1</targetCardinalityString>
+<targetCardinalityString>*</targetCardinalityString>
 <targetEntity>9C5160A7-A7B2-6FDE-8F16-5957DCE00543</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E34029F1-3C3B-2DA0-6191-8F133F4BC115" name="FORMA_VYUKY">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>7498E7F1-9410-A908-F2A7-E109269FF5C9</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4D47BBC6-6A00-34CC-3DD2-98641C7A3F68">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>AE2B2925-0D3C-8A93-CFC8-3FD3793F853E</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazev_formy" id="507CF937-D614-B27D-C0E6-99ED71D07609">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>3EB9A0A2-5F23-3FB2-2640-5B417ED7AF81</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4BD4666C-2B3B-F19D-88C2-B6711C8BEF7F" name="FORMA_VYUKY_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>9136C973-7DC5-150A-B82A-895B2F28CAD8</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D47BBC6-6A00-34CC-3DD2-98641C7A3F68"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2174E182-B081-966F-3944-71B58D7DCB16" name="DOPORUCENY_ROCNIK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>4DED4F83-3DB7-8BF1-50C3-6CA68464DB73</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cislo_rocniku" id="1A54E501-D752-8C23-787C-1A1145574A9F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>5DB3B5A9-8043-7A5D-DEA4-DB817768C193</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB8149DD-C01E-DDB7-9C26-C7B536DD5B45" name="DOPORUCENY_ROCNIK_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>8F5E2778-89CD-D6B7-A417-ACF1E0256D1E</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A54E501-D752-8C23-787C-1A1145574A9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

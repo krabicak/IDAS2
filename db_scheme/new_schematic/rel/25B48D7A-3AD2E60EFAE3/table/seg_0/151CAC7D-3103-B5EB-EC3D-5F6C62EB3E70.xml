@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="151CAC7D-3103-B5EB-EC3D-5F6C62EB3E70" name="PREDMET">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>DC1FC738-E2D8-654C-2ECD-DC2C57664005</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="2F751547-7B0F-81ED-4549-ACA8C8640BB2">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>08212EF5-2B1F-70D9-9A08-F5D233669B77</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazev" id="B58A83C9-A4E2-9BE9-AE45-640CD6B397B7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>173AF89C-6B83-00E3-7A92-9FF3CD0498CB</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="zkratka" id="37A8545C-FD4E-4D93-4B83-F69B376505AE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>91F5A514-017B-F6F1-D29D-BF83050C0C71</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rozsah_hodin" id="9309E493-35D0-C36D-8D19-2E22D06A2D5B">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>C4B7CD74-76A3-CA30-4423-7EDBD9A055DD</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZAKONCENI_PREDMETU" id="CF10884A-33B0-630E-A18E-EE3C3D6A9563">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>50A50E62-EE79-67AC-7858-5BC70D6E6528</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08379ACE-A384-DA02-DCCD-5A0F84E78B1A" referredColumn="2B98ABD9-B318-9FC3-B3DD-5411C0E33406"/>
+</associations>
+</Column>
+<Column name="KATEGORIE_PREDMETU" id="D5499120-88BA-6279-3F14-3A878EEC2167">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>A99CBF99-B60B-121F-F0DE-92CD7138E37D</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="174B31AD-DDB7-5FD9-F658-29209E641B49" referredColumn="3FDC4F03-8792-9A06-1548-A72FA9EADACA"/>
+</associations>
+</Column>
+<Column name="DOPORUCENY_ROCNIK" id="F5745FE9-CB55-6D68-F77D-F9C25C6282BB">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>A8E612C5-02C4-4344-6942-A9460C886EDE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7E96DF5A-9052-BFC2-8ECB-F13817C5DF70" referredColumn="1A54E501-D752-8C23-787C-1A1145574A9F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C3A9335A-CCB5-D8D0-FC70-A7E82C425637" name="PREDMET_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>41723CBC-E205-A295-D794-5977DD3DE50D</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F751547-7B0F-81ED-4549-ACA8C8640BB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EFFC82F-0CA9-9679-F1BE-1CF27504CC0A" name="PREDMET_KATEGORIE_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>A34D0422-620C-6D82-6103-68A938E9F427</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5499120-88BA-6279-3F14-3A878EEC2167"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C89B076-D644-CC01-6263-DBA6ACC3F2DB" name="PREDMET_DOPORUCENY_ROCNIK_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>8D11BA53-4ADF-8D78-F4C9-3B9E452C0808</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5745FE9-CB55-6D68-F77D-F9C25C6282BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD091B30-C537-C50A-319D-8727285268F5" name="PREDMET_ZAKONCENI_PREDMETU_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>7D3AB16E-8B34-E9E6-79D1-6F67F9D262DE</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF10884A-33B0-630E-A18E-EE3C3D6A9563"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

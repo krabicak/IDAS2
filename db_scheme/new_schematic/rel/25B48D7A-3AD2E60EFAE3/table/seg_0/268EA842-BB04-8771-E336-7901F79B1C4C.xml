@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="268EA842-BB04-8771-E336-7901F79B1C4C" name="SEM">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<ordsAlias>relation_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SEMESTR_ID" id="E6536D6F-7AD7-3CFD-AF8B-F9FC0B8E7567">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CE8E1BCA-A5BC-36C9-71C2-19996D8318B7" referredColumn="1BF3EC07-6B66-6CF3-A28F-EF8D53302DA5"/>
+</associations>
+</Column>
+<Column name="PREDMET_ID" id="22575E86-EFF5-534C-D550-CDD98E883D91">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01252F35-A047-04E0-B0D8-9D3EE57E0554" referredColumn="2F751547-7B0F-81ED-4549-ACA8C8640BB2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B071A8CA-EB52-E8C6-A1A4-22D251844EEA" name="Relation_28_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6536D6F-7AD7-3CFD-AF8B-F9FC0B8E7567"/>
+<colUsage columnID="22575E86-EFF5-534C-D550-CDD98E883D91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A5C4703-5999-351A-9F15-8E46231FA2F5" name="Relation_28_SEMESTR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>953838E9-B8CD-C045-2925-5118E5F554C6</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6536D6F-7AD7-3CFD-AF8B-F9FC0B8E7567"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13B754F9-A176-C712-F29F-705C5200557D" name="Relation_28_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>953838E9-B8CD-C045-2925-5118E5F554C6</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22575E86-EFF5-534C-D550-CDD98E883D91"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

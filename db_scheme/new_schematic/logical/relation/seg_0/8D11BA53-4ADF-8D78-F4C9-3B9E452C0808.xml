@@ -3,6 +3,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-15 13:13:11 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
 <sourcePk>8F5E2778-89CD-D6B7-A417-ACF1E0256D1E</sourcePk>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
