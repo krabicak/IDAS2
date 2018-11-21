@@ -4,7 +4,7 @@
 <createdTime>2018-03-20 19:35:19 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-03-20 19:35:27 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2018-03-20 19:35:38 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2018-03-20 19:35:50 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -58,22 +58,53 @@
 <createdTime>2018-03-20 19:36:03 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="50A50E62-EE79-67AC-7858-5BC70D6E6528">
+<Attribute name="zkratka2" id="50A50E62-EE79-67AC-7858-5BC70D6E6528">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:49:16 UTC</createdTime>
 <generatorID>7D3AB16E-8B34-E9E6-79D1-6F67F9D262DE</generatorID>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <referedAttribute>330EB053-173D-D39E-AD76-D26D0A2FE97D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zkratka1" id="A99CBF99-B60B-121F-F0DE-92CD7138E37D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:12:44 UTC</createdTime>
+<generatorID>A34D0422-620C-6D82-6103-68A938E9F427</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CE0CAB5D-C9A6-D1F3-4025-B336F3FC985C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cislo_rocniku" id="A8E612C5-02C4-4344-6942-A9460C886EDE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:33:40 UTC</createdTime>
+<generatorID>8D11BA53-4ADF-8D78-F4C9-3B9E452C0808</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5DB3B5A9-8043-7A5D-DEA4-DB817768C193</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -86,7 +117,7 @@
 <createdTime>2018-03-20 19:35:36 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D2158EA4-36F2-90A3-AD04-699D1D7C454F" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

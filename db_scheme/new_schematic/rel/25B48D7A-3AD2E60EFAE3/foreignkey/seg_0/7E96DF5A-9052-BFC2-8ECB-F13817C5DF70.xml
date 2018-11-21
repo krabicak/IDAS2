@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7E96DF5A-9052-BFC2-8ECB-F13817C5DF70" containerWithKeyObject="151CAC7D-3103-B5EB-EC3D-5F6C62EB3E70" localFKIndex="8C89B076-D644-CC01-6263-DBA6ACC3F2DB" name="PREDMET_DOPORUCENY_ROCNIK_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>8D11BA53-4ADF-8D78-F4C9-3B9E452C0808</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>DOPORUCENY_ROCNIK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2174E182-B081-966F-3944-71B58D7DCB16</referredTableID>
+<keyObject>CB8149DD-C01E-DDB7-9C26-C7B536DD5B45</keyObject>
+<referredKeyID>CB8149DD-C01E-DDB7-9C26-C7B536DD5B45</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>cislo_rocniku</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

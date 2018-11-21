@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7498E7F1-9410-A908-F2A7-E109269FF5C9" name="FORMA_VYUKY">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C84E448D-77FC-7FAC-6E8C-13986DD84CBD" name="DNY">
 <createdBy>hotov</createdBy>
-<createdTime>2018-03-20 19:38:39 UTC</createdTime>
+<createdTime>2018-11-14 16:18:22 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -12,18 +12,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="AE2B2925-0D3C-8A93-CFC8-3FD3793F853E">
+<Attribute name="zkratka" id="637B29E1-4013-E1D1-68C6-93926A4B0527">
 <createdBy>hotov</createdBy>
-<createdTime>2018-03-20 19:38:50 UTC</createdTime>
+<createdTime>2018-11-14 16:33:57 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nazev_formy" id="3EB9A0A2-5F23-3FB2-2640-5B417ED7AF81">
+<Attribute name="detail" id="2490AFD0-ED3B-C8F4-754E-39744388A003">
 <createdBy>hotov</createdBy>
-<createdTime>2018-03-20 19:39:09 UTC</createdTime>
+<createdTime>2018-11-14 16:34:42 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,13 +34,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="9136C973-7DC5-150A-B82A-895B2F28CAD8" name="FORMA_VYUKY PK">
+<identifier id="A3C96B44-DD12-BA05-9B82-B5A4C7EB0F51" name="DNY PK">
 <createdBy>hotov</createdBy>
-<createdTime>2018-03-20 19:58:07 UTC</createdTime>
+<createdTime>2018-11-14 16:34:09 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>AE2B2925-0D3C-8A93-CFC8-3FD3793F853E</attributeRef>
+<attributeRef>637B29E1-4013-E1D1-68C6-93926A4B0527</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="86AF7A93-938A-0182-8BDE-F2DD5410EB4F" containerWithKeyObject="92CB1813-CDE0-EEF2-D362-0CB8AD7B09B8" localFKIndex="BDAE283E-AE88-C674-524E-30E5B087D67A" name="VYUKOVA_AKCE_ZPUSOB_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>ZPUSOB_VYUKY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0CEAC23-D035-0F53-F038-FE176A0D8571</referredTableID>
+<keyObject>220CBD17-F835-8445-7163-0A84E82003B3</keyObject>
+<referredKeyID>220CBD17-F835-8445-7163-0A84E82003B3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>zkrata</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

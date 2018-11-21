@@ -4,7 +4,7 @@
 <createdTime>2018-03-20 19:33:48 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-03-20 19:34:01 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,25 +32,26 @@
 <createdTime>2018-03-20 19:34:11 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="C18E03FE-F6A9-641A-AE1A-832AB8661F58">
+<Attribute name="zkrata" id="C18E03FE-F6A9-641A-AE1A-832AB8661F58">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:48:10 UTC</createdTime>
 <generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <referedAttribute>B64EAFF1-B319-0A9D-2D03-0DEA41507231</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID3" id="65D2AEEF-184D-59A3-1E83-B61877923A88">
@@ -59,7 +60,7 @@
 <generatorID>B9BF0112-4734-7942-BFA3-5D47D5005A6F</generatorID>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>460831BA-31DD-5EA6-2BA3-52EA50DE23AB</referedAttribute>
@@ -68,30 +69,90 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cas_pocatku_vyuky" id="020736C0-B590-ECFD-019A-80ACBABAFB68">
+<Attribute name="pocatek" id="DEA8C1A4-470F-9B14-11D2-FEE8824BE1AF">
 <createdBy>hotov</createdBy>
-<createdTime>2018-11-12 22:27:11 UTC</createdTime>
+<createdTime>2018-11-14 16:35:10 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cas_konce_vyuky" id="61C2A3BF-7DF8-4D5E-93CA-A47B57A7B220">
+<Attribute name="konec" id="8FB7B72C-2AB8-C7AD-36B1-2FB8B0E1103D">
 <createdBy>hotov</createdBy>
-<createdTime>2018-11-12 22:28:34 UTC</createdTime>
+<createdTime>2018-11-14 16:35:29 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="zkratka" id="7E71B310-179F-1E66-11AA-A27E0613A9F3">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-14 16:35:55 UTC</createdTime>
+<generatorID>24B26539-4F60-9F3D-6983-815B6906B018</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>637B29E1-4013-E1D1-68C6-93926A4B0527</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID2" id="DBF7367E-23C8-2A2F-B3FF-AC2BE8DF9200">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-15 13:12:37 UTC</createdTime>
+<generatorID>926478CF-3BEC-221C-8C69-D7D4962B02BD</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<referedAttribute>08212EF5-2B1F-70D9-9A08-F5D233669B77</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="oznaceni" id="4927C8FE-F47D-933E-8AD6-35DD19CF4146">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:31:40 UTC</createdTime>
+<generatorID>49AE7B29-ECC3-2269-3C64-1D557BE58963</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>1DFF8EF6-0448-D53B-6B2C-273BA540C4A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="7BE2FCE3-456B-F195-D163-D75C58246C00">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:35:39 UTC</createdTime>
+<generatorID>49AE7B29-ECC3-2269-3C64-1D557BE58963</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5034EDF5-B532-C848-ED0F-01FEE4B30D79</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -101,7 +162,7 @@
 <createdTime>2018-03-20 19:34:09 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="A811178B-C473-39F5-6C24-06E37BFCA221" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

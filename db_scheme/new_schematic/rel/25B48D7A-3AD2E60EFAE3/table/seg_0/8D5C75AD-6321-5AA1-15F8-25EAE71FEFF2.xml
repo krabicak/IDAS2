@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D5C75AD-6321-5AA1-15F8-25EAE71FEFF2" name="FORMY">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<ordsAlias>relation_20</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STUDIJNI_OBOR_ID" id="116DA9A0-8CB4-62D9-E568-7C0C4BEFF973">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FB6DBEF-C7F4-BA12-B978-729707254004" referredColumn="3E33B673-31CC-622B-F156-97DB4A0CDE72"/>
+</associations>
+</Column>
+<Column name="FORMA_VYUKY_ID" id="AB14D0AF-9465-DAF9-2030-43BD86B466E9">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91E868C4-69C5-8203-E93A-B19D3DFA9A57" referredColumn="4D47BBC6-6A00-34CC-3DD2-98641C7A3F68"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D49E3A29-3F9B-49AC-887E-C12745DB7775" name="Relation_20_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="116DA9A0-8CB4-62D9-E568-7C0C4BEFF973"/>
+<colUsage columnID="AB14D0AF-9465-DAF9-2030-43BD86B466E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6248199E-5B0E-8523-115A-5C430EF8BDDA" name="Relation_20_STUDIJNI_OBOR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>0BAB6A8B-6419-4BED-BE32-5DDD2D806996</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="116DA9A0-8CB4-62D9-E568-7C0C4BEFF973"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CFB68F77-9DD3-D9CE-F7B0-596C9704281E" name="Relation_20_FORMA_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>0BAB6A8B-6419-4BED-BE32-5DDD2D806996</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB14D0AF-9465-DAF9-2030-43BD86B466E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

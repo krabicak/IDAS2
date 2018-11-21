@@ -1,0 +1,208 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="92CB1813-CDE0-EEF2-D362-0CB8AD7B09B8" name="VYUKOVA_AKCE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>9C5160A7-A7B2-6FDE-8F16-5957DCE00543</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="BD40459E-C3FB-2FFD-1913-457DFAE103B0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="max_studentu" id="51272679-D1AE-7F80-A930-1E5FD3BFB006">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>BB7385FE-2E20-CFD4-8D73-3EE283AE5EB4</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZPUSOB_VYUKY" id="43CE4DF4-267B-16CC-940D-3534071FCF56">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>C18E03FE-F6A9-641A-AE1A-832AB8661F58</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="86AF7A93-938A-0182-8BDE-F2DD5410EB4F" referredColumn="74AA4FA2-4E6C-45F1-AD67-84D6789F2A68"/>
+</associations>
+</Column>
+<Column name="VYUCUJICI_ID" id="79764477-EE1E-E0FE-2410-36A33D7F503C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>65D2AEEF-184D-59A3-1E83-B61877923A88</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3DE3C8C4-7D61-0EDD-0B8B-42FA67B35416" referredColumn="E48C1E0C-32D3-A0C7-ABE1-42AA5A214C02"/>
+</associations>
+</Column>
+<Column name="pocatek" id="23D56953-C236-53E9-368A-70BF3E93FE69">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>DEA8C1A4-470F-9B14-11D2-FEE8824BE1AF</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="konec" id="6EFA1937-72CA-D322-32EB-3C0F893201B8">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>8FB7B72C-2AB8-C7AD-36B1-2FB8B0E1103D</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DNY_zkratka" id="7E6A1C9E-79FF-CD1C-521D-1CD399DF1B72">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>7E71B310-179F-1E66-11AA-A27E0613A9F3</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B14592D-1DF5-800E-8D35-7D41F05B0642" referredColumn="5156C04C-F67C-0ADD-93CA-8A1D96D95296"/>
+</associations>
+</Column>
+<Column name="PREDMET_ID" id="AD4DE20A-B2F1-F1D2-E100-76E1FCF2244F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>DBF7367E-23C8-2A2F-B3FF-AC2BE8DF9200</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="278E4A90-4B9D-5CE4-6124-BD4B658C2EDE" referredColumn="2F751547-7B0F-81ED-4549-ACA8C8640BB2"/>
+</associations>
+</Column>
+<Column name="UCEBNA_ID" id="232EE8F4-FD53-5916-2269-81DA8A743168">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>7BE2FCE3-456B-F195-D163-D75C58246C00</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B074677-ED1B-56D5-B514-27C5B2F424F1" referredColumn="6A7FE534-A81B-08B5-D190-C37D45206AD1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B5D29E8-5325-9279-F7BE-4354AC2ECE66" name="VYUKOVA_AKCE_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>7EB0170E-EC88-E1B1-618E-B321E8BE7206</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD40459E-C3FB-2FFD-1913-457DFAE103B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="859F77DF-C8DF-0BC8-3EEA-07B9A7634417" name="VYUKOVA_AKCE_DNY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>24B26539-4F60-9F3D-6983-815B6906B018</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7E6A1C9E-79FF-CD1C-521D-1CD399DF1B72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF405FA7-C77D-CC4C-6DDD-A14FD127E2D3" name="VYUKOVA_AKCE_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>926478CF-3BEC-221C-8C69-D7D4962B02BD</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD4DE20A-B2F1-F1D2-E100-76E1FCF2244F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="877505FA-F7AF-7F0E-6C6C-F1433BE62B81" name="VYUKOVA_AKCE_VYUCUJICI_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>B9BF0112-4734-7942-BFA3-5D47D5005A6F</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79764477-EE1E-E0FE-2410-36A33D7F503C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4EEA5B5-44AE-7593-6449-30BF4A19B338" name="VYUKOVA_AKCE_UCEBNA_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>49AE7B29-ECC3-2269-3C64-1D557BE58963</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="232EE8F4-FD53-5916-2269-81DA8A743168"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDAE283E-AE88-C674-524E-30E5B087D67A" name="VYUKOVA_AKCE_ZPUSOB_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43CE4DF4-267B-16CC-940D-3534071FCF56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

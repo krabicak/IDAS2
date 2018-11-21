@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CE8E1BCA-A5BC-36C9-71C2-19996D8318B7" containerWithKeyObject="268EA842-BB04-8771-E336-7901F79B1C4C" localFKIndex="7A5C4703-5999-351A-9F15-8E46231FA2F5" name="Relation_28_SEMESTR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:37:16 UTC</createdTime>
+<generatorID>953838E9-B8CD-C045-2925-5118E5F554C6</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<referredTableLongName>SEMESTR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>118EFED2-5F47-B0C3-B260-908887D32145</referredTableID>
+<keyObject>B8B4363C-46FB-3A2B-2FE7-471F99021918</keyObject>
+<referredKeyID>B8B4363C-46FB-3A2B-2FE7-471F99021918</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -4,7 +4,7 @@
 <createdTime>2018-11-12 22:26:11 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -15,39 +15,12 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID" id="26371667-FF4E-56F4-26C8-B2047D646B79">
-<createdBy>hotov</createdBy>
-<createdTime>2018-11-12 22:26:21 UTC</createdTime>
-<ownerDesignName>new_schematic</ownerDesignName>
-<engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ID1" id="89826C70-7623-F32F-AB2F-841AD18F54DA">
-<createdBy>hotov</createdBy>
-<createdTime>2018-11-12 22:26:59 UTC</createdTime>
-<generatorID>49AE7B29-ECC3-2269-3C64-1D557BE58963</generatorID>
-<ownerDesignName>new_schematic</ownerDesignName>
-<engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="popis" id="A35AFEF5-5A7A-FD5D-4C2F-9FAFF6D17C82">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-12 22:29:03 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -61,14 +34,25 @@
 <createdTime>2018-11-12 22:30:06 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="5034EDF5-B532-C848-ED0F-01FEE4B30D79">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 19:35:27 UTC</createdTime>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -77,11 +61,12 @@
 <createdTime>2018-11-12 22:26:39 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="A26F6576-B186-27D5-AC05-7A38B70855A8" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>26371667-FF4E-56F4-26C8-B2047D646B79</attributeRef>
+<attributeRef>1DFF8EF6-0448-D53B-6B2C-273BA540C4A3</attributeRef>
+<attributeRef>5034EDF5-B532-C848-ED0F-01FEE4B30D79</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
