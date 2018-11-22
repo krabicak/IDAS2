@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4" name="VYUCUJICI">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4" name="PRACOVNICI">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:31:44 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2018-03-20 19:31:57 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2018-03-20 19:32:09 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2018-03-20 19:32:22 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -58,7 +58,7 @@
 <createdTime>2018-03-20 19:32:37 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -72,7 +72,7 @@
 <createdTime>2018-03-20 19:32:43 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -86,7 +86,7 @@
 <createdTime>2018-03-20 19:33:13 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -100,7 +100,7 @@
 <createdTime>2018-03-20 19:33:24 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -114,7 +114,7 @@
 <createdTime>2018-03-20 19:33:36 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -129,7 +129,7 @@
 <generatorID>6FA28242-4EC4-160A-6B20-1FDCD4C7F7D9</generatorID>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>6493F862-44F1-2A66-5D56-9726FD9EB8FA</referedAttribute>
@@ -143,7 +143,7 @@
 <createdTime>2018-11-12 22:36:48 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -151,14 +151,30 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="zkratka" id="6CD5C765-702D-5101-B4D9-B2B1DEB50602">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:06 UTC</createdTime>
+<generatorID>2A6512D1-7453-A8A7-6158-8B779E2D7133</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
+<referedAttribute>452A87A6-68F7-BA3A-BDF5-24991E7C6685</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="151CAF8E-B6AF-5D4E-ADFB-B2C662CEC2E0" name="VYUCUJICI PK">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:32:06 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="D136EEC8-C822-EC8C-F9B7-27309FB08230" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

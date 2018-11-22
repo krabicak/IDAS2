@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB7AB388-F915-BD52-665A-04C971FBAB36" name="VYUCUJICI">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB7AB388-F915-BD52-665A-04C971FBAB36" name="PRACOVNICI">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-19 19:37:16 UTC</createdTime>
 <generatorID>1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4</generatorID>
@@ -137,6 +137,22 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="ROLE_zkratka" id="29CA8467-78EF-26C5-09A6-C44EDE2CC7A4">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>6CD5C765-702D-5101-B4D9-B2B1DEB50602</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2EC6C14D-3139-F5A8-8911-E5A24BADDFA2" referredColumn="B3070B19-C9F2-508E-EA6A-851D12F108EE"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="A7D5EB7A-B507-2C5A-7998-A2334F294A65" name="VYUCUJICI_PK">
@@ -160,6 +176,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="0565249B-35DB-3619-F547-5DC83F81B8A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="30B2E640-0E48-385C-FFD2-E684FCFBA9E7" name="PRACOVNICI_ROLE_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>2A6512D1-7453-A8A7-6158-8B779E2D7133</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29CA8467-78EF-26C5-09A6-C44EDE2CC7A4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
