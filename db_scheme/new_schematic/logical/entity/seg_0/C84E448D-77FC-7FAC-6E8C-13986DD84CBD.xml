@@ -3,6 +3,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-14 16:18:22 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-14 16:33:57 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
@@ -26,6 +32,9 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-14 16:34:42 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
@@ -38,6 +47,10 @@
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-14 16:34:09 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>637B29E1-4013-E1D1-68C6-93926A4B0527</attributeRef>

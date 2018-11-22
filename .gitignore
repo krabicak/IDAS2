@@ -24,3 +24,7 @@ hs_err_pid*
 /java_app/IDAS2/nbproject/private/
 /java_app/IDAS2/build/
 /java_app/IDAS2/dist/
+/java_app/JavaFXApplication30/nbproject/private/
+/java_app/JavaFXApplication30/build/
+/test/prepare/nbproject/private/
+/test/prepare/build/

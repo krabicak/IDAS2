@@ -87,7 +87,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="DNY_zkratka" id="7E6A1C9E-79FF-CD1C-521D-1CD399DF1B72">
+<Column name="DEN" id="7E6A1C9E-79FF-CD1C-521D-1CD399DF1B72">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-19 19:37:16 UTC</createdTime>
 <generatorID>7E71B310-179F-1E66-11AA-A27E0613A9F3</generatorID>
@@ -133,6 +133,23 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="6B074677-ED1B-56D5-B514-27C5B2F424F1" referredColumn="6A7FE534-A81B-08B5-D190-C37D45206AD1"/>
+</associations>
+</Column>
+<Column name="oznaceni" id="4F70E3EB-DC8A-750D-04B3-88875E3A3E3C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>4927C8FE-F47D-933E-8AD6-35DD19CF4146</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B074677-ED1B-56D5-B514-27C5B2F424F1" referredColumn="507A552C-C292-7089-71ED-2EFF91F40348"/>
 </associations>
 </Column>
 </columns>
@@ -190,6 +207,7 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
+<colUsage columnID="4F70E3EB-DC8A-750D-04B3-88875E3A3E3C"/>
 <colUsage columnID="232EE8F4-FD53-5916-2269-81DA8A743168"/>
 </indexColumnUsage>
 </ind_PK_UK>
