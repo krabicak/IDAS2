@@ -2,45 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/Objects.local" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/Objects.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/186A173B-BBE2-1B96-E438-1BF291902967.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/186A173B-BBE2-1B96-E438-1BF291902967.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/1D72DDDF-8CD9-2CC5-8405-C46D4CD815B4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/38F76801-9B0B-2202-4FE7-F030457163F7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/38F76801-9B0B-2202-4FE7-F030457163F7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/4DED4F83-3DB7-8BF1-50C3-6CA68464DB73.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/4DED4F83-3DB7-8BF1-50C3-6CA68464DB73.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/53BD11F9-73A4-4AB3-94A7-885A910F5270.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/53BD11F9-73A4-4AB3-94A7-885A910F5270.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/5B1E2AA0-C4AF-5ABB-A2A1-C83E7A3F13A4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/5B1E2AA0-C4AF-5ABB-A2A1-C83E7A3F13A4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/6DA09639-294D-AC99-57DE-434A23C2668B.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/6DA09639-294D-AC99-57DE-434A23C2668B.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/7498E7F1-9410-A908-F2A7-E109269FF5C9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/7498E7F1-9410-A908-F2A7-E109269FF5C9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/7EA248F6-2325-91A0-BBBB-656CB20B68A3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/7EA248F6-2325-91A0-BBBB-656CB20B68A3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/9C5160A7-A7B2-6FDE-8F16-5957DCE00543.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/9C5160A7-A7B2-6FDE-8F16-5957DCE00543.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/B5B76602-41A1-8EAF-99AD-0923A7E2DADA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/B5B76602-41A1-8EAF-99AD-0923A7E2DADA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/C84E448D-77FC-7FAC-6E8C-13986DD84CBD.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/C84E448D-77FC-7FAC-6E8C-13986DD84CBD.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/DC1FC738-E2D8-654C-2ECD-DC2C57664005.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/entity/seg_0/DC1FC738-E2D8-654C-2ECD-DC2C57664005.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/subviews/66C1E49C-A064-220C-D2AB-42063D11AE13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/logical/subviews/66C1E49C-A064-220C-D2AB-42063D11AE13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/mapping/DeletedMap_RM25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/mapping/DeletedMap_RM25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/mapping/ExtendedMap_RM25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/mapping/ExtendedMap_RM25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/Objects.local" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/Objects.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/subviews/ED7E5E14-E036-AC86-C7D5-FCAD288DA49C.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/subviews/ED7E5E14-E036-AC86-C7D5-FCAD288DA49C.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/4B7DC83C-0BC5-0B82-5E31-8BAEAE82E43E.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/4B7DC83C-0BC5-0B82-5E31-8BAEAE82E43E.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/5AF49A40-0DC9-1301-997E-549EBB14F0A3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/5AF49A40-0DC9-1301-997E-549EBB14F0A3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/92CB1813-CDE0-EEF2-D362-0CB8AD7B09B8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/92CB1813-CDE0-EEF2-D362-0CB8AD7B09B8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/CB7AB388-F915-BD52-665A-04C971FBAB36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/new_schematic/rel/25B48D7A-3AD2E60EFAE3/table/seg_0/CB7AB388-F915-BD52-665A-04C971FBAB36.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../db_scheme/sql.ddl" beforeDir="false" afterPath="$PROJECT_DIR$/../../db_scheme/sql.ddl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/configs/Run_as_WebStart.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/configs/Run_in_Browser.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/jfx-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/src/hibernateConfig/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/src/view/cli/CLI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/src/view/gui/FXMLGUI.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/src/view/gui/FXMLGUIController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IDAS2/src/view/gui/GUI.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/byte-buddy-1.8.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/classmate-1.3.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/dom4j-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations-5.0.4.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hibernate-core-5.3.7.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jandex-2.0.5.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-swt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.base.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.controls.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.fxml.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.graphics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.media.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.swing.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx.web.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javassist-3.23.1-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.persistence-api-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ojdbc7.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/DaysOfWeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/libs/DaysOfWeek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,50 +71,86 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="3" />
+          <entry key="fxml" value="5" />
           <entry key="iml" value="1" />
-          <entry key="java" value="8" />
+          <entry key="java" value="12" />
           <entry key="properties" value="1" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="7" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="12" />
           <entry key="Properties" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="10" />
+          <entry key="XML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="8" />
-          <entry key="java" value="365" />
+          <entry key="fxml" value="11" />
+          <entry key="java" value="411" />
+          <entry key="txt" value="6" />
           <entry key="xml" value="166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="365" />
-          <entry key="XML" value="174" />
+          <entry key="JAVA" value="411" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="XML" value="177" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/GUI.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DaysOfWeek.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+            <state relative-caret-position="162">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="74" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -140,6 +161,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -163,6 +185,12 @@
         <option value="$PROJECT_DIR$/untitled/src/Main.java" />
         <option value="$PROJECT_DIR$/untitled/src/src/sample.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/libs/MainControllerInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" />
       </list>
     </option>
   </component>
@@ -181,13 +209,18 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="IDAS2_project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="148" />
+    <option name="y" value="98" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -327,6 +360,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDAS2_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDAS2_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDAS2_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDAS2_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,6 +409,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IDAS2_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IDAS2_project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -375,7 +433,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542888369299" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542889663563" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/untitled/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -387,6 +445,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hotov\Desktop\IDAS2\IDAS2\java_app\IDAS2_project\src\main\resources\fxml" />
       <recent name="C:\Users\hotov\Desktop\IDAS2\IDAS2\java_app\IDAS2_project\src\main\resources" />
       <recent name="C:\Users\hotov\Desktop\IDAS2\IDAS2\java_app\IDAS2_project\untitled\src\src" />
       <recent name="C:\Users\hotov\Desktop\IDAS2\IDAS2\java_app\IDAS2_project\src\main\java\view\gui" />
@@ -478,8 +537,16 @@
       <option name="presentableId" value="Default" />
       <updated>1542754522356</updated>
       <workItem from="1542754526590" duration="1009000" />
-      <workItem from="1542871393956" duration="15812000" />
+      <workItem from="1542871393956" duration="17086000" />
     </task>
+    <task id="LOCAL-00001" summary="design">
+      <created>1542888778156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542888778156</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -515,7 +582,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16821000" />
+    <option name="totallyTimeSpent" value="18095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,9 +597,9 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49881235" visible="true" weight="0.2118003" />
-      <window_info id="Structure" order="1" sideWeight="0.5011876" side_tool="true" weight="0.25340393" />
-      <window_info id="Persistence" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.2118003" />
+      <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2118003" />
+      <window_info id="Persistence" order="2" sideWeight="0.502193" side_tool="true" weight="0.2118003" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -540,7 +607,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25245902" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.124590166" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -600,6 +667,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="design" />
+    <option name="LAST_COMMIT_MESSAGE" value="design" />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -632,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="74" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/DayOfWeek.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -648,24 +712,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/DaysOfWeek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/FXMLGUI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -706,12 +752,54 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
             <element signature="e#574#575#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DaysOfWeek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
