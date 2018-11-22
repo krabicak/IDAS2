@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6D53310-B1B0-9A61-8F10-612FE3BDA33C" name="ROLE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>854D879D-9E24-B498-2F58-ADBE5894E712</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="zkratka" id="B3070B19-C9F2-508E-EA6A-851D12F108EE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>452A87A6-68F7-BA3A-BDF5-24991E7C6685</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8684D149-8918-12AD-3BFF-F1AF275EA0FE" name="ROLE_PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-11-19 20:19:24 UTC</createdTime>
+<generatorID>C1B7620C-3F37-C44D-38CD-5806D948F82B</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3070B19-C9F2-508E-EA6A-851D12F108EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
