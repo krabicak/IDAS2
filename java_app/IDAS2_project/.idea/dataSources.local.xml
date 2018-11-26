@@ -9,7 +9,15 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>C##st52512</user-name>
-      <introspection-schemas>*:</introspection-schemas>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+    <data-source name="IDAS2PU/Hibernate" uuid="986fa428-0adb-440c-a03c-b4c1117c8014">
+      <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0" family="ORACLE" exact-version="12.2.0.1">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <user-name>C##st52512</user-name>
     </data-source>
   </component>
 </project>

@@ -7,6 +7,7 @@
     <persistence-unit name="IDAS2PU">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>model.DayOfWeek</class>
+        <class>model.Identity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:oracle:thin:@fei-sql1.upceucebny.cz:1521:IDAS12"/>
             <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@fei-sql1.upceucebny.cz">
+<dataSource name="IDAS2PU/Hibernate">
   <database-model serializer="dbm" rdbms="ORACLE" format-version="4.11">
     <root id="1">
       <ServerVersion>12.2.0.1</ServerVersion>
     </root>
     <schema id="2" parent="1" name="C##ST52512">
       <ObjectId>182</ObjectId>
-      <IntrospectionTimestamp>2018-11-25.14:05:02</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-25.14:03:27</IntrospectionTimestamp>
       <CreatedTimestamp>2018-04-21.16:13:37</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Current>1</Current>
@@ -603,7 +603,6 @@
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>249</SourceTextLength>
       <Invalid>1</Invalid>
-      <DependsOnIds>269917</DependsOnIds>
       <CreatedTimestamp>2018-11-19.22:44:50</CreatedTimestamp>
       <ModifiedTimestamp>2018-11-20.17:49:30</ModifiedTimestamp>
     </routine>
