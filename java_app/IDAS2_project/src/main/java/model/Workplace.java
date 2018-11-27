@@ -34,7 +34,6 @@ public class Workplace {
     this.nazev = nazev;
   }
 
-
   public String getZkratka() {
     return zkratka;
   }
@@ -51,4 +50,13 @@ public class Workplace {
     this.fakulta = fakulta;
   }
 
+  @Override
+  public String toString() {
+    return "Workplace{" +
+            "id='" + id + '\'' +
+            ", nazev='" + nazev + '\'' +
+            ", zkratka='" + zkratka + '\'' +
+            ", fakulta=" + fakulta +
+            '}';
+  }
 }

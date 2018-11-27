@@ -129,7 +129,7 @@ public class FXMLGUIController implements Initializable {
 
                     MainControllerInterface mainController = new MainController();
                     mainController.login("root@root.cz", "admin");
-                    System.out.println(mainController.getAllTeachers());
+                    System.out.println(mainController.getAllWorkplaces());
                 } catch (Exception e) {
                     System.out.println(e);
                 }

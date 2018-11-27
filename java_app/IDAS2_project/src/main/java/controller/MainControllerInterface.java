@@ -1,6 +1,7 @@
 package controller;
 
 import model.Teacher;
+import model.Workplace;
 
 import java.util.List;
 
@@ -20,6 +21,12 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException - při neúspěšném připojení
      */
     List<Teacher> getAllTeachers() throws DatabaseAccesException;
+
+    /**
+     * @return vraci seznam všech pracovišť
+     * @throws DatabaseAccesException - při neúspěšném připojení
+     */
+    List<Workplace> getAllWorkplaces() throws DatabaseAccesException;
 
     class LoginException extends Exception {
 

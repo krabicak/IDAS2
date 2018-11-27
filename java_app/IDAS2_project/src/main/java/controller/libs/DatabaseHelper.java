@@ -1,6 +1,7 @@
 package controller.libs;
 
 import model.Teacher;
+import model.Workplace;
 
 import javax.persistence.*;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class DatabaseHelper {
 
 
     @PersistenceContext
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("IDAS2PU");
-    private static EntityManager em = emf.createEntityManager();
+    public static EntityManagerFactory emf;
+    public static EntityManager em;
 
     private DatabaseHelper() {
 
@@ -50,7 +51,15 @@ public final class DatabaseHelper {
         } catch (Exception e) {
             throw new DatabaseException("Cannot get data from database: " + e.getLocalizedMessage());
         }
+    }
 
+    public static List<Workplace> getAllWorkplaces() throws DatabaseException {
 
+        try {
+            Query query = em.createQuery("from Workplace ");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException("Cannot get data from database: " + e.getLocalizedMessage());
+        }
     }
 }
