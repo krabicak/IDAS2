@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="user class and login libs">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a1756858-a783-4bce-bf84-8725dd07541f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a1756858-a783-4bce-bf84-8725dd07541f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a1756858-a783-4bce-bf84-8725dd07541f/storage_v2/_src_/schema/C__ST52512.VZpbIQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a1756858-a783-4bce-bf84-8725dd07541f/storage_v2/_src_/schema/C__ST52512.VZpbIQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Identity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -111,7 +104,7 @@
           <entry key="class" value="1" />
           <entry key="fxml" value="10" />
           <entry key="iml" value="1" />
-          <entry key="java" value="57" />
+          <entry key="java" value="63" />
           <entry key="properties" value="1" />
           <entry key="sql" value="3" />
           <entry key="xml" value="16" />
@@ -121,7 +114,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="57" />
+          <entry key="JAVA" value="63" />
           <entry key="Properties" value="1" />
           <entry key="SQL" value="2" />
           <entry key="Scratch" value="2" />
@@ -132,14 +125,14 @@
         <counts>
           <entry key="PRACOVNICI_PK" value="8" />
           <entry key="fxml" value="17" />
-          <entry key="java" value="2262" />
+          <entry key="java" value="2718" />
           <entry key="txt" value="32" />
           <entry key="xml" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2262" />
+          <entry key="JAVA" value="2718" />
           <entry key="PLAIN_TEXT" value="32" />
           <entry key="SQL" value="8" />
           <entry key="XML" value="191" />
@@ -149,11 +142,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="200">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="131" column="71" selection-start-line="131" selection-start-column="71" selection-end-line="131" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,10 +167,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="-38">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Pracovnici.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DayOfWeek.java" />
         <option value="a1756858-a783-4bce-bf84-8725dd07541f/schema/C##ST52512/table/PRACOVNICI/index/PRACOVNICI_PK" />
@@ -219,11 +239,12 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Teacher.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Workplace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" />
       </list>
     </option>
   </component>
@@ -480,7 +501,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543310455241" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543311680630" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/untitled/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/model" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -587,7 +608,7 @@
       <workItem from="1542871393956" duration="29312000" />
       <workItem from="1543137470380" duration="6696000" />
       <workItem from="1543254318223" duration="11166000" />
-      <workItem from="1543309224456" duration="1201000" />
+      <workItem from="1543309224456" duration="2352000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1542888778156</created>
@@ -653,7 +674,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49384000" />
+    <option name="totallyTimeSpent" value="50535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,7 +689,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.21558245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49780703" visible="true" weight="0.21558245" />
       <window_info id="Structure" order="1" sideWeight="0.502193" side_tool="true" weight="0.2118003" />
       <window_info id="Persistence" order="2" sideWeight="0.502193" side_tool="true" weight="0.2118003" />
       <window_info id="Designer" order="3" />
@@ -678,7 +699,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.20327869" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.20327869" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -802,18 +823,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Identity.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -822,18 +839,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="14" column="253" selection-start-line="14" selection-start-column="253" selection-end-line="14" selection-end-column="253" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="137" column="21" selection-start-line="137" selection-start-column="21" selection-end-line="137" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3206#3629#0" expanded="true" />
-            <element signature="e#3628#3629#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,23 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DaysOfWeek.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -924,10 +912,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DaysOfWeek.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="131" column="71" selection-start-line="131" selection-start-column="71" selection-end-line="131" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

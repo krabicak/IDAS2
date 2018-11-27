@@ -128,9 +128,9 @@ public class FXMLGUIController implements Initializable {
                 try {
 
                     MainControllerInterface mainController = new MainController();
-                    System.out.println("test");
                     mainController.login("root@root.cz", "admin");
-                } catch (MainControllerInterface.LoginException e) {
+                    System.out.println(mainController.getAllTeachers());
+                } catch (Exception e) {
                     System.out.println(e);
                 }
             }
