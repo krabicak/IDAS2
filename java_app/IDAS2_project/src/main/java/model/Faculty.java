@@ -42,4 +42,12 @@ public class Faculty {
     this.zkratka = zkratka;
   }
 
+  @Override
+  public String toString() {
+    return "Faculty{" +
+            "id='" + id + '\'' +
+            ", nazev='" + nazev + '\'' +
+            ", zkratka='" + zkratka + '\'' +
+            '}';
+  }
 }

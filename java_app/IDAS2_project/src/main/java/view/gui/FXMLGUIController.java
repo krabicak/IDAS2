@@ -12,6 +12,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 
 public class FXMLGUIController implements Initializable {
+    private MainControllerInterface mainController = new MainController();
 
     @FXML
     private Tab ucitelTab;
@@ -127,9 +128,9 @@ public class FXMLGUIController implements Initializable {
             public void run() {
                 try {
 
-                    MainControllerInterface mainController = new MainController();
+
                     mainController.login("root@root.cz", "admin");
-                    System.out.println(mainController.getAllWorkplaces());
+                    System.out.println(mainController.getAllTeachers());
                 } catch (Exception e) {
                     System.out.println(e);
                 }

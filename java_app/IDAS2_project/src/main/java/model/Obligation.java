@@ -21,4 +21,10 @@ public class Obligation {
     this.typ = typ;
   }
 
+  @Override
+  public String toString() {
+    return "Obligation{" +
+            "typ='" + typ + '\'' +
+            '}';
+  }
 }

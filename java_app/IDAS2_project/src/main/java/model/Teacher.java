@@ -15,7 +15,6 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @PrimaryKeyJoinColumn
     @Column(name = "id")
     private String id;
     @Column(name = "titul_pred")
@@ -30,7 +29,7 @@ public class Teacher {
     @JoinColumn(name="pracoviste")
     private Workplace pracoviste;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="uvazek", referencedColumnName = "TYP")
+    @JoinColumn(name="uvazek")
     private Obligation uvazek;
     @Column(name = "email")
     private String email;

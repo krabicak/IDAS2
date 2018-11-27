@@ -20,4 +20,11 @@ public class Role {
     public void setZkratka(String zkratka) {
         this.zkratka = zkratka;
     }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "zkratka='" + zkratka + '\'' +
+                '}';
+    }
 }
