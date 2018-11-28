@@ -15,13 +15,13 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private String id;
     @Column(name = "titul_pred")
     private String titulPred;
-    @Column(name = "jmeno")
+    @Column(name = "jmeno", nullable = false)
     private String jmeno;
-    @Column(name = "prijmeni")
+    @Column(name = "prijmeni", nullable = false)
     private String prijmeni;
     @Column(name = "titul_za")
     private String titulZa;
@@ -31,14 +31,14 @@ public class Teacher {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="uvazek")
     private Obligation uvazek;
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
     @Column(name = "telefon")
     private String telefon;
     @Column(name = "mobil")
     private String mobil;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="role")
+    @JoinColumn(name="role", nullable = false)
     private Role role;
 
 

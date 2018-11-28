@@ -721,7 +721,7 @@
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="177" parent="139" name="ID">
       <Position>1</Position>
@@ -756,7 +756,7 @@
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="182" parent="140" name="STUDIJNI_OBOR_ID">
       <Position>1</Position>
@@ -877,7 +877,7 @@ FORMA_VYUKY_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="200" parent="143" name="ID">
       <Position>1</Position>
@@ -980,7 +980,7 @@ FORMA_VYUKY_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="218" parent="144" name="ID">
       <Position>1</Position>
@@ -1062,7 +1062,7 @@ FORMA_VYUKY_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="231" parent="145" name="ZKRATKA">
       <Position>1</Position>
@@ -1160,7 +1160,7 @@ PREDMET_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="245" parent="148" name="ID">
       <Position>1</Position>
@@ -1213,7 +1213,7 @@ PREDMET_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="253" parent="149" name="STUDIJNI_OBOR_ID">
       <Position>1</Position>
@@ -1313,7 +1313,7 @@ ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="269" parent="153" name="TYP">
       <Position>1</Position>
@@ -1443,7 +1443,7 @@ UCEBNA_ID</ColNames>
       <ModifiedTimestamp>2018-11-25.14:02:07</ModifiedTimestamp>
       <Events>I</Events>
       <Turn>before-row</Turn>
-      <Condition> new.id IS NULL </Condition>
+      <Condition> new.id IS NULL</Condition>
     </trigger>
     <column id="290" parent="155" name="ZKRATKA">
       <Position>1</Position>
