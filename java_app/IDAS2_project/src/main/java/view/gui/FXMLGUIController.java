@@ -2,6 +2,7 @@ package view.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 import controller.MainController;
 import controller.MainControllerInterface;
@@ -10,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
+import model.Teacher;
 
 public class FXMLGUIController implements Initializable {
     private MainControllerInterface mainController = new MainController();
@@ -123,17 +125,16 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delPlanBtn;
 
-    public void test(){
-        Thread thread = new Thread(new Runnable() {
-            public void run() {
-                try {
+    public void test() {
+        Thread thread = new Thread(() -> {
+            try {
 
 
-                    mainController.login("root@root.cz", "admin");
-                    System.out.println(mainController.getAllTeachers());
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
+                mainController.login("root@root.cz", "admin");
+
+                mainController.getAllTeachers().forEach(System.out::println);
+            } catch (Exception e) {
+                System.out.println(e);
             }
         });
         thread.run();

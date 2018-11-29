@@ -1,10 +1,12 @@
 package model;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name = "sem")
-public class Sem {
+public class Sem implements Serializable {
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY)
@@ -33,4 +35,17 @@ public class Sem {
         this.predmetId = predmetId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sem sem = (Sem) o;
+        return Objects.equals(semestrId, sem.semestrId) &&
+                Objects.equals(predmetId, sem.predmetId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(semestrId, predmetId);
+    }
 }

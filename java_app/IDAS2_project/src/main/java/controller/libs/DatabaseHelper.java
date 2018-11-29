@@ -1,6 +1,7 @@
 package controller.libs;
 
 import controller.MainControllerInterface;
+import model.FieldOfStudy;
 import model.Subject;
 import model.Teacher;
 import model.Workplace;
@@ -71,6 +72,15 @@ public final class DatabaseHelper {
     public static  List<Subject> getAllSubjects() throws DatabaseException{
         try{
             Query query = em.createQuery("from Subject ");
+            return query.getResultList();
+        }catch (Exception e){
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static  List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseException{
+        try{
+            Query query = em.createQuery("from FieldOfStudy ");
             return query.getResultList();
         }catch (Exception e){
             throw new DatabaseException(e);

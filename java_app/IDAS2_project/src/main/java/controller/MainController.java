@@ -1,6 +1,7 @@
 package controller;
 
 import controller.libs.DatabaseHelper;
+import model.FieldOfStudy;
 import model.Subject;
 import model.Teacher;
 import model.Workplace;
@@ -10,7 +11,6 @@ import java.util.List;
 
 public class MainController implements MainControllerInterface {
     private Teacher loggedUser;
-    private String email;
     private String password;
 
     public MainController() {
@@ -24,7 +24,6 @@ public class MainController implements MainControllerInterface {
         } catch (DatabaseHelper.DatabaseException e) {
             throw new LoginException(e);
         }
-        this.email = email;
         this.password = password;
     }
 
@@ -47,6 +46,14 @@ public class MainController implements MainControllerInterface {
     public List<Subject> getAllSubjects() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllSubjects();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public  List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseAccesException{
+        try {
+            return DatabaseHelper.getAllFieldsOfStudy();
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }

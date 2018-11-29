@@ -1,5 +1,6 @@
 package controller;
 
+import model.FieldOfStudy;
 import model.Subject;
 import model.Teacher;
 import model.Workplace;
@@ -34,6 +35,12 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException
      */
     List<Subject> getAllSubjects() throws DatabaseAccesException;
+
+    /**
+     * @return vrací seznam všech studijních oborů
+     * @throws DatabaseAccesException
+     */
+    List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseAccesException;
 
     class LoginException extends Exception {
 

@@ -23,7 +23,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="IDAS2_project" target="1.5" />
+      <module name="IDAS2_project" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
