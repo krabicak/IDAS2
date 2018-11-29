@@ -1,7 +1,10 @@
 package controller.libs;
 
+import controller.MainControllerInterface;
+import model.Subject;
 import model.Teacher;
 import model.Workplace;
+import org.omg.CORBA.TRANSACTION_MODE;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,6 +19,8 @@ public final class DatabaseHelper {
         public DatabaseException(String message) {
             super(message);
         }
+
+        public DatabaseException(Exception e){super(e);}
     }
 
 
@@ -59,7 +64,16 @@ public final class DatabaseHelper {
             Query query = em.createQuery("from Workplace ");
             return query.getResultList();
         } catch (Exception e) {
-            throw new DatabaseException("Cannot get data from database: " + e.getLocalizedMessage());
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static  List<Subject> getAllSubjects() throws DatabaseException{
+        try{
+            Query query = em.createQuery("from Subject ");
+            return query.getResultList();
+        }catch (Exception e){
+            throw new DatabaseException(e);
         }
     }
 }

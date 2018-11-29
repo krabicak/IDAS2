@@ -1,5 +1,6 @@
 package controller;
 
+import model.Subject;
 import model.Teacher;
 import model.Workplace;
 
@@ -27,6 +28,12 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException - při neúspěšném připojení
      */
     List<Workplace> getAllWorkplaces() throws DatabaseAccesException;
+
+    /**
+     * @return vrací seznam všech předmětů
+     * @throws DatabaseAccesException
+     */
+    List<Subject> getAllSubjects() throws DatabaseAccesException;
 
     class LoginException extends Exception {
 

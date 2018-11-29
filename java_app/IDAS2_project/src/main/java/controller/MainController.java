@@ -1,6 +1,7 @@
 package controller;
 
 import controller.libs.DatabaseHelper;
+import model.Subject;
 import model.Teacher;
 import model.Workplace;
 
@@ -19,7 +20,7 @@ public class MainController implements MainControllerInterface {
 
     public void login(String email, String password) throws LoginException {
         try {
-            loggedUser = DatabaseHelper.login(email,password);
+            loggedUser = DatabaseHelper.login(email, password);
         } catch (DatabaseHelper.DatabaseException e) {
             throw new LoginException(e);
         }
@@ -27,7 +28,7 @@ public class MainController implements MainControllerInterface {
         this.password = password;
     }
 
-    public List<Teacher> getAllTeachers() throws DatabaseAccesException{
+    public List<Teacher> getAllTeachers() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllTeachers();
         } catch (DatabaseHelper.DatabaseException e) {
@@ -35,9 +36,17 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-    public List<Workplace> getAllWorkplaces() throws DatabaseAccesException{
+    public List<Workplace> getAllWorkplaces() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllWorkplaces();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Subject> getAllSubjects() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllSubjects();
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }

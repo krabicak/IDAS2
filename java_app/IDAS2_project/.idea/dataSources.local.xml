@@ -17,6 +17,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
       <user-name>C##st52512</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>

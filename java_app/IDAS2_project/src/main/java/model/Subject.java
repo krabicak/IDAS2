@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "VIEW_SUBJECTS")
@@ -28,9 +29,8 @@ public class Subject {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "doporuceny_rocnik")
   private RecommendedYear doporucenyRocnik;
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "semestr",nullable = true)
-  private Sem semestr;
+  @OneToMany(mappedBy = "semestrId")
+  private List<Sem> semestr;
 
   public String getId() {
     return id;
@@ -98,4 +98,12 @@ public class Subject {
   public RecommendedYear getDoporucenyRocnik() { return doporucenyRocnik; }
 
   public void setDoporucenyRocnik(RecommendedYear doporucenyRocnik) { this.doporucenyRocnik = doporucenyRocnik; }
+
+  public List<Sem> getSemestr() {
+    return semestr;
+  }
+
+  public void setSemestr(List<Sem> semestr) {
+    this.semestr = semestr;
+  }
 }
