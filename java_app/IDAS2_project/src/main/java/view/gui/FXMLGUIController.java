@@ -2,7 +2,6 @@ package view.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.function.Consumer;
 
 import controller.MainController;
 import controller.MainControllerInterface;
@@ -11,7 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
-import model.Teacher;
+import view.gui.libs.Dialogs;
 
 public class FXMLGUIController implements Initializable {
     private MainControllerInterface mainController = new MainController();
@@ -133,11 +132,18 @@ public class FXMLGUIController implements Initializable {
                 mainController.login("root@root.cz", "admin");
 
                 mainController.getAllTeachers().forEach(System.out::println);
+
+                mainController.getAllFieldsOfStudy();
             } catch (Exception e) {
                 System.out.println(e);
             }
         });
         thread.run();
+        try {
+            Dialogs.getNewEmployeeDialog(mainController.getAllWorkplaces()).showAndWait();
+        } catch (MainControllerInterface.DatabaseAccesException e) {
+            e.printStackTrace();
+        }
     }
 
     public void initialize(URL url, ResourceBundle rb) {

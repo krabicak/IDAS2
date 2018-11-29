@@ -42,6 +42,19 @@ public class Teacher {
     private Role role;
 
 
+    public Teacher(String titulPred, String jmeno, String prijmeni, String titulZa, Workplace pracoviste, Obligation uvazek, String email, String telefon, String mobil, Role role) {
+        this.titulPred = titulPred;
+        this.jmeno = jmeno;
+        this.prijmeni = prijmeni;
+        this.titulZa = titulZa;
+        this.pracoviste = pracoviste;
+        this.uvazek = uvazek;
+        this.email = email;
+        this.telefon = telefon;
+        this.mobil = mobil;
+        this.role = role;
+    }
+
     public String getId() {
         return id;
     }
