@@ -1,8 +1,13 @@
 package view.gui;
 
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 import controller.MainController;
 import controller.MainControllerInterface;
@@ -11,12 +16,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.*;
+import view.gui.libs.Data;
 import view.gui.libs.Dialogs;
 
 public class FXMLGUIController implements Initializable {
@@ -141,7 +144,7 @@ public class FXMLGUIController implements Initializable {
 
     }
 
-    private void setTableViewUcitel() throws MainControllerInterface.DatabaseAccesException {
+    private void setTableViewUcitel(List<Teacher> list) throws MainControllerInterface.DatabaseAccesException {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
         ucitel_jmenoClm.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
         ucitel_prijmeniClm.setCellValueFactory(new PropertyValueFactory<>("prijmeni"));
@@ -153,49 +156,56 @@ public class FXMLGUIController implements Initializable {
         ucitel_telefonClm.setCellValueFactory(new PropertyValueFactory<>("telefon"));
         ucitel_mobilClm.setCellValueFactory(new PropertyValueFactory<>("mobil"));
 
-        ObservableList<Teacher> list = FXCollections.observableArrayList(mainController.getAllTeachers());
-        tableViewUcitel.setItems(list);
+        ObservableList<Teacher> lst = FXCollections.observableArrayList(list);
+        tableViewUcitel.setItems(lst);
     }
 
-    private void setTableViewPracoviste() throws MainControllerInterface.DatabaseAccesException {
+    private void setTableViewPracoviste(List<Workplace> list) throws MainControllerInterface.DatabaseAccesException {
         pracoviste_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
         pracoviste_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
         pracoviste_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
 
-        ObservableList<Workplace> list = FXCollections.observableArrayList(mainController.getAllWorkplaces());
-        tableViewPracoviste.setItems(list);
+        ObservableList<Workplace> lst = FXCollections.observableArrayList(list);
+        tableViewPracoviste.setItems(lst);
     }
 
-    private void setTableViewPredmety() throws MainControllerInterface.DatabaseAccesException {
+    private void setTableViewPredmety(List<Subject> list) throws MainControllerInterface.DatabaseAccesException {
         predmety_garantClm.setCellValueFactory(new PropertyValueFactory<>("garant"));
-        predmety_hodinClm.setCellValueFactory(new  PropertyValueFactory<>("rozsahHodin"));
+        predmety_hodinClm.setCellValueFactory(new PropertyValueFactory<>("rozsahHodin"));
         predmety_kategorieClm.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
         predmety_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
         predmety_semestrClm.setCellValueFactory(new PropertyValueFactory<>("semestr"));
         predmety_zakonceniClm.setCellValueFactory(new PropertyValueFactory<>("zpusobZakonceni"));
         predmety_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
 
-        ObservableList<Subject> list = FXCollections.observableArrayList(mainController.getAllSubjects());
-        tableViewPredmety.setItems(list);
+        ObservableList<Subject> lst = FXCollections.observableArrayList(list);
+        tableViewPredmety.setItems(lst);
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-        Thread thread = new Thread(() -> {
+        CompletableFuture.supplyAsync(() -> {
             try {
                 mainController = new MainController();
-            }catch (Exception e){
+                Data data = new Data();
+                data.setSubjects(mainController.getAllSubjects());
+                data.setTeachers(mainController.getAllTeachers());
+                data.setWorkplaces(mainController.getAllWorkplaces());
+                return data;
+            } catch (Exception e) {
                 Dialogs.showErrorMessage(e);
+                return null;
+            }
+        }).thenApply(data -> {
+            try {
+                setTableViewUcitel(data.getTeachers());
+                setTableViewPredmety(data.getSubjects());
+                setTableViewPracoviste(data.getWorkplaces());
+                return true;
+            } catch (Exception e) {
+                Dialogs.showErrorMessage(e);
+                return false;
             }
         });
-        thread.start();
-        try {
-            thread.join();
-            setTableViewUcitel();
-            setTableViewPracoviste();
-            setTableViewPredmety();
-        } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
-        }
     }
 
 }
