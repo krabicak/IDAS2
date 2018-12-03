@@ -30,4 +30,11 @@ public class CategoryOfSubject {
     this.nazevKategorie = nazevKategorie;
   }
 
+  @Override
+  public String toString() {
+    return "CategoryOfSubject{" +
+            "zkratka='" + zkratka + '\'' +
+            ", nazevKategorie='" + nazevKategorie + '\'' +
+            '}';
+  }
 }

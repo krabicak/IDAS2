@@ -1,11 +1,9 @@
 package controller.libs;
 
-import controller.MainControllerInterface;
 import model.FieldOfStudy;
 import model.Subject;
 import model.Teacher;
 import model.Workplace;
-import org.omg.CORBA.TRANSACTION_MODE;
 
 import javax.persistence.*;
 import java.util.List;

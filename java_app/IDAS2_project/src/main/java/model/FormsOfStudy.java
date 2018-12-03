@@ -1,9 +1,7 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "forma_vyuky")
@@ -14,6 +12,8 @@ public class FormsOfStudy {
   private String id;
   @Column(name = "NAZEV_FORMY")
   private String nazevFormy;
+  @ManyToMany(mappedBy = "forma")
+  private List<FieldOfStudy> studijniObory;
 
 
   public String getId() {

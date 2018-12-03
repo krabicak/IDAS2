@@ -1,9 +1,7 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "semestr")
@@ -14,6 +12,8 @@ public class Semester {
   private String id;
   @Column(name = "nazev_semestru")
   private String nazevSemestru;
+  @ManyToMany(mappedBy = "semestr")
+  private List<Subject> subjects;
 
   public String getId() {
     return id;
@@ -32,4 +32,11 @@ public class Semester {
     this.nazevSemestru = nazevSemestru;
   }
 
+  @Override
+  public String toString() {
+    return "Semester{" +
+            "id='" + id + '\'' +
+            ", nazevSemestru='" + nazevSemestru + '\'' +
+            '}';
+  }
 }

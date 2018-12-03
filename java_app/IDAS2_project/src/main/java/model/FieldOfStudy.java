@@ -17,8 +17,13 @@ public class FieldOfStudy {
   private String nazev;
   @Column(name = "zkratka")
   private String zkratka;
-  @OneToMany(mappedBy = "formaVyukyId")
-  private List<Forms> forma;
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "FORMY",
+            joinColumns = { @JoinColumn(name = "FORMA_VYUKY_ID") },
+            inverseJoinColumns = { @JoinColumn(name = "STUDIJNI_OBOR_ID") }
+    )
+  private List<FormsOfStudy> forma;
 
 
   public String getId() {
@@ -57,11 +62,11 @@ public class FieldOfStudy {
   }
 
 
-  public List<Forms> getForma() {
+  public List<FormsOfStudy> getForma() {
     return forma;
   }
 
-  public void setForma(List<Forms> forma) {
+  public void setForma(List<FormsOfStudy> forma) {
     this.forma = forma;
   }
 

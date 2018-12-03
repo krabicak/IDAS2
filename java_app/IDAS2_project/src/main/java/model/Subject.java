@@ -29,8 +29,13 @@ public class Subject {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "doporuceny_rocnik")
   private RecommendedYear doporucenyRocnik;
-  @OneToMany(mappedBy = "semestrId")
-  private List<Sem> semestr;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "SEM",
+            joinColumns = {@JoinColumn(name = "predmet_id")},
+            inverseJoinColumns = {@JoinColumn(name = "semestr_id")}
+    )
+  private List<Semester> semestr;
 
   public String getId() {
     return id;
@@ -99,11 +104,25 @@ public class Subject {
 
   public void setDoporucenyRocnik(RecommendedYear doporucenyRocnik) { this.doporucenyRocnik = doporucenyRocnik; }
 
-  public List<Sem> getSemestr() {
+  public List<Semester> getSemestr() {
     return semestr;
   }
 
-  public void setSemestr(List<Sem> semestr) {
+  public void setSemestr(List<Semester> semestr) {
     this.semestr = semestr;
   }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "id='" + id + '\'' +
+                ", nazev='" + nazev + '\'' +
+                ", zkratka='" + zkratka + '\'' +
+                ", rozsahHodin='" + rozsahHodin + '\'' +
+                ", kategorie=" + kategorie +
+                ", zpusobZakonceni=" + zpusobZakonceni +
+                ", doporucenyRocnik=" + doporucenyRocnik +
+                ", semestr=" + semestr +
+                '}';
+    }
 }

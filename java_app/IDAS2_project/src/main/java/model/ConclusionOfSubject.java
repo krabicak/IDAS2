@@ -33,4 +33,11 @@ public class ConclusionOfSubject {
     this.nazevZakonceni = nazevZakonceni;
   }
 
+  @Override
+  public String toString() {
+    return "ConclusionOfSubject{" +
+            "zkratka='" + zkratka + '\'' +
+            ", nazevZakonceni='" + nazevZakonceni + '\'' +
+            '}';
+  }
 }

@@ -21,4 +21,10 @@ public class RecommendedYear {
     this.cisloRocniku = cisloRocniku;
   }
 
+  @Override
+  public String toString() {
+    return "RecommendedYear{" +
+            "cisloRocniku='" + cisloRocniku + '\'' +
+            '}';
+  }
 }

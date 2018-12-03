@@ -55,6 +55,9 @@ public class Teacher {
         this.role = role;
     }
 
+    public Teacher() {
+    }
+
     public String getId() {
         return id;
     }
