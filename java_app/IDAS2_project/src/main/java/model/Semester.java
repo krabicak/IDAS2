@@ -34,9 +34,6 @@ public class Semester {
 
   @Override
   public String toString() {
-    return "Semester{" +
-            "id='" + id + '\'' +
-            ", nazevSemestru='" + nazevSemestru + '\'' +
-            '}';
+    return nazevSemestru;
   }
 }

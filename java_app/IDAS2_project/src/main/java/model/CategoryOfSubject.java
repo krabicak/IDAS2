@@ -32,9 +32,6 @@ public class CategoryOfSubject {
 
   @Override
   public String toString() {
-    return "CategoryOfSubject{" +
-            "zkratka='" + zkratka + '\'' +
-            ", nazevKategorie='" + nazevKategorie + '\'' +
-            '}';
+    return nazevKategorie;
   }
 }

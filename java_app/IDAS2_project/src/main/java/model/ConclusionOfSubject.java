@@ -35,9 +35,6 @@ public class ConclusionOfSubject {
 
   @Override
   public String toString() {
-    return "ConclusionOfSubject{" +
-            "zkratka='" + zkratka + '\'' +
-            ", nazevZakonceni='" + nazevZakonceni + '\'' +
-            '}';
+    return nazevZakonceni;
   }
 }

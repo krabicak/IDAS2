@@ -23,8 +23,6 @@ public class Obligation {
 
   @Override
   public String toString() {
-    return "Obligation{" +
-            "typ='" + typ + '\'' +
-            '}';
+    return typ;
   }
 }

@@ -1,20 +1,33 @@
 package view.gui;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import controller.MainController;
 import controller.MainControllerInterface;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.*;
 import view.gui.libs.Dialogs;
 
 public class FXMLGUIController implements Initializable {
-    private MainControllerInterface mainController = new MainController();
+    private MainControllerInterface mainController;
 
+    @FXML
+    private TableView<Workplace> tableViewPracoviste;
+    @FXML
+    private TableView<Teacher> tableViewUcitel;
+    @FXML
+    public TableView<Subject> tableViewPredmety;
     @FXML
     private Tab ucitelTab;
     @FXML
@@ -24,25 +37,25 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delUcitelbtn;
     @FXML
-    private TableColumn<?, ?> ucitel_idClm;
+    private TableColumn<Teacher, String> ucitel_idClm;
     @FXML
-    private TableColumn<?, ?> titul_predClm;
+    private TableColumn<Teacher, String> titul_predClm;
     @FXML
-    private TableColumn<?, ?> ucitel_jmenoClm;
+    private TableColumn<Teacher, String> ucitel_jmenoClm;
     @FXML
-    private TableColumn<?, ?> ucitel_prijmeniClm;
+    private TableColumn<Teacher, String> ucitel_prijmeniClm;
     @FXML
-    private TableColumn<?, ?> titul_zaClm;
+    private TableColumn<Teacher, String> titul_zaClm;
     @FXML
-    private TableColumn<?, ?> ucitel_pracovisteClm;
+    private TableColumn<Teacher, Workplace> ucitel_pracovisteClm;
     @FXML
-    private TableColumn<?, ?> ucitel_uvazekClm;
+    private TableColumn<Teacher, Obligation> ucitel_uvazekClm;
     @FXML
-    private TableColumn<?, ?> ucitel_mailClm;
+    private TableColumn<Teacher, String> ucitel_mailClm;
     @FXML
-    private TableColumn<?, ?> ucitel_telefonClm;
+    private TableColumn<Teacher, String> ucitel_telefonClm;
     @FXML
-    private TableColumn<?, ?> ucitel_mobilClm;
+    private TableColumn<Teacher, String> ucitel_mobilClm;
     @FXML
     private Tab pracovisteTab;
     @FXML
@@ -52,11 +65,11 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delPracovisteBtn;
     @FXML
-    private TableColumn<?, ?> pracoviste_idClm;
+    private TableColumn<Teacher, String> pracoviste_idClm;
     @FXML
-    private TableColumn<?, ?> pracoviste_nazevClm;
+    private TableColumn<Teacher, String> pracoviste_nazevClm;
     @FXML
-    private TableColumn<?, ?> pracoviste_zkratkaClm;
+    private TableColumn<Teacher, String> pracoviste_zkratkaClm;
     @FXML
     private Tab rozvrhTab;
     @FXML
@@ -88,19 +101,19 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delPredmetBtn;
     @FXML
-    private TableColumn<?, ?> predmety_nazevClm;
+    private TableColumn<Subject, String> predmety_nazevClm;
     @FXML
-    private TableColumn<?, ?> predmety_zkratkaClm;
+    private TableColumn<Subject, String> predmety_zkratkaClm;
     @FXML
-    private TableColumn<?, ?> predmety_hodinClm;
+    private TableColumn<Subject, String> predmety_hodinClm;
     @FXML
-    private TableColumn<?, ?> predmety_semestrClm;
+    private TableColumn<Subject, List<Semester>> predmety_semestrClm;
     @FXML
-    private TableColumn<?, ?> predmety_kategorieClm;
+    private TableColumn<Subject, CategoryOfSubject> predmety_kategorieClm;
     @FXML
-    private TableColumn<?, ?> predmety_zakonceniClm;
+    private TableColumn<Subject, ConclusionOfSubject> predmety_zakonceniClm;
     @FXML
-    private TableColumn<?, ?> predmety_zakonceniClm1;
+    private TableColumn<Subject, Teacher> predmety_garantClm;
     @FXML
     private Tab oborTab;
     @FXML
@@ -125,29 +138,64 @@ public class FXMLGUIController implements Initializable {
     private Button delPlanBtn;
 
     public void test() {
-        Thread thread = new Thread(() -> {
-            try {
 
+    }
 
-                mainController.login("root@root.cz", "admin");
+    private void setTableViewUcitel() throws MainControllerInterface.DatabaseAccesException {
+        ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
+        ucitel_jmenoClm.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
+        ucitel_prijmeniClm.setCellValueFactory(new PropertyValueFactory<>("prijmeni"));
+        titul_predClm.setCellValueFactory(new PropertyValueFactory<>("titulPred"));
+        titul_zaClm.setCellValueFactory(new PropertyValueFactory<>("titulZa"));
+        ucitel_pracovisteClm.setCellValueFactory(new PropertyValueFactory<>("pracoviste"));
+        ucitel_uvazekClm.setCellValueFactory(new PropertyValueFactory<>("uvazek"));
+        ucitel_mailClm.setCellValueFactory(new PropertyValueFactory<>("email"));
+        ucitel_telefonClm.setCellValueFactory(new PropertyValueFactory<>("telefon"));
+        ucitel_mobilClm.setCellValueFactory(new PropertyValueFactory<>("mobil"));
 
-                mainController.getAllTeachers().forEach(System.out::println);
+        ObservableList<Teacher> list = FXCollections.observableArrayList(mainController.getAllTeachers());
+        tableViewUcitel.setItems(list);
+    }
 
-                mainController.getAllFieldsOfStudy();
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        });
-        thread.run();
-        try {
-            Dialogs.getNewEmployeeDialog(mainController.getAllWorkplaces()).showAndWait();
-        } catch (MainControllerInterface.DatabaseAccesException e) {
-            e.printStackTrace();
-        }
+    private void setTableViewPracoviste() throws MainControllerInterface.DatabaseAccesException {
+        pracoviste_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
+        pracoviste_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
+        pracoviste_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
+
+        ObservableList<Workplace> list = FXCollections.observableArrayList(mainController.getAllWorkplaces());
+        tableViewPracoviste.setItems(list);
+    }
+
+    private void setTableViewPredmety() throws MainControllerInterface.DatabaseAccesException {
+        predmety_garantClm.setCellValueFactory(new PropertyValueFactory<>("garant"));
+        predmety_hodinClm.setCellValueFactory(new  PropertyValueFactory<>("rozsahHodin"));
+        predmety_kategorieClm.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
+        predmety_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
+        predmety_semestrClm.setCellValueFactory(new PropertyValueFactory<>("semestr"));
+        predmety_zakonceniClm.setCellValueFactory(new PropertyValueFactory<>("zpusobZakonceni"));
+        predmety_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
+
+        ObservableList<Subject> list = FXCollections.observableArrayList(mainController.getAllSubjects());
+        tableViewPredmety.setItems(list);
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-
+        Thread thread = new Thread(() -> {
+            try {
+                mainController = new MainController();
+            }catch (Exception e){
+                Dialogs.showErrorMessage(e);
+            }
+        });
+        thread.start();
+        try {
+            thread.join();
+            setTableViewUcitel();
+            setTableViewPracoviste();
+            setTableViewPredmety();
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
     }
 
 }

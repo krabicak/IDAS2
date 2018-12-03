@@ -52,11 +52,6 @@ public class Workplace {
 
   @Override
   public String toString() {
-    return "Workplace{" +
-            "id='" + id + '\'' +
-            ", nazev='" + nazev + '\'' +
-            ", zkratka='" + zkratka + '\'' +
-            ", fakulta=" + fakulta +
-            '}';
+    return zkratka;
   }
 }

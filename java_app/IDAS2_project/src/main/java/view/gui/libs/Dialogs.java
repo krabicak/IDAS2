@@ -1,5 +1,6 @@
 package view.gui.libs;
 
+import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
@@ -10,9 +11,28 @@ import model.Teacher;
 import model.Workplace;
 
 import java.util.List;
+import java.util.Optional;
 
 public final class Dialogs {
     private Dialogs() {
+    }
+
+    public static void showExitDialog() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText("Přejete si ukončit tento program?");
+        alert.setTitle("Konec");
+        Optional<ButtonType> result = alert.showAndWait();
+        result.ifPresent((t) -> {
+            Platform.exit();
+        });
+    }
+
+    public static void showErrorMessage(Exception ex) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Chyba");
+        alert.setHeaderText(ex.getMessage());
+        alert.setContentText(ex.toString());
+        alert.showAndWait();
     }
 
     private static void isItNull(TextField textField)

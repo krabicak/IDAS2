@@ -46,7 +46,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tableViewUcitel" prefHeight="200.0" prefWidth="200.0">
                           <columns>
                             <TableColumn fx:id="ucitel_idClm" prefWidth="75.0" text="netID" />
                               <TableColumn fx:id="titul_predClm" prefWidth="75.0" text="titul před" />
@@ -94,7 +94,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tableViewPracoviste" prefHeight="200.0" prefWidth="200.0">
                            <columns>
                               <TableColumn fx:id="pracoviste_idClm" prefWidth="75.0" text="ID" />
                               <TableColumn fx:id="pracoviste_nazevClm" prefWidth="75.0" text="Název" />
@@ -178,7 +178,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tableViewPredmety" prefHeight="200.0" prefWidth="200.0">
                            <columns>
                               <TableColumn fx:id="predmety_nazevClm" prefWidth="75.0" text="Název" />
                               <TableColumn fx:id="predmety_zkratkaClm" prefWidth="75.0" text="Zkratka" />
@@ -186,7 +186,7 @@
                               <TableColumn fx:id="predmety_semestrClm" prefWidth="75.0" text="Semestr" />
                               <TableColumn fx:id="predmety_kategorieClm" prefWidth="71.0" text="Kategorie" />
                               <TableColumn fx:id="predmety_zakonceniClm" prefWidth="115.0" text="Způsob zakončení" />
-                              <TableColumn fx:id="predmety_zakonceniClm1" prefWidth="115.0" text="Garant" />
+                              <TableColumn fx:id="predmety_garantClm" prefWidth="115.0" text="Garant" />
                            </columns>
                         </TableView>
                      </children>

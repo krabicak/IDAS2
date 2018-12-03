@@ -26,10 +26,10 @@ public class Teacher {
     @Column(name = "titul_za")
     private String titulZa;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="pracoviste")
+    @JoinColumn(name = "pracoviste")
     private Workplace pracoviste;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="uvazek")
+    @JoinColumn(name = "uvazek")
     private Obligation uvazek;
     @Column(name = "email", nullable = false)
     private String email;
@@ -38,7 +38,7 @@ public class Teacher {
     @Column(name = "mobil")
     private String mobil;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="role", nullable = false)
+    @JoinColumn(name = "role", nullable = false)
     private Role role;
 
 
@@ -156,18 +156,6 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" +
-                "id='" + id + '\'' +
-                ", titulPred='" + titulPred + '\'' +
-                ", jmeno='" + jmeno + '\'' +
-                ", prijmeni='" + prijmeni + '\'' +
-                ", titulZa='" + titulZa + '\'' +
-                ", pracoviste=" + pracoviste +
-                ", uvazek=" + uvazek +
-                ", email='" + email + '\'' +
-                ", telefon='" + telefon + '\'' +
-                ", mobil='" + mobil + '\'' +
-                ", role=" + role +
-                '}';
+        return ((titulPred != null) ? titulPred + ' ' : "") + jmeno + ' ' + prijmeni + ' ' + ((titulZa != null) ? titulZa : "");
     }
 }
