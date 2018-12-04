@@ -49,17 +49,17 @@ public final class DatabaseHelper {
     public static List<Teacher> getAllTeachers() throws DatabaseException {
 
         try {
-            Query query = em.createQuery("from Teacher ");
+            Query query = em.createNamedQuery("get_all_teachers");
             return query.getResultList();
         } catch (Exception e) {
-            throw new DatabaseException("Cannot get data from database: " + e.getLocalizedMessage());
+            throw new DatabaseException(e);
         }
     }
 
     public static List<Workplace> getAllWorkplaces() throws DatabaseException {
 
         try {
-            Query query = em.createQuery("from Workplace ");
+            Query query = em.createNamedQuery("get_all_workplaces");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);
@@ -68,7 +68,7 @@ public final class DatabaseHelper {
 
     public static List<Subject> getAllSubjects() throws DatabaseException {
         try {
-            Query query = em.createQuery("from Subject ");
+            Query query = em.createNamedQuery("get_all_subjects");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);
@@ -77,7 +77,7 @@ public final class DatabaseHelper {
 
     public static List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseException {
         try {
-            Query query = em.createQuery("from FieldOfStudy ");
+            Query query = em.createNamedQuery("get_all_fields_of_study");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);
@@ -86,7 +86,7 @@ public final class DatabaseHelper {
 
     public static List<LearningAction> getAllLearningActions() throws DatabaseException {
         try {
-            Query query = em.createQuery("from LearningAction ");
+            Query query = em.createNamedQuery("get_all_learning_actions");
             return query.getResultList();
         }catch (Exception e){
             throw new DatabaseException(e);

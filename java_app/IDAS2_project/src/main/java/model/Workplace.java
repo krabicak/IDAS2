@@ -2,6 +2,12 @@ package model;
 
 import javax.persistence.*;
 
+@NamedNativeQuery(
+        name = "get_all_workplaces",
+        query = "{ ? = call get_all_workplaces ( ) }",
+        resultClass = Workplace.class,
+        hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+)
 @Entity
 @Table(name = "view_workplace")
 public class Workplace {

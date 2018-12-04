@@ -2,7 +2,9 @@ package view.gui;
 
 import controller.MainController;
 import controller.MainControllerInterface;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,6 +14,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 import model.*;
 import view.gui.libs.Data;
 import view.gui.libs.Dialogs;
@@ -22,7 +25,7 @@ import java.util.ResourceBundle;
 import java.util.concurrent.CompletableFuture;
 
 public class FXMLGUIController implements Initializable {
-    private MainControllerInterface mainController;
+    private MainControllerInterface mainController = new MainController();
 
     @FXML
     private TableView<Workplace> tableViewPracoviste;
@@ -113,7 +116,7 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private TableColumn<Subject, String> predmety_hodinClm;
     @FXML
-    private TableColumn<Subject, List<Semester>> predmety_semestrClm;
+    private TableColumn<Subject, String> predmety_semestrClm;
     @FXML
     private TableColumn<Subject, CategoryOfSubject> predmety_kategorieClm;
     @FXML
@@ -133,7 +136,7 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private TableColumn<FieldOfStudy, String> obor_zkratkaClm;
     @FXML
-    private TableColumn<FieldOfStudy, FormsOfStudy> obor_formaClm;
+    private TableColumn<FieldOfStudy, String> obor_formaClm;
     @FXML
     private Tab planTab;
     @FXML
@@ -147,7 +150,7 @@ public class FXMLGUIController implements Initializable {
 
     }
 
-    private void setTableViewUcitel(List<Teacher> list){
+    private void setTableViewUcitel(List<Teacher> list) {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
         ucitel_jmenoClm.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
         ucitel_prijmeniClm.setCellValueFactory(new PropertyValueFactory<>("prijmeni"));
@@ -163,7 +166,7 @@ public class FXMLGUIController implements Initializable {
         tableViewUcitel.setItems(lst);
     }
 
-    private void setTableViewPracoviste(List<Workplace> list){
+    private void setTableViewPracoviste(List<Workplace> list) {
         pracoviste_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
         pracoviste_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
         pracoviste_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
@@ -172,12 +175,21 @@ public class FXMLGUIController implements Initializable {
         tableViewPracoviste.setItems(lst);
     }
 
-    private void setTableViewPredmety(List<Subject> list){
+    private void setTableViewPredmety(List<Subject> list) {
         predmety_garantClm.setCellValueFactory(new PropertyValueFactory<>("garant"));
         predmety_hodinClm.setCellValueFactory(new PropertyValueFactory<>("rozsahHodin"));
         predmety_kategorieClm.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
         predmety_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
-        predmety_semestrClm.setCellValueFactory(new PropertyValueFactory<>("semestr"));
+        predmety_semestrClm.setCellValueFactory(param -> {
+            StringBuilder sem = new StringBuilder();
+            param.getValue().getSemestr().forEach(semester -> {
+                sem.append(semester.getNazevSemestru());
+                sem.append(',');
+            });
+            if (sem.length() > 1)
+                sem.deleteCharAt(sem.length() - 1);
+            return new SimpleStringProperty(sem.toString());
+        });
         predmety_zakonceniClm.setCellValueFactory(new PropertyValueFactory<>("zpusobZakonceni"));
         predmety_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
 
@@ -185,16 +197,24 @@ public class FXMLGUIController implements Initializable {
         tableViewPredmety.setItems(lst);
     }
 
-    private void setTableViewObory(List<FieldOfStudy> list){
-        obor_formaClm.setCellValueFactory(new PropertyValueFactory<>("forma"));
+    private void setTableViewObory(List<FieldOfStudy> list) {
+        obor_formaClm.setCellValueFactory(param -> {
+            StringBuilder sem = new StringBuilder();
+            param.getValue().getForma().forEach(form -> {
+                sem.append(form.getNazevFormy());
+                sem.append(',');
+            });
+            if (sem.length() > 1)
+                sem.deleteCharAt(sem.length() - 1);
+            return new SimpleStringProperty(sem.toString());
+        });
         obor_nazevClm.setCellValueFactory(new PropertyValueFactory<>("nazev"));
         obor_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
-
         ObservableList<FieldOfStudy> lst = FXCollections.observableArrayList(list);
         tableViewObory.setItems(lst);
     }
 
-    private void setTableViewRozvrh(List<LearningAction> list){
+    private void setTableViewRozvrh(List<LearningAction> list) {
         rozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
         rozvrh_odClm.setCellValueFactory(new PropertyValueFactory<>("pocatek"));
         rozvrh_doClm.setCellValueFactory(new PropertyValueFactory<>("konec"));
@@ -207,10 +227,9 @@ public class FXMLGUIController implements Initializable {
         tableViewRozvrh.setItems(lst);
     }
 
-    private void setAllData(){
+    private void setAllData() {
         CompletableFuture.supplyAsync(() -> {
             try {
-                mainController = new MainController();
                 Data data = new Data();
                 data.setSubjects(mainController.getAllSubjects());
                 data.setTeachers(mainController.getAllTeachers());
