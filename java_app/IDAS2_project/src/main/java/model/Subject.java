@@ -114,15 +114,6 @@ public class Subject {
 
     @Override
     public String toString() {
-        return "Subject{" +
-                "id='" + id + '\'' +
-                ", nazev='" + nazev + '\'' +
-                ", zkratka='" + zkratka + '\'' +
-                ", rozsahHodin='" + rozsahHodin + '\'' +
-                ", kategorie=" + kategorie +
-                ", zpusobZakonceni=" + zpusobZakonceni +
-                ", doporucenyRocnik=" + doporucenyRocnik +
-                ", semestr=" + semestr +
-                '}';
+        return zkratka;
     }
 }

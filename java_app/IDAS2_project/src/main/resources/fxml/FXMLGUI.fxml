@@ -134,7 +134,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tableViewRozvrh" prefHeight="200.0" prefWidth="200.0">
                            <columns>
                               <TableColumn fx:id="rozvrh_denClm" prefWidth="70.0" text="Den" />
                               <TableColumn fx:id="rozvrh_odClm" prefWidth="52.0" text="Od: " />
@@ -222,7 +222,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tableViewObory" prefHeight="200.0" prefWidth="200.0">
                            <columns>
                               <TableColumn fx:id="obor_nazevClm" prefWidth="220.0" text="Název" />
                               <TableColumn fx:id="obor_zkratkaClm" minWidth="0.0" prefWidth="84.0" text="Zkratka" />

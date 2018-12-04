@@ -1,10 +1,7 @@
 package controller;
 
 import controller.libs.DatabaseHelper;
-import model.FieldOfStudy;
-import model.Subject;
-import model.Teacher;
-import model.Workplace;
+import model.*;
 
 import javax.persistence.Persistence;
 import java.util.List;
@@ -25,6 +22,10 @@ public class MainController implements MainControllerInterface {
             throw new LoginException(e);
         }
         this.password = password;
+    }
+
+    public boolean isUserLogged() {
+        return loggedUser != null;
     }
 
     public List<Teacher> getAllTeachers() throws DatabaseAccesException {
@@ -51,10 +52,18 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-    public  List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseAccesException{
+    public List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllFieldsOfStudy();
         } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<LearningAction> getAllLearningActions() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllLearningActions();
+        } catch (Exception e) {
             throw new DatabaseAccesException(e);
         }
     }

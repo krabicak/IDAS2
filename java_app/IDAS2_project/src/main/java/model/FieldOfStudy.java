@@ -9,6 +9,7 @@ public class FieldOfStudy {
 
   @Id
   @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "pracoviste")
@@ -20,8 +21,8 @@ public class FieldOfStudy {
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "FORMY",
-            joinColumns = { @JoinColumn(name = "FORMA_VYUKY_ID") },
-            inverseJoinColumns = { @JoinColumn(name = "STUDIJNI_OBOR_ID") }
+            joinColumns = { @JoinColumn(name = "studijni_obor_id") },
+            inverseJoinColumns = { @JoinColumn(name = "forma_vyuky_id") }
     )
   private List<FormsOfStudy> forma;
 
@@ -70,4 +71,14 @@ public class FieldOfStudy {
     this.forma = forma;
   }
 
+    @Override
+    public String toString() {
+        return "FieldOfStudy{" +
+                "id='" + id + '\'' +
+                ", pracoviste=" + pracoviste +
+                ", nazev='" + nazev + '\'' +
+                ", zkratka='" + zkratka + '\'' +
+                ", forma=" + forma +
+                '}';
+    }
 }

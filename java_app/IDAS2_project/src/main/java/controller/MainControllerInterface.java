@@ -1,9 +1,6 @@
 package controller;
 
-import model.FieldOfStudy;
-import model.Subject;
-import model.Teacher;
-import model.Workplace;
+import model.*;
 
 import java.util.List;
 
@@ -41,6 +38,17 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException
      */
     List<FieldOfStudy> getAllFieldsOfStudy() throws DatabaseAccesException;
+
+    /**
+     * @return vrací všechny rozvrhové akce
+     * @throws DatabaseAccesException
+     */
+    List<LearningAction> getAllLearningActions() throws DatabaseAccesException;
+
+    /**
+     * @return pokud je uzivatel prihlasen true jinak false
+     */
+    boolean isUserLogged();
 
     class LoginException extends Exception {
 

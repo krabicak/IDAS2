@@ -7,30 +7,42 @@ import java.util.List;
 @Table(name = "forma_vyuky")
 public class FormsOfStudy {
 
-  @Id
-  @Column(name = "ID")
-  private String id;
-  @Column(name = "NAZEV_FORMY")
-  private String nazevFormy;
-  @ManyToMany(mappedBy = "forma")
-  private List<FieldOfStudy> studijniObory;
+    @Id
+    @Column(name = "ID")
+    private String id;
+    @Column(name = "NAZEV_FORMY")
+    private String nazevFormy;
+    @ManyToMany(mappedBy = "forma")
+    private List<FieldOfStudy> studijniObory;
 
 
-  public String getId() {
-    return id;
-  }
+    public String getId() {
+        return id;
+    }
 
-  public void setId(String id) {
-    this.id = id;
-  }
+    public void setId(String id) {
+        this.id = id;
+    }
 
 
-  public String getNazevFormy() {
-    return nazevFormy;
-  }
+    public String getNazevFormy() {
+        return nazevFormy;
+    }
 
-  public void setNazevFormy(String nazevFormy) {
-    this.nazevFormy = nazevFormy;
-  }
+    public void setNazevFormy(String nazevFormy) {
+        this.nazevFormy = nazevFormy;
+    }
 
+    public List<FieldOfStudy> getStudijniObory() {
+        return studijniObory;
+    }
+
+    public void setStudijniObory(List<FieldOfStudy> studijniObory) {
+        this.studijniObory = studijniObory;
+    }
+
+    @Override
+    public String toString() {
+        return nazevFormy;
+    }
 }
