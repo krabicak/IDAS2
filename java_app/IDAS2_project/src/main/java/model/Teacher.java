@@ -2,7 +2,31 @@ package model;
 
 import javax.persistence.*;
 
+/*@NamedStoredProcedureQuery(
+        name="add_teacher",
+        procedureName="add_teacher",
+        parameters={
+                @StoredProcedureParameter(name="admin_mail", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="admin_heslo", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_jmeno", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_prijmeni", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_titul_pred", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_titul_za", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_telefon", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_mobil", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_email", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_pracoviste_id", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_heslo", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_role_zkratka", type=String.class, mode=ParameterMode.IN),
+                @StoredProcedureParameter(name="p_uvazek_typ", type=String.class, mode=ParameterMode.IN)
+        }
+)*/
 @NamedNativeQueries({
+        /*@NamedNativeQuery(
+                name = "add_teacher",
+                query = "{ call add_teacher ( ? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? )}",
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        ),*/
         @NamedNativeQuery(
                 name = "login_user",
                 query = "{ ? = call login_usr ( ? , ? ) }",
@@ -47,9 +71,10 @@ public class Teacher {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role", nullable = false)
     private Role role;
+    @Transient
+    private String heslo;
 
-
-    public Teacher(String titulPred, String jmeno, String prijmeni, String titulZa, Workplace pracoviste, Obligation uvazek, String email, String telefon, String mobil, Role role) {
+    public Teacher(String titulPred, String jmeno, String prijmeni, String titulZa, Workplace pracoviste, Obligation uvazek, String email, String telefon, String mobil, Role role, String heslo) {
         this.titulPred = titulPred;
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
@@ -60,6 +85,7 @@ public class Teacher {
         this.telefon = telefon;
         this.mobil = mobil;
         this.role = role;
+        this.heslo = heslo;
     }
 
     public Teacher() {
@@ -160,6 +186,10 @@ public class Teacher {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public String getHeslo() { return heslo; }
+
+    public void setHeslo(String heslo) { this.heslo = heslo; }
 
     @Override
     public String toString() {

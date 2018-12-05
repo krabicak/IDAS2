@@ -30,7 +30,7 @@ public class LearningAction {
     private String konec;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEN")
-    private DayOfWeek den;
+    private Day den;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PREDMET")
     private Subject predmet;
@@ -86,11 +86,11 @@ public class LearningAction {
         this.konec = konec;
     }
 
-    public DayOfWeek getDen() {
+    public Day getDen() {
         return den;
     }
 
-    public void setDen(DayOfWeek den) {
+    public void setDen(Day den) {
         this.den = den;
     }
 

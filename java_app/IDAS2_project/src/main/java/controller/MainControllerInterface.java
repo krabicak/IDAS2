@@ -1,5 +1,6 @@
 package controller;
 
+import controller.libs.DatabaseHelper;
 import model.*;
 
 import java.util.List;
@@ -50,10 +51,25 @@ public interface MainControllerInterface {
      */
     boolean isUserLogged();
 
+    /**
+     * @param newTeacher
+     * @throws DatabaseAccesException
+     */
+    void addTeacher(Teacher newTeacher) throws DatabaseAccesException, LoginException;
+
+    /**
+     * @return
+     */
+    Teacher getLoggedUser();
+
     class LoginException extends Exception {
 
         public LoginException(Exception e) {
             super(e);
+        }
+
+        public LoginException(String s) {
+            super(s);
         }
     }
 
@@ -61,6 +77,10 @@ public interface MainControllerInterface {
 
         public DatabaseAccesException(Exception e) {
             super(e);
+        }
+
+        public DatabaseAccesException(String s){
+            super(s);
         }
     }
 }

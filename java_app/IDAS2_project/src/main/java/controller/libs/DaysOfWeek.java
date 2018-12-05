@@ -1,6 +1,6 @@
 package controller.libs;
 
-import model.DayOfWeek;
+import model.Day;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,7 +16,7 @@ public class DaysOfWeek implements Runnable {
 
         Query query = em.createNamedQuery("get_days_of_week");
 
-        List<DayOfWeek> days = query.getResultList();
+        List<Day> days = query.getResultList();
         System.out.println(days);
         System.out.println(days.get(0).getFullname());
 

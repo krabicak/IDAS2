@@ -16,25 +16,25 @@ public class Subject {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id",nullable = false)
+  @Column(name = "ID",nullable = false)
   private String id;
-  @Column(name = "nazev")
+  @Column(name = "NAZEV")
   private String nazev;
-  @Column(name = "zkratka")
+  @Column(name = "ZKRATKA")
   private String zkratka;
-  @Column(name = "rozsah_hodin")
+  @Column(name = "ROZSAH_HODIN")
   private String rozsahHodin;
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "kategorie")
+  @JoinColumn(name = "KATEGORIE")
   private CategoryOfSubject kategorie;
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "zpusob_zakonceni")
+  @JoinColumn(name = "ZPUSOB_ZAKONCENI")
   private ConclusionOfSubject zpusobZakonceni;
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "garant")
+  @JoinColumn(name = "GARANT")
   private Teacher garant;
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "doporuceny_rocnik")
+  @JoinColumn(name = "DOPORUCENY_ROCNIK")
   private RecommendedYear doporucenyRocnik;
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(

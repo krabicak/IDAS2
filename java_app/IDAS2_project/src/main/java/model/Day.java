@@ -3,14 +3,14 @@ package model;
 import javax.persistence.*;
 
 @NamedNativeQuery(
-        name = "get_days_of_week",
-        query = "{ ? = call get_days_of_week ( ) }",
-        resultClass = DayOfWeek.class,
+        name = "get_all_days",
+        query = "{ ? = call get_all_days ( ) }",
+        resultClass = Day.class,
         hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
 )
 @Entity
 @Table(name = "dny")
-public class DayOfWeek {
+public class Day {
 
     @Id
     @Column(name = "ZKRATKA")
@@ -18,10 +18,10 @@ public class DayOfWeek {
     @Column(name = "DETAIL")
     private String fullname;
 
-    public DayOfWeek() {
+    public Day() {
     }
 
-    public DayOfWeek(String shortcut, String fullname) {
+    public Day(String shortcut, String fullname) {
         this.shortcut = shortcut;
         this.fullname = fullname;
     }

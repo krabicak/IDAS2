@@ -2,9 +2,7 @@ package view.gui;
 
 import controller.MainController;
 import controller.MainControllerInterface;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -14,7 +12,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Callback;
 import model.*;
 import view.gui.libs.Data;
 import view.gui.libs.Dialogs;
@@ -88,7 +85,7 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delRozvrhBtn;
     @FXML
-    private TableColumn<LearningAction, DayOfWeek> rozvrh_denClm;
+    private TableColumn<LearningAction, Day> rozvrh_denClm;
     @FXML
     private TableColumn<LearningAction, String> rozvrh_odClm;
     @FXML
@@ -236,6 +233,8 @@ public class FXMLGUIController implements Initializable {
                 data.setWorkplaces(mainController.getAllWorkplaces());
                 data.setFieldOfStudies(mainController.getAllFieldsOfStudy());
                 data.setLearningActions(mainController.getAllLearningActions());
+                mainController.login("root@root.cz","admin");
+                //mainController.addTeacher(new Teacher(null,"test","test",null,data.getWorkplaces().get(0),data.getTeachers().get(0).getUvazek(),"test@test.cz",null,null,data.getTeachers().get(0).getRole(),"heslo"));
                 return data;
             } catch (Exception e) {
                 Dialogs.showErrorMessage(e);

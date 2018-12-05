@@ -28,6 +28,10 @@ public class MainController implements MainControllerInterface {
         return loggedUser != null;
     }
 
+    public boolean isUserAdmin(){
+        return loggedUser.getRole().getZkratka().equals("admin");
+    }
+
     public List<Teacher> getAllTeachers() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllTeachers();
@@ -66,5 +70,19 @@ public class MainController implements MainControllerInterface {
         } catch (Exception e) {
             throw new DatabaseAccesException(e);
         }
+    }
+
+    public void addTeacher(Teacher newTeacher) throws DatabaseAccesException, LoginException {
+        try {
+            if (!isUserLogged()) throw new LoginException("Uživatel není přihlášen");
+            if (!isUserAdmin()) throw new DatabaseAccesException("Přihlášený uživatel není admin");
+            DatabaseHelper.addTeacher(newTeacher,loggedUser.getEmail(),password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public Teacher getLoggedUser(){
+        return loggedUser;
     }
 }

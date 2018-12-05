@@ -262,7 +262,7 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0" />
+                        <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                   </GridPane>
                </content></Tab>
