@@ -85,6 +85,13 @@ public interface MainControllerInterface {
      */
     void logOut();
 
+    /**
+     * @param teacher
+     * @throws DatabaseAccesException
+     * @throws LoginException
+     */
+    void updateTeacher(Teacher teacher) throws DatabaseAccesException, LoginException;
+
     class LoginException extends Exception {
 
         public LoginException(Exception e) {

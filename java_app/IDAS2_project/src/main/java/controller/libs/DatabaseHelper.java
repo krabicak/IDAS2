@@ -101,34 +101,57 @@ public final class DatabaseHelper {
         }
     }
 
+    private static CallableStatement setTeacher(CallableStatement stmt, Teacher newTeacher, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, newTeacher.getJmeno());
+        stmt.setString(4, newTeacher.getPrijmeni());
+        if (newTeacher.getTitulPred() == null) {
+            stmt.setNull(5, Types.VARCHAR);
+        } else stmt.setString(5, newTeacher.getTitulPred());
+        if (newTeacher.getTitulZa() == null) {
+            stmt.setNull(6, Types.VARCHAR);
+        } else stmt.setString(6, newTeacher.getTitulZa());
+        if (newTeacher.getTelefon() == null) {
+            stmt.setNull(7, Types.VARCHAR);
+        } else stmt.setString(7, newTeacher.getTelefon());
+        if (newTeacher.getMobil() == null) {
+            stmt.setNull(8, Types.VARCHAR);
+        } else stmt.setString(8, newTeacher.getMobil());
+        stmt.setString(9, newTeacher.getEmail());
+        if (newTeacher.getPracoviste() == null) {
+            stmt.setNull(10, Types.NUMERIC);
+        } else stmt.setString(10, newTeacher.getPracoviste().getId());
+        if (newTeacher.getHeslo() == null) {
+            stmt.setNull(11, Types.VARCHAR);
+        } else stmt.setString(11, newTeacher.getHeslo());
+        stmt.setString(12, newTeacher.getRole().getZkratka());
+        stmt.setString(13, newTeacher.getUvazek().getTyp());
+        return stmt;
+    }
+
     public static void addTeacher(Teacher newTeacher, String email, String password) throws DatabaseException {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call add_teacher(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12,:13) }");
-                stmt.setString(1, email);
-                stmt.setString(2, password);
-                stmt.setString(3, newTeacher.getJmeno());
-                stmt.setString(4, newTeacher.getPrijmeni());
-                if (newTeacher.getTitulPred() == null) {
-                    stmt.setNull(5, Types.VARCHAR);
-                } else stmt.setString(5, newTeacher.getTitulPred());
-                if (newTeacher.getTitulZa() == null) {
-                    stmt.setNull(6, Types.VARCHAR);
-                } else stmt.setString(6, newTeacher.getTitulZa());
-                if (newTeacher.getTelefon() == null) {
-                    stmt.setNull(7, Types.VARCHAR);
-                } else stmt.setString(7, newTeacher.getTelefon());
-                if (newTeacher.getMobil() == null) {
-                    stmt.setNull(8, Types.VARCHAR);
-                } else stmt.setString(8, newTeacher.getMobil());
-                stmt.setString(9, newTeacher.getEmail());
-                if (newTeacher.getPracoviste() == null) {
-                    stmt.setNull(10, Types.NUMERIC);
-                } else stmt.setString(10, newTeacher.getPracoviste().getId());
-                stmt.setString(11, newTeacher.getHeslo());
-                stmt.setString(12, newTeacher.getRole().getZkratka());
-                stmt.setString(13, newTeacher.getUvazek().getTyp());
+                setTeacher(stmt,newTeacher,email,password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+
+    public static void updateTeacher(Teacher teacher, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_teacher(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12,:13,:14) }");
+                setTeacher(stmt,teacher,email,password);
+                stmt.setString(14, teacher.getId());
                 stmt.execute();
                 stmt.close();
             });
@@ -142,9 +165,9 @@ public final class DatabaseHelper {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stm = connection.prepareCall("{ call delete_teacher ( :1 , :2 , :3 ) }");
-                stm.setString(1,email);
-                stm.setString(2,password);
-                stm.setString(3,teacher.getId());
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, teacher.getId());
                 stm.execute();
                 stm.close();
             });

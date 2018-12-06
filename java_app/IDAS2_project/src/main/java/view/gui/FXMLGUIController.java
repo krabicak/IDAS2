@@ -280,12 +280,12 @@ public class FXMLGUIController implements Initializable {
                 try {
                     mainController.addTeacher(teacher);
                     setAllData();
-                    Dialogs.showInfoDialog("Uživatel "+teacher+"přidán");
+                    Dialogs.showInfoDialog("Uživatel " + teacher + "přidán");
                 } catch (Exception e) {
                     Dialogs.showErrorMessage(e);
                 }
             });
-        }catch (Exception e){
+        } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
     }
@@ -295,8 +295,30 @@ public class FXMLGUIController implements Initializable {
             String name = tableViewUcitel.getSelectionModel().getSelectedItem().toString();
             mainController.deleteTeacher(tableViewUcitel.getSelectionModel().getSelectedItem());
             setAllData();
-            Dialogs.showInfoDialog("Uživatel "+name+" smazán");
-        }catch (Exception e){
+            Dialogs.showInfoDialog("Uživatel " + name + "smazán");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void updateTeacher(ActionEvent actionEvent) {
+        try {
+            Optional<Teacher> result = Dialogs.getTeacherDialog(
+                    tableViewUcitel.getSelectionModel().getSelectedItem(),
+                    mainController.getAllWorkplaces(),
+                    mainController.getAllObligations(),
+                    mainController.getAllRoles()
+            ).showAndWait();
+            result.ifPresent(teacher -> {
+                try {
+                    mainController.updateTeacher(teacher);
+                    Dialogs.showInfoDialog("Uživatel " + teacher + "upraven");
+                    setAllData();
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
     }

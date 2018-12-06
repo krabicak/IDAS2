@@ -119,4 +119,13 @@ public class MainController implements MainControllerInterface {
         loggedUser = null;
         password = null;
     }
+
+    public void updateTeacher(Teacher teacher) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.updateTeacher(teacher, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
 }

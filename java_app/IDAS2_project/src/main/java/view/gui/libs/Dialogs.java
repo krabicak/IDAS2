@@ -103,6 +103,10 @@ public final class Dialogs {
     }
 
     public static Dialog getTeacherDialog(List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles) {
+        return getTeacherDialog(new Teacher(), workplaces, obligations, roles);
+    }
+
+    public static Dialog getTeacherDialog(Teacher teacher, List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles) {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",
@@ -111,24 +115,34 @@ public final class Dialogs {
                 "Zrušit",
                 ButtonBar.ButtonData.CANCEL_CLOSE);
         TextField firstName = new TextField();
+        firstName.setText(teacher.getJmeno());
         TextField lastName = new TextField();
+        lastName.setText(teacher.getPrijmeni());
         TextField tittleBefore = new TextField();
+        tittleBefore.setText(teacher.getTitulPred());
         TextField tittleAfter = new TextField();
+        tittleAfter.setText(teacher.getTitulZa());
         TextField telNumber = new TextField();
+        telNumber.setText(teacher.getTelefon());
         TextField mobileNumber = new TextField();
+        mobileNumber.setText(teacher.getMobil());
         TextField email = new TextField();
+        email.setText(teacher.getEmail());
         PasswordField password = new PasswordField();
         ChoiceBox<Workplace> workplacess = new ChoiceBox<>();
         workplaces.forEach(workplacess.getItems()::add);
-        workplacess.getSelectionModel().selectFirst();
+        if (teacher.getPracoviste() != null) workplacess.getSelectionModel().select(teacher.getPracoviste());
+        else workplacess.getSelectionModel().selectFirst();
 
         ChoiceBox<Role> roless = new ChoiceBox<>();
         roles.forEach(roless.getItems()::add);
-        roless.getSelectionModel().selectFirst();
+        if (teacher.getRole() != null) roless.getSelectionModel().select(teacher.getRole());
+        else roless.getSelectionModel().selectFirst();
 
         ChoiceBox<Obligation> obligationn = new ChoiceBox<>();
         obligations.forEach(obligationn.getItems()::add);
-        obligationn.getSelectionModel().selectFirst();
+        if (teacher.getUvazek() != null) obligationn.getSelectionModel().select(teacher.getUvazek());
+        else obligationn.getSelectionModel().selectFirst();
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
@@ -137,7 +151,7 @@ public final class Dialogs {
                 isItNull(lastName);
                 isItNull(firstName);
                 isItNull(email);
-                isItNull(password);
+                //isItNull(password);
                 dialog.getDialogPane().lookupButton(save).setDisable(false);
             } catch (NullPointerException | NumberFormatException e) {
                 dialog.getDialogPane().lookupButton(save).setDisable(true);
@@ -184,9 +198,9 @@ public final class Dialogs {
         grid.add(obligationn, 1, 10);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Nový zaměstnanec");
+        dialog.setTitle("Učitel");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(true);
+        dialog.getDialogPane().lookupButton(save).setDisable(teacher.getId() == null);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 
@@ -204,18 +218,18 @@ public final class Dialogs {
         //vraceni objektu
         Callback<ButtonType, Teacher> callback = (ButtonType dialogButton) -> {
             if (dialogButton == save) {
-                return new Teacher(
-                        tittleBefore.getText(),
-                        firstName.getText(),
-                        lastName.getText(),
-                        tittleAfter.getText(),
-                        workplacess.getSelectionModel().getSelectedItem(),
-                        obligationn.getSelectionModel().getSelectedItem(),
-                        email.getText(),
-                        telNumber.getText(),
-                        mobileNumber.getText(),
-                        roless.getSelectionModel().getSelectedItem(),
-                        password.getText());
+                teacher.setTitulPred(tittleBefore.getText());
+                teacher.setJmeno(firstName.getText());
+                teacher.setPrijmeni(lastName.getText());
+                teacher.setTitulZa(tittleAfter.getText());
+                teacher.setPracoviste(workplacess.getSelectionModel().getSelectedItem());
+                teacher.setUvazek(obligationn.getSelectionModel().getSelectedItem());
+                teacher.setEmail(email.getText());
+                teacher.setTelefon(telNumber.getText());
+                teacher.setMobil(mobileNumber.getText());
+                teacher.setRole(roless.getSelectionModel().getSelectedItem());
+                teacher.setHeslo(password.getText());
+                return teacher;
             }
             return null;
         };
