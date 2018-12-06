@@ -68,6 +68,23 @@ public interface MainControllerInterface {
      */
     void deleteTeacher(Teacher teacher) throws DatabaseAccesException, LoginException;
 
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<Obligation> getAllObligations() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<Role> getAllRoles() throws DatabaseAccesException;
+
+    /**
+     *
+     */
+    void logOut();
+
     class LoginException extends Exception {
 
         public LoginException(Exception e) {

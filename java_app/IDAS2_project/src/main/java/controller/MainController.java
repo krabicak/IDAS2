@@ -24,7 +24,6 @@ public class MainController implements MainControllerInterface {
         try {
             loggedUser = DatabaseHelper.login(email, password);
         } catch (DatabaseHelper.DatabaseException e) {
-            System.out.println(e);
             throw new LoginException(e);
         }
         this.password = password;
@@ -98,5 +97,26 @@ public class MainController implements MainControllerInterface {
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }
+    }
+
+    public List<Obligation> getAllObligations() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllObligations();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Role> getAllRoles() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllRoles();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void logOut() {
+        loggedUser = null;
+        password = null;
     }
 }

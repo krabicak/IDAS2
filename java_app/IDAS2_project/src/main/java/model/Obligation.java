@@ -1,10 +1,14 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_obligation",
+                query = "{ ? = call get_all_obligations () }",
+                resultClass = Obligation.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )})
 @Entity
 @Table(name = "uvazek")
 public class Obligation {

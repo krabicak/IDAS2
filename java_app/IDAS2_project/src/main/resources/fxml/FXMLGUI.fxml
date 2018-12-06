@@ -268,5 +268,6 @@
                </content></Tab>
          </tabs>
       </TabPane>
+      <Button fx:id="logButton" mnemonicParsing="false" text="Přihlásit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
    </children>
 </AnchorPane>

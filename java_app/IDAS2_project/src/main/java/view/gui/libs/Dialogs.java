@@ -2,11 +2,13 @@ package view.gui.libs;
 
 import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.util.Callback;
+import javafx.util.Pair;
 import model.Teacher;
 import model.Workplace;
 
@@ -27,10 +29,17 @@ public final class Dialogs {
         });
     }
 
+    public static void showInfoDialog(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(message);
+        alert.setTitle("Info");
+        alert.show();
+    }
+
     public static void showErrorMessage(Exception ex) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Chyba");
-        alert.setHeaderText(ex.getMessage());
+        alert.setHeaderText(ex.getLocalizedMessage());
         alert.setContentText(ex.toString());
         alert.showAndWait();
     }
@@ -40,6 +49,75 @@ public final class Dialogs {
         if (textField.getText() == null || textField.getText().equals("")) {
             throw new NullPointerException("Nezadány všechny údaje");
         }
+    }
+
+    public static Dialog getLoginDialog() {
+        final ButtonType SAVE = new ButtonType(
+                "Přihlásit",
+                ButtonBar.ButtonData.OK_DONE);
+        final ButtonType CANCEL = new ButtonType(
+                "Zrušit",
+                ButtonBar.ButtonData.CANCEL_CLOSE);
+        TextField email = new TextField();
+        PasswordField password = new PasswordField();
+
+        Dialog dialog = new Dialog();
+        InvalidationListener listener = (Observable observable) -> {
+            try {
+                isItNull(email);
+                isItNull(password);
+                dialog.getDialogPane().lookupButton(SAVE).setDisable(false);
+            } catch (NullPointerException ex) {
+                dialog.getDialogPane().lookupButton(SAVE).setDisable(true);
+            }
+        };
+
+        email.setPromptText(
+                "email");
+        password.setPromptText(
+                "heslo");
+
+        GridPane grid = new GridPane();
+
+        grid.setHgap(
+                10);
+        grid.setVgap(
+                10);
+        grid.setPadding(
+                new Insets(20, 150, 10, 10));
+        grid.add(
+                new Label("Zadejte email:"), 0, 0);
+        grid.add(email,
+                1, 0);
+        grid.add(
+                new Label("Zadejte heslo:"), 0, 1);
+        grid.add(password,
+                1, 1);
+
+        dialog.setTitle(
+                "Přihlášení");
+        dialog.getDialogPane()
+                .getButtonTypes().addAll(SAVE, CANCEL);
+        dialog.getDialogPane()
+                .lookupButton(SAVE).setDisable(true);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+
+        dialog.getDialogPane()
+                .setContent(grid);
+
+        email.textProperty()
+                .addListener(listener);
+        password.textProperty()
+                .addListener(listener);
+
+        Callback<ButtonType, Pair<String,String>> callback = dialogButton -> {
+            if (dialogButton == SAVE) {
+               return new Pair<>(email.getText(), password.getText());
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+        return dialog;
     }
 
     public static Dialog getNewEmployeeDialog(List<Workplace> departments) {

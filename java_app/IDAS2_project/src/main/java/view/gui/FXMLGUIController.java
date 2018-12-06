@@ -5,6 +5,7 @@ import controller.MainControllerInterface;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -12,12 +13,15 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Pair;
 import model.*;
 import view.gui.libs.Dialogs;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
+
 
 public class FXMLGUIController implements Initializable {
     private MainControllerInterface mainController = new MainController();
@@ -32,6 +36,8 @@ public class FXMLGUIController implements Initializable {
     private TableView<FieldOfStudy> tableViewObory;
     @FXML
     private TableView<LearningAction> tableViewRozvrh;
+    @FXML
+    private Button logButton;
     @FXML
     private Tab ucitelTab;
     @FXML
@@ -238,8 +244,31 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
+        logButton.setOnAction(this::onLoginClick);
         setAllData();
     }
 
+    public void onLoginClick(ActionEvent actionEvent) {
+        try {
+            Optional<Pair<String, String>> result = Dialogs.getLoginDialog().showAndWait();
+            result.ifPresent(stringStringPair -> {
+                try {
+                    mainController.login(stringStringPair.getKey(), stringStringPair.getValue());
+                    logButton.setText("Odhlásit");
+                    logButton.setOnAction(event -> {
+                        mainController.logOut();
+                        logButton.setText("Přihlásit");
+                        logButton.setOnAction(this::onLoginClick);
+                        Dialogs.showInfoDialog("Odhlášeno");
+                    });
+                    Dialogs.showInfoDialog("Přihlášeno");
+                } catch (MainControllerInterface.LoginException e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
 }
 
