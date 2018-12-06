@@ -1,6 +1,5 @@
 package controller;
 
-import controller.libs.DatabaseHelper;
 import model.*;
 
 import java.util.List;
@@ -62,6 +61,13 @@ public interface MainControllerInterface {
      */
     Teacher getLoggedUser();
 
+    /**
+     * @param teacher
+     * @throws DatabaseAccesException
+     * @throws LoginException
+     */
+    void deleteTeacher(Teacher teacher) throws DatabaseAccesException, LoginException;
+
     class LoginException extends Exception {
 
         public LoginException(Exception e) {
@@ -79,7 +85,7 @@ public interface MainControllerInterface {
             super(e);
         }
 
-        public DatabaseAccesException(String s){
+        public DatabaseAccesException(String s) {
             super(s);
         }
     }

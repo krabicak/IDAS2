@@ -10,6 +10,11 @@ public class MainController implements MainControllerInterface {
     private Teacher loggedUser;
     private String password;
 
+    private void checkLoging() throws DatabaseAccesException, LoginException {
+        if (!isUserLogged()) throw new LoginException("Uživatel není přihlášen");
+        if (!isUserAdmin()) throw new DatabaseAccesException("Přihlášený uživatel není admin");
+    }
+
     public MainController() {
         DatabaseHelper.emf = Persistence.createEntityManagerFactory("IDAS2PU");
         DatabaseHelper.em = DatabaseHelper.emf.createEntityManager();
@@ -19,6 +24,7 @@ public class MainController implements MainControllerInterface {
         try {
             loggedUser = DatabaseHelper.login(email, password);
         } catch (DatabaseHelper.DatabaseException e) {
+            System.out.println(e);
             throw new LoginException(e);
         }
         this.password = password;
@@ -28,7 +34,7 @@ public class MainController implements MainControllerInterface {
         return loggedUser != null;
     }
 
-    public boolean isUserAdmin(){
+    public boolean isUserAdmin() {
         return loggedUser.getRole().getZkratka().equals("admin");
     }
 
@@ -74,15 +80,23 @@ public class MainController implements MainControllerInterface {
 
     public void addTeacher(Teacher newTeacher) throws DatabaseAccesException, LoginException {
         try {
-            if (!isUserLogged()) throw new LoginException("Uživatel není přihlášen");
-            if (!isUserAdmin()) throw new DatabaseAccesException("Přihlášený uživatel není admin");
-            DatabaseHelper.addTeacher(newTeacher,loggedUser.getEmail(),password);
+            checkLoging();
+            DatabaseHelper.addTeacher(newTeacher, loggedUser.getEmail(), password);
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }
     }
 
-    public Teacher getLoggedUser(){
+    public Teacher getLoggedUser() {
         return loggedUser;
+    }
+
+    public void deleteTeacher(Teacher teacher) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.deleteTeacher(teacher, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
     }
 }

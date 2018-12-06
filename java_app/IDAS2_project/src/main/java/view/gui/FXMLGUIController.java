@@ -13,13 +13,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.*;
-import view.gui.libs.Data;
 import view.gui.libs.Dialogs;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.concurrent.CompletableFuture;
 
 public class FXMLGUIController implements Initializable {
     private MainControllerInterface mainController = new MainController();
@@ -225,34 +223,18 @@ public class FXMLGUIController implements Initializable {
     }
 
     private void setAllData() {
-        CompletableFuture.supplyAsync(() -> {
-            try {
-                Data data = new Data();
-                data.setSubjects(mainController.getAllSubjects());
-                data.setTeachers(mainController.getAllTeachers());
-                data.setWorkplaces(mainController.getAllWorkplaces());
-                data.setFieldOfStudies(mainController.getAllFieldsOfStudy());
-                data.setLearningActions(mainController.getAllLearningActions());
-                mainController.login("root@root.cz","admin");
-                //mainController.addTeacher(new Teacher(null,"test","test",null,data.getWorkplaces().get(0),data.getTeachers().get(0).getUvazek(),"test@test.cz",null,null,data.getTeachers().get(0).getRole(),"heslo"));
-                return data;
-            } catch (Exception e) {
-                Dialogs.showErrorMessage(e);
-                return null;
-            }
-        }).thenApply(data -> {
-            try {
-                setTableViewUcitel(data.getTeachers());
-                setTableViewPredmety(data.getSubjects());
-                setTableViewPracoviste(data.getWorkplaces());
-                setTableViewObory(data.getFieldOfStudies());
-                setTableViewRozvrh(data.getLearningActions());
-                return true;
-            } catch (Exception e) {
-                Dialogs.showErrorMessage(e);
-                return false;
-            }
-        });
+        try {
+            mainController.login("root@root.cz", "admin");
+            //mainController.addTeacher(new Teacher(null, "test", "test", null, data.getWorkplaces().get(0), data.getTeachers().get(0).getUvazek(), "test1@test.cz", null, null, data.getTeachers().get(0).getRole(), "heslo"));
+            setTableViewUcitel(mainController.getAllTeachers());
+            setTableViewPredmety(mainController.getAllSubjects());
+            setTableViewPracoviste(mainController.getAllWorkplaces());
+            setTableViewObory(mainController.getAllFieldsOfStudy());
+            setTableViewRozvrh(mainController.getAllLearningActions());
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+
     }
 
     public void initialize(URL url, ResourceBundle rb) {
