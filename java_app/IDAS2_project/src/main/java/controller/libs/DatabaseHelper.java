@@ -50,7 +50,7 @@ public final class DatabaseHelper {
                 throw new DatabaseException("Invalid credentials");
             }
         } catch (Exception e) {
-            throw new DatabaseException(e);
+            throw new DatabaseException(e.getMessage());
         }
     }
 
@@ -139,11 +139,15 @@ public final class DatabaseHelper {
 
     public static void deleteTeacher(Teacher teacher, String email, String password) throws DatabaseException {
         try {
-            Query query = em.createNamedQuery("delete_teacher");
-            query.setParameter(1, email);
-            query.setParameter(2, password);
-            query.setParameter(3, teacher.getId());
-            query.executeUpdate();
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_teacher ( :1 , :2 , :3 ) }");
+                stm.setString(1,email);
+                stm.setString(2,password);
+                stm.setString(3,teacher.getId());
+                stm.execute();
+                stm.close();
+            });
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -151,7 +155,7 @@ public final class DatabaseHelper {
 
     public static List<Obligation> getAllObligations() throws DatabaseException {
         try {
-            Query query = em.createNamedQuery("delete_teacher");
+            Query query = em.createNamedQuery("get_all_obligations");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);

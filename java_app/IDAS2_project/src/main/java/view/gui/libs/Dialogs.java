@@ -9,6 +9,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.util.Callback;
 import javafx.util.Pair;
+import model.Obligation;
+import model.Role;
 import model.Teacher;
 import model.Workplace;
 
@@ -37,6 +39,7 @@ public final class Dialogs {
     }
 
     public static void showErrorMessage(Exception ex) {
+        System.out.println(ex);
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Chyba");
         alert.setHeaderText(ex.getLocalizedMessage());
@@ -52,12 +55,8 @@ public final class Dialogs {
     }
 
     public static Dialog getLoginDialog() {
-        final ButtonType SAVE = new ButtonType(
-                "Přihlásit",
-                ButtonBar.ButtonData.OK_DONE);
-        final ButtonType CANCEL = new ButtonType(
-                "Zrušit",
-                ButtonBar.ButtonData.CANCEL_CLOSE);
+        final ButtonType SAVE = new ButtonType("Přihlásit", ButtonBar.ButtonData.OK_DONE);
+        final ButtonType CANCEL = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
         TextField email = new TextField();
         PasswordField password = new PasswordField();
 
@@ -72,47 +71,30 @@ public final class Dialogs {
             }
         };
 
-        email.setPromptText(
-                "email");
-        password.setPromptText(
-                "heslo");
-
+        email.setPromptText("email");
+        password.setPromptText("heslo");
         GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte email:"), 0, 0);
+        grid.add(email, 1, 0);
+        grid.add(new Label("Zadejte heslo:"), 0, 1);
+        grid.add(password, 1, 1);
 
-        grid.setHgap(
-                10);
-        grid.setVgap(
-                10);
-        grid.setPadding(
-                new Insets(20, 150, 10, 10));
-        grid.add(
-                new Label("Zadejte email:"), 0, 0);
-        grid.add(email,
-                1, 0);
-        grid.add(
-                new Label("Zadejte heslo:"), 0, 1);
-        grid.add(password,
-                1, 1);
-
-        dialog.setTitle(
-                "Přihlášení");
-        dialog.getDialogPane()
-                .getButtonTypes().addAll(SAVE, CANCEL);
-        dialog.getDialogPane()
-                .lookupButton(SAVE).setDisable(true);
+        dialog.setTitle("Přihlášení");
+        dialog.getDialogPane().getButtonTypes().addAll(SAVE, CANCEL);
+        dialog.getDialogPane().lookupButton(SAVE).setDisable(true);
         dialog.initModality(Modality.APPLICATION_MODAL);
 
-        dialog.getDialogPane()
-                .setContent(grid);
+        dialog.getDialogPane().setContent(grid);
 
-        email.textProperty()
-                .addListener(listener);
-        password.textProperty()
-                .addListener(listener);
+        email.textProperty().addListener(listener);
+        password.textProperty().addListener(listener);
 
-        Callback<ButtonType, Pair<String,String>> callback = dialogButton -> {
+        Callback<ButtonType, Pair<String, String>> callback = dialogButton -> {
             if (dialogButton == SAVE) {
-               return new Pair<>(email.getText(), password.getText());
+                return new Pair<>(email.getText(), password.getText());
             }
             return null;
         };
@@ -120,139 +102,120 @@ public final class Dialogs {
         return dialog;
     }
 
-    public static Dialog getNewEmployeeDialog(List<Workplace> departments) {
+    public static Dialog getTeacherDialog(List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles) {
         // část deklarace polí
-        final ButtonType SAVE = new ButtonType(
+        ButtonType save = new ButtonType(
                 "Uložit",
                 ButtonBar.ButtonData.OK_DONE);
-        final ButtonType CANCEL = new ButtonType(
+        ButtonType cancel = new ButtonType(
                 "Zrušit",
                 ButtonBar.ButtonData.CANCEL_CLOSE);
-        final TextField FIRST_NAME = new TextField();
-        final TextField LAST_NAME = new TextField();
-        final TextField TITTLE_BEFORE = new TextField();
-        final TextField TITTLE_AFTER = new TextField();
-        final TextField TEL_NUMBER = new TextField();
-        final TextField MOBILE_NUMBER = new TextField();
-        final TextField EMAIL = new TextField();
-        final ChoiceBox<String> DEPARTMENT = new ChoiceBox<>();
-        departments.forEach((t) -> {
-            DEPARTMENT.getItems().add(t.getZkratka());
-        });
-        DEPARTMENT.getSelectionModel().selectFirst();
+        TextField firstName = new TextField();
+        TextField lastName = new TextField();
+        TextField tittleBefore = new TextField();
+        TextField tittleAfter = new TextField();
+        TextField telNumber = new TextField();
+        TextField mobileNumber = new TextField();
+        TextField email = new TextField();
+        PasswordField password = new PasswordField();
+        ChoiceBox<Workplace> workplacess = new ChoiceBox<>();
+        workplaces.forEach(workplacess.getItems()::add);
+        workplacess.getSelectionModel().selectFirst();
+
+        ChoiceBox<Role> roless = new ChoiceBox<>();
+        roles.forEach(roless.getItems()::add);
+        roless.getSelectionModel().selectFirst();
+
+        ChoiceBox<Obligation> obligationn = new ChoiceBox<>();
+        obligations.forEach(obligationn.getItems()::add);
+        obligationn.getSelectionModel().selectFirst();
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
         InvalidationListener listener = observable -> {
             try {
-                isItNull(LAST_NAME);
-                isItNull(FIRST_NAME);
-                dialog.getDialogPane().lookupButton(SAVE).setDisable(false);
+                isItNull(lastName);
+                isItNull(firstName);
+                isItNull(email);
+                isItNull(password);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
             } catch (NullPointerException | NumberFormatException e) {
-                dialog.getDialogPane().lookupButton(SAVE).setDisable(true);
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
             }
         };
 
         // popis prmpt textu
-        FIRST_NAME.setPromptText(
-                "jméno");
-        LAST_NAME.setPromptText(
-                "příjmení");
-        TITTLE_BEFORE.setPromptText("titul před");
-        TITTLE_AFTER.setPromptText("titul za");
-        TEL_NUMBER.setPromptText("telefon");
-        MOBILE_NUMBER.setPromptText("mobil");
-        EMAIL.setPromptText(
-                "email");
+        firstName.setPromptText("jméno");
+        lastName.setPromptText("příjmení");
+        tittleBefore.setPromptText("titul před");
+        tittleAfter.setPromptText("titul za");
+        telNumber.setPromptText("telefon");
+        mobileNumber.setPromptText("mobil");
+        email.setPromptText("email");
+        password.setPromptText("heslo");
 
         // grid všech polí
         GridPane grid = new GridPane();
 
-        grid.setHgap(
-                10);
-        grid.setVgap(
-                10);
-        grid.setPadding(
-                new Insets(20, 150, 10, 10));
-        grid.add(
-                new Label("Zadejte jméno:"), 0, 0);
-        grid.add(FIRST_NAME,
-                1, 0);
-        grid.add(
-                new Label("Zadejte příjmení:"), 0, 1);
-        grid.add(LAST_NAME,
-                1, 1);
-        grid.add(
-                new Label("Zadejte titul před:"), 0, 2);
-        grid.add(TITTLE_BEFORE,
-                1, 2);
-        grid.add(
-                new Label("Zadejte titul za:"), 0, 3);
-        grid.add(TITTLE_AFTER,
-                1, 3);
-        grid.add(
-                new Label("Zadejte telefon:"), 0, 4);
-        grid.add(TEL_NUMBER,
-                1, 4);
-        grid.add(
-                new Label("Zadejte číslo mobilního telefonu:"), 0, 5);
-        grid.add(MOBILE_NUMBER,
-                1, 5);
-        grid.add(
-                new Label("Zadejte email:"), 0, 6);
-        grid.add(EMAIL,
-                1, 6);
-        grid.add(
-                new Label("Vyberte katedru:"), 0, 7);
-        grid.add(DEPARTMENT,
-                1, 7);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte jméno:"), 0, 0);
+        grid.add(firstName, 1, 0);
+        grid.add(new Label("Zadejte příjmení:"), 0, 1);
+        grid.add(lastName, 1, 1);
+        grid.add(new Label("Zadejte titul před:"), 0, 2);
+        grid.add(tittleBefore, 1, 2);
+        grid.add(new Label("Zadejte titul za:"), 0, 3);
+        grid.add(tittleAfter, 1, 3);
+        grid.add(new Label("Zadejte telefon:"), 0, 4);
+        grid.add(telNumber, 1, 4);
+        grid.add(new Label("Zadejte číslo mobilního telefonu:"), 0, 5);
+        grid.add(mobileNumber, 1, 5);
+        grid.add(new Label("Zadejte email:"), 0, 6);
+        grid.add(email, 1, 6);
+        grid.add(new Label("Zadejte heslo:"), 0, 7);
+        grid.add(password, 1, 7);
+        grid.add(new Label("Vyberte katedru:"), 0, 8);
+        grid.add(workplacess, 1, 8);
+        grid.add(new Label("Vyberte roli:"), 0, 9);
+        grid.add(roless, 1, 9);
+        grid.add(new Label("Vyberte úvazek:"), 0, 10);
+        grid.add(obligationn, 1, 10);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle(
-                "Nový zaměstnanec");
-        dialog.getDialogPane()
-                .getButtonTypes().addAll(SAVE, CANCEL);
-        dialog.getDialogPane()
-                .lookupButton(SAVE).setDisable(true);
+        dialog.setTitle("Nový zaměstnanec");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(true);
         dialog.initModality(Modality.APPLICATION_MODAL);
-
-        dialog.getDialogPane()
-                .setContent(grid);
+        dialog.getDialogPane().setContent(grid);
 
         // nastaveni listeneru pro kontrolu dat na pole
-        FIRST_NAME.textProperty()
-                .addListener(listener);
-        LAST_NAME.textProperty()
-                .addListener(listener);
+        firstName.textProperty().addListener(listener);
+        lastName.textProperty().addListener(listener);
+        tittleBefore.textProperty().addListener(listener);
+        tittleAfter.textProperty().addListener(listener);
+        telNumber.textProperty().addListener(listener);
+        mobileNumber.textProperty().addListener(listener);
+        email.textProperty().addListener(listener);
+        password.textProperty().addListener(listener);
 
-        TITTLE_BEFORE.textProperty()
-                .addListener(listener);
-
-        TITTLE_AFTER.textProperty()
-                .addListener(listener);
-
-        TEL_NUMBER.textProperty()
-                .addListener(listener);
-
-        MOBILE_NUMBER.textProperty()
-                .addListener(listener);
-        EMAIL.textProperty()
-                .addListener(listener);
 
         //vraceni objektu
-        Callback<ButtonType, Teacher> callback = (ButtonType dialogButton)
-                -> {
-            if (dialogButton == SAVE) {
-                /*return new Workplace(
-                        0,
-                        FIRST_NAME.getText(),
-                        LAST_NAME.getText(),
-                        TITTLE_BEFORE.getText(),
-                        TITTLE_AFTER.getText(),
-                        TEL_NUMBER.getText(),
-                        MOBILE_NUMBER.getText(),
-                        EMAIL.getText()
-                );*/
+        Callback<ButtonType, Teacher> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                return new Teacher(
+                        tittleBefore.getText(),
+                        firstName.getText(),
+                        lastName.getText(),
+                        tittleAfter.getText(),
+                        workplacess.getSelectionModel().getSelectedItem(),
+                        obligationn.getSelectionModel().getSelectedItem(),
+                        email.getText(),
+                        telNumber.getText(),
+                        mobileNumber.getText(),
+                        roless.getSelectionModel().getSelectedItem(),
+                        password.getText());
             }
             return null;
         };

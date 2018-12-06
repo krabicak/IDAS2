@@ -230,7 +230,6 @@ public class FXMLGUIController implements Initializable {
 
     private void setAllData() {
         try {
-            mainController.login("root@root.cz", "admin");
             //mainController.addTeacher(new Teacher(null, "test", "test", null, data.getWorkplaces().get(0), data.getTeachers().get(0).getUvazek(), "test1@test.cz", null, null, data.getTeachers().get(0).getRole(), "heslo"));
             setTableViewUcitel(mainController.getAllTeachers());
             setTableViewPredmety(mainController.getAllSubjects());
@@ -267,6 +266,37 @@ public class FXMLGUIController implements Initializable {
                 }
             });
         } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void addTeacher(ActionEvent actionEvent) {
+        try {
+            Optional<Teacher> result = Dialogs.getTeacherDialog(
+                    mainController.getAllWorkplaces(),
+                    mainController.getAllObligations(),
+                    mainController.getAllRoles()).showAndWait();
+            result.ifPresent(teacher -> {
+                try {
+                    mainController.addTeacher(teacher);
+                    setAllData();
+                    Dialogs.showInfoDialog("Uživatel "+teacher+"přidán");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        }catch (Exception e){
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void deleteTeacher(ActionEvent actionEvent) {
+        try {
+            String name = tableViewUcitel.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteTeacher(tableViewUcitel.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Uživatel "+name+" smazán");
+        }catch (Exception e){
             Dialogs.showErrorMessage(e);
         }
     }

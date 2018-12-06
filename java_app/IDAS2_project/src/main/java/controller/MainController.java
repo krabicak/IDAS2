@@ -24,7 +24,7 @@ public class MainController implements MainControllerInterface {
         try {
             loggedUser = DatabaseHelper.login(email, password);
         } catch (DatabaseHelper.DatabaseException e) {
-            throw new LoginException(e);
+            throw new LoginException(e.getMessage());
         }
         this.password = password;
     }

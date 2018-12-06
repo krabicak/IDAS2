@@ -3,11 +3,6 @@ package model;
 import javax.persistence.*;
 
 @NamedNativeQueries({
-        @NamedNativeQuery(
-                name = "delete_teacher",
-                query = "{ call delete_teacher ( ? , ? , ? ) }",
-                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
-        ),
 
         @NamedNativeQuery(
                 name = "login_user",
