@@ -128,4 +128,39 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+
+    public void addWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.addWorkplace(workplace, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void updateWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.updateWorkplace(workplace, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void deleteWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.deleteWorkplace(workplace, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Faculty> getAllFaculties() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllFaculties();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
 }

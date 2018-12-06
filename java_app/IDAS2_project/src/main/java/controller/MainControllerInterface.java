@@ -92,6 +92,33 @@ public interface MainControllerInterface {
      */
     void updateTeacher(Teacher teacher) throws DatabaseAccesException, LoginException;
 
+    /**
+     * @param workplace
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void addWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
+
+    /**
+     * @param workplace
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void updateWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
+
+    /**
+     * @param workplace
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void deleteWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    public List<Faculty> getAllFaculties() throws DatabaseAccesException;
+
     class LoginException extends Exception {
 
         public LoginException(Exception e) {

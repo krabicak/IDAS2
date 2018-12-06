@@ -322,5 +322,52 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(e);
         }
     }
+
+    public void addWorkplace(ActionEvent actionEvent) {
+        try {
+            System.out.println(mainController.getAllFaculties().get(0).getId());
+            Optional<Workplace> result = Dialogs.getWorkplaceDialog(mainController.getAllFaculties()).showAndWait();
+            result.ifPresent(workplace-> {
+                try {
+                    mainController.addWorkplace(workplace);
+                    setAllData();
+                    Dialogs.showInfoDialog("Katedra " + workplace + "přidána");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void updateWorkplace(ActionEvent actionEvent) {
+        try {
+            Optional<Workplace> result = Dialogs.getWorkplaceDialog(
+                    tableViewPracoviste.getSelectionModel().getSelectedItem(),mainController.getAllFaculties()).showAndWait();
+            result.ifPresent(workplace-> {
+                try {
+                    mainController.updateWorkplace(workplace);
+                    setAllData();
+                    Dialogs.showInfoDialog("Katedra " + workplace + " upravena");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void deleteWorkplace(ActionEvent actionEvent) {
+        try {
+            String name = tableViewPracoviste.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteWorkplace(tableViewPracoviste.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Katedra " + name + " smazána");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
 }
 

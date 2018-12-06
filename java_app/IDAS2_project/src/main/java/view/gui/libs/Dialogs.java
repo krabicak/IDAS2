@@ -9,10 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.util.Callback;
 import javafx.util.Pair;
-import model.Obligation;
-import model.Role;
-import model.Teacher;
-import model.Workplace;
+import model.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -151,7 +148,8 @@ public final class Dialogs {
                 isItNull(lastName);
                 isItNull(firstName);
                 isItNull(email);
-                //isItNull(password);
+                if (teacher.getId() == null)
+                    isItNull(password);
                 dialog.getDialogPane().lookupButton(save).setDisable(false);
             } catch (NullPointerException | NumberFormatException e) {
                 dialog.getDialogPane().lookupButton(save).setDisable(true);
@@ -230,6 +228,83 @@ public final class Dialogs {
                 teacher.setRole(roless.getSelectionModel().getSelectedItem());
                 teacher.setHeslo(password.getText());
                 return teacher;
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+        return dialog;
+    }
+
+    public static Dialog getWorkplaceDialog(List<Faculty> faculties){
+        return getWorkplaceDialog(new Workplace(),faculties);
+    }
+
+    public static Dialog getWorkplaceDialog(Workplace workplace, List<Faculty> faculties) {
+        // část deklarace polí
+        ButtonType save = new ButtonType(
+                "Uložit",
+                ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType(
+                "Zrušit",
+                ButtonBar.ButtonData.CANCEL_CLOSE);
+        TextField nazev = new TextField();
+        nazev.setText(workplace.getNazev());
+        TextField zkratka = new TextField();
+        zkratka.setText(workplace.getZkratka());
+
+        ChoiceBox<Faculty> facultyChoiceBox = new ChoiceBox<>();
+        faculties.forEach(facultyChoiceBox.getItems()::add);
+        if (workplace.getFakulta() != null) facultyChoiceBox.getSelectionModel().select(workplace.getFakulta());
+        else facultyChoiceBox.getSelectionModel().selectFirst();
+
+        //kontrola vložených dat
+        Dialog dialog = new Dialog();
+        InvalidationListener listener = observable -> {
+            try {
+                isItNull(zkratka);
+                isItNull(nazev);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
+            } catch (NullPointerException | NumberFormatException e) {
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
+            }
+        };
+
+        // popis prmpt textu
+        nazev.setPromptText("název");
+        zkratka.setPromptText("zkratka");
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte název:"), 0, 0);
+        grid.add(nazev, 1, 0);
+        grid.add(new Label("Zadejte zkratku:"), 0, 1);
+        grid.add(zkratka, 1, 1);
+        grid.add(new Label("Vyberte fakultu:"), 0, 2);
+        grid.add(facultyChoiceBox, 1, 2);
+
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Pracoviště");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(workplace.getId() == null);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+        // nastaveni listeneru pro kontrolu dat na pole
+        nazev.textProperty().addListener(listener);
+        zkratka.textProperty().addListener(listener);
+
+
+        //vraceni objektu
+        Callback<ButtonType, Workplace> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                workplace.setNazev(nazev.getText());
+                workplace.setZkratka(zkratka.getText());
+                workplace.setFakulta(facultyChoiceBox.getSelectionModel().getSelectedItem());
+                return workplace;
             }
             return null;
         };

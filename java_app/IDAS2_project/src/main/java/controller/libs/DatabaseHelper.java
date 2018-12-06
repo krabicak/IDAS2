@@ -135,7 +135,7 @@ public final class DatabaseHelper {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call add_teacher(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12,:13) }");
-                setTeacher(stmt,newTeacher,email,password);
+                setTeacher(stmt, newTeacher, email, password);
                 stmt.execute();
                 stmt.close();
             });
@@ -150,7 +150,7 @@ public final class DatabaseHelper {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call update_teacher(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12,:13,:14) }");
-                setTeacher(stmt,teacher,email,password);
+                setTeacher(stmt, teacher, email, password);
                 stmt.setString(14, teacher.getId());
                 stmt.execute();
                 stmt.close();
@@ -188,6 +188,70 @@ public final class DatabaseHelper {
     public static List<Role> getAllRoles() throws DatabaseException {
         try {
             Query query = em.createNamedQuery("get_all_role");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+
+    private static CallableStatement setWorkplace(CallableStatement stmt, Workplace workplace, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, workplace.getNazev());
+        stmt.setString(4, workplace.getZkratka());
+        stmt.setString(5, workplace.getFakulta().getId());
+        return stmt;
+    }
+
+    public static void addWorkplace(Workplace workplace, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_workplace(:1,:2,:3,:4,:5) }");
+                setWorkplace(stmt,workplace,email,password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void updateWorkplace(Workplace workplace, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_workplace(:1,:2,:3,:4,:5,:6) }");
+                setWorkplace(stmt,workplace,email,password);
+                stmt.setString(6,workplace.getId());
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deleteWorkplace(Workplace workplace, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_workplace ( :1 , :2 , :3 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, workplace.getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<Faculty> getAllFaculties() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_faculties");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);

@@ -2,6 +2,12 @@ package model;
 
 import javax.persistence.*;
 
+@NamedNativeQuery(
+        name = "get_all_faculties",
+        query = "{ ? = call get_all_faculties ( ) }",
+        resultClass = Faculty.class,
+        hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+)
 @Entity
 @Table(name = "FAKULTA")
 public class Faculty {
@@ -44,10 +50,6 @@ public class Faculty {
 
   @Override
   public String toString() {
-    return "Faculty{" +
-            "id='" + id + '\'' +
-            ", nazev='" + nazev + '\'' +
-            ", zkratka='" + zkratka + '\'' +
-            '}';
+    return zkratka;
   }
 }
