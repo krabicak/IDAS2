@@ -327,7 +327,7 @@ public class FXMLGUIController implements Initializable {
         try {
             System.out.println(mainController.getAllFaculties().get(0).getId());
             Optional<Workplace> result = Dialogs.getWorkplaceDialog(mainController.getAllFaculties()).showAndWait();
-            result.ifPresent(workplace-> {
+            result.ifPresent(workplace -> {
                 try {
                     mainController.addWorkplace(workplace);
                     setAllData();
@@ -344,8 +344,8 @@ public class FXMLGUIController implements Initializable {
     public void updateWorkplace(ActionEvent actionEvent) {
         try {
             Optional<Workplace> result = Dialogs.getWorkplaceDialog(
-                    tableViewPracoviste.getSelectionModel().getSelectedItem(),mainController.getAllFaculties()).showAndWait();
-            result.ifPresent(workplace-> {
+                    tableViewPracoviste.getSelectionModel().getSelectedItem(), mainController.getAllFaculties()).showAndWait();
+            result.ifPresent(workplace -> {
                 try {
                     mainController.updateWorkplace(workplace);
                     setAllData();
@@ -369,5 +369,95 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(e);
         }
     }
+
+
+    public void addSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void editSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void addSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void editSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void addStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void editStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void addStudyPlan(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void editStudyPlan(ActionEvent actionEvent) {
+
+    }
+
+    public void deleteStudyPlan(ActionEvent actionEvent) {
+
+    }
+
 }
 
