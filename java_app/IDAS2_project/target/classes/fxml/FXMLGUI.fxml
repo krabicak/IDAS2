@@ -29,17 +29,17 @@
                      <children>
                         <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
                            <children>
-                              <Button fx:id="addUcitelbtn" mnemonicParsing="false" onAction="#test" text="Přidat">
+                              <Button fx:id="addUcitelbtn" mnemonicParsing="false" onAction="#addTeacher" text="Přidat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editUcitelbtn" mnemonicParsing="false" text="Editovat">
+                              <Button fx:id="editUcitelbtn" mnemonicParsing="false" onAction="#updateTeacher" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="delUcitelbtn" mnemonicParsing="false" text="Odebrat">
+                              <Button fx:id="delUcitelbtn" mnemonicParsing="false" onAction="#deleteTeacher" text="Odebrat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
@@ -77,17 +77,17 @@
                      <children>
                         <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
                            <children>
-                              <Button fx:id="addPracovisteBtn" mnemonicParsing="false" text="Přidat">
+                              <Button fx:id="addPracovisteBtn" mnemonicParsing="false" onAction="#addWorkplace" text="Přidat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editPracovisteBtn" mnemonicParsing="false" text="Editovat">
+                              <Button fx:id="editPracovisteBtn" mnemonicParsing="false" onAction="#updateWorkplace" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="delPracovisteBtn" mnemonicParsing="false" text="Odebrat">
+                              <Button fx:id="delPracovisteBtn" mnemonicParsing="false" onAction="#deleteWorkplace" text="Odebrat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
@@ -262,11 +262,12 @@
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView prefHeight="200.0" prefWidth="200.0" />
+                        <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                   </GridPane>
                </content></Tab>
          </tabs>
       </TabPane>
+      <Button fx:id="logButton" mnemonicParsing="false" text="Přihlásit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
    </children>
 </AnchorPane>
