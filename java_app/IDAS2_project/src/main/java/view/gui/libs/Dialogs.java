@@ -311,4 +311,14 @@ public final class Dialogs {
         dialog.setResultConverter(callback);
         return dialog;
     }
+
+    public static Dialog getSubjectDialog(List<Obligation> obligations) {
+        return getSubjectDialog(new Subject(), obligations);
+    }
+
+    public static Dialog getSubjectDialog(Subject subject, List<Obligation> ub){
+        Dialog dialog = new Dialog();
+        return dialog;
+    }
+
 }

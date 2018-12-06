@@ -379,7 +379,7 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void editSchedule(ActionEvent actionEvent) {
+    public void updateSchedule(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
@@ -394,16 +394,25 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(ex);
         }
     }
-
     public void addSubject(ActionEvent actionEvent) {
         try {
-
+            Optional<Subject> result = Dialogs.getSubjectDialog(
+                    mainController.getAllObligations()).showAndWait();
+            result.ifPresent(subject -> {
+                try {
+                    mainController.addSubject(subject);
+                    setAllData();
+                    Dialogs.showInfoDialog("Předmět " + subject + "přidán");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
     }
 
-    public void editSubject(ActionEvent actionEvent) {
+    public void updateSubject(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
@@ -427,7 +436,7 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void editStudyField(ActionEvent actionEvent) {
+    public void updateStudyField(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
@@ -451,7 +460,7 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void editStudyPlan(ActionEvent actionEvent) {
+    public void updateStudyPlan(ActionEvent actionEvent) {
 
     }
 

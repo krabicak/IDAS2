@@ -257,4 +257,18 @@ public final class DatabaseHelper {
             throw new DatabaseException(e);
         }
     }
+
+    public static void addSubject(Workplace workplace, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_workplace(:1,:2,:3,:4,:5) }");
+                setWorkplace(stmt,workplace,email,password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
 }

@@ -113,6 +113,28 @@ public interface MainControllerInterface {
      */
     void deleteWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
 
+
+    /**
+     * @param subject
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void addSubject(Subject subject) throws LoginException, DatabaseAccesException;
+
+    /**
+     * @param subject
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void editSubject(Subject subject) throws LoginException, DatabaseAccesException;
+
+    /**
+     * @param subject
+     * @throws LoginException
+     * @throws DatabaseAccesException
+     */
+    void deleteSubject(Subject subject) throws LoginException, DatabaseAccesException;
+
     /**
      * @return
      * @throws DatabaseAccesException

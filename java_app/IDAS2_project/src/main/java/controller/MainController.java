@@ -163,4 +163,13 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+/*
+    public void addSubject(Subject subject) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.addSubject(subject, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }*/
 }

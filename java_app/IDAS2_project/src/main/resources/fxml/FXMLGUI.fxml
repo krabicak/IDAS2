@@ -122,7 +122,7 @@
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editRozvrhBtn" mnemonicParsing="false" onAction="#editSchedule" text="Editovat">
+                              <Button fx:id="editRozvrhBtn" mnemonicParsing="false" onAction="#updateSchedule" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
@@ -166,7 +166,7 @@
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editPredmetBtn" mnemonicParsing="false" onAction="#editSubject" text="Editovat">
+                              <Button fx:id="editPredmetBtn" mnemonicParsing="false" onAction="#updateSubject" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
@@ -210,7 +210,7 @@
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editOborBtn" mnemonicParsing="false" onAction="#editStudyField" text="Editovat">
+                              <Button fx:id="editOborBtn" mnemonicParsing="false" onAction="#updateStudyField" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
@@ -250,7 +250,7 @@
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editPlanBtn" mnemonicParsing="false" onAction="#editStudyPlan" text="Editovat">
+                              <Button fx:id="editPlanBtn" mnemonicParsing="false" onAction="#updateStudyPlan" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
