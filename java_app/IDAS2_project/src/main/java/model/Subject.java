@@ -7,6 +7,7 @@ import java.util.List;
 @NamedNativeQuery(
         name = "get_all_subjects",
         query = "{ ? = call get_all_subjects ( ) }",
+        //query = "select u from Subject u left join fetch u.semestr",
         resultClass = Subject.class,
         hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
 )

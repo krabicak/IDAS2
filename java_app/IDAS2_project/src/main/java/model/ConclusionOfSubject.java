@@ -1,10 +1,14 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_conclusions_of_subject",
+                query = "{ ? = call get_all_conclusions_of_subject () }",
+                resultClass = ConclusionOfSubject.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )})
 @Entity
 @Table(name = "zakonceni_predmetu")
 public class ConclusionOfSubject {

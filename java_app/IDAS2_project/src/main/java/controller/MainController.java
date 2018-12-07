@@ -266,4 +266,12 @@ public class MainController implements MainControllerInterface {
         }
     }
 
+    public List<RecommendedYear> getAllRecommendedYears() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllRecommendedYears();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
 }

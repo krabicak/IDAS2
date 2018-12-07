@@ -1,11 +1,16 @@
 package controller.libs;
 
 import model.*;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.JoinType;
+import javax.persistence.criteria.Root;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -77,6 +82,7 @@ public final class DatabaseHelper {
     public static List<Subject> getAllSubjects() throws DatabaseException {
         try {
             Query query = em.createNamedQuery("get_all_subjects");
+            //Query query = em.createQuery("select u from Subject u left join fetch u.semestr");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);
@@ -203,7 +209,7 @@ public final class DatabaseHelper {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call update_teacher(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12,:13,:14) }");
-                stmt  =setTeacher(stmt, teacher, email, password);
+                stmt = setTeacher(stmt, teacher, email, password);
                 stmt.setString(14, teacher.getId());
                 stmt.execute();
                 stmt.close();
@@ -352,9 +358,26 @@ public final class DatabaseHelper {
         stmt.setString(4, subject.getZkratka());
         stmt.setString(5, subject.getRozsahHodin());
         stmt.setString(6, subject.getZpusobZakonceni().getZkratka());
-        stmt.setString(7, subject.getKategorie().getNazevKategorie());
-        stmt.setString(8, subject.getDoporucenyRocnik().getCisloRocniku());
+        if (subject.getKategorie() == null) stmt.setNull(7, Types.VARCHAR);
+        else stmt.setString(7, subject.getKategorie().getZkratka());
+        if (subject.getDoporucenyRocnik() == null) stmt.setNull(8, Types.NUMERIC);
+        else stmt.setString(8, subject.getDoporucenyRocnik().getCisloRocniku());
         stmt.setString(9, subject.getGarant().getId());
+        if(subject.getSemestr().size()==0){
+            stmt.setNull(10,Types.NUMERIC);
+            stmt.setNull(11,Types.NUMERIC);
+        }else if(subject.getSemestr().size()==1){
+            if (subject.getSemestr().get(0).getId().equals("1")){
+                stmt.setString(10,"1");
+                stmt.setNull(11,Types.NUMERIC);
+            }else if (subject.getSemestr().get(0).getId().equals("2")){
+                stmt.setString(11,"1");
+                stmt.setNull(10,Types.NUMERIC);
+            }
+        }else if(subject.getSemestr().size()==2){
+            stmt.setString(10,"1");
+            stmt.setString(11,"1");
+        }
         return stmt;
     }
 
@@ -362,12 +385,11 @@ public final class DatabaseHelper {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
-                CallableStatement stmt = connection.prepareCall("{ call add_subject(:1,:2,:3,:4,:5,:6,:7,:8,:9) }");
+                CallableStatement stmt = connection.prepareCall("{ call add_subject(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11) }");
                 stmt = setSubject(stmt, subject, email, password);
                 stmt.execute();
                 stmt.close();
             });
-            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -377,13 +399,12 @@ public final class DatabaseHelper {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
-                CallableStatement stmt = connection.prepareCall("{ call update_subject(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10) }");
+                CallableStatement stmt = connection.prepareCall("{ call update_subject(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11,:12) }");
                 stmt = setSubject(stmt, subject, email, password);
-                stmt.setString(10,subject.getId());
+                stmt.setString(12, subject.getId());
                 stmt.execute();
                 stmt.close();
             });
-            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -400,7 +421,6 @@ public final class DatabaseHelper {
                 stm.execute();
                 stm.close();
             });
-            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -409,6 +429,33 @@ public final class DatabaseHelper {
     public static List<Semester> getAllSemesters() throws DatabaseException {
         try {
             Query query = em.createNamedQuery("get_all_semesters");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<CategoryOfSubject> getAllCategoriesofSubjects() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_categories_of_subject");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<ConclusionOfSubject> getAllConclusionsOfSubjects() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_conclusions_of_subject");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<RecommendedYear> getAllRecommendedYears() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_recommended_years");
             return query.getResultList();
         } catch (Exception e) {
             throw new DatabaseException(e);

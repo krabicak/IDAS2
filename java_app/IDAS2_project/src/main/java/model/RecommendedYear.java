@@ -1,10 +1,14 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_recommended_years",
+                query = "{ ? = call get_all_recommended_years () }",
+                resultClass = RecommendedYear.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )})
 @Entity
 @Table(name = "doporuceny_rocnik")
 public class RecommendedYear {
@@ -23,8 +27,6 @@ public class RecommendedYear {
 
   @Override
   public String toString() {
-    return "RecommendedYear{" +
-            "cisloRocniku='" + cisloRocniku + '\'' +
-            '}';
+    return cisloRocniku;
   }
 }

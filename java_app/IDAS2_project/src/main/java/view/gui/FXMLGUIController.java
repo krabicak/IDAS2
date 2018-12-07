@@ -2,15 +2,16 @@ package view.gui;
 
 import controller.MainController;
 import controller.MainControllerInterface;
-import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Pair;
 import model.*;
@@ -430,12 +431,13 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllSemesters(),
                     mainController.getAllCategoriesofSubjects(),
                     mainController.getAllConclusionsOfSubjects(),
-                    mainController.getAllTeachers()).showAndWait();
+                    mainController.getAllTeachers(),
+                    mainController.getAllRecommendedYears()).showAndWait();
             result.ifPresent(subject -> {
                 try {
                     mainController.addSubject(subject);
                     setAllData();
-                    Dialogs.showInfoDialog("Předmět " + subject + "přidán");
+                    Dialogs.showInfoDialog("Předmět " + subject + " přidán");
                 } catch (Exception e) {
                     Dialogs.showErrorMessage(e);
                 }
@@ -447,7 +449,22 @@ public class FXMLGUIController implements Initializable {
 
     public void updateSubject(ActionEvent actionEvent) {
         try {
-
+            Optional<Subject> result = Dialogs.getSubjectDialog(
+                    tableViewPredmety.getSelectionModel().getSelectedItem(),
+                    mainController.getAllSemesters(),
+                    mainController.getAllCategoriesofSubjects(),
+                    mainController.getAllConclusionsOfSubjects(),
+                    mainController.getAllTeachers(),
+                    mainController.getAllRecommendedYears()).showAndWait();
+            result.ifPresent(subject -> {
+                try {
+                    mainController.updateSubject(subject);
+                    setAllData();
+                    Dialogs.showInfoDialog("Předmět " + subject + " upraven");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
@@ -455,9 +472,12 @@ public class FXMLGUIController implements Initializable {
 
     public void deleteSubject(ActionEvent actionEvent) {
         try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            String name = tableViewPredmety.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteSubject(tableViewPredmety.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Předmět " + name + " smazán");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
         }
     }
 

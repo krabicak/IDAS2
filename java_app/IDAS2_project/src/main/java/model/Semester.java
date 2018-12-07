@@ -3,6 +3,13 @@ package model;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_semesters",
+                query = "{ ? = call get_all_semesters () }",
+                resultClass = Semester.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )})
 @Entity
 @Table(name = "semestr")
 public class Semester {

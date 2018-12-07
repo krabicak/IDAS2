@@ -2,6 +2,13 @@ package model;
 
 import javax.persistence.*;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_categories_of_subject",
+                query = "{ ? = call get_all_categories_of_subject () }",
+                resultClass = CategoryOfSubject.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )})
 @Entity
 @Table(name = "kategorie_predmetu")
 public class CategoryOfSubject {

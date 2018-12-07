@@ -11,6 +11,7 @@ import javafx.util.Callback;
 import javafx.util.Pair;
 import model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -433,12 +434,12 @@ public final class Dialogs {
     }
 
     public static Dialog getSubjectDialog(List<Semester> semestr, List<CategoryOfSubject> category, List<ConclusionOfSubject> conclusion,
-                                          List<Teacher> garant) {
-        return getSubjectDialog(new Subject(), semestr, category, conclusion, garant);
+                                          List<Teacher> garant, List<RecommendedYear> recommendedYears) {
+        return getSubjectDialog(new Subject(), semestr, category, conclusion, garant, recommendedYears);
     }
 
     public static Dialog getSubjectDialog(Subject subject, List<Semester> semestr, List<CategoryOfSubject> category,
-                                          List<ConclusionOfSubject> conclusion, List<Teacher> garant) {
+                                          List<ConclusionOfSubject> conclusion, List<Teacher> garant, List<RecommendedYear> recommendedYears) {
 
         ButtonType save = new ButtonType("Uložit", ButtonBar.ButtonData.OK_DONE);
         ButtonType cancel = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
@@ -450,14 +451,16 @@ public final class Dialogs {
         TextField rozsahHodin = new TextField();
         rozsahHodin.setText(subject.getRozsahHodin());
 
-        TextField doporucenyRocnik = new TextField();
-       // doporucenyRocnik.setText(subject.getDoporucenyRocnik());
-
-        ChoiceBox<Semester> semesterChoiceBox = new ChoiceBox<>();
-        semestr.forEach(semesterChoiceBox.getItems()::add);
-        if (subject.getSemestr() != null)
-            semesterChoiceBox.getSelectionModel().select(subject.getSemestr().get(1));
-        else semesterChoiceBox.getSelectionModel().selectFirst();
+        ChoiceBox<SemesterTypes> semesterChoiceBox = new ChoiceBox<>();
+        semesterChoiceBox.getItems().addAll(SemesterTypes.values());
+        if (subject.getSemestr() != null) {
+            if (subject.getSemestr().size() == 2)
+                semesterChoiceBox.getSelectionModel().select(SemesterTypes.ZIMNI_A_LETNI);
+            else if (subject.getSemestr().size() == 1 && subject.getSemestr().get(0).toString().equals(SemesterTypes.ZIMNI.toString()))
+                semesterChoiceBox.getSelectionModel().select(SemesterTypes.ZIMNI);
+            else if (subject.getSemestr().size() == 1 && subject.getSemestr().get(0).toString().equals(SemesterTypes.LETNI.toString()))
+                semesterChoiceBox.getSelectionModel().select(SemesterTypes.LETNI);
+        } else semesterChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<CategoryOfSubject> categoryOfSubjectChoiceBox = new ChoiceBox<>();
         category.forEach(categoryOfSubjectChoiceBox.getItems()::add);
@@ -477,6 +480,13 @@ public final class Dialogs {
             garantChoiceBox.getSelectionModel().select(subject.getGarant());
         else garantChoiceBox.getSelectionModel().selectFirst();
 
+        ChoiceBox<RecommendedYear> recommendedYearChoiceBox = new ChoiceBox<>();
+        recommendedYears.forEach(recommendedYearChoiceBox.getItems()::add);
+        recommendedYearChoiceBox.getItems().add(null);
+        if (subject.getDoporucenyRocnik() != null)
+            recommendedYearChoiceBox.getSelectionModel().select(subject.getDoporucenyRocnik());
+        else recommendedYearChoiceBox.getSelectionModel().selectFirst();
+
         //kontrola vložených dat
         Dialog dialog = new Dialog();
         InvalidationListener listener = observable -> {
@@ -484,8 +494,6 @@ public final class Dialogs {
                 isItNull(nazevPredmetu);
                 isItNull(zkratkaPredmetu);
                 isItNull(rozsahHodin);
-                if (subject.getId() == null)
-                    isItNull(null);
                 dialog.getDialogPane().lookupButton(save).setDisable(false);
             } catch (NullPointerException | NumberFormatException e) {
                 dialog.getDialogPane().lookupButton(save).setDisable(true);
@@ -495,7 +503,6 @@ public final class Dialogs {
         // popis prmpt textu
         nazevPredmetu.setPromptText("název");
         zkratkaPredmetu.setPromptText("zkratka");
-        rozsahHodin.setPromptText("rozsah");
         rozsahHodin.setPromptText("rozsah");
 
 
@@ -517,8 +524,8 @@ public final class Dialogs {
         grid.add(categoryOfSubjectChoiceBox, 1, 4);
         grid.add(new Label("Vyberte způsob zakončení:"), 0, 5);
         grid.add(conclusionChoiceBox, 1, 5);
-        grid.add(new Label("Zadejte doporučený ročník:"), 0, 6);
-        grid.add(doporucenyRocnik, 1, 6);
+        grid.add(new Label("Vyberte doporučený ročník:"), 0, 6);
+        grid.add(recommendedYearChoiceBox, 1, 6);
         grid.add(new Label("Vyberte garanta předmětu:"), 0, 7);
         grid.add(garantChoiceBox, 1, 7);
 
@@ -544,7 +551,26 @@ public final class Dialogs {
                 subject.setKategorie(categoryOfSubjectChoiceBox.getSelectionModel().getSelectedItem());
                 subject.setZpusobZakonceni(conclusionChoiceBox.getSelectionModel().getSelectedItem());
                 subject.setGarant(garantChoiceBox.getSelectionModel().getSelectedItem());
-                subject.setDoporucenyRocnik(null);
+                subject.setDoporucenyRocnik(recommendedYearChoiceBox.getSelectionModel().getSelectedItem());
+                List<Semester> sem = new ArrayList<>();
+                if (semesterChoiceBox.getSelectionModel().getSelectedItem() != null) {
+                    switch (semesterChoiceBox.getSelectionModel().getSelectedItem()) {
+                        case ZIMNI_A_LETNI: {
+                            sem.add(semestr.get(0));
+                            sem.add(semestr.get(1));
+                            break;
+                        }
+                        case LETNI: {
+                            sem.add(semestr.get(1));
+                            break;
+                        }
+                        case ZIMNI: {
+                            sem.add(semestr.get(0));
+                            break;
+                        }
+                    }
+                }
+                subject.setSemestr(sem);
                 return subject;
             }
             return null;

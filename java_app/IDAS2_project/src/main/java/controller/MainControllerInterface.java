@@ -194,7 +194,13 @@ public interface MainControllerInterface {
      * @return
      * @throws DatabaseAccesException
      */
-    public List<Faculty> getAllFaculties() throws DatabaseAccesException;
+    List<Faculty> getAllFaculties() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<RecommendedYear> getAllRecommendedYears() throws DatabaseAccesException;
 
     class LoginException extends Exception {
 
