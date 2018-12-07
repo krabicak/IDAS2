@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 
 
 public class FXMLGUIController implements Initializable {
-    public static MainControllerInterface mainController;
+    public static MainControllerInterface mainController= new MainController();
 
     @FXML
     private TableView<Workplace> tableViewPracoviste;
@@ -370,9 +370,12 @@ public class FXMLGUIController implements Initializable {
 
     public void addLearningAction(ActionEvent actionEvent) {
         try {
-            Optional<LearningAction> result = Dialogs.getLearningActionDialog(mainController.getAllMethodsOfLearning(),
-                    mainController.getAllTeachers(), mainController.getAllDays(),
-                    mainController.getAllSubjects(), mainController.getAllRooms()).showAndWait();
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+                    mainController.getAllMethodsOfLearning(),
+                    mainController.getAllTeachers(),
+                    mainController.getAllDays(),
+                    mainController.getAllSubjects(),
+                    mainController.getAllRooms()).showAndWait();
             result.ifPresent(learningAction -> {
                 try {
                     mainController.addLearningAction(learningAction);
@@ -392,8 +395,10 @@ public class FXMLGUIController implements Initializable {
         try {
             Optional<LearningAction> result = Dialogs.getLearningActionDialog(tableViewRozvrh.getSelectionModel().getSelectedItem(),
                     mainController.getAllMethodsOfLearning(),
-                    mainController.getAllTeachers(), mainController.getAllDays(),
-                    mainController.getAllSubjects(), mainController.getAllRooms()).showAndWait();
+                    mainController.getAllTeachers(),
+                    mainController.getAllDays(),
+                    mainController.getAllSubjects(),
+                    mainController.getAllRooms()).showAndWait();
             result.ifPresent(learningAction -> {
                 try {
                     mainController.updateLearningAction(learningAction);
@@ -422,7 +427,10 @@ public class FXMLGUIController implements Initializable {
     public void addSubject(ActionEvent actionEvent) {
         try {
             Optional<Subject> result = Dialogs.getSubjectDialog(
-                    mainController.getAllObligations()).showAndWait();
+                    mainController.getAllSemesters(),
+                    mainController.getAllCategoriesofSubjects(),
+                    mainController.getAllConclusionsOfSubjects(),
+                    mainController.getAllTeachers()).showAndWait();
             result.ifPresent(subject -> {
                 try {
                     mainController.addSubject(subject);

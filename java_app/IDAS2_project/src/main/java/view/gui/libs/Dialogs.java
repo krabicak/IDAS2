@@ -432,12 +432,125 @@ public final class Dialogs {
         return dialog;
     }
 
-    public static Dialog getSubjectDialog(List<Obligation> obligations) {
-        return getSubjectDialog(new Subject(), obligations);
+    public static Dialog getSubjectDialog(List<Semester> semestr, List<CategoryOfSubject> category, List<ConclusionOfSubject> conclusion,
+                                          List<Teacher> garant) {
+        return getSubjectDialog(new Subject(), semestr, category, conclusion, garant);
     }
 
-    public static Dialog getSubjectDialog(Subject subject, List<Obligation> ub) {
+    public static Dialog getSubjectDialog(Subject subject, List<Semester> semestr, List<CategoryOfSubject> category,
+                                          List<ConclusionOfSubject> conclusion, List<Teacher> garant) {
+
+        ButtonType save = new ButtonType("Uložit", ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        TextField nazevPredmetu = new TextField();
+        nazevPredmetu.setText(subject.getNazev());
+        TextField zkratkaPredmetu = new TextField();
+        zkratkaPredmetu.setText(subject.getZkratka());
+        TextField rozsahHodin = new TextField();
+        rozsahHodin.setText(subject.getRozsahHodin());
+
+        TextField doporucenyRocnik = new TextField();
+       // doporucenyRocnik.setText(subject.getDoporucenyRocnik());
+
+        ChoiceBox<Semester> semesterChoiceBox = new ChoiceBox<>();
+        semestr.forEach(semesterChoiceBox.getItems()::add);
+        if (subject.getSemestr() != null)
+            semesterChoiceBox.getSelectionModel().select(subject.getSemestr().get(1));
+        else semesterChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<CategoryOfSubject> categoryOfSubjectChoiceBox = new ChoiceBox<>();
+        category.forEach(categoryOfSubjectChoiceBox.getItems()::add);
+        if (subject.getKategorie() != null)
+            categoryOfSubjectChoiceBox.getSelectionModel().select(subject.getKategorie());
+        else categoryOfSubjectChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<ConclusionOfSubject> conclusionChoiceBox = new ChoiceBox<>();
+        conclusion.forEach(conclusionChoiceBox.getItems()::add);
+        if (subject.getZpusobZakonceni() != null)
+            conclusionChoiceBox.getSelectionModel().select(subject.getZpusobZakonceni());
+        else conclusionChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<Teacher> garantChoiceBox = new ChoiceBox<>();
+        garant.forEach(garantChoiceBox.getItems()::add);
+        if (subject.getGarant() != null)
+            garantChoiceBox.getSelectionModel().select(subject.getGarant());
+        else garantChoiceBox.getSelectionModel().selectFirst();
+
+        //kontrola vložených dat
         Dialog dialog = new Dialog();
+        InvalidationListener listener = observable -> {
+            try {
+                isItNull(nazevPredmetu);
+                isItNull(zkratkaPredmetu);
+                isItNull(rozsahHodin);
+                if (subject.getId() == null)
+                    isItNull(null);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
+            } catch (NullPointerException | NumberFormatException e) {
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
+            }
+        };
+
+        // popis prmpt textu
+        nazevPredmetu.setPromptText("název");
+        zkratkaPredmetu.setPromptText("zkratka");
+        rozsahHodin.setPromptText("rozsah");
+        rozsahHodin.setPromptText("rozsah");
+
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte název:"), 0, 0);
+        grid.add(nazevPredmetu, 1, 0);
+        grid.add(new Label("Zadejte zkratku:"), 0, 1);
+        grid.add(zkratkaPredmetu, 1, 1);
+        grid.add(new Label("Zadejte rozsah hodin:"), 0, 2);
+        grid.add(rozsahHodin, 1, 2);
+        grid.add(new Label("Vyberte semestr:"), 0, 3);
+        grid.add(semesterChoiceBox, 1, 3);
+        grid.add(new Label("Vyberte kategorii předmětu:"), 0, 4);
+        grid.add(categoryOfSubjectChoiceBox, 1, 4);
+        grid.add(new Label("Vyberte způsob zakončení:"), 0, 5);
+        grid.add(conclusionChoiceBox, 1, 5);
+        grid.add(new Label("Zadejte doporučený ročník:"), 0, 6);
+        grid.add(doporucenyRocnik, 1, 6);
+        grid.add(new Label("Vyberte garanta předmětu:"), 0, 7);
+        grid.add(garantChoiceBox, 1, 7);
+
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Předmět");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(subject.getId() == null);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+        // nastaveni listeneru pro kontrolu dat na pole
+        nazevPredmetu.textProperty().addListener(listener);
+        zkratkaPredmetu.textProperty().addListener(listener);
+        rozsahHodin.textProperty().addListener(listener);
+
+
+        //vraceni objektu
+        Callback<ButtonType, Subject> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                subject.setNazev(nazevPredmetu.getText());
+                subject.setZkratka(zkratkaPredmetu.getText());
+                subject.setRozsahHodin(rozsahHodin.getText());
+                subject.setKategorie(categoryOfSubjectChoiceBox.getSelectionModel().getSelectedItem());
+                subject.setZpusobZakonceni(conclusionChoiceBox.getSelectionModel().getSelectedItem());
+                subject.setGarant(garantChoiceBox.getSelectionModel().getSelectedItem());
+                subject.setDoporucenyRocnik(null);
+                return subject;
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+
         return dialog;
     }
 

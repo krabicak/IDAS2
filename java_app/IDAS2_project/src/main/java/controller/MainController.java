@@ -241,4 +241,29 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+
+    public List<Semester> getAllSemesters() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllSemesters();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Semester> getAllCategoriesofSubjects() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllCategoriesofSubjects();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Semester> getAllConclusionsOfSubjects() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllConclusionsOfSubjects();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
 }

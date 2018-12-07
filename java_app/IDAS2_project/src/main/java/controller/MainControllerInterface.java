@@ -176,6 +176,24 @@ public interface MainControllerInterface {
      * @return
      * @throws DatabaseAccesException
      */
+    List<Semester> getAllSemesters() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<CategoryOfSubject> getAllCategoriesofSubjects() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<ConclusionOfSubject> getAllConclusionsOfSubjects() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
     public List<Faculty> getAllFaculties() throws DatabaseAccesException;
 
     class LoginException extends Exception {

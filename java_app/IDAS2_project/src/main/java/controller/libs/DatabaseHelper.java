@@ -405,4 +405,14 @@ public final class DatabaseHelper {
             throw new DatabaseException(e);
         }
     }
+
+    public static List<Semester> getAllSemesters() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_semesters");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
 }

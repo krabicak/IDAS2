@@ -23,7 +23,7 @@ public class GUI extends Application {
             @Override
             protected Void call() throws Exception {
                 try {
-                    FXMLGUIController.mainController = new MainController();
+                    //FXMLGUIController.mainController = new MainController();
                 } catch (Exception e) {
                     Dialogs.showErrorMessage(e);
                     Platform.exit();
