@@ -163,7 +163,7 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
-/*
+
     public void addSubject(Subject subject) throws DatabaseAccesException, LoginException {
         try {
             checkLoging();
@@ -171,5 +171,14 @@ public class MainController implements MainControllerInterface {
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }
-    }*/
+    }
+/*
+    public void updateSubject(Subject subject) throws DatabaseAccesException, LoginException {
+
+    }
+
+    public void deleteSubject(Subject subject) throws DatabaseAccesException, LoginException {
+
+    }
+    */
 }

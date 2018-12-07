@@ -370,30 +370,6 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-
-    public void addSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-    public void updateSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-    public void deleteSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
     public void addSubject(ActionEvent actionEvent) {
         try {
             Optional<Subject> result = Dialogs.getSubjectDialog(
@@ -421,6 +397,31 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void deleteSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+
+    public void addSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void updateSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteSchedule(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
