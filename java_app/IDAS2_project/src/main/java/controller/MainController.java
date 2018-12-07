@@ -250,7 +250,7 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-    public List<Semester> getAllCategoriesofSubjects() throws DatabaseAccesException {
+    public List<CategoryOfSubject> getAllCategoriesofSubjects() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllCategoriesofSubjects();
         } catch (DatabaseHelper.DatabaseException e) {
@@ -258,7 +258,7 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-    public List<Semester> getAllConclusionsOfSubjects() throws DatabaseAccesException {
+    public List<ConclusionOfSubject> getAllConclusionsOfSubjects() throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllConclusionsOfSubjects();
         } catch (DatabaseHelper.DatabaseException e) {

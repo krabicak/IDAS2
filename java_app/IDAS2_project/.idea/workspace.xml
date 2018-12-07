@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="vdvcx">
+    <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -117,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="260" column="73" selection-start-line="260" selection-start-column="73" selection-end-line="260" selection-end-column="73" />
+            <state relative-caret-position="191">
+              <caret line="260" column="35" selection-start-line="260" selection-start-column="35" selection-end-line="260" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -441,7 +435,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544210263636" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544210347228" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/untitled/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ojdbc7.jar!/" />
@@ -563,7 +557,7 @@
       <workItem from="1544188149654" duration="2658000" />
       <workItem from="1544190845536" duration="23000" />
       <workItem from="1544191207616" duration="1519000" />
-      <workItem from="1544199955433" duration="9389000" />
+      <workItem from="1544199955433" duration="9473000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1542888778156</created>
@@ -642,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544132332526</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="dialog Subject (nejdou metody z DatabaseHelper)">
+      <created>1544210312841</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544210312841</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -678,7 +679,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142540000" />
+    <option name="totallyTimeSpent" value="142624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -785,7 +786,8 @@
     <MESSAGE value="functions" />
     <MESSAGE value="user class and login libs" />
     <MESSAGE value="vdvcx" />
-    <option name="LAST_COMMIT_MESSAGE" value="vdvcx" />
+    <MESSAGE value="dialog Subject (nejdou metody z DatabaseHelper)" />
+    <option name="LAST_COMMIT_MESSAGE" value="dialog Subject (nejdou metody z DatabaseHelper)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1034,8 +1036,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="260" column="73" selection-start-line="260" selection-start-column="73" selection-end-line="260" selection-end-column="73" />
+        <state relative-caret-position="191">
+          <caret line="260" column="35" selection-start-line="260" selection-start-column="35" selection-end-line="260" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
