@@ -204,6 +204,20 @@ public final class DatabaseHelper {
         return stmt;
     }
 
+
+    private static CallableStatement setSubject(CallableStatement stmt, Subject subject, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, subject.getNazev());
+        stmt.setString(4, subject.getZkratka());
+        stmt.setString(5, subject.getRozsahHodin());
+        stmt.setString(6, subject.getKategorie().getNazevKategorie());
+        stmt.setString(7, subject.getZpusobZakonceni().getZkratka());
+        stmt.setString(8, subject.getGarant().getId());
+        stmt.setString(9, subject.getDoporucenyRocnik().getCisloRocniku());
+        return stmt;
+    }
+
     public static void addWorkplace(Workplace workplace, String email, String password) throws DatabaseException {
         try {
             Session session = (Session) em.getDelegate();
@@ -253,6 +267,20 @@ public final class DatabaseHelper {
         try {
             Query query = em.createNamedQuery("get_all_faculties");
             return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void addSubject(Subject subject, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_workplace(:1,:2,:3,:4,:5,:6,:7,:8,:9) }");
+                setSubject(stmt,subject,email,password);
+                stmt.execute();
+                stmt.close();
+            });
         } catch (Exception e) {
             throw new DatabaseException(e);
         }

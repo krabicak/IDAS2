@@ -369,5 +369,108 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(e);
         }
     }
+<<<<<<< HEAD
+=======
+
+    public void addSubject(ActionEvent actionEvent) {
+        try {
+            Optional<Subject> result = Dialogs.getSubjectDialog(
+                    mainController.getAllObligations()).showAndWait();
+            result.ifPresent(subject -> {
+                try {
+                    mainController.addSubject(subject);
+                    setAllData();
+                    Dialogs.showInfoDialog("Předmět " + subject + "přidán");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void updateSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteSubject(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+
+    public void addSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void updateSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteSchedule(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void addStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void updateStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void deleteStudyField(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void addStudyPlan(ActionEvent actionEvent) {
+        try {
+
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
+    public void updateStudyPlan(ActionEvent actionEvent) {
+
+    }
+
+    public void deleteStudyPlan(ActionEvent actionEvent) {
+
+    }
+
+>>>>>>> ade501b417875633b030b7be2b19208879693f73
 }
 
