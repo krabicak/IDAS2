@@ -154,25 +154,17 @@ public interface MainControllerInterface {
 
     /**
      * @param subject
-     * @throws LoginException
      * @throws DatabaseAccesException
+     * @throws LoginException
      */
-    void addSubject(Subject subject) throws LoginException, DatabaseAccesException;
-/*
-    /**
-     * @param subject
-     * @throws LoginException
-     * @throws DatabaseAccesException
-     *
-    void editSubject(Subject subject) throws LoginException, DatabaseAccesException;
+    void updateSubject(Subject subject) throws DatabaseAccesException, LoginException;
 
     /**
      * @param subject
-     * @throws LoginException
      * @throws DatabaseAccesException
-     *
-    void deleteSubject(Subject subject) throws LoginException, DatabaseAccesException;
-*/
+     * @throws LoginException
+     */
+    void deleteSubject(Subject subject) throws DatabaseAccesException, LoginException;
 
     /**
      * @return
