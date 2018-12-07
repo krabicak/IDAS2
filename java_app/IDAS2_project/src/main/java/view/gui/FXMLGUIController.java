@@ -165,6 +165,7 @@ public class FXMLGUIController implements Initializable {
 
         ObservableList<Teacher> lst = FXCollections.observableArrayList(list);
         tableViewUcitel.setItems(lst);
+        tableViewUcitel.refresh();
     }
 
     private void setTableViewPracoviste(List<Workplace> list) {
@@ -174,6 +175,7 @@ public class FXMLGUIController implements Initializable {
 
         ObservableList<Workplace> lst = FXCollections.observableArrayList(list);
         tableViewPracoviste.setItems(lst);
+        tableViewPracoviste.refresh();
     }
 
     private void setTableViewPredmety(List<Subject> list) {
@@ -196,6 +198,7 @@ public class FXMLGUIController implements Initializable {
 
         ObservableList<Subject> lst = FXCollections.observableArrayList(list);
         tableViewPredmety.setItems(lst);
+        tableViewPredmety.refresh();
     }
 
     private void setTableViewObory(List<FieldOfStudy> list) {
@@ -213,6 +216,7 @@ public class FXMLGUIController implements Initializable {
         obor_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("zkratka"));
         ObservableList<FieldOfStudy> lst = FXCollections.observableArrayList(list);
         tableViewObory.setItems(lst);
+        tableViewObory.refresh();
     }
 
     private void setTableViewRozvrh(List<LearningAction> list) {
@@ -226,6 +230,7 @@ public class FXMLGUIController implements Initializable {
 
         ObservableList<LearningAction> lst = FXCollections.observableArrayList(list);
         tableViewRozvrh.setItems(lst);
+        tableViewRozvrh.refresh();
     }
 
     private void setAllData() {
@@ -325,9 +330,8 @@ public class FXMLGUIController implements Initializable {
 
     public void addWorkplace(ActionEvent actionEvent) {
         try {
-            System.out.println(mainController.getAllFaculties().get(0).getId());
             Optional<Workplace> result = Dialogs.getWorkplaceDialog(mainController.getAllFaculties()).showAndWait();
-            result.ifPresent(workplace-> {
+            result.ifPresent(workplace -> {
                 try {
                     mainController.addWorkplace(workplace);
                     setAllData();
@@ -344,8 +348,8 @@ public class FXMLGUIController implements Initializable {
     public void updateWorkplace(ActionEvent actionEvent) {
         try {
             Optional<Workplace> result = Dialogs.getWorkplaceDialog(
-                    tableViewPracoviste.getSelectionModel().getSelectedItem(),mainController.getAllFaculties()).showAndWait();
-            result.ifPresent(workplace-> {
+                    tableViewPracoviste.getSelectionModel().getSelectedItem(), mainController.getAllFaculties()).showAndWait();
+            result.ifPresent(workplace -> {
                 try {
                     mainController.updateWorkplace(workplace);
                     setAllData();
@@ -369,8 +373,57 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(e);
         }
     }
-<<<<<<< HEAD
-=======
+
+    public void addLearningAction(ActionEvent actionEvent) {
+        try {
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(mainController.getAllMethodsOfLearning(),
+                    mainController.getAllTeachers(), mainController.getAllDays(),
+                    mainController.getAllSubjects(), mainController.getAllRooms()).showAndWait();
+            result.ifPresent(learningAction -> {
+                try {
+                    mainController.addLearningAction(learningAction);
+                    setAllData();
+                    Dialogs.showInfoDialog("Výuková akce " + learningAction + " přidána");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+
+    public void updateLearningAction(ActionEvent actionEvent) {
+        try {
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(tableViewRozvrh.getSelectionModel().getSelectedItem(),
+                    mainController.getAllMethodsOfLearning(),
+                    mainController.getAllTeachers(), mainController.getAllDays(),
+                    mainController.getAllSubjects(), mainController.getAllRooms()).showAndWait();
+            result.ifPresent(learningAction -> {
+                try {
+                    mainController.updateLearningAction(learningAction);
+                    setAllData();
+                    Dialogs.showInfoDialog("Výuková akce " + learningAction + " upravena");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
+
+    public void deleteLearningAction(ActionEvent actionEvent) {
+        try {
+            String name = tableViewRozvrh.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteLearningAction(tableViewRozvrh.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Výuková akce " + name + " smazána");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
 
     public void addSubject(ActionEvent actionEvent) {
         try {
@@ -399,39 +452,6 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void deleteSubject(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-
-    public void addSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-    public void updateSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-    public void deleteSchedule(ActionEvent actionEvent) {
-        try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
-        }
-    }
-
-    public void addStudyField(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
@@ -468,9 +488,6 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void deleteStudyPlan(ActionEvent actionEvent) {
-
     }
-
->>>>>>> ade501b417875633b030b7be2b19208879693f73
 }
 

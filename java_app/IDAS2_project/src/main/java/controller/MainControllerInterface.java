@@ -113,6 +113,44 @@ public interface MainControllerInterface {
      */
     void deleteWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
 
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<Room> getAllRooms() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<Day> getAllDays() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<MethodOfLearning> getAllMethodsOfLearning() throws DatabaseAccesException;
+
+    /**
+     * @param learningAction
+     * @throws DatabaseAccesException
+     * @throws LoginException
+     */
+    void addLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException;
+
+    /**
+     * @param learningAction
+     * @throws DatabaseAccesException
+     * @throws LoginException
+     */
+    void updateLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException;
+
+    /**
+     * @param learningAction
+     * @throws DatabaseAccesException
+     * @throws LoginException
+     */
+    void deleteLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException;
 
     /**
      * @param subject

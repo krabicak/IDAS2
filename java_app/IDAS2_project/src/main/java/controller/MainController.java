@@ -164,6 +164,57 @@ public class MainController implements MainControllerInterface {
         }
     }
 
+    public List<Room> getAllRooms() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllRooms();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<Day> getAllDays() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllDays();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<MethodOfLearning> getAllMethodsOfLearning() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllMethodsOfLearning();
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void addLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.addLearningAction(learningAction, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void updateLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.updateLearningAction(learningAction, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void deleteLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.deleteLearningAction(learningAction, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
     public void addSubject(Subject subject) throws DatabaseAccesException, LoginException {
         try {
             checkLoging();

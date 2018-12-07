@@ -109,4 +109,9 @@ public class LearningAction {
     public void setUcebna(Room ucebna) {
         this.ucebna = ucebna;
     }
+
+    @Override
+    public String toString() {
+        return (den + " " + ((pocatek != null && konec != null) ? (pocatek + '-' + konec + ' ') : "") + predmet);
+    }
 }

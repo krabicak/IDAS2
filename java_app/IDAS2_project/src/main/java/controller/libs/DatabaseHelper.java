@@ -2,6 +2,7 @@ package controller.libs;
 
 import model.*;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 
 import javax.persistence.*;
@@ -204,26 +205,12 @@ public final class DatabaseHelper {
         return stmt;
     }
 
-
-    private static CallableStatement setSubject(CallableStatement stmt, Subject subject, String email, String password) throws SQLException {
-        stmt.setString(1, email);
-        stmt.setString(2, password);
-        stmt.setString(3, subject.getNazev());
-        stmt.setString(4, subject.getZkratka());
-        stmt.setString(5, subject.getRozsahHodin());
-        stmt.setString(6, subject.getKategorie().getNazevKategorie());
-        stmt.setString(7, subject.getZpusobZakonceni().getZkratka());
-        stmt.setString(8, subject.getGarant().getId());
-        stmt.setString(9, subject.getDoporucenyRocnik().getCisloRocniku());
-        return stmt;
-    }
-
     public static void addWorkplace(Workplace workplace, String email, String password) throws DatabaseException {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call add_workplace(:1,:2,:3,:4,:5) }");
-                setWorkplace(stmt,workplace,email,password);
+                setWorkplace(stmt, workplace, email, password);
                 stmt.execute();
                 stmt.close();
             });
@@ -237,8 +224,8 @@ public final class DatabaseHelper {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call update_workplace(:1,:2,:3,:4,:5,:6) }");
-                setWorkplace(stmt,workplace,email,password);
-                stmt.setString(6,workplace.getId());
+                setWorkplace(stmt, workplace, email, password);
+                stmt.setString(6, workplace.getId());
                 stmt.execute();
                 stmt.close();
             });
@@ -272,12 +259,114 @@ public final class DatabaseHelper {
         }
     }
 
+    public static List<Room> getAllRooms() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_rooms");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<MethodOfLearning> getAllMethodsOfLearning() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_methods_of_learning");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<Day> getAllDays() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_days");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    private static CallableStatement setLearningAction(CallableStatement stmt, LearningAction learningAction, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, learningAction.getKapacita());
+        stmt.setString(4, learningAction.getZpusobVyuky().getZkrata());
+        stmt.setString(5, learningAction.getVyucujici().getId());
+        if (learningAction.getPocatek() == null) stmt.setNull(6, Types.VARCHAR);
+        else stmt.setString(6, learningAction.getPocatek());
+        if (learningAction.getKonec() == null) stmt.setNull(7, Types.VARCHAR);
+        else stmt.setString(7, learningAction.getKonec());
+        if (learningAction.getDen() == null) stmt.setNull(8, Types.VARCHAR);
+        else stmt.setString(8, learningAction.getDen().getShortcut());
+        stmt.setString(9, learningAction.getPredmet().getId());
+        stmt.setString(10, learningAction.getUcebna().getId());
+        return stmt;
+    }
+
+    public static void addLearningAction(LearningAction learningAction, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_learning_action(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10) }");
+                stmt = setLearningAction(stmt, learningAction, email, password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void updateLearningAction(LearningAction learningAction, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_learning_action(:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11) }");
+                stmt = setLearningAction(stmt, learningAction, email, password);
+                stmt.setString(11, learningAction.getId());
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deleteLearningAction(LearningAction learningAction, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_learning_action ( :1 , :2 , :3 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, learningAction.getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    private static CallableStatement setSubject(CallableStatement stmt, Subject subject, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, subject.getNazev());
+        stmt.setString(4, subject.getZkratka());
+        stmt.setString(5, subject.getRozsahHodin());
+        stmt.setString(6, subject.getKategorie().getNazevKategorie());
+        stmt.setString(7, subject.getZpusobZakonceni().getZkratka());
+        stmt.setString(8, subject.getGarant().getId());
+        stmt.setString(9, subject.getDoporucenyRocnik().getCisloRocniku());
+        return stmt;
+    }
+
     public static void addSubject(Subject subject, String email, String password) throws DatabaseException {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
                 CallableStatement stmt = connection.prepareCall("{ call add_workplace(:1,:2,:3,:4,:5,:6,:7,:8,:9) }");
-                setSubject(stmt,subject,email,password);
+                setSubject(stmt, subject, email, password);
                 stmt.execute();
                 stmt.close();
             });
