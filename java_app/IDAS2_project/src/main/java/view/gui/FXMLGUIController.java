@@ -2,16 +2,15 @@ package view.gui;
 
 import controller.MainController;
 import controller.MainControllerInterface;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Pair;
 import model.*;
@@ -24,7 +23,7 @@ import java.util.ResourceBundle;
 
 
 public class FXMLGUIController implements Initializable {
-    private MainControllerInterface mainController = new MainController();
+    public static MainControllerInterface mainController;
 
     @FXML
     private TableView<Workplace> tableViewPracoviste;
@@ -147,10 +146,6 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delPlanBtn;
 
-    public void test() {
-
-    }
-
     private void setTableViewUcitel(List<Teacher> list) {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
         ucitel_jmenoClm.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
@@ -235,7 +230,6 @@ public class FXMLGUIController implements Initializable {
 
     private void setAllData() {
         try {
-            //mainController.addTeacher(new Teacher(null, "test", "test", null, data.getWorkplaces().get(0), data.getTeachers().get(0).getUvazek(), "test1@test.cz", null, null, data.getTeachers().get(0).getRole(), "heslo"));
             setTableViewUcitel(mainController.getAllTeachers());
             setTableViewPredmety(mainController.getAllSubjects());
             setTableViewPracoviste(mainController.getAllWorkplaces());

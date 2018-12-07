@@ -367,6 +367,7 @@ public final class DatabaseHelper {
                 stmt.execute();
                 stmt.close();
             });
+            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -382,6 +383,7 @@ public final class DatabaseHelper {
                 stmt.execute();
                 stmt.close();
             });
+            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
@@ -398,6 +400,7 @@ public final class DatabaseHelper {
                 stm.execute();
                 stm.close();
             });
+            session.close();
         } catch (Exception e) {
             throw new DatabaseException(e);
         }
