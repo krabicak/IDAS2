@@ -158,6 +158,7 @@ public interface MainControllerInterface {
      * @throws LoginException
      */
     void addSubject(Subject subject) throws DatabaseAccesException, LoginException;
+
     /**
      * @param subject
      * @throws DatabaseAccesException
@@ -201,6 +202,31 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException
      */
     List<RecommendedYear> getAllRecommendedYears() throws DatabaseAccesException;
+
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<FormOfStudy> getAllFormsOfStudy() throws DatabaseAccesException;
+
+    /**
+     * @param fieldOfStudy
+     * @throws DatabaseAccesException
+     */
+    void addFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException;
+
+    /**
+     * @param fieldOfStudy
+     * @throws DatabaseAccesException
+     */
+    void updateFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException;
+
+    /**
+     * @param fieldOfStudy
+     * @throws DatabaseAccesException
+     */
+    void deleteFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException;
+
 
     class LoginException extends Exception {
 

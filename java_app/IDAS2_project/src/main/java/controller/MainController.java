@@ -2,6 +2,7 @@ package controller;
 
 import controller.libs.DatabaseHelper;
 import model.*;
+import org.hibernate.Session;
 
 import javax.persistence.Persistence;
 import java.util.List;
@@ -270,6 +271,41 @@ public class MainController implements MainControllerInterface {
         try {
             return DatabaseHelper.getAllRecommendedYears();
         } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public List<FormOfStudy> getAllFormsOfStudy() throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllFormsOfStudy();
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void addFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.addFieldOfStudy(fieldOfStudy, loggedUser.getEmail(), password);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void updateFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.updateFieldOfStudy(fieldOfStudy, loggedUser.getEmail(), password);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void deleteFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.deleteFieldOfStudy(fieldOfStudy, loggedUser.getEmail(), password);
+        } catch (Exception e) {
             throw new DatabaseAccesException(e);
         }
     }

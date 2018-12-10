@@ -3,9 +3,15 @@ package model;
 import javax.persistence.*;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "get_all_forms_of_study",
+        query = "{ ? = call get_all_forms_of_study ( ) }",
+        resultClass = FormOfStudy.class,
+        hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+)
 @Entity
 @Table(name = "forma_vyuky")
-public class FormsOfStudy {
+public class FormOfStudy {
 
     @Id
     @Column(name = "ID")

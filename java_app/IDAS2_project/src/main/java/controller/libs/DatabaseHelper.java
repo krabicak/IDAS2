@@ -1,16 +1,10 @@
 package controller.libs;
 
 import model.*;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.JoinType;
-import javax.persistence.criteria.Root;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -363,20 +357,20 @@ public final class DatabaseHelper {
         if (subject.getDoporucenyRocnik() == null) stmt.setNull(8, Types.NUMERIC);
         else stmt.setString(8, subject.getDoporucenyRocnik().getCisloRocniku());
         stmt.setString(9, subject.getGarant().getId());
-        if(subject.getSemestr().size()==0){
-            stmt.setNull(10,Types.NUMERIC);
-            stmt.setNull(11,Types.NUMERIC);
-        }else if(subject.getSemestr().size()==1){
-            if (subject.getSemestr().get(0).getId().equals("1")){
-                stmt.setString(10,"1");
-                stmt.setNull(11,Types.NUMERIC);
-            }else if (subject.getSemestr().get(0).getId().equals("2")){
-                stmt.setString(11,"1");
-                stmt.setNull(10,Types.NUMERIC);
+        if (subject.getSemestr().size() == 0) {
+            stmt.setNull(10, Types.NUMERIC);
+            stmt.setNull(11, Types.NUMERIC);
+        } else if (subject.getSemestr().size() == 1) {
+            if (subject.getSemestr().get(0).getId().equals("1")) {
+                stmt.setString(10, "1");
+                stmt.setNull(11, Types.NUMERIC);
+            } else if (subject.getSemestr().get(0).getId().equals("2")) {
+                stmt.setString(11, "1");
+                stmt.setNull(10, Types.NUMERIC);
             }
-        }else if(subject.getSemestr().size()==2){
-            stmt.setString(10,"1");
-            stmt.setString(11,"1");
+        } else if (subject.getSemestr().size() == 2) {
+            stmt.setString(10, "1");
+            stmt.setString(11, "1");
         }
         return stmt;
     }
@@ -457,6 +451,84 @@ public final class DatabaseHelper {
         try {
             Query query = em.createNamedQuery("get_all_recommended_years");
             return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<FormOfStudy> getAllFormsOfStudy() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_forms_of_study");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    private static CallableStatement setFieldOfStudy(CallableStatement stmt, FieldOfStudy fieldOfStudy, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, fieldOfStudy.getPracoviste().getId());
+        stmt.setString(4, fieldOfStudy.getNazev());
+        stmt.setString(5, fieldOfStudy.getZkratka());
+        if (fieldOfStudy.getForma().size() == 0) {
+            stmt.setNull(6, Types.NUMERIC);
+            stmt.setNull(7, Types.NUMERIC);
+        } else if (fieldOfStudy.getForma().size() == 1) {
+            if (fieldOfStudy.getForma().get(0).getId().equals("1")) {
+                stmt.setString(6, "1");
+                stmt.setNull(7, Types.NUMERIC);
+            } else if (fieldOfStudy.getForma().get(0).getId().equals("2")) {
+                stmt.setString(11, "1");
+                stmt.setNull(10, Types.NUMERIC);
+            }
+        } else if (fieldOfStudy.getForma().size() == 2) {
+            stmt.setString(6, "1");
+            stmt.setString(7, "1");
+        }
+        return stmt;
+    }
+
+    public static void addFieldOfStudy(FieldOfStudy fieldOfStudy, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_field_of_study(:1,:2,:3,:4,:5,:6,:7) }");
+                stmt = setFieldOfStudy(stmt, fieldOfStudy, email, password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void updateFieldOfStudy(FieldOfStudy fieldOfStudy, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_field_of_study(:1,:2,:3,:4,:5,:6,:7,:8) }");
+                stmt = setFieldOfStudy(stmt, fieldOfStudy, email, password);
+                stmt.setString(8, fieldOfStudy.getId());
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deleteFieldOfStudy(FieldOfStudy fieldOfStudy, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_field_of_study ( :1 , :2 , :3 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, fieldOfStudy.getId());
+                stm.execute();
+                stm.close();
+            });
         } catch (Exception e) {
             throw new DatabaseException(e);
         }

@@ -1,5 +1,6 @@
 package view.gui.libs;
 
+import com.sun.corba.se.impl.ior.WireObjectKeyTemplate;
 import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
@@ -572,6 +573,113 @@ public final class Dialogs {
                 }
                 subject.setSemestr(sem);
                 return subject;
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+
+        return dialog;
+    }
+
+    public static Dialog getFieldOfStudyDialog(List<FormOfStudy> formOfStudies, List<Workplace> workplaces) {
+        return getFieldOfStudyDialog(new FieldOfStudy(), formOfStudies, workplaces);
+    }
+
+    public static Dialog getFieldOfStudyDialog(FieldOfStudy fieldOfStudy, List<FormOfStudy> formOfStudies, List<Workplace> workplaces) {
+        ButtonType save = new ButtonType("Uložit", ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        TextField nazev = new TextField();
+        nazev.setText(fieldOfStudy.getNazev());
+        TextField zkratka = new TextField();
+        zkratka.setText(fieldOfStudy.getZkratka());
+
+        ChoiceBox<Workplace> workplaceChoiceBox = new ChoiceBox<>();
+        workplaces.forEach(workplaceChoiceBox.getItems()::add);
+        if (fieldOfStudy.getPracoviste() != null)
+            workplaceChoiceBox.getSelectionModel().select(fieldOfStudy.getPracoviste());
+        else workplaceChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<FormsTypes> formsTypesChoiceBox = new ChoiceBox<>();
+        formsTypesChoiceBox.getItems().addAll(FormsTypes.values());
+        if (fieldOfStudy.getForma() != null) {
+            if (fieldOfStudy.getForma().size() == 2)
+                formsTypesChoiceBox.getSelectionModel().select(FormsTypes.PREZENCNI_A_KOMBINOVANA);
+            else if (fieldOfStudy.getForma().size() == 1 && fieldOfStudy.getForma().get(0).toString().equals(FormsTypes.PREZENCNI.toString()))
+                formsTypesChoiceBox.getSelectionModel().select(FormsTypes.PREZENCNI);
+            else if (fieldOfStudy.getForma().size() == 1 && fieldOfStudy.getForma().get(0).toString().equals(FormsTypes.KOMBINOVANA.toString()))
+                formsTypesChoiceBox.getSelectionModel().select(FormsTypes.KOMBINOVANA);
+        } else formsTypesChoiceBox.getSelectionModel().selectFirst();
+
+        //kontrola vložených dat
+        Dialog dialog = new Dialog();
+        InvalidationListener listener = observable -> {
+            try {
+                isItNull(nazev);
+                isItNull(zkratka);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
+            } catch (NullPointerException | NumberFormatException e) {
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
+            }
+        };
+
+        // popis prmpt textu
+        nazev.setPromptText("název");
+        zkratka.setPromptText("zkratka");
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte název:"), 0, 0);
+        grid.add(nazev, 1, 0);
+        grid.add(new Label("Zadejte zkratku:"), 0, 1);
+        grid.add(zkratka, 1, 1);
+        grid.add(new Label("Vyberte pracoviště:"), 0, 2);
+        grid.add(workplaceChoiceBox, 1, 2);
+        grid.add(new Label("Vyberte formu studia:"), 0, 3);
+        grid.add(formsTypesChoiceBox, 1, 3);
+
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Předmět");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(fieldOfStudy.getId() == null);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+        // nastaveni listeneru pro kontrolu dat na pole
+        nazev.textProperty().addListener(listener);
+        zkratka.textProperty().addListener(listener);
+
+
+        //vraceni objektu
+        Callback<ButtonType, FieldOfStudy> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                fieldOfStudy.setNazev(nazev.getText());
+                fieldOfStudy.setZkratka(zkratka.getText());
+                fieldOfStudy.setPracoviste(workplaceChoiceBox.getSelectionModel().getSelectedItem());
+                List<FormOfStudy> sem = new ArrayList<>();
+                if (formsTypesChoiceBox.getSelectionModel().getSelectedItem() != null) {
+                    switch (formsTypesChoiceBox.getSelectionModel().getSelectedItem()) {
+                        case PREZENCNI_A_KOMBINOVANA: {
+                            sem.add(formOfStudies.get(0));
+                            sem.add(formOfStudies.get(1));
+                            break;
+                        }
+                        case KOMBINOVANA: {
+                            sem.add(formOfStudies.get(1));
+                            break;
+                        }
+                        case PREZENCNI: {
+                            sem.add(formOfStudies.get(0));
+                            break;
+                        }
+                    }
+                }
+                fieldOfStudy.setForma(sem);
+                return fieldOfStudy;
             }
             return null;
         };

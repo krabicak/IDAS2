@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 
 
 public class FXMLGUIController implements Initializable {
-    public static MainControllerInterface mainController= new MainController();
+    public static MainControllerInterface mainController = new MainController();
 
     @FXML
     private TableView<Workplace> tableViewPracoviste;
@@ -481,9 +481,41 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
+
+    public void addStudyField(ActionEvent actionEvent) {
+        try {
+            Optional<FieldOfStudy> result = Dialogs.getFieldOfStudyDialog(
+                    mainController.getAllFormsOfStudy(),
+                    mainController.getAllWorkplaces()).showAndWait();
+            result.ifPresent(fieldOfStudy -> {
+                try {
+                    mainController.addFieldOfStudy(fieldOfStudy);
+                    setAllData();
+                    Dialogs.showInfoDialog("Obor " + fieldOfStudy + " přidán");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
+
     public void updateStudyField(ActionEvent actionEvent) {
         try {
-
+            Optional<FieldOfStudy> result = Dialogs.getFieldOfStudyDialog(
+                    tableViewObory.getSelectionModel().getSelectedItem(),
+                    mainController.getAllFormsOfStudy(),
+                    mainController.getAllWorkplaces()).showAndWait();
+            result.ifPresent(fieldOfStudy -> {
+                try {
+                    mainController.updateFieldOfStudy(fieldOfStudy);
+                    setAllData();
+                    Dialogs.showInfoDialog("Obor " + fieldOfStudy + " upraven");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
@@ -491,9 +523,12 @@ public class FXMLGUIController implements Initializable {
 
     public void deleteStudyField(ActionEvent actionEvent) {
         try {
-
-        } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            String name = tableViewObory.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteFieldOfStudy(tableViewObory.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Obor " + name + " smazán");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
         }
     }
 

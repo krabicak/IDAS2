@@ -30,7 +30,7 @@ public class FieldOfStudy {
             joinColumns = {@JoinColumn(name = "studijni_obor_id")},
             inverseJoinColumns = {@JoinColumn(name = "forma_vyuky_id")}
     )
-    private List<FormsOfStudy> forma;
+    private List<FormOfStudy> forma;
 
 
     public String getId() {
@@ -69,22 +69,16 @@ public class FieldOfStudy {
     }
 
 
-    public List<FormsOfStudy> getForma() {
+    public List<FormOfStudy> getForma() {
         return forma;
     }
 
-    public void setForma(List<FormsOfStudy> forma) {
+    public void setForma(List<FormOfStudy> forma) {
         this.forma = forma;
     }
 
     @Override
     public String toString() {
-        return "FieldOfStudy{" +
-                "id='" + id + '\'' +
-                ", pracoviste=" + pracoviste +
-                ", nazev='" + nazev + '\'' +
-                ", zkratka='" + zkratka + '\'' +
-                ", forma=" + forma +
-                '}';
+        return nazev + " " + zkratka;
     }
 }
