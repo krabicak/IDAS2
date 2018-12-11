@@ -605,4 +605,14 @@ public final class DatabaseHelper {
         }
     }
 
+    public static List<LearningAction> getLearningActionsByTeacher(Teacher teacher) throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_learning_actions_by_teacher");
+            query.setParameter(1, teacher.getId());
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
 }

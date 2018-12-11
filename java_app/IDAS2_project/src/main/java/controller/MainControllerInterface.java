@@ -252,6 +252,13 @@ public interface MainControllerInterface {
      */
     void deletePhoto(Photo photo) throws DatabaseAccesException;
 
+    /**
+     * @param teacher
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<LearningAction> getLearningActionsByTeacher(Teacher teacher) throws DatabaseAccesException;
+
 
     class LoginException extends Exception {
 

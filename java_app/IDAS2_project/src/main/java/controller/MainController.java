@@ -345,5 +345,11 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-
+    public List<LearningAction> getLearningActionsByTeacher(Teacher teacher) throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getLearningActionsByTeacher(teacher);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
 }
