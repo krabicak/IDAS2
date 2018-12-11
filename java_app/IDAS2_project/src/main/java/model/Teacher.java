@@ -164,9 +164,14 @@ public class Teacher {
         this.role = role;
     }
 
-    public String getHeslo() { return heslo; }
 
-    public void setHeslo(String heslo) { this.heslo = heslo; }
+    public String getHeslo() {
+        return heslo;
+    }
+
+    public void setHeslo(String heslo) {
+        this.heslo = heslo;
+    }
 
     @Override
     public String toString() {

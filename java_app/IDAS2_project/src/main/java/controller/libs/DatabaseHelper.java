@@ -534,4 +534,72 @@ public final class DatabaseHelper {
         }
     }
 
+    public static Photo getPhotoByTeacher(Teacher teacher) throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_photo_by_id");
+            query.setParameter(1, teacher.getId());
+            List<Photo> list = query.getResultList();
+            if (list.size() == 1) {
+                return list.get(0);
+            } else {
+                throw new DatabaseException("Obrazek nenalezen");
+            }
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    private static CallableStatement setPhoto(CallableStatement stmt, Photo photo, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, photo.getId());
+        stmt.setString(4, photo.getInfo());
+        stmt.setBlob(5, photo.getObrazek());
+        return stmt;
+    }
+
+    public static void addPhoto(Photo photo, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_photo(:1,:2,:3,:4,:5) }");
+                stmt = setPhoto(stmt, photo, email, password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void updatePhoto(Photo photo, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_photo(:1,:2,:3,:4,:5) }");
+                stmt = setPhoto(stmt, photo, email, password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deletePhoto(Photo photo, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_photo ( :1 , :2 , :3 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, photo.getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
 }

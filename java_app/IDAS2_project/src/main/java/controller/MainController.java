@@ -310,4 +310,40 @@ public class MainController implements MainControllerInterface {
         }
     }
 
+    public Photo getPhotoByTeacher(Teacher teacher) throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getPhotoByTeacher(teacher);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void addPhoto(Photo photo) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.addPhoto(photo, loggedUser.getEmail(), password);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void updatePhoto(Photo photo) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.updatePhoto(photo, loggedUser.getEmail(), password);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void deletePhoto(Photo photo) throws DatabaseAccesException {
+        try {
+            checkLoging();
+            DatabaseHelper.deletePhoto(photo, loggedUser.getEmail(), password);
+        } catch (Exception e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+
 }

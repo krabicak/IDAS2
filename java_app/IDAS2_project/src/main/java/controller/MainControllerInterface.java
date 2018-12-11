@@ -227,6 +227,31 @@ public interface MainControllerInterface {
      */
     void deleteFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException;
 
+    /**
+     * @param teacher
+     * @return
+     * @throws DatabaseAccesException
+     */
+    Photo getPhotoByTeacher(Teacher teacher) throws DatabaseAccesException;
+
+    /**
+     * @param photo
+     * @throws DatabaseAccesException
+     */
+    void addPhoto(Photo photo) throws DatabaseAccesException;
+
+    /**
+     * @param photo
+     * @throws DatabaseAccesException
+     */
+    void updatePhoto(Photo photo) throws DatabaseAccesException;
+
+    /**
+     * @param photo
+     * @throws DatabaseAccesException
+     */
+    void deletePhoto(Photo photo) throws DatabaseAccesException;
+
 
     class LoginException extends Exception {
 
