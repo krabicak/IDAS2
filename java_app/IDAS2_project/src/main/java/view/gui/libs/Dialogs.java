@@ -110,10 +110,10 @@ public final class Dialogs {
     }
 
     public static Dialog getTeacherDialog(List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles) throws SQLException {
-        return getTeacherDialog(new Teacher(), new Photo(), workplaces, obligations, roles);
+        return getTeacherDialog(new Teacher(), new Photo(), workplaces, obligations, roles, true);
     }
 
-    public static Dialog getTeacherDialog(Teacher teacher, Photo photo, List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles) throws SQLException {
+    public static Dialog getTeacherDialog(Teacher teacher, Photo photo, List<Workplace> workplaces, List<Obligation> obligations, List<Role> roles, boolean editable) throws SQLException {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",
@@ -123,37 +123,49 @@ public final class Dialogs {
                 ButtonBar.ButtonData.CANCEL_CLOSE);
         TextField firstName = new TextField();
         firstName.setText(teacher.getJmeno());
+        firstName.setEditable(editable);
         TextField lastName = new TextField();
         lastName.setText(teacher.getPrijmeni());
+        lastName.setEditable(editable);
         TextField tittleBefore = new TextField();
         tittleBefore.setText(teacher.getTitulPred());
+        tittleBefore.setEditable(editable);
         TextField tittleAfter = new TextField();
         tittleAfter.setText(teacher.getTitulZa());
+        tittleAfter.setEditable(editable);
         TextField telNumber = new TextField();
         telNumber.setText(teacher.getTelefon());
+        telNumber.setEditable(editable);
         TextField mobileNumber = new TextField();
         mobileNumber.setText(teacher.getMobil());
+        mobileNumber.setEditable(editable);
         TextField email = new TextField();
         email.setText(teacher.getEmail());
+        email.setEditable(editable);
         PasswordField password = new PasswordField();
+        password.setEditable(editable);
         ChoiceBox<Workplace> workplacess = new ChoiceBox<>();
         workplaces.forEach(workplacess.getItems()::add);
+        workplacess.setDisable(!editable);
         if (teacher.getPracoviste() != null) workplacess.getSelectionModel().select(teacher.getPracoviste());
         else workplacess.getSelectionModel().selectFirst();
 
         ChoiceBox<Role> roless = new ChoiceBox<>();
         roles.forEach(roless.getItems()::add);
+        roless.setDisable(!editable);
         if (teacher.getRole() != null) roless.getSelectionModel().select(teacher.getRole());
         else roless.getSelectionModel().selectFirst();
 
         ChoiceBox<Obligation> obligationn = new ChoiceBox<>();
         obligations.forEach(obligationn.getItems()::add);
+        obligationn.setDisable(!editable);
         if (teacher.getUvazek() != null) obligationn.getSelectionModel().select(teacher.getUvazek());
         else obligationn.getSelectionModel().selectFirst();
 
         HBox hBox = new HBox();
         if (photo.getId() != null) {
             Button updatePhoto = new Button();
+            updatePhoto.setDisable(!editable);
             updatePhoto.setText("Upravit");
             updatePhoto.setOnAction(event -> {
                 Optional<Photo> result = getPhotoDialog(photo).showAndWait();
@@ -168,6 +180,7 @@ public final class Dialogs {
             });
             Button deletePhoto = new Button();
             deletePhoto.setText("Odstranit");
+            deletePhoto.setDisable(!editable);
             deletePhoto.setOnAction(event -> {
                 try {
                     FXMLGUIController.mainController.deletePhoto(photo);
@@ -179,6 +192,7 @@ public final class Dialogs {
             hBox.getChildren().addAll(updatePhoto, deletePhoto);
         } else {
             Button addPhoto = new Button();
+            addPhoto.setDisable(!editable);
             addPhoto.setText("Přidat");
             addPhoto.setOnAction(event -> {
                 photo.setId(teacher.getId());
@@ -262,7 +276,7 @@ public final class Dialogs {
         //nastavení dialogu (modal atd)
         dialog.setTitle("Učitel");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(teacher.getId() == null);
+        dialog.getDialogPane().lookupButton(save).setDisable(teacher.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 
@@ -300,10 +314,10 @@ public final class Dialogs {
     }
 
     public static Dialog getWorkplaceDialog(List<Faculty> faculties) {
-        return getWorkplaceDialog(new Workplace(), faculties);
+        return getWorkplaceDialog(new Workplace(), faculties, true);
     }
 
-    public static Dialog getWorkplaceDialog(Workplace workplace, List<Faculty> faculties) {
+    public static Dialog getWorkplaceDialog(Workplace workplace, List<Faculty> faculties, boolean editable) {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",
@@ -312,11 +326,14 @@ public final class Dialogs {
                 "Zrušit",
                 ButtonBar.ButtonData.CANCEL_CLOSE);
         TextField nazev = new TextField();
+        nazev.setEditable(editable);
         nazev.setText(workplace.getNazev());
         TextField zkratka = new TextField();
+        zkratka.setEditable(editable);
         zkratka.setText(workplace.getZkratka());
 
         ChoiceBox<Faculty> facultyChoiceBox = new ChoiceBox<>();
+        facultyChoiceBox.setDisable(!editable);
         faculties.forEach(facultyChoiceBox.getItems()::add);
         if (workplace.getFakulta() != null) facultyChoiceBox.getSelectionModel().select(workplace.getFakulta());
         else facultyChoiceBox.getSelectionModel().selectFirst();
@@ -353,7 +370,7 @@ public final class Dialogs {
         //nastavení dialogu (modal atd)
         dialog.setTitle("Pracoviště");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(workplace.getId() == null);
+        dialog.getDialogPane().lookupButton(save).setDisable(workplace.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 
@@ -378,11 +395,11 @@ public final class Dialogs {
 
     public static Dialog getLearningActionDialog(List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
                                                  List<Day> days, List<Subject> subjects, List<Room> rooms) {
-        return getLearningActionDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, rooms);
+        return getLearningActionDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, rooms, true);
     }
 
     public static Dialog getLearningActionDialog(LearningAction learningAction, List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
-                                                 List<Day> days, List<Subject> subjects, List<Room> rooms) {
+                                                 List<Day> days, List<Subject> subjects, List<Room> rooms, boolean editable) {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",
@@ -392,36 +409,44 @@ public final class Dialogs {
                 ButtonBar.ButtonData.CANCEL_CLOSE);
         TextField kapacita = new TextField();
         kapacita.setText(learningAction.getKapacita());
+        kapacita.setEditable(editable);
         TextField pocatek = new TextField();
         pocatek.setText(learningAction.getPocatek());
+        pocatek.setEditable(editable);
         TextField konec = new TextField();
         konec.setText(learningAction.getKonec());
+        konec.setEditable(editable);
 
         ChoiceBox<MethodOfLearning> methodOfLearningChoiceBox = new ChoiceBox<>();
         methodOfLearnings.forEach(methodOfLearningChoiceBox.getItems()::add);
+        methodOfLearningChoiceBox.setDisable(!editable);
         if (learningAction.getZpusobVyuky() != null)
             methodOfLearningChoiceBox.getSelectionModel().select(learningAction.getZpusobVyuky());
         else methodOfLearningChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Teacher> teacherChoiceBox = new ChoiceBox<>();
         teachers.forEach(teacherChoiceBox.getItems()::add);
+        teacherChoiceBox.setDisable(!editable);
         if (learningAction.getVyucujici() != null)
             teacherChoiceBox.getSelectionModel().select(learningAction.getVyucujici());
         else teacherChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Day> dayChoiceBox = new ChoiceBox<>();
         days.forEach(dayChoiceBox.getItems()::add);
+        dayChoiceBox.setDisable(!editable);
         if (learningAction.getDen() != null) dayChoiceBox.getSelectionModel().select(learningAction.getDen());
         else dayChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Subject> subjectChoiceBox = new ChoiceBox<>();
         subjects.forEach(subjectChoiceBox.getItems()::add);
+        subjectChoiceBox.setDisable(!editable);
         if (learningAction.getPredmet() != null)
             subjectChoiceBox.getSelectionModel().select(learningAction.getPredmet());
         else subjectChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Room> roomChoiceBox = new ChoiceBox<>();
         rooms.forEach(roomChoiceBox.getItems()::add);
+        roomChoiceBox.setDisable(!editable);
         if (learningAction.getUcebna() != null) roomChoiceBox.getSelectionModel().select(learningAction.getUcebna());
         else roomChoiceBox.getSelectionModel().selectFirst();
 
@@ -429,6 +454,7 @@ public final class Dialogs {
         Dialog dialog = new Dialog();
         InvalidationListener listener = observable -> {
             try {
+                if (!editable) throw new NullPointerException();
                 isItNull(kapacita);
                 dialog.getDialogPane().lookupButton(save).setDisable(false);
             } catch (NullPointerException | NumberFormatException e) {
@@ -467,7 +493,7 @@ public final class Dialogs {
         //nastavení dialogu (modal atd)
         dialog.setTitle("Pracoviště");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(learningAction.getId() == null);
+        dialog.getDialogPane().lookupButton(save).setDisable(learningAction.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 
@@ -498,23 +524,27 @@ public final class Dialogs {
 
     public static Dialog getSubjectDialog(List<Semester> semestr, List<CategoryOfSubject> category, List<ConclusionOfSubject> conclusion,
                                           List<Teacher> garant, List<RecommendedYear> recommendedYears) {
-        return getSubjectDialog(new Subject(), semestr, category, conclusion, garant, recommendedYears);
+        return getSubjectDialog(new Subject(), semestr, category, conclusion, garant, recommendedYears, true);
     }
 
     public static Dialog getSubjectDialog(Subject subject, List<Semester> semestr, List<CategoryOfSubject> category,
-                                          List<ConclusionOfSubject> conclusion, List<Teacher> garant, List<RecommendedYear> recommendedYears) {
+                                          List<ConclusionOfSubject> conclusion, List<Teacher> garant, List<RecommendedYear> recommendedYears, boolean editable) {
 
         ButtonType save = new ButtonType("Uložit", ButtonBar.ButtonData.OK_DONE);
         ButtonType cancel = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
 
         TextField nazevPredmetu = new TextField();
         nazevPredmetu.setText(subject.getNazev());
+        nazevPredmetu.setEditable(editable);
         TextField zkratkaPredmetu = new TextField();
         zkratkaPredmetu.setText(subject.getZkratka());
+        zkratkaPredmetu.setEditable(editable);
         TextField rozsahHodin = new TextField();
         rozsahHodin.setText(subject.getRozsahHodin());
+        rozsahHodin.setEditable(editable);
 
         ChoiceBox<SemesterTypes> semesterChoiceBox = new ChoiceBox<>();
+        semesterChoiceBox.setDisable(!editable);
         semesterChoiceBox.getItems().addAll(SemesterTypes.values());
         if (subject.getSemestr() != null) {
             if (subject.getSemestr().size() == 2)
@@ -526,24 +556,28 @@ public final class Dialogs {
         } else semesterChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<CategoryOfSubject> categoryOfSubjectChoiceBox = new ChoiceBox<>();
+        categoryOfSubjectChoiceBox.setDisable(!editable);
         category.forEach(categoryOfSubjectChoiceBox.getItems()::add);
         if (subject.getKategorie() != null)
             categoryOfSubjectChoiceBox.getSelectionModel().select(subject.getKategorie());
         else categoryOfSubjectChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<ConclusionOfSubject> conclusionChoiceBox = new ChoiceBox<>();
+        conclusionChoiceBox.setDisable(!editable);
         conclusion.forEach(conclusionChoiceBox.getItems()::add);
         if (subject.getZpusobZakonceni() != null)
             conclusionChoiceBox.getSelectionModel().select(subject.getZpusobZakonceni());
         else conclusionChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Teacher> garantChoiceBox = new ChoiceBox<>();
+        garantChoiceBox.setDisable(!editable);
         garant.forEach(garantChoiceBox.getItems()::add);
         if (subject.getGarant() != null)
             garantChoiceBox.getSelectionModel().select(subject.getGarant());
         else garantChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<RecommendedYear> recommendedYearChoiceBox = new ChoiceBox<>();
+        recommendedYearChoiceBox.setDisable(!editable);
         recommendedYears.forEach(recommendedYearChoiceBox.getItems()::add);
         recommendedYearChoiceBox.getItems().add(null);
         if (subject.getDoporucenyRocnik() != null)
@@ -595,7 +629,7 @@ public final class Dialogs {
         //nastavení dialogu (modal atd)
         dialog.setTitle("Předmět");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(subject.getId() == null);
+        dialog.getDialogPane().lookupButton(save).setDisable(subject.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 
@@ -644,25 +678,29 @@ public final class Dialogs {
     }
 
     public static Dialog getFieldOfStudyDialog(List<FormOfStudy> formOfStudies, List<Workplace> workplaces) {
-        return getFieldOfStudyDialog(new FieldOfStudy(), formOfStudies, workplaces);
+        return getFieldOfStudyDialog(new FieldOfStudy(), formOfStudies, workplaces, true);
     }
 
-    public static Dialog getFieldOfStudyDialog(FieldOfStudy fieldOfStudy, List<FormOfStudy> formOfStudies, List<Workplace> workplaces) {
+    public static Dialog getFieldOfStudyDialog(FieldOfStudy fieldOfStudy, List<FormOfStudy> formOfStudies, List<Workplace> workplaces, boolean editable) {
         ButtonType save = new ButtonType("Uložit", ButtonBar.ButtonData.OK_DONE);
         ButtonType cancel = new ButtonType("Zrušit", ButtonBar.ButtonData.CANCEL_CLOSE);
 
         TextField nazev = new TextField();
+        nazev.setEditable(editable);
         nazev.setText(fieldOfStudy.getNazev());
         TextField zkratka = new TextField();
+        zkratka.setEditable(editable);
         zkratka.setText(fieldOfStudy.getZkratka());
 
         ChoiceBox<Workplace> workplaceChoiceBox = new ChoiceBox<>();
+        workplaceChoiceBox.setDisable(!editable);
         workplaces.forEach(workplaceChoiceBox.getItems()::add);
         if (fieldOfStudy.getPracoviste() != null)
             workplaceChoiceBox.getSelectionModel().select(fieldOfStudy.getPracoviste());
         else workplaceChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<FormsTypes> formsTypesChoiceBox = new ChoiceBox<>();
+        formsTypesChoiceBox.setDisable(!editable);
         formsTypesChoiceBox.getItems().addAll(FormsTypes.values());
         if (fieldOfStudy.getForma() != null) {
             if (fieldOfStudy.getForma().size() == 2)
@@ -707,7 +745,7 @@ public final class Dialogs {
         //nastavení dialogu (modal atd)
         dialog.setTitle("Předmět");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
-        dialog.getDialogPane().lookupButton(save).setDisable(fieldOfStudy.getId() == null);
+        dialog.getDialogPane().lookupButton(save).setDisable(fieldOfStudy.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
 

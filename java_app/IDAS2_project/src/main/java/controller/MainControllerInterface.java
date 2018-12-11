@@ -51,6 +51,11 @@ public interface MainControllerInterface {
     boolean isUserLogged();
 
     /**
+     * @return
+     */
+    boolean isUserAdmin();
+
+    /**
      * @param newTeacher
      * @throws DatabaseAccesException
      */

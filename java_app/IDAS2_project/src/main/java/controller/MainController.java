@@ -35,6 +35,7 @@ public class MainController implements MainControllerInterface {
     }
 
     public boolean isUserAdmin() {
+        if (!isUserLogged()) return false;
         return loggedUser.getRole().getZkratka().equals("admin");
     }
 

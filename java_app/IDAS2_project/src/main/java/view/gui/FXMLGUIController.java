@@ -18,14 +18,16 @@ import model.*;
 import view.gui.libs.Dialogs;
 
 import java.net.URL;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 
 public class FXMLGUIController implements Initializable {
-    public static MainControllerInterface mainController = new MainController();
+    public static MainControllerInterface mainController;
 
+    @FXML
+    private TableView tableViewPlany;
+    @FXML
+    private TableView<LearningAction> tableViewMujRozvrh;
     @FXML
     private TableView<Workplace> tableViewPracoviste;
     @FXML
@@ -89,6 +91,8 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button delRozvrhBtn;
     @FXML
+    private TableColumn<LearningAction, Room> rozvrh_mistnostClm;
+    @FXML
     private TableColumn<LearningAction, Day> rozvrh_denClm;
     @FXML
     private TableColumn<LearningAction, String> rozvrh_odClm;
@@ -146,6 +150,35 @@ public class FXMLGUIController implements Initializable {
     private Button editPlanBtn;
     @FXML
     private Button delPlanBtn;
+    @FXML
+    private TableColumn studyPlan_obor_Clm;
+    @FXML
+    private TableColumn studyPlan_Predmet_Clm;
+    @FXML
+    private TableColumn<LearningAction, Room> mujRozvrh_mistnostClm;
+    @FXML
+    private TableColumn<LearningAction, Day> mujRozvrh_denClm;
+    @FXML
+    private Tab mujRozvrhTab;
+    @FXML
+    private Button delMujRozvrhBtn;
+    @FXML
+    private Button editMujRozvrhBtn;
+    @FXML
+    private Button addMujRozvrhBtn;
+    @FXML
+    private TableColumn<LearningAction, String> mujRozvrh_od_Clm;
+    @FXML
+    private TableColumn<LearningAction, String> mujRozvrh_do_Clm;
+    @FXML
+    private TableColumn<LearningAction, MethodOfLearning> mujRozvrh_typ_Clm;
+    @FXML
+    private TableColumn<LearningAction, String> mujRozvrh_nazevPredmetu_Clm;
+    @FXML
+    private TableColumn<LearningAction, Subject> mujRozvrh_zkratka_Clm;
+
+    private List<Button> adminButtons;
+    private List<Button> infoButtons;
 
     private void setTableViewUcitel(List<Teacher> list) {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -215,7 +248,22 @@ public class FXMLGUIController implements Initializable {
         tableViewObory.refresh();
     }
 
+    private void setTableViewMujRozvrh(List<LearningAction> list) {
+        mujRozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
+        mujRozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
+        mujRozvrh_od_Clm.setCellValueFactory(new PropertyValueFactory<>("pocatek"));
+        mujRozvrh_do_Clm.setCellValueFactory(new PropertyValueFactory<>("konec"));
+        mujRozvrh_typ_Clm.setCellValueFactory(new PropertyValueFactory<>("zpusobVyuky"));
+        mujRozvrh_nazevPredmetu_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getNazev()));
+        mujRozvrh_zkratka_Clm.setCellValueFactory(new PropertyValueFactory<>("predmet"));
+
+        ObservableList<LearningAction> lst = FXCollections.observableArrayList(list);
+        tableViewMujRozvrh.setItems(lst);
+        tableViewMujRozvrh.refresh();
+    }
+
     private void setTableViewRozvrh(List<LearningAction> list) {
+        rozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
         rozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
         rozvrh_odClm.setCellValueFactory(new PropertyValueFactory<>("pocatek"));
         rozvrh_doClm.setCellValueFactory(new PropertyValueFactory<>("konec"));
@@ -236,6 +284,15 @@ public class FXMLGUIController implements Initializable {
             setTableViewPracoviste(mainController.getAllWorkplaces());
             setTableViewObory(mainController.getAllFieldsOfStudy());
             setTableViewRozvrh(mainController.getAllLearningActions());
+            if (mainController.isUserLogged())
+                setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
+            mujRozvrhTab.setDisable(!mainController.isUserLogged());
+            adminButtons.forEach(button -> button.setDisable(!mainController.isUserAdmin()));
+            infoButtons.forEach(button -> {
+                if (!mainController.isUserAdmin()) {
+                    button.setText("Info");
+                } else button.setText("Upravit");
+            });
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
@@ -243,6 +300,13 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
+        mainController = new MainController();
+        adminButtons = Arrays.asList(
+                addOborBtn, addPracovisteBtn, addPredmetBtn, addRozvrhBtn, addStudijniPlan, addUcitelbtn,
+                delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn);
+        infoButtons = Arrays.asList(
+                editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editPlanBtn, editUcitelbtn
+        );
         logButton.setOnAction(this::onLoginClick);
         setAllData();
     }
@@ -258,8 +322,10 @@ public class FXMLGUIController implements Initializable {
                         mainController.logOut();
                         logButton.setText("Přihlásit");
                         logButton.setOnAction(this::onLoginClick);
+                        setAllData();
                         Dialogs.showInfoDialog("Odhlášeno");
                     });
+                    setAllData();
                     Dialogs.showInfoDialog("Přihlášeno");
                 } catch (MainControllerInterface.LoginException e) {
                     Dialogs.showErrorMessage(e);
@@ -314,7 +380,8 @@ public class FXMLGUIController implements Initializable {
                     photo,
                     mainController.getAllWorkplaces(),
                     mainController.getAllObligations(),
-                    mainController.getAllRoles()
+                    mainController.getAllRoles(),
+                    mainController.isUserAdmin()
             ).showAndWait();
             result.ifPresent(teacher -> {
                 try {
@@ -350,7 +417,7 @@ public class FXMLGUIController implements Initializable {
     public void updateWorkplace(ActionEvent actionEvent) {
         try {
             Optional<Workplace> result = Dialogs.getWorkplaceDialog(
-                    tableViewPracoviste.getSelectionModel().getSelectedItem(), mainController.getAllFaculties()).showAndWait();
+                    tableViewPracoviste.getSelectionModel().getSelectedItem(), mainController.getAllFaculties(), mainController.isUserAdmin()).showAndWait();
             result.ifPresent(workplace -> {
                 try {
                     mainController.updateWorkplace(workplace);
@@ -406,7 +473,8 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllTeachers(),
                     mainController.getAllDays(),
                     mainController.getAllSubjects(),
-                    mainController.getAllRooms()).showAndWait();
+                    mainController.getAllRooms(),
+                    mainController.isUserAdmin()).showAndWait();
             result.ifPresent(learningAction -> {
                 try {
                     mainController.updateLearningAction(learningAction);
@@ -462,7 +530,8 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllCategoriesofSubjects(),
                     mainController.getAllConclusionsOfSubjects(),
                     mainController.getAllTeachers(),
-                    mainController.getAllRecommendedYears()).showAndWait();
+                    mainController.getAllRecommendedYears(),
+                    mainController.isUserAdmin()).showAndWait();
             result.ifPresent(subject -> {
                 try {
                     mainController.updateSubject(subject);
@@ -509,13 +578,13 @@ public class FXMLGUIController implements Initializable {
     }
 
 
-
     public void updateStudyField(ActionEvent actionEvent) {
         try {
             Optional<FieldOfStudy> result = Dialogs.getFieldOfStudyDialog(
                     tableViewObory.getSelectionModel().getSelectedItem(),
                     mainController.getAllFormsOfStudy(),
-                    mainController.getAllWorkplaces()).showAndWait();
+                    mainController.getAllWorkplaces(),
+                    mainController.isUserAdmin()).showAndWait();
             result.ifPresent(fieldOfStudy -> {
                 try {
                     mainController.updateFieldOfStudy(fieldOfStudy);
