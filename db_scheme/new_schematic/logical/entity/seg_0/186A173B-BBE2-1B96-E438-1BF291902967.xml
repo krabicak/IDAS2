@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nazev_semestru" id="AB1D58D2-C437-8A76-F238-A2BA5F05C88A">
+<Attribute name="nazev semestru" id="AB1D58D2-C437-8A76-F238-A2BA5F05C88A">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:42:10 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>

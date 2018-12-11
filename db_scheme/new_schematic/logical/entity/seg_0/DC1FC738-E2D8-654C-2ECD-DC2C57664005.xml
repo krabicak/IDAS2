@@ -53,7 +53,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rozsah_hodin" id="C4B7CD74-76A3-CA30-4423-7EDBD9A055DD">
+<Attribute name="rozsah hodin" id="C4B7CD74-76A3-CA30-4423-7EDBD9A055DD">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:36:03 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -65,7 +65,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="zkratka2" id="50A50E62-EE79-67AC-7858-5BC70D6E6528">
+<Attribute name="ZAKONCENI PREDMETU" id="50A50E62-EE79-67AC-7858-5BC70D6E6528">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:49:16 UTC</createdTime>
 <generatorID>7D3AB16E-8B34-E9E6-79D1-6F67F9D262DE</generatorID>
@@ -79,7 +79,7 @@
 <logicalDatatype>LOGDT037</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="zkratka1" id="A99CBF99-B60B-121F-F0DE-92CD7138E37D">
+<Attribute name="KATEGORIE PREDMETU" id="A99CBF99-B60B-121F-F0DE-92CD7138E37D">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-15 13:12:44 UTC</createdTime>
 <generatorID>A34D0422-620C-6D82-6103-68A938E9F427</generatorID>
@@ -93,9 +93,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>5</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cislo_rocniku" id="A8E612C5-02C4-4344-6942-A9460C886EDE">
+<Attribute name="DOPORUCENY ROCNIK" id="A8E612C5-02C4-4344-6942-A9460C886EDE">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-19 19:33:40 UTC</createdTime>
 <generatorID>8D11BA53-4ADF-8D78-F4C9-3B9E452C0808</generatorID>

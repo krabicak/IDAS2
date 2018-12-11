@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4DED4F83-3DB7-8BF1-50C3-6CA68464DB73" name="DOPORUCENY_ROCNIK">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4DED4F83-3DB7-8BF1-50C3-6CA68464DB73" name="DOPORUCENY ROCNIK">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:43:15 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cislo_rocniku" id="5DB3B5A9-8043-7A5D-DEA4-DB817768C193">
+<Attribute name="cislo rocniku" id="5DB3B5A9-8043-7A5D-DEA4-DB817768C193">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:43:40 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -29,7 +29,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="8F5E2778-89CD-D6B7-A417-ACF1E0256D1E" name="DOPORUCENY_ROCNIK PK">
+<identifier id="8F5E2778-89CD-D6B7-A417-ACF1E0256D1E" name="DOPORUCENY_ROCNIK_PK">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:43:38 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>

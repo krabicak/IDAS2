@@ -53,7 +53,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="titul_pred" id="1EA7F49D-2DC2-1DC8-4378-9826F4DE15E0">
+<Attribute name="titul pred" id="1EA7F49D-2DC2-1DC8-4378-9826F4DE15E0">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:32:37 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -67,7 +67,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="titul_za" id="C7C12C36-574F-D79A-4B33-DE9742E410E3">
+<Attribute name="titul za" id="C7C12C36-574F-D79A-4B33-DE9742E410E3">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:32:43 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -123,7 +123,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID1" id="0B6C3C36-C1BF-6D75-659C-7E060EF0EFE6">
+<Attribute name="PRACOVISTE ID" id="0B6C3C36-C1BF-6D75-659C-7E060EF0EFE6">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:47:18 UTC</createdTime>
 <generatorID>6FA28242-4EC4-160A-6B20-1FDCD4C7F7D9</generatorID>
@@ -151,7 +151,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="zkratka" id="6CD5C765-702D-5101-B4D9-B2B1DEB50602">
+<Attribute name="ROLE zkratka" id="6CD5C765-702D-5101-B4D9-B2B1DEB50602">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-19 20:19:06 UTC</createdTime>
 <generatorID>2A6512D1-7453-A8A7-6158-8B779E2D7133</generatorID>
@@ -164,7 +164,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

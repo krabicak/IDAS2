@@ -1,8 +1,11 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_27" directorySegmentName="seg_0" id="F5F10AFF-0AC5-5B85-3D89-895A09BE0CAC">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STUDINI_PLAN" directorySegmentName="seg_0" id="F5F10AFF-0AC5-5B85-3D89-895A09BE0CAC">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-15 13:14:07 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>

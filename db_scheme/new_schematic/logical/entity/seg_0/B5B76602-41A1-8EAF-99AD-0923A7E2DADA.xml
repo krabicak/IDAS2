@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B5B76602-41A1-8EAF-99AD-0923A7E2DADA" name="STUDIJNI_OBOR">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B5B76602-41A1-8EAF-99AD-0923A7E2DADA" name="STUDIJNI OBOR">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 20:20:57 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID3" id="54B5007D-9CFF-506C-BA1D-BB382A38EDF5">
+<Attribute name="PRACOVISTE ID" id="54B5007D-9CFF-506C-BA1D-BB382A38EDF5">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 20:21:54 UTC</createdTime>
 <generatorID>747E5CEB-FA9E-D881-82E6-B8280E508F0F</generatorID>
@@ -69,7 +69,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="1D58FB6E-797D-AD4A-9FF8-A189A4ECBBE5" name="STUDIJNI_OBOR PK">
+<identifier id="1D58FB6E-797D-AD4A-9FF8-A189A4ECBBE5" name="STUDIJNI_OBOR_PK">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 20:21:30 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>

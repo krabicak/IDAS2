@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_25" directorySegmentName="seg_0" id="B9BF0112-4734-7942-BFA3-5D47D5005A6F">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VYUKOVA AKCE VYUCUJICI FK" directorySegmentName="seg_0" id="B9BF0112-4734-7942-BFA3-5D47D5005A6F">
 <createdBy>hotov</createdBy>
 <createdTime>2018-11-12 21:35:30 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
 <sourcePk>151CAF8E-B6AF-5D4E-ADFB-B2C662CEC2E0</sourcePk>
 <identifying>false</identifying>

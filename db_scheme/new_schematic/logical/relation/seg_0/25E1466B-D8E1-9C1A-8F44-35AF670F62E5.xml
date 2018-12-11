@@ -1,16 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_5" directorySegmentName="seg_0" id="25E1466B-D8E1-9C1A-8F44-35AF670F62E5">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VYUKOVA AKCE ZPUSOB VYUKY FK" directorySegmentName="seg_0" id="25E1466B-D8E1-9C1A-8F44-35AF670F62E5">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:48:02 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
 <engineerTo>
-<item key="31775A58-A898-A658-55B4-5DEF606C3F80" value="true"/>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
 </engineerTo>
+<sourcePk>7EB0170E-EC88-E1B1-618E-B321E8BE7206</sourcePk>
 <targetPk>A289289E-07BE-E6C3-EFB9-EF46A981D4A9</targetPk>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
-<sourceCardinality>*</sourceCardinality>
+<sourceCardinality>1</sourceCardinality>
 <sourceEntity>9C5160A7-A7B2-6FDE-8F16-5957DCE00543</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>7EA248F6-2325-91A0-BBBB-656CB20B68A3</targetEntity>

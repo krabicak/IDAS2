@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
    <children>
       <TabPane prefHeight="558.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
@@ -24,7 +24,7 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -245,27 +245,75 @@
                      <children>
                         <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
                            <children>
-                              <Button fx:id="addStudijniPlan" mnemonicParsing="false" text="Přidat">
+                              <Button fx:id="addStudijniPlan" mnemonicParsing="false" onAction="#addStudyPlanAct" text="Přidat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="editPlanBtn" mnemonicParsing="false" onAction="#updateStudyPlan" text="Editovat">
+                              <Button fx:id="editPlanBtn" mnemonicParsing="false" onAction="#updateStudyPlanAct" text="Editovat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="delPlanBtn" mnemonicParsing="false" text="Odebrat">
+                              <Button fx:id="delPlanBtn" mnemonicParsing="false" onAction="#deleteStudyPlan" text="Odebrat">
                                  <FlowPane.margin>
                                     <Insets left="20.0" />
                                  </FlowPane.margin>
                               </Button>
                            </children>
                         </FlowPane>
-                        <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0" />
+                        <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="studyPlan_obor_Clm" prefWidth="258.0" text="Obor" />
+                              <TableColumn fx:id="studyPlan_Predmet_Clm" prefWidth="285.0" text="Předmět" />
+                           </columns></TableView>
                      </children>
                   </GridPane>
                </content></Tab>
+            <Tab fx:id="mujRozvrhTab" text="Můj rozvrh">
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="addMujRozvrhBtn" mnemonicParsing="false" onAction="#addMujRozvrhAct" text="Přidat">
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                              <Button fx:id="editMujRozvrhBtn" mnemonicParsing="false" onAction="#updateMujRozvrhAct" text="Editovat">
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                              <Button fx:id="delMujRozvrhBtn" mnemonicParsing="false" onAction="#deleteMujRozvrhAct" text="Odebrat">
+                                 <FlowPane.margin>
+                                    <Insets left="20.0" />
+                                 </FlowPane.margin>
+                              </Button>
+                           </children>
+                        </FlowPane>
+                        <TableView fx:id="tableViewMujRozvrh" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="mujRozvrh_denClm" prefWidth="70.0" text="Den" />
+                              <TableColumn fx:id="mujRozvrh_od_Clm" prefWidth="52.0" text="Od: " />
+                              <TableColumn fx:id="mujRozvrh_do_Clm" prefWidth="52.0" text="Do: " />
+                              <TableColumn fx:id="mujRozvrh_typ_Clm" prefWidth="58.0" text="Typ" />
+                              <TableColumn fx:id="mujRozvrh_nazevPredmetu_Clm" prefWidth="121.0" text="Název předmětu" />
+                              <TableColumn fx:id="mujRozvrh_zkratka_Clm" prefWidth="145.0" text="Zkratka předmětu" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
          </tabs>
       </TabPane>
       <Button fx:id="logButton" mnemonicParsing="false" text="Přihlásit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7EA248F6-2325-91A0-BBBB-656CB20B68A3" name="ZPUSOB_VYUKY">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7EA248F6-2325-91A0-BBBB-656CB20B68A3" name="ZPUSOB VYUKY">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:32 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nazev_zpusobu" id="5B7B1E26-C104-247D-BB6B-7B93F67083A2">
+<Attribute name="nazev zpusobu" id="5B7B1E26-C104-247D-BB6B-7B93F67083A2">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:56 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>
@@ -41,9 +41,23 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID" id="CD00B22F-08B3-38B7-E259-9C1A2FEC8E89">
+<createdBy>Filip</createdBy>
+<createdTime>2018-12-11 15:11:46 UTC</createdTime>
+<generatorID>25E1466B-D8E1-9C1A-8F44-35AF670F62E5</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
+<referedAttribute>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A289289E-07BE-E6C3-EFB9-EF46A981D4A9" name="ZPUSOB_VYUKY PK">
+<identifier id="A289289E-07BE-E6C3-EFB9-EF46A981D4A9" name="ZPUSOB_VYUKY_PK">
 <createdBy>hotov</createdBy>
 <createdTime>2018-03-20 19:34:54 UTC</createdTime>
 <ownerDesignName>new_schematic</ownerDesignName>

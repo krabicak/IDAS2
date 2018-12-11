@@ -41,6 +41,20 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID" id="620E8594-F072-B78F-2580-B0D989FE842C">
+<createdBy>Filip</createdBy>
+<createdTime>2018-12-11 15:11:46 UTC</createdTime>
+<generatorID>24B26539-4F60-9F3D-6983-815B6906B018</generatorID>
+<ownerDesignName>new_schematic</ownerDesignName>
+<engineerTo>
+<item key="25B48D7A-FCE4-8C6A-EDB2-3AD2E60EFAE3" value="true"/>
+</engineerTo>
+<referedAttribute>2E0FE81F-2148-35DA-D2ED-3FC4C25C8B9A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A3C96B44-DD12-BA05-9B82-B5A4C7EB0F51" name="DNY PK">

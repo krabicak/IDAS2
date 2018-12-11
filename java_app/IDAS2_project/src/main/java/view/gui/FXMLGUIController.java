@@ -501,6 +501,8 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
+
+
     public void updateStudyField(ActionEvent actionEvent) {
         try {
             Optional<FieldOfStudy> result = Dialogs.getFieldOfStudyDialog(
@@ -532,7 +534,7 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void addStudyPlan(ActionEvent actionEvent) {
+    public void addStudyPlanAct(ActionEvent actionEvent) {
         try {
 
         } catch (Exception ex) {
@@ -540,11 +542,26 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void updateStudyPlan(ActionEvent actionEvent) {
+    public void updateStudyPlanAct(ActionEvent actionEvent) {
 
     }
 
     public void deleteStudyPlan(ActionEvent actionEvent) {
+
     }
+
+    public void addMujRozvrhAct(ActionEvent actionEvent) {
+
+    }
+
+    public void updateMujRozvrhAct(ActionEvent actionEvent) {
+
+    }
+
+    public void deleteMujRozvrhAct(ActionEvent actionEvent) {
+
+    }
+
+
 }
 
