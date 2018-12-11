@@ -10,7 +10,7 @@ import javax.persistence.*;
                 hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
         ),
         @NamedNativeQuery(
-                name = "get_",
+                name = "get_all_learning_actions",
                 query = "{ ? = call get_all_learning_actions ( ) }",
                 resultClass = LearningAction.class,
                 hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
