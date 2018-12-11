@@ -20,7 +20,7 @@ public class Photo {
     private String id;
     @Lob
     @Column(name = "obrazek", columnDefinition = "BLOB")
-    private Blob obrazek;
+    private byte[] obrazek;
     @Column(name = "info")
     private String info;
 
@@ -32,11 +32,11 @@ public class Photo {
         this.id = id;
     }
 
-    public Blob getObrazek() {
+    public byte[] getObrazek() {
         return obrazek;
     }
 
-    public void setObrazek(Blob obrazek) {
+    public void setObrazek(byte[] obrazek) {
         this.obrazek = obrazek;
     }
 

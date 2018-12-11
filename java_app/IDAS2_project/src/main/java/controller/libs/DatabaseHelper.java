@@ -5,6 +5,8 @@ import org.hibernate.Session;
 
 
 import javax.persistence.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.sql.CallableStatement;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -554,7 +556,8 @@ public final class DatabaseHelper {
         stmt.setString(2, password);
         stmt.setString(3, photo.getId());
         stmt.setString(4, photo.getInfo());
-        stmt.setBlob(5, photo.getObrazek());
+        InputStream in = new ByteArrayInputStream(photo.getObrazek());
+        stmt.setBinaryStream(5, in, photo.getObrazek().length);
         return stmt;
     }
 

@@ -303,8 +303,15 @@ public class FXMLGUIController implements Initializable {
 
     public void updateTeacher(ActionEvent actionEvent) {
         try {
+            Photo photo;
+            try {
+                photo = mainController.getPhotoByTeacher(tableViewUcitel.getSelectionModel().getSelectedItem());
+            } catch (Exception e) {
+                photo = new Photo();
+            }
             Optional<Teacher> result = Dialogs.getTeacherDialog(
                     tableViewUcitel.getSelectionModel().getSelectedItem(),
+                    photo,
                     mainController.getAllWorkplaces(),
                     mainController.getAllObligations(),
                     mainController.getAllRoles()
