@@ -869,4 +869,47 @@ public final class Dialogs {
             dialog.getDialogPane().lookupButton(save).setDisable(true);
         }
     }
+
+    public static Dialog getStudyPlanDialog(List<Subject> subjects) {
+        // část deklarace polí
+        ButtonType save = new ButtonType(
+                "Uložit",
+                ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType(
+                "Zrušit",
+                ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        ChoiceBox<Subject> subjectChoiceBox = new ChoiceBox<>();
+        subjects.forEach(subjectChoiceBox.getItems()::add);
+        subjectChoiceBox.getSelectionModel().selectFirst();
+
+        //kontrola vložených dat
+        Dialog dialog = new Dialog();
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Vyberte předmět:"), 0, 0);
+        grid.add(subjectChoiceBox, 1, 0);
+
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Pracoviště");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+
+        //vraceni objektu
+        Callback<ButtonType, StudyPlan> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                return new StudyPlan(subjectChoiceBox.getSelectionModel().getSelectedItem());
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+        return dialog;
+    }
 }

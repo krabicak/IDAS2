@@ -615,4 +615,56 @@ public final class DatabaseHelper {
         }
     }
 
+    public static List<StudyPlan> getAllStudyPlans() throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_study_plans");
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static List<StudyPlan> getStudyPlansByFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseException {
+        try {
+            Query query = em.createNamedQuery("get_all_study_plan_by_field_of_study");
+            query.setParameter(1, fieldOfStudy.getId());
+            return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void addStudyPlan(StudyPlan studyPlan, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call add_study_plan ( :1 , :2 , :3, :4 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, studyPlan.getStudijniObor().getId());
+                stm.setString(4, studyPlan.getPredmet().getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deleteStudyPlan(StudyPlan studyPlan, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_study_plan ( :1 , :2 , :3, :4 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, studyPlan.getStudijniObor().getId());
+                stm.setString(4, studyPlan.getPredmet().getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
 }

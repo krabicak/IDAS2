@@ -3,15 +3,14 @@ package view.gui;
 import controller.MainController;
 import controller.MainControllerInterface;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Pair;
 import model.*;
@@ -25,7 +24,7 @@ public class FXMLGUIController implements Initializable {
     public static MainControllerInterface mainController;
 
     @FXML
-    private TableView tableViewPlany;
+    private TableView<StudyPlan> tableViewPlany;
     @FXML
     private TableView<LearningAction> tableViewMujRozvrh;
     @FXML
@@ -147,13 +146,15 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private Button addStudijniPlan;
     @FXML
-    private Button editPlanBtn;
-    @FXML
     private Button delPlanBtn;
     @FXML
-    private TableColumn studyPlan_obor_Clm;
+    private ChoiceBox<FieldOfStudy> oborChoiceBox;
     @FXML
-    private TableColumn studyPlan_Predmet_Clm;
+    private TableColumn<StudyPlan, String> studyPlan_rocnik_Clm;
+    @FXML
+    private TableColumn<StudyPlan, String> studyPlan_kategorie_Clm;
+    @FXML
+    private TableColumn<StudyPlan, Subject> studyPlan_Predmet_Clm;
     @FXML
     private TableColumn<LearningAction, Room> mujRozvrh_mistnostClm;
     @FXML
@@ -277,6 +278,23 @@ public class FXMLGUIController implements Initializable {
         tableViewRozvrh.refresh();
     }
 
+    private void setPlany() throws MainControllerInterface.DatabaseAccesException {
+        if (oborChoiceBox.getSelectionModel().getSelectedItem() != null) {
+            tableViewPlany.setItems(FXCollections.observableArrayList(mainController.getStudyPlansByFieldOfStudy(oborChoiceBox.getSelectionModel().getSelectedItem())));
+            tableViewPlany.refresh();
+        }
+    }
+
+    private void setTableViewPlany(List<FieldOfStudy> list) {
+        studyPlan_kategorie_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getKategorie().getNazevKategorie()));
+        studyPlan_Predmet_Clm.setCellValueFactory(new PropertyValueFactory<>("predmet"));
+        studyPlan_rocnik_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getDoporucenyRocnik().getCisloRocniku()));
+
+        oborChoiceBox.setItems(FXCollections.observableArrayList(list));
+        oborChoiceBox.getSelectionModel().selectFirst();
+        tableViewPlany.refresh();
+    }
+
     private void setAllData() {
         try {
             setTableViewUcitel(mainController.getAllTeachers());
@@ -284,6 +302,7 @@ public class FXMLGUIController implements Initializable {
             setTableViewPracoviste(mainController.getAllWorkplaces());
             setTableViewObory(mainController.getAllFieldsOfStudy());
             setTableViewRozvrh(mainController.getAllLearningActions());
+            setTableViewPlany(mainController.getAllFieldsOfStudy());
             if (mainController.isUserLogged())
                 setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
@@ -305,7 +324,7 @@ public class FXMLGUIController implements Initializable {
                 addOborBtn, addPracovisteBtn, addPredmetBtn, addRozvrhBtn, addStudijniPlan, addUcitelbtn,
                 delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn);
         infoButtons = Arrays.asList(
-                editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editPlanBtn, editUcitelbtn
+                editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editUcitelbtn
         );
         logButton.setOnAction(this::onLoginClick);
         setAllData();
@@ -612,18 +631,31 @@ public class FXMLGUIController implements Initializable {
 
     public void addStudyPlanAct(ActionEvent actionEvent) {
         try {
-
+            Optional<StudyPlan> result = Dialogs.getStudyPlanDialog(mainController.getAllSubjects()).showAndWait();
+            result.ifPresent(studyPlan -> {
+                studyPlan.setStudijniObor(oborChoiceBox.getSelectionModel().getSelectedItem());
+                try {
+                    mainController.addStudyPlan(studyPlan);
+                    setPlany();
+                    Dialogs.showInfoDialog("Předmět " + studyPlan.getPredmet() + " přidán do plánu");
+                } catch (MainControllerInterface.DatabaseAccesException e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
     }
 
-    public void updateStudyPlanAct(ActionEvent actionEvent) {
-
-    }
-
     public void deleteStudyPlan(ActionEvent actionEvent) {
-
+        try {
+            String name = tableViewPlany.getSelectionModel().getSelectedItem().getPredmet().toString();
+            mainController.deleteStudyPlan(tableViewPlany.getSelectionModel().getSelectedItem());
+            setPlany();
+            Dialogs.showInfoDialog("Předmět " + name + " odebrán z plánu");
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
     }
 
     public void addMujRozvrhAct(ActionEvent actionEvent) {
@@ -638,6 +670,13 @@ public class FXMLGUIController implements Initializable {
 
     }
 
+    public void onSubjectCommit(ActionEvent actionEvent) {
+        try {
+            setPlany();
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
 
+    }
 }
 

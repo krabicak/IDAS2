@@ -264,6 +264,31 @@ public interface MainControllerInterface {
      */
     List<LearningAction> getLearningActionsByTeacher(Teacher teacher) throws DatabaseAccesException;
 
+    /**
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<StudyPlan> getAllStudyPlans() throws DatabaseAccesException;
+
+    /**
+     * @param fieldOfStudy
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<StudyPlan> getStudyPlansByFieldOfStudy(FieldOfStudy fieldOfStudy) throws DatabaseAccesException;
+
+    /**
+     * @param studyPlan
+     * @throws DatabaseAccesException
+     */
+    void addStudyPlan(StudyPlan studyPlan) throws DatabaseAccesException;
+
+    /**
+     * @param studyPlan
+     * @throws DatabaseAccesException
+     */
+    void deleteStudyPlan(StudyPlan studyPlan) throws DatabaseAccesException;
+
 
     class LoginException extends Exception {
 
