@@ -667,4 +667,60 @@ public final class DatabaseHelper {
             throw new DatabaseException(e);
         }
     }
+
+
+    public static void addRoom(Room room, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call add_room(:1,:2,:3,:4) }");
+                stmt = setRoom(stmt, room, email, password);
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void updateRoom(Room room, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stmt = connection.prepareCall("{ call update_room(:1,:2,:3,:4) }");
+                stmt = setRoom(stmt, room, email, password);
+                stmt.setString(12, room.getId());
+                stmt.execute();
+                stmt.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void deleteRoom(Room room, String email, String password) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call delete_room ( :1 , :2 , :3 ) }");
+                stm.setString(1, email);
+                stm.setString(2, password);
+                stm.setString(3, room.getId());
+                stm.execute();
+                stm.close();
+            });
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    private static CallableStatement setRoom(CallableStatement stmt, Room room, String email, String password) throws SQLException {
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, room.getPopis());
+        stmt.setString(4, room.getOznaceni());
+        return stmt;
+    }
+
+
 }

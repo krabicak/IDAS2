@@ -122,21 +122,21 @@ public interface MainControllerInterface {
      * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
-     *
+     */
     void addRoom(Room room) throws DatabaseAccesException, LoginException;
 
     /**
      * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
-     *
+     */
     void updateRoom(Room room) throws DatabaseAccesException, LoginException;
 
     /**
      * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
-     *
+     */
     void deleteRoom(Room room) throws DatabaseAccesException, LoginException;
 
     /**

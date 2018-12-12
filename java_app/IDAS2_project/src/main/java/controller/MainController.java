@@ -390,4 +390,31 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+
+    public void addRoom(Room room) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.addRoom(room, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void updateRoom(Room room) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.updateRoom(room, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void deleteRoom(Room room) throws DatabaseAccesException, LoginException {
+        try {
+            checkLoging();
+            DatabaseHelper.deleteRoom(room, loggedUser.getEmail(), password);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
 }
