@@ -709,5 +709,32 @@ public class FXMLGUIController implements Initializable {
         }
 
     }
+
+    public void addRoomAct(ActionEvent actionEvent) {
+        /**
+        try {
+            Optional<Room> result = Dialogs.getRoomDialog(
+                    mainController.getAllRooms(),
+                    mainController.getAllWorkplaces()).showAndWait();
+            result.ifPresent(fieldOfStudy -> {
+                try {
+                    mainController.addFieldOfStudy(fieldOfStudy);
+                    setAllData();
+                    Dialogs.showInfoDialog("Obor " + fieldOfStudy + " přidán");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+         */
+    }
+
+    public void updateRoomAct(ActionEvent actionEvent) {
+    }
+
+    public void deleteRoomAct(ActionEvent actionEvent) {
+    }
 }
 
