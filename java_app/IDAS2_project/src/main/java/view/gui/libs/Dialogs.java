@@ -912,4 +912,125 @@ public final class Dialogs {
         dialog.setResultConverter(callback);
         return dialog;
     }
+
+    public static Dialog getRoomDialog(List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
+                                                 List<Day> days, List<Subject> subjects) {
+        return getRoomDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, true);
+    }
+
+    public static Dialog getRoomDialog(LearningAction learningAction, List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
+                                                 List<Day> days, List<Subject> subjects, boolean editable) {
+        // část deklarace polí
+        ButtonType save = new ButtonType(
+                "Uložit",
+                ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType(
+                "Zrušit",
+                ButtonBar.ButtonData.CANCEL_CLOSE);
+        TextField kapacita = new TextField();
+        kapacita.setText(learningAction.getKapacita());
+        kapacita.setEditable(editable);
+        TextField pocatek = new TextField();
+        pocatek.setText(learningAction.getPocatek());
+        pocatek.setEditable(editable);
+        TextField konec = new TextField();
+        konec.setText(learningAction.getKonec());
+        konec.setEditable(editable);
+
+        ChoiceBox<MethodOfLearning> methodOfLearningChoiceBox = new ChoiceBox<>();
+        methodOfLearnings.forEach(methodOfLearningChoiceBox.getItems()::add);
+        methodOfLearningChoiceBox.setDisable(!editable);
+        if (learningAction.getZpusobVyuky() != null)
+            methodOfLearningChoiceBox.getSelectionModel().select(learningAction.getZpusobVyuky());
+        else methodOfLearningChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<Teacher> teacherChoiceBox = new ChoiceBox<>();
+        teachers.forEach(teacherChoiceBox.getItems()::add);
+        teacherChoiceBox.setDisable(!editable);
+        if (learningAction.getVyucujici() != null)
+            teacherChoiceBox.getSelectionModel().select(learningAction.getVyucujici());
+        else teacherChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<Day> dayChoiceBox = new ChoiceBox<>();
+        days.forEach(dayChoiceBox.getItems()::add);
+        dayChoiceBox.setDisable(!editable);
+        if (learningAction.getDen() != null) dayChoiceBox.getSelectionModel().select(learningAction.getDen());
+        else dayChoiceBox.getSelectionModel().selectFirst();
+
+        ChoiceBox<Subject> subjectChoiceBox = new ChoiceBox<>();
+        subjects.forEach(subjectChoiceBox.getItems()::add);
+        subjectChoiceBox.setDisable(!editable);
+        if (learningAction.getPredmet() != null)
+            subjectChoiceBox.getSelectionModel().select(learningAction.getPredmet());
+        else subjectChoiceBox.getSelectionModel().selectFirst();
+
+        //kontrola vložených dat
+        Dialog dialog = new Dialog();
+        InvalidationListener listener = observable -> {
+            try {
+                if (!editable) throw new NullPointerException();
+                isItNull(kapacita);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
+            } catch (NullPointerException | NumberFormatException e) {
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
+            }
+        };
+
+        // popis prmpt textu
+        kapacita.setPromptText("kapacita");
+        pocatek.setPromptText("počátek");
+        konec.setPromptText("konec");
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte kapacitu:"), 0, 0);
+        grid.add(kapacita, 1, 0);
+        grid.add(new Label("Zadejte počátek:"), 0, 1);
+        grid.add(pocatek, 1, 1);
+        grid.add(new Label("Vyberte konec:"), 0, 2);
+        grid.add(konec, 1, 2);
+        grid.add(new Label("Vyberte způsob výuky:"), 0, 3);
+        grid.add(methodOfLearningChoiceBox, 1, 3);
+        grid.add(new Label("Vyberte vyučujícího:"), 0, 4);
+        grid.add(teacherChoiceBox, 1, 4);
+        grid.add(new Label("Vyberte den:"), 0, 5);
+        grid.add(dayChoiceBox, 1, 5);
+        grid.add(new Label("Vyberte předmět:"), 0, 6);
+        grid.add(subjectChoiceBox, 1, 6);
+
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Rozvrh třídy");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(learningAction.getId() == null || !editable);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+        // nastaveni listeneru pro kontrolu dat na pole
+        kapacita.textProperty().addListener(listener);
+        pocatek.textProperty().addListener(listener);
+        konec.textProperty().addListener(listener);
+
+
+        //vraceni objektu
+        Callback<ButtonType, LearningAction> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                learningAction.setZpusobVyuky(methodOfLearningChoiceBox.getSelectionModel().getSelectedItem());
+                learningAction.setVyucujici(teacherChoiceBox.getSelectionModel().getSelectedItem());
+                learningAction.setPredmet(subjectChoiceBox.getSelectionModel().getSelectedItem());
+                learningAction.setPocatek(pocatek.getText());
+                learningAction.setKonec(konec.getText());
+                learningAction.setKapacita(kapacita.getText());
+                learningAction.setDen(dayChoiceBox.getSelectionModel().getSelectedItem());
+                return learningAction;
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+        return dialog;
+    }
+
 }

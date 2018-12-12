@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
     <children>
         <TabPane prefHeight="558.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
@@ -27,7 +27,7 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -75,7 +75,7 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -116,7 +116,7 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -162,7 +162,7 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -207,10 +207,10 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="1">
                                     <children>
                                         <Button fx:id="addOborBtn" mnemonicParsing="false" onAction="#addStudyField" text="Přidat">
                                             <FlowPane.margin>
@@ -248,11 +248,11 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="463.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="2">
+                                <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="2">
                                     <children>
                                         <Button fx:id="addStudijniPlan" mnemonicParsing="false" onAction="#addStudyPlanAct" text="Přidat" />
                                         <Button fx:id="delPlanBtn" mnemonicParsing="false" onAction="#deleteStudyPlan" text="Odebrat">
@@ -262,7 +262,7 @@
                                         </Button>
                                     </children>
                                 </FlowPane>
-                                <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                <TableView fx:id="tableViewPlany" prefHeight="479.0" prefWidth="889.0" GridPane.rowIndex="1">
                                     <columns>
                                         <TableColumn fx:id="studyPlan_rocnik_Clm" prefWidth="92.0" text="Ročník" />
                                         <TableColumn fx:id="studyPlan_kategorie_Clm" prefWidth="92.0" text="Kategorie" />
@@ -271,9 +271,18 @@
                                 </TableView>
                                 <HBox>
                                     <children>
-                                        <Label text="Vyberte obor:" />
-                                        <ChoiceBox fx:id="oborChoiceBox" prefWidth="150.0" />
-                              <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit" />
+                                        <Label text="Vyberte obor:">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin></Label>
+                                        <ChoiceBox fx:id="oborChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </HBox.margin></ChoiceBox>
+                              <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </HBox.margin></Button>
                                     </children>
                                 </HBox>
                             </children>
@@ -287,11 +296,11 @@
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="502.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                <FlowPane prefHeight="40.0" prefWidth="889.0" GridPane.rowIndex="1">
                                     <children>
                                         <Button fx:id="addMujRozvrhBtn" mnemonicParsing="false" onAction="#addMujRozvrhAct" text="Přidat">
                                             <FlowPane.margin>
@@ -327,6 +336,6 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <Button fx:id="logButton" mnemonicParsing="false" text="Přihlásit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
+        <Button fx:id="logButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Přihlásit se" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
     </children>
 </AnchorPane>

@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,312 +12,330 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
-   <children>
-      <TabPane prefHeight="558.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <tabs>
-            <Tab fx:id="ucitelTab" text="Vyučující">
-               <content>
-                  <GridPane>
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addUcitelbtn" mnemonicParsing="false" onAction="#addTeacher" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editUcitelbtn" mnemonicParsing="false" onAction="#updateTeacher" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delUcitelbtn" mnemonicParsing="false" onAction="#deleteTeacher" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewUcitel" prefHeight="200.0" prefWidth="200.0">
-                          <columns>
-                            <TableColumn fx:id="ucitel_idClm" prefWidth="75.0" text="netID" />
-                              <TableColumn fx:id="titul_predClm" prefWidth="75.0" text="titul před" />
-                              <TableColumn fx:id="ucitel_jmenoClm" prefWidth="75.0" text="Jméno" />
-                              <TableColumn fx:id="ucitel_prijmeniClm" prefWidth="75.0" text="Příjmení" />
-                              <TableColumn fx:id="titul_zaClm" prefWidth="75.0" text="titul za" />
-                              <TableColumn fx:id="ucitel_pracovisteClm" prefWidth="104.0" text="Pracoviště" />
-                              <TableColumn fx:id="ucitel_uvazekClm" prefWidth="78.0" text="Úvazek" />
-                              <TableColumn fx:id="ucitel_mailClm" prefWidth="75.0" text="Email" />
-                              <TableColumn fx:id="ucitel_telefonClm" prefWidth="75.0" text="Telefon" />
-                              <TableColumn fx:id="ucitel_mobilClm" prefWidth="75.0" text="Mobil" />
-                          </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content>
-            </Tab>
-            <Tab fx:id="pracovisteTab" text="Pracoviště">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addPracovisteBtn" mnemonicParsing="false" onAction="#addWorkplace" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editPracovisteBtn" mnemonicParsing="false" onAction="#updateWorkplace" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delPracovisteBtn" mnemonicParsing="false" onAction="#deleteWorkplace" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewPracoviste" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="pracoviste_idClm" prefWidth="75.0" text="ID" />
-                              <TableColumn fx:id="pracoviste_nazevClm" prefWidth="75.0" text="Název" />
-                              <TableColumn fx:id="pracoviste_zkratkaClm" prefWidth="75.0" text="Zkratka" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content></Tab>
-            <Tab fx:id="rozvrhTab" text="Rozvrhy">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addRozvrhBtn" mnemonicParsing="false" onAction="#addLearningAction" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editRozvrhBtn" mnemonicParsing="false" onAction="#updateLearningAction" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delRozvrhBtn" mnemonicParsing="false" onAction="#deleteLearningAction" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewRozvrh" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="rozvrh_denClm" prefWidth="70.0" text="Den" />
-                              <TableColumn fx:id="rozvrh_odClm" prefWidth="52.0" text="Od: " />
-                              <TableColumn fx:id="rozvrh_doClm" prefWidth="52.0" text="Do: " />
-                              <TableColumn fx:id="rozvrh_typClm" prefWidth="58.0" text="Typ" />
-                              <TableColumn fx:id="rozvrh_predmetClm" prefWidth="121.0" text="Název předmětu" />
-                              <TableColumn fx:id="rozvrh_zkratkaClm" prefWidth="145.0" text="Zkratka předmětu" />
-                              <TableColumn fx:id="rozvrh_vyucujiciClm" prefWidth="145.0" text="Vyučující" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content></Tab>
-            <Tab fx:id="seznamPredmetuTab" text="Předměty">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addPredmetBtn" mnemonicParsing="false" onAction="#addSubject" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editPredmetBtn" mnemonicParsing="false" onAction="#updateSubject" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delPredmetBtn" mnemonicParsing="false" onAction="#deleteSubject" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewPredmety" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="predmety_nazevClm" prefWidth="75.0" text="Název" />
-                              <TableColumn fx:id="predmety_zkratkaClm" prefWidth="75.0" text="Zkratka" />
-                              <TableColumn fx:id="predmety_hodinClm" prefWidth="108.0" text="Rozsah hodin" />
-                              <TableColumn fx:id="predmety_semestrClm" prefWidth="75.0" text="Semestr" />
-                              <TableColumn fx:id="predmety_kategorieClm" prefWidth="71.0" text="Kategorie" />
-                              <TableColumn fx:id="predmety_zakonceniClm" prefWidth="115.0" text="Způsob zakončení" />
-                              <TableColumn fx:id="predmety_garantClm" prefWidth="115.0" text="Garant" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content></Tab>
-            <Tab fx:id="oborTab" text="Obory">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addOborBtn" mnemonicParsing="false" onAction="#addStudyField" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editOborBtn" mnemonicParsing="false" onAction="#updateStudyField" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delOborBtn" mnemonicParsing="false" onAction="#deleteStudyField" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewObory" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="obor_nazevClm" prefWidth="220.0" text="Název" />
-                              <TableColumn fx:id="obor_zkratkaClm" minWidth="0.0" prefWidth="84.0" text="Zkratka" />
-                              <TableColumn fx:id="obor_formaClm" prefWidth="106.0" text="Forma výuky" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content></Tab>
-            <Tab fx:id="planTab" text="Sudijní plány">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addStudijniPlan" mnemonicParsing="false" onAction="#addStudyPlanAct" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editPlanBtn" mnemonicParsing="false" onAction="#updateStudyPlanAct" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delPlanBtn" mnemonicParsing="false" onAction="#deleteStudyPlan" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewPlany" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="studyPlan_obor_Clm" prefWidth="258.0" text="Obor" />
-                              <TableColumn fx:id="studyPlan_Predmet_Clm" prefWidth="285.0" text="Předmět" />
-                           </columns></TableView>
-                     </children>
-                  </GridPane>
-               </content></Tab>
-            <Tab fx:id="mujRozvrhTab" text="Můj rozvrh">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <children>
-                              <Button fx:id="addMujRozvrhBtn" mnemonicParsing="false" onAction="#addMujRozvrhAct" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editMujRozvrhBtn" mnemonicParsing="false" onAction="#updateMujRozvrhAct" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delMujRozvrhBtn" mnemonicParsing="false" onAction="#deleteMujRozvrhAct" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <TableView fx:id="tableViewMujRozvrh" prefHeight="200.0" prefWidth="200.0">
-                           <columns>
-                              <TableColumn fx:id="mujRozvrh_denClm" prefWidth="70.0" text="Den" />
-                              <TableColumn fx:id="mujRozvrh_od_Clm" prefWidth="52.0" text="Od: " />
-                              <TableColumn fx:id="mujRozvrh_do_Clm" prefWidth="52.0" text="Do: " />
-                              <TableColumn fx:id="mujRozvrh_typ_Clm" prefWidth="58.0" text="Typ" />
-                              <TableColumn fx:id="mujRozvrh_nazevPredmetu_Clm" prefWidth="121.0" text="Název předmětu" />
-                              <TableColumn fx:id="mujRozvrh_zkratka_Clm" prefWidth="145.0" text="Zkratka předmětu" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </GridPane>
-               </content>
-            </Tab>
-         </tabs>
-      </TabPane>
-      <Button fx:id="logButton" mnemonicParsing="false" text="Přihlásit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
+    <children>
+        <TabPane prefHeight="558.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="ucitelTab" text="Vyučující">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addUcitelbtn" mnemonicParsing="false" onAction="#addTeacher" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editUcitelbtn" mnemonicParsing="false" onAction="#updateTeacher" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delUcitelbtn" mnemonicParsing="false" onAction="#deleteTeacher" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewUcitel" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="ucitel_idClm" prefWidth="75.0" text="netID" />
+                                        <TableColumn fx:id="titul_predClm" prefWidth="75.0" text="titul před" />
+                                        <TableColumn fx:id="ucitel_jmenoClm" prefWidth="75.0" text="Jméno" />
+                                        <TableColumn fx:id="ucitel_prijmeniClm" prefWidth="75.0" text="Příjmení" />
+                                        <TableColumn fx:id="titul_zaClm" prefWidth="75.0" text="titul za" />
+                                        <TableColumn fx:id="ucitel_pracovisteClm" prefWidth="104.0" text="Pracoviště" />
+                                        <TableColumn fx:id="ucitel_uvazekClm" prefWidth="78.0" text="Úvazek" />
+                                        <TableColumn fx:id="ucitel_mailClm" prefWidth="75.0" text="Email" />
+                                        <TableColumn fx:id="ucitel_telefonClm" prefWidth="75.0" text="Telefon" />
+                                        <TableColumn fx:id="ucitel_mobilClm" prefWidth="75.0" text="Mobil" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="pracovisteTab" text="Pracoviště">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addPracovisteBtn" mnemonicParsing="false" onAction="#addWorkplace" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editPracovisteBtn" mnemonicParsing="false" onAction="#updateWorkplace" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delPracovisteBtn" mnemonicParsing="false" onAction="#deleteWorkplace" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewPracoviste" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="pracoviste_idClm" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="pracoviste_nazevClm" prefWidth="75.0" text="Název" />
+                                        <TableColumn fx:id="pracoviste_zkratkaClm" prefWidth="75.0" text="Zkratka" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="rozvrhTab" text="Rozvrhy">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addRozvrhBtn" mnemonicParsing="false" onAction="#addLearningAction" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editRozvrhBtn" mnemonicParsing="false" onAction="#updateLearningAction" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delRozvrhBtn" mnemonicParsing="false" onAction="#deleteLearningAction" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewRozvrh" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="rozvrh_denClm" prefWidth="70.0" text="Den" />
+                                        <TableColumn fx:id="rozvrh_odClm" prefWidth="52.0" text="Od: " />
+                                        <TableColumn fx:id="rozvrh_doClm" prefWidth="52.0" text="Do: " />
+                                        <TableColumn fx:id="rozvrh_mistnostClm" prefWidth="70.0" text="Místnost" />
+                                        <TableColumn fx:id="rozvrh_typClm" prefWidth="58.0" text="Typ" />
+                                        <TableColumn fx:id="rozvrh_predmetClm" prefWidth="121.0" text="Název předmětu" />
+                                        <TableColumn fx:id="rozvrh_zkratkaClm" prefWidth="145.0" text="Zkratka předmětu" />
+                                        <TableColumn fx:id="rozvrh_vyucujiciClm" prefWidth="145.0" text="Vyučující" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="seznamPredmetuTab" text="Předměty">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addPredmetBtn" mnemonicParsing="false" onAction="#addSubject" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editPredmetBtn" mnemonicParsing="false" onAction="#updateSubject" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delPredmetBtn" mnemonicParsing="false" onAction="#deleteSubject" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewPredmety" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="predmety_nazevClm" prefWidth="75.0" text="Název" />
+                                        <TableColumn fx:id="predmety_zkratkaClm" prefWidth="75.0" text="Zkratka" />
+                                        <TableColumn fx:id="predmety_hodinClm" prefWidth="108.0" text="Rozsah hodin" />
+                                        <TableColumn fx:id="predmety_semestrClm" prefWidth="75.0" text="Semestr" />
+                                        <TableColumn fx:id="predmety_kategorieClm" prefWidth="71.0" text="Kategorie" />
+                                        <TableColumn fx:id="predmety_zakonceniClm" prefWidth="115.0" text="Způsob zakončení" />
+                                        <TableColumn fx:id="predmety_garantClm" prefWidth="115.0" text="Garant" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="oborTab" text="Obory">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addOborBtn" mnemonicParsing="false" onAction="#addStudyField" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editOborBtn" mnemonicParsing="false" onAction="#updateStudyField" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delOborBtn" mnemonicParsing="false" onAction="#deleteStudyField" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewObory" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="obor_nazevClm" prefWidth="220.0" text="Název" />
+                                        <TableColumn fx:id="obor_zkratkaClm" minWidth="0.0" prefWidth="84.0" text="Zkratka" />
+                                        <TableColumn fx:id="obor_formaClm" prefWidth="106.0" text="Forma výuky" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="planTab" text="Studijní plány">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="463.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="2">
+                                    <children>
+                                        <Button fx:id="addStudijniPlan" mnemonicParsing="false" onAction="#addStudyPlanAct" text="Přidat" />
+                                        <Button fx:id="delPlanBtn" mnemonicParsing="false" onAction="#deleteStudyPlan" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewPlany" prefHeight="479.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <columns>
+                                        <TableColumn fx:id="studyPlan_rocnik_Clm" prefWidth="92.0" text="Ročník" />
+                                        <TableColumn fx:id="studyPlan_kategorie_Clm" prefWidth="92.0" text="Kategorie" />
+                                        <TableColumn fx:id="studyPlan_Predmet_Clm" prefWidth="451.0" text="Předmět" />
+                                    </columns>
+                                </TableView>
+                                <HBox>
+                                    <children>
+                                        <Label text="Vyberte obor:">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin></Label>
+                                        <ChoiceBox fx:id="oborChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </HBox.margin></ChoiceBox>
+                              <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </HBox.margin></Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="mujRozvrhTab" text="Můj rozvrh">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="502.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="40.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addMujRozvrhBtn" mnemonicParsing="false" onAction="#addMujRozvrhAct" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editMujRozvrhBtn" mnemonicParsing="false" onAction="#updateMujRozvrhAct" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delMujRozvrhBtn" mnemonicParsing="false" onAction="#deleteMujRozvrhAct" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewMujRozvrh" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="mujRozvrh_denClm" prefWidth="70.0" text="Den" />
+                                        <TableColumn fx:id="mujRozvrh_od_Clm" prefWidth="52.0" text="Od: " />
+                                        <TableColumn fx:id="mujRozvrh_do_Clm" prefWidth="52.0" text="Do: " />
+                                        <TableColumn fx:id="mujRozvrh_mistnostClm" prefWidth="70.0" text="Místnost" />
+                                        <TableColumn fx:id="mujRozvrh_typ_Clm" prefWidth="58.0" text="Typ" />
+                                        <TableColumn fx:id="mujRozvrh_nazevPredmetu_Clm" prefWidth="121.0" text="Název předmětu" />
+                                        <TableColumn fx:id="mujRozvrh_zkratka_Clm" prefWidth="145.0" text="Zkratka předmětu" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="logButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" text="Přihlásit se" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+    </children>
 </AnchorPane>
