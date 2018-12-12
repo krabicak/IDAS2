@@ -3,8 +3,6 @@ package view.gui;
 import controller.MainController;
 import controller.MainControllerInterface;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -470,15 +468,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllDays(),
                     mainController.getAllSubjects(),
                     mainController.getAllRooms()).showAndWait();
-            result.ifPresent(learningAction -> {
-                try {
-                    mainController.addLearningAction(learningAction);
-                    setAllData();
-                    Dialogs.showInfoDialog("Výuková akce " + learningAction + " přidána");
-                } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
-                }
-            });
+            addStudyActionResolver(result);
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
@@ -487,22 +477,15 @@ public class FXMLGUIController implements Initializable {
 
     public void updateLearningAction(ActionEvent actionEvent) {
         try {
-            Optional<LearningAction> result = Dialogs.getLearningActionDialog(tableViewRozvrh.getSelectionModel().getSelectedItem(),
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+                    tableViewRozvrh.getSelectionModel().getSelectedItem(),
                     mainController.getAllMethodsOfLearning(),
                     mainController.getAllTeachers(),
                     mainController.getAllDays(),
                     mainController.getAllSubjects(),
                     mainController.getAllRooms(),
                     mainController.isUserAdmin()).showAndWait();
-            result.ifPresent(learningAction -> {
-                try {
-                    mainController.updateLearningAction(learningAction);
-                    setAllData();
-                    Dialogs.showInfoDialog("Výuková akce " + learningAction + " upravena");
-                } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
-                }
-            });
+            updateStudyActionResolver(result);
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
@@ -659,15 +642,63 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void addMujRozvrhAct(ActionEvent actionEvent) {
+        try {
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+                    mainController.getAllMethodsOfLearning(),
+                    mainController.getAllTeachers(),
+                    mainController.getAllDays(),
+                    mainController.getAllSubjects(),
+                    mainController.getAllRooms(),
+                    mainController.getLoggedUser()).showAndWait();
+            addStudyActionResolver(result);
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
+    }
 
+    private void addStudyActionResolver(Optional<LearningAction> result) {
+        result.ifPresent(learningAction -> {
+            try {
+                mainController.addLearningAction(learningAction);
+                setAllData();
+                Dialogs.showInfoDialog("Výuková akce " + learningAction + " přidána");
+            } catch (Exception e) {
+                Dialogs.showErrorMessage(e);
+            }
+        });
     }
 
     public void updateMujRozvrhAct(ActionEvent actionEvent) {
+        try {
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+                    tableViewMujRozvrh.getSelectionModel().getSelectedItem(),
+                    mainController.getAllMethodsOfLearning(),
+                    mainController.getAllTeachers(),
+                    mainController.getAllDays(),
+                    mainController.getAllSubjects(),
+                    mainController.getAllRooms(),
+                    true,
+                    mainController.getLoggedUser()).showAndWait();
+            updateStudyActionResolver(result);
+        } catch (Exception ex) {
+            Dialogs.showErrorMessage(ex);
+        }
+    }
 
+    private void updateStudyActionResolver(Optional<LearningAction> result) {
+        result.ifPresent(learningAction -> {
+            try {
+                mainController.updateLearningAction(learningAction);
+                setAllData();
+                Dialogs.showInfoDialog("Výuková akce " + learningAction + " upravena");
+            } catch (Exception e) {
+                Dialogs.showErrorMessage(e);
+            }
+        });
     }
 
     public void deleteMujRozvrhAct(ActionEvent actionEvent) {
-
+        deleteLearningAction(actionEvent);
     }
 
     public void onSubjectCommit(ActionEvent actionEvent) {

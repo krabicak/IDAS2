@@ -395,11 +395,21 @@ public final class Dialogs {
 
     public static Dialog getLearningActionDialog(List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
                                                  List<Day> days, List<Subject> subjects, List<Room> rooms) {
-        return getLearningActionDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, rooms, true);
+        return getLearningActionDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, rooms, true, null);
+    }
+
+    public static Dialog getLearningActionDialog(List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
+                                                 List<Day> days, List<Subject> subjects, List<Room> rooms, Teacher owner) {
+        return getLearningActionDialog(new LearningAction(), methodOfLearnings, teachers, days, subjects, rooms, true, owner);
     }
 
     public static Dialog getLearningActionDialog(LearningAction learningAction, List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
                                                  List<Day> days, List<Subject> subjects, List<Room> rooms, boolean editable) {
+        return getLearningActionDialog(learningAction, methodOfLearnings, teachers, days, subjects, rooms, editable, null);
+    }
+
+    public static Dialog getLearningActionDialog(LearningAction learningAction, List<MethodOfLearning> methodOfLearnings, List<Teacher> teachers,
+                                                 List<Day> days, List<Subject> subjects, List<Room> rooms, boolean editable, Teacher owner) {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",
@@ -426,9 +436,10 @@ public final class Dialogs {
 
         ChoiceBox<Teacher> teacherChoiceBox = new ChoiceBox<>();
         teachers.forEach(teacherChoiceBox.getItems()::add);
-        teacherChoiceBox.setDisable(!editable);
+        teacherChoiceBox.setDisable(!editable || owner != null);
         if (learningAction.getVyucujici() != null)
             teacherChoiceBox.getSelectionModel().select(learningAction.getVyucujici());
+        else if (owner != null) teacherChoiceBox.getSelectionModel().select(owner);
         else teacherChoiceBox.getSelectionModel().selectFirst();
 
         ChoiceBox<Day> dayChoiceBox = new ChoiceBox<>();
@@ -789,7 +800,7 @@ public final class Dialogs {
     }
 
 
-    public static Dialog getPhotoDialog(Photo photo) {
+    private static Dialog getPhotoDialog(Photo photo) {
         // část deklarace polí
         ButtonType save = new ButtonType(
                 "Uložit",

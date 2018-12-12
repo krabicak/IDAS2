@@ -192,7 +192,8 @@ public class MainController implements MainControllerInterface {
 
     public void addLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
         try {
-            checkLoging();
+            if (!learningAction.getVyucujici().getId().equals(loggedUser.getId()))
+                checkLoging();
             DatabaseHelper.addLearningAction(learningAction, loggedUser.getEmail(), password);
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
@@ -201,7 +202,8 @@ public class MainController implements MainControllerInterface {
 
     public void updateLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
         try {
-            checkLoging();
+            if (!learningAction.getVyucujici().getId().equals(loggedUser.getId()))
+                checkLoging();
             DatabaseHelper.updateLearningAction(learningAction, loggedUser.getEmail(), password);
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
@@ -210,7 +212,8 @@ public class MainController implements MainControllerInterface {
 
     public void deleteLearningAction(LearningAction learningAction) throws DatabaseAccesException, LoginException {
         try {
-            checkLoging();
+            if (!learningAction.getVyucujici().getId().equals(loggedUser.getId()))
+                checkLoging();
             DatabaseHelper.deleteLearningAction(learningAction, loggedUser.getEmail(), password);
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
