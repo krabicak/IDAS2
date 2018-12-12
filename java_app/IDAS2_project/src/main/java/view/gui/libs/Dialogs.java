@@ -274,7 +274,7 @@ public final class Dialogs {
         grid.add(obligationn, 1, 12);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Učitel");
+        dialog.setTitle("Vyučující");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
         dialog.getDialogPane().lookupButton(save).setDisable(teacher.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
@@ -491,7 +491,7 @@ public final class Dialogs {
         grid.add(roomChoiceBox, 1, 7);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Pracoviště");
+        dialog.setTitle("Vyučovací akce");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
         dialog.getDialogPane().lookupButton(save).setDisable(learningAction.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
@@ -743,7 +743,7 @@ public final class Dialogs {
         grid.add(formsTypesChoiceBox, 1, 3);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Předmět");
+        dialog.setTitle("Studijní obor");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
         dialog.getDialogPane().lookupButton(save).setDisable(fieldOfStudy.getId() == null || !editable);
         dialog.initModality(Modality.APPLICATION_MODAL);
@@ -838,7 +838,7 @@ public final class Dialogs {
         grid.add(button, 1, 1);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Pracoviště");
+        dialog.setTitle("Fotografie");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
         dialog.getDialogPane().lookupButton(save).setDisable(photo.getId() == null);
         dialog.initModality(Modality.APPLICATION_MODAL);
@@ -896,7 +896,7 @@ public final class Dialogs {
         grid.add(subjectChoiceBox, 1, 0);
 
         //nastavení dialogu (modal atd)
-        dialog.setTitle("Pracoviště");
+        dialog.setTitle("Studijní plán");
         dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.getDialogPane().setContent(grid);
