@@ -2,7 +2,6 @@ package controller;
 
 import controller.libs.DatabaseHelper;
 import model.*;
-import org.hibernate.Session;
 
 import javax.persistence.Persistence;
 import java.util.List;
