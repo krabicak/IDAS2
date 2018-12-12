@@ -1,14 +1,11 @@
 package view.gui;
 
-import controller.MainController;
-import controller.MainControllerInterface;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Dialog;
 import javafx.stage.Stage;
 import view.gui.libs.Dialogs;
 

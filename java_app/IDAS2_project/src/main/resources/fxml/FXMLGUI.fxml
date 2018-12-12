@@ -272,17 +272,17 @@
                                 <HBox>
                                     <children>
                                         <Label text="Vyberte obor:">
-                                 <HBox.margin>
-                                    <Insets left="5.0" top="10.0" />
-                                 </HBox.margin></Label>
+                                            <HBox.margin>
+                                                <Insets left="5.0" top="10.0" />
+                                            </HBox.margin></Label>
                                         <ChoiceBox fx:id="oborChoiceBox" prefWidth="150.0">
-                                 <HBox.margin>
-                                    <Insets bottom="5.0" left="10.0" top="5.0" />
-                                 </HBox.margin></ChoiceBox>
-                              <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit">
-                                 <HBox.margin>
-                                    <Insets bottom="5.0" left="10.0" top="5.0" />
-                                 </HBox.margin></Button>
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" top="5.0" />
+                                            </HBox.margin></ChoiceBox>
+                                        <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" top="5.0" />
+                                            </HBox.margin></Button>
                                     </children>
                                 </HBox>
                             </children>
