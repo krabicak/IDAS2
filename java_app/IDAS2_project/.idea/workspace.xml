@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="dialog Subject (nejdou metody z DatabaseHelper)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -88,11 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="985" lean-forward="true" selection-start-line="985" selection-end-line="985" />
+            <state relative-caret-position="480">
+              <caret line="1029" column="24" lean-forward="true" selection-start-line="1029" selection-start-column="24" selection-end-line="1029" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -109,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10183">
-              <caret line="615" column="5" selection-start-line="615" selection-start-column="5" selection-end-line="615" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="583" column="31" lean-forward="true" selection-start-line="583" selection-start-column="31" selection-end-line="583" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -124,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="265">
+              <caret line="447" column="35" lean-forward="true" selection-start-line="447" selection-start-column="35" selection-end-line="447" selection-end-column="35" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -162,6 +160,7 @@
       <find>deleteStudyPlan</find>
       <find>learning</find>
       <find>getLear</find>
+      <find>tableViewMujRozvrh</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untitled/src/Main.java" />
         <option value="$PROJECT_DIR$/untitled/src/src/sample.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/libs/MainControllerInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Login.java" />
@@ -220,8 +218,9 @@
         <option value="/1c94e0e/e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/routine/IS_USER_VALUE.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e4dba454-49a3-4740-91dc-2156160ee9fe/console.sql" />
         <option value="/1c94e0e/e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/routine/IS_USER_SCHEDULE.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" />
       </list>
     </option>
   </component>
@@ -586,7 +585,7 @@
       <workItem from="1544622455938" duration="2586000" />
       <workItem from="1544625086075" duration="27000" />
       <workItem from="1544625246291" duration="469000" />
-      <workItem from="1544636981486" duration="1041000" />
+      <workItem from="1544636981486" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1542888778156</created>
@@ -679,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544210356368</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="dialog Subject (nejdou metody z DatabaseHelper)">
+      <created>1544638032933</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1544638032933</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -715,7 +721,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154230000" />
+    <option name="totallyTimeSpent" value="155568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,7 +747,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.12747875" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.68926173" visible="true" weight="0.14301191" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.68926173" visible="true" weight="0.14301191" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49932885" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -760,7 +766,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.23071104" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.20149253" />
+      <window_info active="true" anchor="right" id="Database" order="7" visible="true" weight="0.20149253" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Maven" order="10" weight="0.3295302" />
@@ -1002,7 +1008,6 @@
     <entry file="dbSrc:///1c94e0e/e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/routine/IS_USER_ADMIN.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/table/PRACOVNICI" />
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1039,31 +1044,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10183">
-          <caret line="615" column="5" selection-start-line="615" selection-start-column="5" selection-end-line="615" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbSrc:///1c94e0e/e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/routine/IS_USER_SCHEDULE.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="985" lean-forward="true" selection-start-line="985" selection-end-line="985" />
         </state>
       </provider>
     </entry>
@@ -1076,11 +1060,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="265">
+          <caret line="447" column="35" lean-forward="true" selection-start-line="447" selection-start-column="35" selection-end-line="447" selection-end-column="35" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="das://e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/table/PRACOVNICI">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="583" column="31" lean-forward="true" selection-start-line="583" selection-start-column="31" selection-end-line="583" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="1029" column="24" lean-forward="true" selection-start-line="1029" selection-start-column="24" selection-end-line="1029" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

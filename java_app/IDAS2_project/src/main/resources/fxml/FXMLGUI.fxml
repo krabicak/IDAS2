@@ -348,6 +348,9 @@
                                        <font>
                                           <Font size="30.0" />
                                        </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
                                     </Label>
                                  </children>
                               </FlowPane>
@@ -385,7 +388,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="8:00 - 10:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -394,7 +397,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="7:00 - 8:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -403,7 +406,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="10:00 - 12:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -412,7 +415,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="12:00 - 14:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -421,7 +424,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="14:00 - 16:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -430,7 +433,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="16:00 - 18:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>
@@ -439,7 +442,7 @@
                                  <children>
                                     <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="18:00 - 20:00">
                                        <padding>
-                                          <Insets left="10.0" />
+                                          <Insets left="10.0" top="5.0" />
                                        </padding>
                                     </Label>
                                  </children>

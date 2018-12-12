@@ -319,6 +319,7 @@
                                         </Button>
                                     </children>
                                 </FlowPane>
+                                <!--
                                 <TableView fx:id="tableViewMujRozvrh" prefHeight="200.0" prefWidth="200.0">
                                     <columns>
                                         <TableColumn fx:id="mujRozvrh_denClm" prefWidth="70.0" text="Den" />
@@ -330,6 +331,7 @@
                                         <TableColumn fx:id="mujRozvrh_zkratka_Clm" prefWidth="145.0" text="Zkratka předmětu" />
                                     </columns>
                                 </TableView>
+                                -->
                             </children>
                         </GridPane>
                     </content>
