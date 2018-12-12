@@ -711,16 +711,13 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void addRoomAct(ActionEvent actionEvent) {
-        /**
         try {
-            Optional<Room> result = Dialogs.getRoomDialog(
-                    mainController.getAllRooms(),
-                    mainController.getAllWorkplaces()).showAndWait();
-            result.ifPresent(fieldOfStudy -> {
+            Optional<Room> result = Dialogs.getRoomDialog().showAndWait();
+            result.ifPresent(room -> {
                 try {
-                    mainController.addFieldOfStudy(fieldOfStudy);
+                    mainController.addRoom(room);
                     setAllData();
-                    Dialogs.showInfoDialog("Obor " + fieldOfStudy + " přidán");
+                    Dialogs.showInfoDialog("Učebna " + room + " přidána");
                 } catch (Exception e) {
                     Dialogs.showErrorMessage(e);
                 }
@@ -728,13 +725,36 @@ public class FXMLGUIController implements Initializable {
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
-         */
     }
 
     public void updateRoomAct(ActionEvent actionEvent) {
+        try {
+            /*
+            Optional<Room> result = Dialogs.getWorkplaceDialog(
+                    ucebnaComboBox.getSelectionModel().getSelectedItem(), mainController.getAllRooms(), mainController.isUserAdmin()).showAndWait();
+            result.ifPresent(room -> {
+                try {
+                    mainController.updateRoom(room);
+                    setAllData();
+                    Dialogs.showInfoDialog("Učebna " + room + " upravena");
+                } catch (Exception e) {
+                    Dialogs.showErrorMessage(e);
+                }
+            });*/
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
     }
 
     public void deleteRoomAct(ActionEvent actionEvent) {
+            try {/*
+                String name = ucebnaComboBox.getSelectionModel().getSelectedItem().toString();
+                mainController.deleteRoom(ucebnaComboBox.getSelectionModel().getSelectedItem().toString();
+                setAllData();
+                Dialogs.showInfoDialog("Učebna " + name + " smazána");*/
+            } catch (Exception e) {
+                Dialogs.showErrorMessage(e);
+            }
     }
 }
 

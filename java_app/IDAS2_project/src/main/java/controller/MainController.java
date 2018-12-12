@@ -417,4 +417,12 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+
+    public List<Room> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException {
+        try {
+            return DatabaseHelper.getAllLearningActionsByRoom(room);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
 }
