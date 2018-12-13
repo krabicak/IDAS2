@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import model.*;
 import view.gui.libs.Dialogs;
@@ -21,6 +22,12 @@ import java.util.*;
 public class FXMLGUIController implements Initializable {
     public static MainControllerInterface mainController;
 
+    @FXML
+    public GridPane rozvrhGrid;
+    @FXML
+    public GridPane ucecebnyGrid;
+    @FXML
+    public ComboBox ucebnaComboBox;
     @FXML
     private TableView<StudyPlan> tableViewPlany;
     @FXML
