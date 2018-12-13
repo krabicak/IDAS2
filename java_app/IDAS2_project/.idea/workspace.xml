@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="dialog Subject (nejdou metody z DatabaseHelper)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="747" lean-forward="true" selection-start-line="747" selection-end-line="747" />
+            <state relative-caret-position="175">
+              <caret line="732" column="63" lean-forward="true" selection-start-line="732" selection-start-column="63" selection-end-line="732" selection-end-column="63" />
               <folding>
                 <element signature="e#28518#28519#0" expanded="true" />
                 <element signature="e#28567#28568#0" expanded="true" />
@@ -104,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+            <state relative-caret-position="714">
+              <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="419" lean-forward="true" selection-start-line="419" selection-end-line="419" />
+            <state relative-caret-position="6970">
+              <caret line="419" selection-start-line="419" selection-end-line="419" />
               <folding>
                 <element signature="e#1096#1097#0" expanded="true" />
                 <element signature="e#1137#1138#0" expanded="true" />
@@ -126,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="721" column="20" lean-forward="true" selection-start-line="721" selection-start-column="20" selection-end-line="721" selection-end-column="20" />
+            <state relative-caret-position="11985">
+              <caret line="721" column="20" selection-start-line="721" selection-start-column="20" selection-end-line="721" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -272,7 +270,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
+    <option name="x" value="-15" />
     <option name="width" value="1225" />
     <option name="height" value="1300" />
   </component>
@@ -380,6 +378,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -453,7 +452,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -602,6 +600,8 @@
       <workItem from="1544636981486" duration="3949000" />
       <workItem from="1544647259306" duration="5150000" />
       <workItem from="1544654007669" duration="4379000" />
+      <workItem from="1544658434039" duration="92000" />
+      <workItem from="1544738563671" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1542888778156</created>
@@ -751,7 +751,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166667000" />
+    <option name="totallyTimeSpent" value="167360000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,7 +766,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.92805755" visible="true" weight="0.23959732" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.92805755" visible="true" weight="0.24630873" />
       <window_info id="Structure" order="1" sideWeight="0.5084986" side_tool="true" weight="0.2295302" />
       <window_info id="Persistence" order="2" sideWeight="0.07112376" side_tool="true" weight="0.25381416" />
       <window_info id="Designer" order="3" />
@@ -777,13 +777,13 @@
       <window_info active="true" anchor="bottom" id="Database Console" order="0" sideWeight="0.6162047" visible="true" weight="0.12567714" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.68791944" weight="0.18696883" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.68724835" weight="0.18696883" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49932885" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.31208053" side_tool="true" visible="true" weight="0.18696883" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.31275168" side_tool="true" visible="true" weight="0.18696883" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4986577" weight="0.2549575" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.4966443" weight="0.08498584" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" weight="0.28360656" />
@@ -998,12 +998,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="182" column="95" selection-start-line="182" selection-start-column="95" selection-end-line="182" selection-end-column="95" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="dbSrc:///1c94e0e/e4dba454-49a3-4740-91dc-2156160ee9fe/schema/C##ST52512/routine/GET_ALL_FACULTIES.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -1153,24 +1153,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+        <state relative-caret-position="175">
+          <caret line="732" column="63" lean-forward="true" selection-start-line="732" selection-start-column="63" selection-end-line="732" selection-end-column="63" />
+          <folding>
+            <element signature="e#28518#28519#0" expanded="true" />
+            <element signature="e#28567#28568#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainControllerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="721" column="20" lean-forward="true" selection-start-line="721" selection-start-column="20" selection-end-line="721" selection-end-column="20" />
+        <state relative-caret-position="714">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="419" lean-forward="true" selection-start-line="419" selection-end-line="419" />
+        <state relative-caret-position="6970">
+          <caret line="419" selection-start-line="419" selection-end-line="419" />
           <folding>
             <element signature="e#1096#1097#0" expanded="true" />
             <element signature="e#1137#1138#0" expanded="true" />
@@ -1178,14 +1182,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/libs/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="747" lean-forward="true" selection-start-line="747" selection-end-line="747" />
-          <folding>
-            <element signature="e#28518#28519#0" expanded="true" />
-            <element signature="e#28567#28568#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="11985">
+          <caret line="721" column="20" selection-start-line="721" selection-start-column="20" selection-end-line="721" selection-end-column="20" />
         </state>
       </provider>
     </entry>
