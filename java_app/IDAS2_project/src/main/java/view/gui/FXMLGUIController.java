@@ -30,8 +30,8 @@ public class FXMLGUIController implements Initializable {
     public ComboBox ucebnaComboBox;
     @FXML
     private TableView<StudyPlan> tableViewPlany;
-    @FXML
-    private TableView<LearningAction> tableViewMujRozvrh;
+    /*    @FXML
+        private TableView<LearningAction> tableViewMujRozvrh;*/
     @FXML
     private TableView<Workplace> tableViewPracoviste;
     @FXML
@@ -155,15 +155,17 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private ChoiceBox<FieldOfStudy> oborChoiceBox;
     @FXML
+    private ChoiceBox<Room> ucebnaChoiceBox;
+    @FXML
     private TableColumn<StudyPlan, String> studyPlan_rocnik_Clm;
     @FXML
     private TableColumn<StudyPlan, String> studyPlan_kategorie_Clm;
     @FXML
     private TableColumn<StudyPlan, Subject> studyPlan_Predmet_Clm;
-    @FXML
-    private TableColumn<LearningAction, Room> mujRozvrh_mistnostClm;
-    @FXML
-    private TableColumn<LearningAction, Day> mujRozvrh_denClm;
+    /*    @FXML
+        private TableColumn<LearningAction, Room> mujRozvrh_mistnostClm;
+        @FXML
+        private TableColumn<LearningAction, Day> mujRozvrh_denClm;*/
     @FXML
     private Tab mujRozvrhTab;
     @FXML
@@ -172,16 +174,21 @@ public class FXMLGUIController implements Initializable {
     private Button editMujRozvrhBtn;
     @FXML
     private Button addMujRozvrhBtn;
+    /*    @FXML
+        private TableColumn<LearningAction, String> mujRozvrh_od_Clm;
+        @FXML
+        private TableColumn<LearningAction, String> mujRozvrh_do_Clm;
+        @FXML
+        private TableColumn<LearningAction, MethodOfLearning> mujRozvrh_typ_Clm;
+        @FXML
+        private TableColumn<LearningAction, String> mujRozvrh_nazevPredmetu_Clm;
+        @FXML
+        private TableColumn<LearningAction, Subject> mujRozvrh_zkratka_Clm;*/
     @FXML
-    private TableColumn<LearningAction, String> mujRozvrh_od_Clm;
+    private Tab ucebnyTab;
     @FXML
-    private TableColumn<LearningAction, String> mujRozvrh_do_Clm;
-    @FXML
-    private TableColumn<LearningAction, MethodOfLearning> mujRozvrh_typ_Clm;
-    @FXML
-    private TableColumn<LearningAction, String> mujRozvrh_nazevPredmetu_Clm;
-    @FXML
-    private TableColumn<LearningAction, Subject> mujRozvrh_zkratka_Clm;
+    private GridPane rozvrhGrid1;
+
 
     private List<Button> adminButtons;
     private List<Button> infoButtons;
@@ -255,7 +262,7 @@ public class FXMLGUIController implements Initializable {
     }
 
     private void setTableViewMujRozvrh(List<LearningAction> list) {
-        mujRozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
+       /* mujRozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
         mujRozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
         mujRozvrh_od_Clm.setCellValueFactory(new PropertyValueFactory<>("pocatek"));
         mujRozvrh_do_Clm.setCellValueFactory(new PropertyValueFactory<>("konec"));
@@ -265,7 +272,7 @@ public class FXMLGUIController implements Initializable {
 
         ObservableList<LearningAction> lst = FXCollections.observableArrayList(list);
         tableViewMujRozvrh.setItems(lst);
-        tableViewMujRozvrh.refresh();
+        tableViewMujRozvrh.refresh();*/
     }
 
     private void setTableViewRozvrh(List<LearningAction> list) {
@@ -292,12 +299,18 @@ public class FXMLGUIController implements Initializable {
 
     private void setTableViewPlany(List<FieldOfStudy> list) {
         studyPlan_kategorie_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getKategorie().getNazevKategorie()));
-        studyPlan_Predmet_Clm.setCellValueFactory(new PropertyValueFactory<>("predmet"));
+        studyPlan_Predmet_Clm.setCellValueFactory(new PropertyValueFactory<>("předmet"));
         studyPlan_rocnik_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getDoporucenyRocnik().getCisloRocniku()));
 
         oborChoiceBox.setItems(FXCollections.observableArrayList(list));
         oborChoiceBox.getSelectionModel().selectFirst();
         tableViewPlany.refresh();
+    }
+
+    private void setUcebnyTab(List<Room> rooms) {
+        ucebnaChoiceBox.setItems(FXCollections.observableArrayList(rooms));
+        ucebnaChoiceBox.getSelectionModel().selectFirst();
+
     }
 
     private void setAllData() {
@@ -308,6 +321,7 @@ public class FXMLGUIController implements Initializable {
             setTableViewObory(mainController.getAllFieldsOfStudy());
             setTableViewRozvrh(mainController.getAllLearningActions());
             setTableViewPlany(mainController.getAllFieldsOfStudy());
+            setUcebnyTab(mainController.getAllRooms());
             if (mainController.isUserLogged())
                 setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
@@ -677,7 +691,7 @@ public class FXMLGUIController implements Initializable {
 
     public void updateMujRozvrhAct(ActionEvent actionEvent) {
         try {
-            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+            /*Optional<LearningAction> result = Dialogs.getLearningActionDialog(
                     tableViewMujRozvrh.getSelectionModel().getSelectedItem(),
                     mainController.getAllMethodsOfLearning(),
                     mainController.getAllTeachers(),
@@ -686,7 +700,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllRooms(),
                     true,
                     mainController.getLoggedUser()).showAndWait();
-            updateStudyActionResolver(result);
+            updateStudyActionResolver(result);*/
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
@@ -723,7 +737,6 @@ public class FXMLGUIController implements Initializable {
             result.ifPresent(room -> {
                 try {
                     mainController.addRoom(room);
-                    ucebnaComboBox.getItems().addAll(room);
                     setAllData();
                     Dialogs.showInfoDialog("Učebna " + room + " přidána");
                 } catch (Exception e) {
@@ -737,7 +750,9 @@ public class FXMLGUIController implements Initializable {
 
     public void updateRoomAct(ActionEvent actionEvent) {
         try {
-            Optional<Room> result = Dialogs.getRoomDialog().showAndWait();
+            Optional<Room> result = Dialogs.getRoomDialog(
+                    ucebnaChoiceBox.getSelectionModel().getSelectedItem(),
+                    mainController.isUserAdmin()).showAndWait();
             result.ifPresent(room -> {
                 try {
                     mainController.updateRoom(room);
@@ -753,18 +768,25 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void deleteRoomAct(ActionEvent actionEvent) {
-            try {
-                String name = ucebnaComboBox.getSelectionModel().getSelectedItem().toString();
-                ucebnaComboBox.getItems().remove(name);
-               // mainController.deleteRoom(ucebnaComboBox.getSelectionModel());
-                setAllData();
-                Dialogs.showInfoDialog("Učebna " + name + " smazána");
-            } catch (Exception e) {
-                Dialogs.showErrorMessage(e);
-            }
+        try {
+            String name = ucebnaChoiceBox.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteRoom(ucebnaChoiceBox.getSelectionModel().getSelectedItem());
+            setAllData();
+            Dialogs.showInfoDialog("Učebna " + name + " smazána");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
     }
 
-    public void ucebnaComboAct(ActionEvent actionEvent) {
+    public void onSelectRoomClick(ActionEvent actionEvent) {
+        try {
+            if (ucebnaChoiceBox.getSelectionModel().getSelectedItem() != null) {
+                List<LearningAction> learningActions = mainController.getAllLearningActionsByRoom(
+                        ucebnaChoiceBox.getSelectionModel().getSelectedItem());
+            }
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
     }
 }
 

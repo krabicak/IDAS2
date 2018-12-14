@@ -1,9 +1,7 @@
 package controller;
 
 import controller.libs.DatabaseHelper;
-import javafx.scene.control.ComboBox;
 import model.*;
-import org.hibernate.Session;
 
 import javax.persistence.Persistence;
 import java.util.List;
@@ -410,7 +408,6 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-
     public void deleteRoom(Room room) throws DatabaseAccesException, LoginException {
         try {
             checkLoging();
@@ -420,8 +417,7 @@ public class MainController implements MainControllerInterface {
         }
     }
 
-
-    public List<Room> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException {
+    public List<LearningAction> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllLearningActionsByRoom(room);
         } catch (DatabaseHelper.DatabaseException e) {

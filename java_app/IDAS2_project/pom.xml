@@ -52,5 +52,6 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.3.7.Final</version>
         </dependency>
+
     </dependencies>
 </project>

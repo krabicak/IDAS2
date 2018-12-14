@@ -722,8 +722,9 @@ public final class DatabaseHelper {
         return stmt;
     }
 
-    public static List<Room> getAllLearningActionsByRoom(Room room) throws DatabaseException {
+    public static List<LearningAction> getAllLearningActionsByRoom(Room room) throws DatabaseException {
         try {
+            System.out.println(room.getId());
             Query query = em.createNamedQuery("get_all_learning_actions_by_room");
             query.setParameter(1, room.getId());
             return query.getResultList();

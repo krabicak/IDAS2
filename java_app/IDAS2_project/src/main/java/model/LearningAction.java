@@ -24,26 +24,26 @@ public class LearningAction {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
-    @Column(name = "KAPACITA")
+    @Column(name = "kapacita")
     private String kapacita;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ZPUSOB_VYUKY")
+    @JoinColumn(name = "zpusob_vyuky")
     private MethodOfLearning zpusobVyuky;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "VYUCUJICI")
+    @JoinColumn(name = "vyucujici")
     private Teacher vyucujici;
-    @Column(name = "POCATEK")
+    @Column(name = "pocatek")
     private String pocatek;
-    @Column(name = "KONEC")
+    @Column(name = "konec")
     private String konec;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "DEN")
+    @JoinColumn(name = "den")
     private Day den;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PREDMET")
+    @JoinColumn(name = "predmet")
     private Subject predmet;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UCEBNA")
+    @JoinColumn(name = "ucebna")
     private Room ucebna;
 
     public String getId() {

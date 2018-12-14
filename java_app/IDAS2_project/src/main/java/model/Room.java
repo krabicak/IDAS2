@@ -2,12 +2,20 @@ package model;
 
 import javax.persistence.*;
 
-@NamedNativeQuery(
-        name = "get_all_rooms",
-        query = "{ ? = call get_all_rooms ( ) }",
-        resultClass = Room.class,
-        hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
-)
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "get_all_rooms",
+                query = "{ ? = call get_all_rooms ( ) }",
+                resultClass = Room.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        ),
+        @NamedNativeQuery(
+                name = "get_all_learning_actions_by_room",
+                query = "{ ? = call get_all_learning_actions_by_room ( ? ) }",
+                resultClass = Room.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )
+})
 @Entity
 @Table(name = "UCEBNA")
 public class Room {

@@ -312,6 +312,13 @@ public interface MainControllerInterface {
      */
     void deleteStudyPlan(StudyPlan studyPlan) throws DatabaseAccesException;
 
+    /**
+     * @param room
+     * @return
+     * @throws DatabaseAccesException
+     */
+    List<LearningAction> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException;
+
 
     class LoginException extends Exception {
 
