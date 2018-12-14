@@ -23,15 +23,23 @@ public class FXMLGUIController implements Initializable {
     public static MainControllerInterface mainController;
 
     @FXML
-    public GridPane rozvrhGrid;
+    private GridPane rozvrhGrid;
     @FXML
-    public GridPane ucecebnyGrid;
+    private GridPane ucecebnyGrid;
     @FXML
-    public ComboBox ucebnaComboBox;
+    private Button addRoomBtn;
+    @FXML
+    private Button editRoomBtn;
+    @FXML
+    private Button delRoomBtn;
+    @FXML
+    private TableView<Room> tableViewMistnosti;
+    @FXML
+    private TableColumn<Room, String> mistnost_popisClm;
+    @FXML
+    private TableColumn<Room, String> mistnos_zkratkaClm;
     @FXML
     private TableView<StudyPlan> tableViewPlany;
-    /*    @FXML
-        private TableView<LearningAction> tableViewMujRozvrh;*/
     @FXML
     private TableView<Workplace> tableViewPracoviste;
     @FXML
@@ -174,16 +182,6 @@ public class FXMLGUIController implements Initializable {
     private Button editMujRozvrhBtn;
     @FXML
     private Button addMujRozvrhBtn;
-    /*    @FXML
-        private TableColumn<LearningAction, String> mujRozvrh_od_Clm;
-        @FXML
-        private TableColumn<LearningAction, String> mujRozvrh_do_Clm;
-        @FXML
-        private TableColumn<LearningAction, MethodOfLearning> mujRozvrh_typ_Clm;
-        @FXML
-        private TableColumn<LearningAction, String> mujRozvrh_nazevPredmetu_Clm;
-        @FXML
-        private TableColumn<LearningAction, Subject> mujRozvrh_zkratka_Clm;*/
     @FXML
     private Tab ucebnyTab;
     @FXML
@@ -261,20 +259,6 @@ public class FXMLGUIController implements Initializable {
         tableViewObory.refresh();
     }
 
-    private void setTableViewMujRozvrh(List<LearningAction> list) {
-       /* mujRozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
-        mujRozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
-        mujRozvrh_od_Clm.setCellValueFactory(new PropertyValueFactory<>("pocatek"));
-        mujRozvrh_do_Clm.setCellValueFactory(new PropertyValueFactory<>("konec"));
-        mujRozvrh_typ_Clm.setCellValueFactory(new PropertyValueFactory<>("zpusobVyuky"));
-        mujRozvrh_nazevPredmetu_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getNazev()));
-        mujRozvrh_zkratka_Clm.setCellValueFactory(new PropertyValueFactory<>("predmet"));
-
-        ObservableList<LearningAction> lst = FXCollections.observableArrayList(list);
-        tableViewMujRozvrh.setItems(lst);
-        tableViewMujRozvrh.refresh();*/
-    }
-
     private void setTableViewRozvrh(List<LearningAction> list) {
         rozvrh_mistnostClm.setCellValueFactory(new PropertyValueFactory<>("ucebna"));
         rozvrh_denClm.setCellValueFactory(new PropertyValueFactory<>("den"));
@@ -313,6 +297,14 @@ public class FXMLGUIController implements Initializable {
 
     }
 
+    private void setTableViewMistnosti(List<Room> rooms) {
+        mistnos_zkratkaClm.setCellValueFactory(new PropertyValueFactory<>("oznaceni"));
+        mistnost_popisClm.setCellValueFactory(new PropertyValueFactory<>("popis"));
+
+        tableViewMistnosti.setItems(FXCollections.observableArrayList(rooms));
+        tableViewMistnosti.refresh();
+    }
+
     private void setAllData() {
         try {
             setTableViewUcitel(mainController.getAllTeachers());
@@ -321,9 +313,13 @@ public class FXMLGUIController implements Initializable {
             setTableViewObory(mainController.getAllFieldsOfStudy());
             setTableViewRozvrh(mainController.getAllLearningActions());
             setTableViewPlany(mainController.getAllFieldsOfStudy());
+            setTableViewMistnosti(mainController.getAllRooms());
+
             setUcebnyTab(mainController.getAllRooms());
-            if (mainController.isUserLogged())
-                setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
+            if (mainController.isUserLogged()) {
+            }
+            //TODO
+            //setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
             adminButtons.forEach(button -> button.setDisable(!mainController.isUserAdmin()));
             infoButtons.forEach(button -> {
@@ -341,9 +337,9 @@ public class FXMLGUIController implements Initializable {
         mainController = new MainController();
         adminButtons = Arrays.asList(
                 addOborBtn, addPracovisteBtn, addPredmetBtn, addRozvrhBtn, addStudijniPlan, addUcitelbtn,
-                delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn);
+                delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn, addRoomBtn, delRoomBtn);
         infoButtons = Arrays.asList(
-                editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editUcitelbtn
+                editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editUcitelbtn, editRoomBtn
         );
         logButton.setOnAction(this::onLoginClick);
         setAllData();
@@ -731,7 +727,7 @@ public class FXMLGUIController implements Initializable {
 
     }
 
-    public void addRoomAct(ActionEvent actionEvent) {
+    public void addRoom(ActionEvent actionEvent) {
         try {
             Optional<Room> result = Dialogs.getRoomDialog().showAndWait();
             result.ifPresent(room -> {
@@ -748,10 +744,10 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void updateRoomAct(ActionEvent actionEvent) {
+    public void updateRoom(ActionEvent actionEvent) {
         try {
             Optional<Room> result = Dialogs.getRoomDialog(
-                    ucebnaChoiceBox.getSelectionModel().getSelectedItem(),
+                    tableViewMistnosti.getSelectionModel().getSelectedItem(),
                     mainController.isUserAdmin()).showAndWait();
             result.ifPresent(room -> {
                 try {
@@ -767,10 +763,10 @@ public class FXMLGUIController implements Initializable {
         }
     }
 
-    public void deleteRoomAct(ActionEvent actionEvent) {
+    public void deleteRoom(ActionEvent actionEvent) {
         try {
-            String name = ucebnaChoiceBox.getSelectionModel().getSelectedItem().toString();
-            mainController.deleteRoom(ucebnaChoiceBox.getSelectionModel().getSelectedItem());
+            String name = tableViewMistnosti.getSelectionModel().getSelectedItem().toString();
+            mainController.deleteRoom(tableViewMistnosti.getSelectionModel().getSelectedItem());
             setAllData();
             Dialogs.showInfoDialog("Učebna " + name + " smazána");
         } catch (Exception e) {
@@ -787,6 +783,15 @@ public class FXMLGUIController implements Initializable {
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
+    }
+
+    public void addRoomLearningAction(ActionEvent actionEvent) {
+    }
+
+    public void updateRoomLearningAction(ActionEvent actionEvent) {
+    }
+
+    public void deleteRoomLearningAction(ActionEvent actionEvent) {
     }
 }
 

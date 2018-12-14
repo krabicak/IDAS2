@@ -54,6 +54,14 @@ public final class Dialogs {
         alert.showAndWait();
     }
 
+    public static void showErrorMessage(String message) {
+        System.out.println(message);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Chyba");
+        alert.setHeaderText(message);
+        alert.showAndWait();
+    }
+
     private static void isItNull(TextField textField)
             throws NullPointerException {
         if (textField.getText() == null || textField.getText().equals("")) {
