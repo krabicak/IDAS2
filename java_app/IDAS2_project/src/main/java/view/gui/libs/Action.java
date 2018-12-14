@@ -8,6 +8,7 @@ public class Action extends VBox {
     private LearningAction learningAction;
 
     public Action(LearningAction learningAction) {
+        super();
         this.learningAction = learningAction;
         Label ucitel = new Label(learningAction.getVyucujici().toString());
         Label ucebna = new Label(learningAction.getUcebna().toString());

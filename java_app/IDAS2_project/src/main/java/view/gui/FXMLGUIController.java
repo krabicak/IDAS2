@@ -784,14 +784,5 @@ public class FXMLGUIController implements Initializable {
             Dialogs.showErrorMessage(e);
         }
     }
-
-    public void addRoomLearningAction(ActionEvent actionEvent) {
-    }
-
-    public void updateRoomLearningAction(ActionEvent actionEvent) {
-    }
-
-    public void deleteRoomLearningAction(ActionEvent actionEvent) {
-    }
 }
 
