@@ -13,6 +13,9 @@ public class Action extends VBox {
         Label ucitel = new Label(learningAction.getVyucujici().toString());
         Label ucebna = new Label(learningAction.getUcebna().toString());
         Label predmet = new Label(learningAction.getPredmet().toString());
+        this.prefWidth(200);
+        this.prefHeight(100);
+
 
         this.getChildren().addAll(ucitel, ucebna, predmet);
     }

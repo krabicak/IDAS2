@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import model.*;
+import view.gui.libs.Action;
 import view.gui.libs.Dialogs;
 
 import java.net.URL;
@@ -190,6 +191,242 @@ public class FXMLGUIController implements Initializable {
 
     private List<Button> adminButtons;
     private List<Button> infoButtons;
+
+    public void setRozvrh(LearningAction act){
+        String od = act.getPocatek().toString();
+        String den = act.getDen().toString();
+        for (int i = 1; i < 7; i++) { //dny
+            for (int j = 1; j < 13; j++) { //zacatek akce
+                switch (den) {
+                    case "po":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "út":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "st":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "čt":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "pá":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "so":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                    case "ne":
+                        switch (od) {
+                            case "7:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "8:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "9:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "10:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "11:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "12:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "13:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "14:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "15:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "16:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "17:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "18:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "19:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                            case "20:00":
+                                rozvrhGrid.add(new Action(act), i, j);
+                        }
+                }
+            }
+        }
+    }
+
+    public void setRozvrhGrid(LearningAction act) {
+        setRozvrh(act);
+    }
+
+    public void setUcecebnyGrid(LearningAction act) {
+        setRozvrh(act);
+    }
 
     private void setTableViewUcitel(List<Teacher> list) {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));

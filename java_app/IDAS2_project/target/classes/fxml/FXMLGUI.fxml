@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -15,21 +14,23 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
+<?import view.gui.libs.Action?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="856.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.gui.FXMLGUIController">
     <children>
         <TabPane prefHeight="558.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
                 <Tab fx:id="ucitelTab" text="Vyučující">
                     <content>
-                        <GridPane>
+                        <GridPane prefHeight="743.0" prefWidth="1262.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="40.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="786.0" minHeight="10.0" prefHeight="773.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="225.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -76,7 +77,7 @@
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="773.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
@@ -117,7 +118,7 @@
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="769.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
@@ -156,201 +157,243 @@
                         </GridPane>
                     </content>
                 </Tab>
-            <Tab fx:id="ucebnyTab" text="Učebny">
-               <content>
-                  <GridPane>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="482.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <FlowPane prefHeight="40.0" prefWidth="889.0" GridPane.rowIndex="2">
-                           <children>
-                              <Button fx:id="addRoomBtn" mnemonicParsing="false" onAction="#addRoomAct" text="Přidat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="editRoomBtn" mnemonicParsing="false" onAction="#updateRoomAct" text="Editovat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                              <Button fx:id="delRoomBtn" mnemonicParsing="false" onAction="#deleteRoomAct" text="Odebrat">
-                                 <FlowPane.margin>
-                                    <Insets left="20.0" />
-                                 </FlowPane.margin>
-                              </Button>
-                           </children>
-                        </FlowPane>
-                        <GridPane fx:id="rozvrhGrid1" prefHeight="476.0" prefWidth="889.0" GridPane.rowIndex="1">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="47.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="101.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="115.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="131.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="129.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="121.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="129.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="111.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="254.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="38.0" prefHeight="68.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="64.0" prefHeight="79.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="75.0" prefHeight="82.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="69.0" prefHeight="80.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="55.0" prefHeight="58.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label text="Po" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Út" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="St" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Čt" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Pá" GridPane.rowIndex="5">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="So" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Ne" GridPane.rowIndex="7">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="8:00 - 10:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="7:00 - 8:00">
-                                       <padding>
-                                          <Insets top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="10:00 - 12:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="26.0" prefWidth="132.0" GridPane.columnIndex="4">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="12:00 - 14:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="14:00 - 16:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="16:00 - 18:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="18:00 - 20:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                           </children>
+                <Tab fx:id="ucebnyTab" text="Učebny">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="599.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="736.0" minHeight="10.0" prefHeight="736.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="27.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="40.0" prefWidth="889.0" GridPane.rowIndex="2" />
+                                <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label text="Učebna: ">
+                                            <padding>
+                                                <Insets left="10.0" />
+                                            </padding>
+                                        </Label>
+                                        <ChoiceBox fx:id="ucebnaChoiceBox" onAction="#onSelectRoomClick" prefHeight="31.0" prefWidth="164.0">
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                            <FlowPane.margin>
+                                                <Insets top="5.0" />
+                                            </FlowPane.margin>
+                                        </ChoiceBox>
+                                    </children>
+                                </FlowPane>
+                                <GridPane fx:id="ucecebnyGrid" prefHeight="478.0" prefWidth="816.0" GridPane.rowIndex="1">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="43.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="0.0" prefWidth="77.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="81.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="0.0" prefWidth="86.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="0.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="0.0" prefWidth="97.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="96.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="97.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="0.0" prefWidth="99.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="0.0" prefWidth="103.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="94.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="102.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="254.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="38.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="64.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="75.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="69.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="55.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Po" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Út" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="St" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Čt" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Pá" GridPane.rowIndex="5">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="So" GridPane.rowIndex="6">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Ne" GridPane.rowIndex="7">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="8:00 - 9:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="54.0" prefWidth="67.0" GridPane.columnIndex="1">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="7:00 - 8:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="9:00 - 10:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="10:00 - 11:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="11:00 - 12:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="12:00 - 13:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="13:00 - 14:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="98.0" text="14:00 - 15:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="102.0" text="15:00 - 16:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefWidth="118.0" text="16:00 - 17:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="11">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="103.0" text="17:00 - 18:00">
+                                                    <padding>
+                                                        <Insets left="10.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="12">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="96.0" text="18:00 - 19:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="13">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="102.0" text="19:00 - 20:00">
+                                                    <padding>
+                                                        <Insets left="10.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                    </children>
+                                </GridPane>
+                            </children>
                         </GridPane>
-                        <FlowPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Label text="Učebna: ">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
-                              <ComboBox fx:id="ucebnaComboBox" prefHeight="31.0" prefWidth="164.0" promptText="vyberte učebnu">
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                                 <FlowPane.margin>
-                                    <Insets top="5.0" />
-                                 </FlowPane.margin>
-                              </ComboBox>
-                           </children>
-                        </FlowPane>
-                     </children>
-                  </GridPane>
-               </content>
-            </Tab>
+                    </content>
+                </Tab>
                 <Tab fx:id="seznamPredmetuTab" text="Předměty">
                     <content>
                         <GridPane>
@@ -358,8 +401,8 @@
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="774.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="57.0" prefWidth="889.0" GridPane.rowIndex="1">
@@ -403,7 +446,7 @@
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="589.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="715.0" vgrow="SOMETIMES" />
                                 <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
@@ -445,8 +488,8 @@
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="463.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="715.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="2">
@@ -471,15 +514,18 @@
                                         <Label text="Vyberte obor:">
                                             <HBox.margin>
                                                 <Insets left="5.0" top="10.0" />
-                                            </HBox.margin></Label>
+                                            </HBox.margin>
+                                        </Label>
                                         <ChoiceBox fx:id="oborChoiceBox" prefWidth="150.0">
                                             <HBox.margin>
                                                 <Insets bottom="5.0" left="10.0" top="5.0" />
-                                            </HBox.margin></ChoiceBox>
+                                            </HBox.margin>
+                                        </ChoiceBox>
                                         <Button mnemonicParsing="false" onAction="#onSubjectCommit" text="Potvrdit">
                                             <HBox.margin>
                                                 <Insets bottom="5.0" left="10.0" top="5.0" />
-                                            </HBox.margin></Button>
+                                            </HBox.margin>
+                                        </Button>
                                     </children>
                                 </HBox>
                             </children>
@@ -488,16 +534,16 @@
                 </Tab>
                 <Tab fx:id="mujRozvrhTab" text="Můj rozvrh">
                     <content>
-                        <GridPane>
+                        <GridPane prefHeight="779.0" prefWidth="1264.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints maxHeight="599.0" minHeight="10.0" prefHeight="502.0" vgrow="SOMETIMES" />
-                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="781.0" minHeight="10.0" prefHeight="778.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="39.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <FlowPane prefHeight="40.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                <FlowPane prefHeight="102.0" prefWidth="1163.0" GridPane.rowIndex="1">
                                     <children>
                                         <Button fx:id="addMujRozvrhBtn" mnemonicParsing="false" onAction="#addMujRozvrhAct" text="Přidat">
                                             <FlowPane.margin>
@@ -516,149 +562,209 @@
                                         </Button>
                                     </children>
                                 </FlowPane>
-                        <GridPane fx:id="rozvrhGrid" prefHeight="478.0" prefWidth="816.0">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="47.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="101.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="115.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="131.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="129.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="121.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="129.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="111.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="254.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="351.0" minHeight="38.0" prefHeight="68.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="64.0" prefHeight="79.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="75.0" prefHeight="82.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="69.0" prefHeight="80.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="351.0" minHeight="55.0" prefHeight="58.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Label text="Po" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Út" GridPane.rowIndex="2">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="St" GridPane.rowIndex="3">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Čt" GridPane.rowIndex="4">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Pá" GridPane.rowIndex="5">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="So" GridPane.rowIndex="6">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="Ne" GridPane.rowIndex="7">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets left="5.0" />
-                                 </padding>
-                              </Label>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="8:00 - 10:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="7:00 - 8:00">
-                                       <padding>
-                                          <Insets top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="10:00 - 12:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="12:00 - 14:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="14:00 - 16:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="16:00 - 18:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="18:00 - 20:00">
-                                       <padding>
-                                          <Insets left="10.0" top="5.0" />
-                                       </padding>
-                                    </Label>
-                                 </children>
-                              </FlowPane>
-                           </children>
-                        </GridPane>
+                                <GridPane fx:id="rozvrhGrid" prefHeight="478.0" prefWidth="816.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="43.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="0.0" prefWidth="77.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="81.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="0.0" prefWidth="86.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="0.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="0.0" prefWidth="97.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="96.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="97.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="95.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="0.0" prefWidth="99.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="0.0" prefWidth="103.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="94.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="102.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="122.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="172.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="254.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="38.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="64.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="75.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="69.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="351.0" minHeight="55.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Po" GridPane.rowIndex="1">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Út" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="St" GridPane.rowIndex="3">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Čt" GridPane.rowIndex="4">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Pá" GridPane.rowIndex="5">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="So" GridPane.rowIndex="6">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="Ne" GridPane.rowIndex="7">
+                                            <font>
+                                                <Font size="30.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="5.0" />
+                                            </padding>
+                                        </Label>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="8:00 - 9:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="54.0" prefWidth="67.0" GridPane.columnIndex="1">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="7:00 - 8:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="9:00 - 10:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="10:00 - 11:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="11:00 - 12:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="12:00 - 13:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" text="13:00 - 14:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="98.0" text="14:00 - 15:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="102.0" text="15:00 - 16:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="10">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefWidth="118.0" text="16:00 - 17:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="11">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="103.0" text="17:00 - 18:00">
+                                                    <padding>
+                                                        <Insets left="10.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="12">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="96.0" text="18:00 - 19:00">
+                                                    <padding>
+                                                        <Insets left="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="13">
+                                            <children>
+                                                <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="102.0" text="19:00 - 20:00">
+                                                    <padding>
+                                                        <Insets left="10.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                    </children>
+                                </GridPane>
                                 <!--
                                 <TableView fx:id="tableViewMujRozvrh" prefHeight="200.0" prefWidth="200.0">
                                     <columns>
@@ -672,6 +778,46 @@
                                     </columns>
                                 </TableView>
                                 -->
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="seznamUcebenTab" text="Seznam učeben">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="715.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="254.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <FlowPane prefHeight="50.0" prefWidth="889.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Button fx:id="addRoomBtn" mnemonicParsing="false" onAction="#addRoom" text="Přidat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="editRoomBtn" mnemonicParsing="false" onAction="#updateRoom" text="Editovat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                        <Button fx:id="delRoomBtn" mnemonicParsing="false" onAction="#deleteRoom" text="Odebrat">
+                                            <FlowPane.margin>
+                                                <Insets left="20.0" />
+                                            </FlowPane.margin>
+                                        </Button>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableViewMistnosti" prefHeight="200.0" prefWidth="200.0">
+                                    <columns>
+                                        <TableColumn fx:id="mistnost_popisClm" prefWidth="288.0" text="Popis" />
+                                        <TableColumn fx:id="mistnos_zkratkaClm" minWidth="0.0" prefWidth="167.0" text="Zkratka" />
+                                    </columns>
+                                </TableView>
                             </children>
                         </GridPane>
                     </content>
