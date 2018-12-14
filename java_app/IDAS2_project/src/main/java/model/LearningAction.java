@@ -15,6 +15,12 @@ import javax.persistence.*;
                 resultClass = LearningAction.class,
                 hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
         ),
+        @NamedNativeQuery(
+                name = "get_all_learning_actions_by_room",
+                query = "{ ? = call get_all_learning_actions_by_room ( ? ) }",
+                resultClass = LearningAction.class,
+                hints = @javax.persistence.QueryHint(name = "org.hibernate.callable", value = "true")
+        )
 })
 @Entity
 @Table(name = "VIEW_LEARNING_ACTION")
