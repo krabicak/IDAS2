@@ -8,10 +8,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.AreaChart;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.util.Pair;
 import model.*;
 import view.gui.libs.Action;
@@ -188,6 +192,8 @@ public class FXMLGUIController implements Initializable {
     private List<Button> adminButtons;
     private List<Button> infoButtons;
 
+    private Action clickedAction;
+
     private GridPane setRozvrhGrid(GridPane gridPane, List<Day> days, List<LearningAction> learningActions) {
         learningActions.forEach(learningAction -> {
             for (int i = 0; i < days.size(); i++) {
@@ -195,9 +201,18 @@ public class FXMLGUIController implements Initializable {
                 if (learningAction.getPocatek() != null && learningAction.getKonec() != null)
                     if (learningAction.getDen().getShortcut().equals(day.getShortcut())) {
                         Action action = new Action(learningAction);
+                        action.setOnMouseClicked(event -> {
+                            clickedAction = action;
+                            action.setBackground(new Background(new BackgroundFill(Color.YELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
+                            gridPane.getChildren().forEach(node -> {
+                                if (node.getClass() == Action.class && node != action) {
+                                    ((Action) node).setBackground(new Background(new BackgroundFill(Color.LIGHTYELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
+                                }
+                            });
+                        });
                         int index = Integer.valueOf(learningAction.getPocatek().split(":")[0]) - 6;
                         gridPane.add(action, index, i + 1);
-                        Integer konec = Integer.valueOf(learningAction.getKonec().split(":")[0]) - 6;
+                        int konec = Integer.valueOf(learningAction.getKonec().split(":")[0]) - 6;
                         while (index < konec) {
                             index++;
                             gridPane.add(new Action(new LearningAction()), index, i + 1);
@@ -343,8 +358,6 @@ public class FXMLGUIController implements Initializable {
             if (mainController.isUserLogged()) {
                 setMujRozvrhTab(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()), mainController.getAllDays());
             }
-            //TODO
-            //setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
             adminButtons.forEach(button -> button.setDisable(!mainController.isUserAdmin()));
             infoButtons.forEach(button -> {
@@ -712,8 +725,8 @@ public class FXMLGUIController implements Initializable {
 
     public void updateMujRozvrhAct(ActionEvent actionEvent) {
         try {
-            /*Optional<LearningAction> result = Dialogs.getLearningActionDialog(
-                    tableViewMujRozvrh.getSelectionModel().getSelectedItem(),
+            Optional<LearningAction> result = Dialogs.getLearningActionDialog(
+                    clickedAction.getLearningAction(),
                     mainController.getAllMethodsOfLearning(),
                     mainController.getAllTeachers(),
                     mainController.getAllDays(),
@@ -721,7 +734,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllRooms(),
                     true,
                     mainController.getLoggedUser()).showAndWait();
-            updateStudyActionResolver(result);*/
+            updateStudyActionResolver(result);
         } catch (Exception ex) {
             Dialogs.showErrorMessage(ex);
         }
@@ -740,7 +753,14 @@ public class FXMLGUIController implements Initializable {
     }
 
     public void deleteMujRozvrhAct(ActionEvent actionEvent) {
-        deleteLearningAction(actionEvent);
+        try {
+            String name = clickedAction.getLearningAction().toString();
+            mainController.deleteLearningAction(clickedAction.getLearningAction());
+            setAllData();
+            Dialogs.showInfoDialog("Výuková akce " + name + " smazána");
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e);
+        }
     }
 
     public void onSubjectCommit(ActionEvent actionEvent) {
