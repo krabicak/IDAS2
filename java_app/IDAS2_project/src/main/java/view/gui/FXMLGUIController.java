@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.AreaChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
@@ -188,12 +189,33 @@ public class FXMLGUIController implements Initializable {
     @FXML
     private GridPane rozvrhGrid1;
 
-
     private List<Button> adminButtons;
     private List<Button> infoButtons;
 
-    public void setRozvrh(LearningAction act){
-        String od = act.getPocatek().toString();
+    private GridPane setRozvrhGrid(GridPane gridPane, List<Day> days, List<LearningAction> learningActions) {
+        learningActions.forEach(learningAction -> {
+            for (int i = 0; i < days.size(); i++) {
+                Day day = days.get(i);
+                if (learningAction.getPocatek() != null && learningAction.getKonec() != null)
+                    if (learningAction.getDen().getShortcut().equals(day.getShortcut())) {
+                        Action action = new Action(learningAction);
+                        int index = Integer.valueOf(learningAction.getPocatek().split(":")[0]) - 6;
+                        gridPane.add(action, index, i + 1);
+                        Integer konec = Integer.valueOf(learningAction.getKonec().split(":")[0]) - 6;
+                        while (index < konec) {
+                            index++;
+                            gridPane.add(new Action(new LearningAction()), index, i + 1);
+                        }
+                        return;
+                    }
+            }
+
+        });
+        return gridPane;
+    }
+
+    /*public void setRozvrh(LearningAction act) {
+        String od = act.getPocatek();
         String den = act.getDen().toString();
         for (int i = 1; i < 7; i++) { //dny
             for (int j = 1; j < 13; j++) { //zacatek akce
@@ -418,15 +440,15 @@ public class FXMLGUIController implements Initializable {
                 }
             }
         }
-    }
+    }*/
 
-    public void setRozvrhGrid(LearningAction act) {
+    /*public void setRozvrhGrid(LearningAction act) {
         setRozvrh(act);
     }
 
     public void setUcecebnyGrid(LearningAction act) {
         setRozvrh(act);
-    }
+    }*/
 
     private void setTableViewUcitel(List<Teacher> list) {
         ucitel_idClm.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -531,7 +553,11 @@ public class FXMLGUIController implements Initializable {
     private void setUcebnyTab(List<Room> rooms) {
         ucebnaChoiceBox.setItems(FXCollections.observableArrayList(rooms));
         ucebnaChoiceBox.getSelectionModel().selectFirst();
+    }
 
+    private void setMujRozvrhTab(List<LearningAction> learningActions, List<Day> days) {
+        rozvrhGrid.getChildren().removeIf(node -> node.getClass() == Action.class);
+        setRozvrhGrid(rozvrhGrid, days, learningActions);
     }
 
     private void setTableViewMistnosti(List<Room> rooms) {
@@ -553,7 +579,9 @@ public class FXMLGUIController implements Initializable {
             setTableViewMistnosti(mainController.getAllRooms());
 
             setUcebnyTab(mainController.getAllRooms());
+
             if (mainController.isUserLogged()) {
+                setMujRozvrhTab(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()), mainController.getAllDays());
             }
             //TODO
             //setTableViewMujRozvrh(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()));
@@ -1014,8 +1042,9 @@ public class FXMLGUIController implements Initializable {
     public void onSelectRoomClick(ActionEvent actionEvent) {
         try {
             if (ucebnaChoiceBox.getSelectionModel().getSelectedItem() != null) {
-                List<LearningAction> learningActions = mainController.getAllLearningActionsByRoom(
-                        ucebnaChoiceBox.getSelectionModel().getSelectedItem());
+                ucecebnyGrid.getChildren().removeIf(node -> node.getClass() == Action.class);
+                setRozvrhGrid(ucecebnyGrid, mainController.getAllDays(), mainController.getAllLearningActionsByRoom(
+                        ucebnaChoiceBox.getSelectionModel().getSelectedItem()));
             }
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
