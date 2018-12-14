@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33341d72-5de9-4aec-9a59-cdd0d17d7e1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/libs/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -84,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-440">
-              <caret line="504" column="33" selection-start-line="504" selection-start-column="16" selection-end-line="504" selection-end-column="33" />
+            <state relative-caret-position="8653">
+              <caret line="517" column="33" selection-start-line="517" selection-start-column="33" selection-end-line="517" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -93,14 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/LearningAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="782">
               <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-              <folding>
-                <element signature="e#2244#2245#0" expanded="true" />
-                <element signature="e#2274#2275#0" expanded="true" />
-                <element signature="e#2521#2522#0" expanded="true" />
-                <element signature="e#2547#2548#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +117,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="544" column="98" lean-forward="true" selection-start-line="544" selection-start-column="98" selection-end-line="544" selection-end-column="98" />
+            <state relative-caret-position="291">
+              <caret line="548" column="69" lean-forward="true" selection-start-line="548" selection-start-column="69" selection-end-line="548" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,19 +128,19 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="629">
+              <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Action.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding>
                 <element signature="e#1304#1305#0" expanded="true" />
                 <element signature="e#1341#1342#0" expanded="true" />
@@ -410,7 +401,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -503,6 +493,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -517,7 +508,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544816190300" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544816191460" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/untitled/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ojdbc7.jar!/" />
@@ -661,7 +652,8 @@
       <workItem from="1544796648771" duration="1170000" />
       <workItem from="1544802417685" duration="614000" />
       <workItem from="1544803527019" duration="773000" />
-      <workItem from="1544807951526" duration="6204000" />
+      <workItem from="1544807951526" duration="6240000" />
+      <workItem from="1544816279605" duration="416000" />
     </task>
     <task id="LOCAL-00001" summary="design">
       <created>1542888778156</created>
@@ -818,7 +810,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191172000" />
+    <option name="totallyTimeSpent" value="191624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,7 +825,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.92805755" visible="true" weight="0.17449665" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.92805755" visible="true" weight="0.17718121" />
       <window_info id="Structure" order="1" sideWeight="0.5084986" side_tool="true" weight="0.2295302" />
       <window_info id="Persistence" order="2" sideWeight="0.07112376" side_tool="true" weight="0.25381416" />
       <window_info id="Designer" order="3" />
@@ -1186,16 +1178,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8653">
+          <caret line="517" column="33" selection-start-line="517" selection-start-column="33" selection-end-line="517" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/LearningAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
+        <state relative-caret-position="782">
           <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="e#2244#2245#0" expanded="true" />
-            <element signature="e#2274#2275#0" expanded="true" />
-            <element signature="e#2521#2522#0" expanded="true" />
-            <element signature="e#2547#2548#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,10 +1206,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding>
             <element signature="e#1304#1305#0" expanded="true" />
             <element signature="e#1341#1342#0" expanded="true" />
@@ -1228,25 +1229,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/FXMLGUI.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/FXMLGUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="504" column="33" selection-start-line="504" selection-start-column="16" selection-end-line="504" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/gui/libs/Dialogs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="544" column="98" lean-forward="true" selection-start-line="544" selection-start-column="98" selection-end-line="544" selection-end-column="98" />
+        <state relative-caret-position="291">
+          <caret line="548" column="69" lean-forward="true" selection-start-line="548" selection-start-column="69" selection-end-line="548" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
