@@ -29,6 +29,10 @@ public class FXMLGUIController implements Initializable {
     public static MainControllerInterface mainController;
 
     @FXML
+    private Button importButton;
+    @FXML
+    private Label nameOfLoggedUser;
+    @FXML
     private GridPane rozvrhGrid;
     @FXML
     private GridPane ucecebnyGrid;
@@ -213,9 +217,10 @@ public class FXMLGUIController implements Initializable {
                         int index = Integer.valueOf(learningAction.getPocatek().split(":")[0]) - 6;
                         gridPane.add(action, index, i + 1);
                         int konec = Integer.valueOf(learningAction.getKonec().split(":")[0]) - 6;
+                        index++;
                         while (index < konec) {
-                            index++;
                             gridPane.add(new Action(new LearningAction()), index, i + 1);
+                            index++;
                         }
                         return;
                     }
@@ -356,8 +361,9 @@ public class FXMLGUIController implements Initializable {
             setUcebnyTab(mainController.getAllRooms());
 
             if (mainController.isUserLogged()) {
+                nameOfLoggedUser.setText(mainController.getLoggedUser().toString());
                 setMujRozvrhTab(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()), mainController.getAllDays());
-            }
+            }else nameOfLoggedUser.setText("Nepřihlášený uživatel");
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
             adminButtons.forEach(button -> button.setDisable(!mainController.isUserAdmin()));
             infoButtons.forEach(button -> {
@@ -375,7 +381,7 @@ public class FXMLGUIController implements Initializable {
         mainController = new MainController();
         adminButtons = Arrays.asList(
                 addOborBtn, addPracovisteBtn, addPredmetBtn, addRozvrhBtn, addStudijniPlan, addUcitelbtn,
-                delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn, addRoomBtn, delRoomBtn);
+                delOborBtn, delPracovisteBtn, delPredmetBtn, delRozvrhBtn, delPlanBtn, delUcitelbtn, addRoomBtn, delRoomBtn, importButton);
         infoButtons = Arrays.asList(
                 editOborBtn, editPracovisteBtn, editPredmetBtn, editRozvrhBtn, editUcitelbtn, editRoomBtn
         );
@@ -383,7 +389,7 @@ public class FXMLGUIController implements Initializable {
         setAllData();
     }
 
-    public void onLoginClick(ActionEvent actionEvent) {
+    private void onLoginClick(ActionEvent actionEvent) {
         try {
             Optional<Pair<String, String>> result = Dialogs.getLoginDialog().showAndWait();
             result.ifPresent(stringStringPair -> {

@@ -28,6 +28,7 @@ public class Action extends VBox {
         }
         this.prefWidth(200);
         this.prefHeight(100);
+        this.setStyle("-fx-border-color: black");
         this.setBackground(new Background(new BackgroundFill(Color.LIGHTYELLOW, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 

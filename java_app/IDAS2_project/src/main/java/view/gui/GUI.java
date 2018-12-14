@@ -6,6 +6,7 @@ import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import view.gui.libs.Dialogs;
 
@@ -19,11 +20,14 @@ public class GUI extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLGUI.fxml"));
             primaryStage.setTitle("Databázový projekt");
-            primaryStage.setHeight(700);
+            primaryStage.setMinHeight(500);
+            primaryStage.setMinWidth(1100);
+            primaryStage.setMaximized(true);
+            primaryStage.getIcons().add(new Image("/img/app_icon.png"));
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
         } catch (IOException e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage("Chyba s připojením");
             Platform.exit();
         }
 

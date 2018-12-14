@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Pair;
 import model.*;
@@ -30,6 +31,7 @@ public final class Dialogs {
 
     public static void showExitDialog() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         alert.setHeaderText("Přejete si ukončit tento program?");
         alert.setTitle("Konec");
         Optional<ButtonType> result = alert.showAndWait();
@@ -40,6 +42,7 @@ public final class Dialogs {
 
     public static void showInfoDialog(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         alert.setHeaderText(message);
         alert.setTitle("Info");
         alert.show();
@@ -48,6 +51,7 @@ public final class Dialogs {
     public static void showErrorMessage(Exception ex) {
         System.out.println(ex);
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         alert.setTitle("Chyba");
         alert.setHeaderText(ex.getLocalizedMessage());
         alert.setContentText(ex.toString());
@@ -57,6 +61,7 @@ public final class Dialogs {
     public static void showErrorMessage(String message) {
         System.out.println(message);
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         alert.setTitle("Chyba");
         alert.setHeaderText(message);
         alert.showAndWait();
@@ -76,6 +81,7 @@ public final class Dialogs {
         PasswordField password = new PasswordField();
 
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = (Observable observable) -> {
             try {
                 isItNull(email);
@@ -220,6 +226,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
                 isItNull(lastName);
@@ -348,6 +355,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
                 isItNull(zkratka);
@@ -434,9 +442,15 @@ public final class Dialogs {
         final int initialValueK = 8;
 
         Spinner<Integer> zacatekHodiny = new Spinner<>();
+        zacatekHodiny.setDisable(!editable);
         Spinner<Integer> konecHodiny = new Spinner<>();
+        konecHodiny.setDisable(!editable);
         SpinnerValueFactory<Integer> valuesZacatek = new SpinnerValueFactory.IntegerSpinnerValueFactory(7, 19, initialValueZ);
+        if (learningAction.getPocatek() != null)
+            valuesZacatek.setValue(Integer.valueOf(learningAction.getPocatek().split(":")[0]));
         SpinnerValueFactory<Integer> valuesKonec = new SpinnerValueFactory.IntegerSpinnerValueFactory(8, 20, initialValueK);
+        if (learningAction.getKonec() != null)
+            valuesKonec.setValue(Integer.valueOf(learningAction.getKonec().split(":")[0]));
 
         //TextField pocatek = new TextField();
         //pocatek.setText(learningAction.getPocatek());
@@ -483,6 +497,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
                 if (!editable) throw new NullPointerException();
@@ -508,10 +523,10 @@ public final class Dialogs {
         grid.add(kapacita, 1, 0);
         grid.add(new Label("Zadejte počátek:"), 0, 1);
         // grid.add(pocatek, 1, 1);
-        grid.add(zacatekHodiny,1,1);
+        grid.add(zacatekHodiny, 1, 1);
         grid.add(new Label("Vyberte konec:"), 0, 2);
         // grid.add(konec, 1, 2);
-        grid.add(konecHodiny,1,2);
+        grid.add(konecHodiny, 1, 2);
         grid.add(new Label("Vyberte způsob výuky:"), 0, 3);
         grid.add(methodOfLearningChoiceBox, 1, 3);
         grid.add(new Label("Vyberte vyučujícího:"), 0, 4);
@@ -543,8 +558,8 @@ public final class Dialogs {
                 learningAction.setVyucujici(teacherChoiceBox.getSelectionModel().getSelectedItem());
                 learningAction.setUcebna(roomChoiceBox.getSelectionModel().getSelectedItem());
                 learningAction.setPredmet(subjectChoiceBox.getSelectionModel().getSelectedItem());
-                learningAction.setPocatek(zacatekHodiny.getValue().toString()+":00");
-                learningAction.setKonec(konecHodiny.getValue().toString()+":00");
+                learningAction.setPocatek(zacatekHodiny.getValue().toString() + ":00");
+                learningAction.setKonec(konecHodiny.getValue().toString() + ":00");
                 learningAction.setKapacita(kapacita.getText());
                 learningAction.setDen(dayChoiceBox.getSelectionModel().getSelectedItem());
                 return learningAction;
@@ -619,6 +634,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
                 isItNull(nazevPredmetu);
@@ -746,6 +762,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
                 isItNull(nazev);
@@ -838,6 +855,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             setPhotoMethod(photo, save, info, dialog);
         };
@@ -918,6 +936,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
 
         // grid všech polí
         GridPane grid = new GridPane();
@@ -967,6 +986,7 @@ public final class Dialogs {
 
         //kontrola vložených dat
         Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         InvalidationListener listener = observable -> {
             try {
 
