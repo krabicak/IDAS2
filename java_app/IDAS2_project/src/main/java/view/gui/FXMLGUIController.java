@@ -723,6 +723,7 @@ public class FXMLGUIController implements Initializable {
             result.ifPresent(room -> {
                 try {
                     mainController.addRoom(room);
+                    ucebnaComboBox.getItems().addAll(room);
                     setAllData();
                     Dialogs.showInfoDialog("Učebna " + room + " přidána");
                 } catch (Exception e) {
@@ -736,9 +737,7 @@ public class FXMLGUIController implements Initializable {
 
     public void updateRoomAct(ActionEvent actionEvent) {
         try {
-            /*
-            Optional<Room> result = Dialogs.getWorkplaceDialog(
-                    ucebnaComboBox.getSelectionModel().getSelectedItem(), mainController.getAllRooms(), mainController.isUserAdmin()).showAndWait();
+            Optional<Room> result = Dialogs.getRoomDialog().showAndWait();
             result.ifPresent(room -> {
                 try {
                     mainController.updateRoom(room);
@@ -747,21 +746,25 @@ public class FXMLGUIController implements Initializable {
                 } catch (Exception e) {
                     Dialogs.showErrorMessage(e);
                 }
-            });*/
+            });
         } catch (Exception e) {
             Dialogs.showErrorMessage(e);
         }
     }
 
     public void deleteRoomAct(ActionEvent actionEvent) {
-            try {/*
+            try {
                 String name = ucebnaComboBox.getSelectionModel().getSelectedItem().toString();
-                mainController.deleteRoom(ucebnaComboBox.getSelectionModel().getSelectedItem().toString();
+                ucebnaComboBox.getItems().remove(name);
+               // mainController.deleteRoom(ucebnaComboBox.getSelectionModel());
                 setAllData();
-                Dialogs.showInfoDialog("Učebna " + name + " smazána");*/
+                Dialogs.showInfoDialog("Učebna " + name + " smazána");
             } catch (Exception e) {
                 Dialogs.showErrorMessage(e);
             }
+    }
+
+    public void ucebnaComboAct(ActionEvent actionEvent) {
     }
 }
 

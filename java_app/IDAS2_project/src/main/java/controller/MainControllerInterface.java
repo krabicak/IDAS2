@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.scene.control.ComboBox;
 import model.*;
 
 import java.util.List;
@@ -138,6 +139,7 @@ public interface MainControllerInterface {
      * @throws LoginException
      */
     void deleteRoom(Room room) throws DatabaseAccesException, LoginException;
+
 
     /**
      * @return
