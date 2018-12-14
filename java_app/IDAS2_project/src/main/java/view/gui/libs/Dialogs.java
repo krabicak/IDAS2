@@ -428,12 +428,24 @@ public final class Dialogs {
         TextField kapacita = new TextField();
         kapacita.setText(learningAction.getKapacita());
         kapacita.setEditable(editable);
-        TextField pocatek = new TextField();
-        pocatek.setText(learningAction.getPocatek());
-        pocatek.setEditable(editable);
-        TextField konec = new TextField();
-        konec.setText(learningAction.getKonec());
-        konec.setEditable(editable);
+
+
+        final int initialValueZ = 7;
+        final int initialValueK = 8;
+
+        Spinner<Integer> zacatekHodiny = new Spinner<>();
+        Spinner<Integer> konecHodiny = new Spinner<>();
+        SpinnerValueFactory<Integer> valuesZacatek = new SpinnerValueFactory.IntegerSpinnerValueFactory(7, 19, initialValueZ);
+        SpinnerValueFactory<Integer> valuesKonec = new SpinnerValueFactory.IntegerSpinnerValueFactory(8, 20, initialValueK);
+
+        //TextField pocatek = new TextField();
+        //pocatek.setText(learningAction.getPocatek());
+        //pocatek.setEditable(editable);
+        zacatekHodiny.setValueFactory(valuesZacatek);
+        //TextField konec = new TextField();
+        //konec.setText(learningAction.getKonec());
+        //konec.setEditable(editable);
+        konecHodiny.setValueFactory(valuesKonec);
 
         ChoiceBox<MethodOfLearning> methodOfLearningChoiceBox = new ChoiceBox<>();
         methodOfLearnings.forEach(methodOfLearningChoiceBox.getItems()::add);
@@ -483,8 +495,8 @@ public final class Dialogs {
 
         // popis prmpt textu
         kapacita.setPromptText("kapacita");
-        pocatek.setPromptText("počátek");
-        konec.setPromptText("konec");
+        //pocatek.setPromptText("počátek");
+        //konec.setPromptText("konec");
 
         // grid všech polí
         GridPane grid = new GridPane();
@@ -495,9 +507,11 @@ public final class Dialogs {
         grid.add(new Label("Zadejte kapacitu:"), 0, 0);
         grid.add(kapacita, 1, 0);
         grid.add(new Label("Zadejte počátek:"), 0, 1);
-        grid.add(pocatek, 1, 1);
+        // grid.add(pocatek, 1, 1);
+        grid.add(zacatekHodiny,1,1);
         grid.add(new Label("Vyberte konec:"), 0, 2);
-        grid.add(konec, 1, 2);
+        // grid.add(konec, 1, 2);
+        grid.add(konecHodiny,1,2);
         grid.add(new Label("Vyberte způsob výuky:"), 0, 3);
         grid.add(methodOfLearningChoiceBox, 1, 3);
         grid.add(new Label("Vyberte vyučujícího:"), 0, 4);
@@ -518,8 +532,8 @@ public final class Dialogs {
 
         // nastaveni listeneru pro kontrolu dat na pole
         kapacita.textProperty().addListener(listener);
-        pocatek.textProperty().addListener(listener);
-        konec.textProperty().addListener(listener);
+        //pocatek.textProperty().addListener(listener);
+        //konec.textProperty().addListener(listener);
 
 
         //vraceni objektu
@@ -529,8 +543,8 @@ public final class Dialogs {
                 learningAction.setVyucujici(teacherChoiceBox.getSelectionModel().getSelectedItem());
                 learningAction.setUcebna(roomChoiceBox.getSelectionModel().getSelectedItem());
                 learningAction.setPredmet(subjectChoiceBox.getSelectionModel().getSelectedItem());
-                learningAction.setPocatek(pocatek.getText());
-                learningAction.setKonec(konec.getText());
+                learningAction.setPocatek(zacatekHodiny.getValue().toString()+":00");
+                learningAction.setKonec(konecHodiny.getValue().toString()+":00");
                 learningAction.setKapacita(kapacita.getText());
                 learningAction.setDen(dayChoiceBox.getSelectionModel().getSelectedItem());
                 return learningAction;
