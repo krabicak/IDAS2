@@ -20,14 +20,14 @@ public class GUI extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/FXMLGUI.fxml"));
             primaryStage.setTitle("Databázový projekt");
-            primaryStage.setMinHeight(500);
-            primaryStage.setMinWidth(1100);
+            primaryStage.setMinHeight(600);
+            primaryStage.setMinWidth(1300);
             primaryStage.setMaximized(true);
             primaryStage.getIcons().add(new Image("/img/app_icon.png"));
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
         } catch (IOException e) {
-            Dialogs.showErrorMessage("Chyba s připojením");
+            Dialogs.showErrorMessage(e, "Chyba s připojením");
             Platform.exit();
         }
 

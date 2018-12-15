@@ -21,6 +21,7 @@ import model.*;
 import view.gui.libs.Action;
 import view.gui.libs.Dialogs;
 
+import java.io.File;
 import java.net.URL;
 import java.util.*;
 
@@ -322,7 +323,7 @@ public class FXMLGUIController implements Initializable {
 
     private void setTableViewPlany(List<FieldOfStudy> list) {
         studyPlan_kategorie_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getKategorie().getNazevKategorie()));
-        studyPlan_Predmet_Clm.setCellValueFactory(new PropertyValueFactory<>("předmet"));
+        studyPlan_Predmet_Clm.setCellValueFactory(new PropertyValueFactory<>("predmet"));
         studyPlan_rocnik_Clm.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getPredmet().getDoporucenyRocnik().getCisloRocniku()));
 
         oborChoiceBox.setItems(FXCollections.observableArrayList(list));
@@ -361,9 +362,9 @@ public class FXMLGUIController implements Initializable {
             setUcebnyTab(mainController.getAllRooms());
 
             if (mainController.isUserLogged()) {
-                nameOfLoggedUser.setText(mainController.getLoggedUser().toString());
+                nameOfLoggedUser.setText((mainController.isUserAdmin() ? "admin " : "") + mainController.getLoggedUser().toString());
                 setMujRozvrhTab(mainController.getLearningActionsByTeacher(mainController.getLoggedUser()), mainController.getAllDays());
-            }else nameOfLoggedUser.setText("Nepřihlášený uživatel");
+            } else nameOfLoggedUser.setText("Nepřihlášený uživatel");
             mujRozvrhTab.setDisable(!mainController.isUserLogged());
             adminButtons.forEach(button -> button.setDisable(!mainController.isUserAdmin()));
             infoButtons.forEach(button -> {
@@ -372,7 +373,7 @@ public class FXMLGUIController implements Initializable {
                 } else button.setText("Upravit");
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
 
     }
@@ -406,11 +407,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Přihlášeno");
                 } catch (MainControllerInterface.LoginException e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Špatně zadané informace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Špatně zadané informace");
         }
     }
 
@@ -426,11 +427,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Uživatel " + teacher + "přidán");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Špatně zadané informace");
         }
     }
 
@@ -441,7 +442,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Uživatel " + name + "smazán");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -467,11 +468,11 @@ public class FXMLGUIController implements Initializable {
                     Dialogs.showInfoDialog("Uživatel " + teacher + "upraven");
                     setAllData();
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -484,11 +485,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Katedra " + workplace + "přidána");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -502,11 +503,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Katedra " + workplace + " upravena");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -517,7 +518,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Katedra " + name + " smazána");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -531,7 +532,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getAllRooms()).showAndWait();
             addStudyActionResolver(result);
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -548,7 +549,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.isUserAdmin()).showAndWait();
             updateStudyActionResolver(result);
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -559,7 +560,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Výuková akce " + name + " smazána");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -577,11 +578,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Předmět " + subject + " přidán");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -601,11 +602,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Předmět " + subject + " upraven");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -616,7 +617,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Předmět " + name + " smazán");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -632,11 +633,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Obor " + fieldOfStudy + " přidán");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -654,11 +655,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Obor " + fieldOfStudy + " upraven");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -669,7 +670,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Obor " + name + " smazán");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -683,11 +684,11 @@ public class FXMLGUIController implements Initializable {
                     setPlany();
                     Dialogs.showInfoDialog("Předmět " + studyPlan.getPredmet() + " přidán do plánu");
                 } catch (MainControllerInterface.DatabaseAccesException e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -698,7 +699,7 @@ public class FXMLGUIController implements Initializable {
             setPlany();
             Dialogs.showInfoDialog("Předmět " + name + " odebrán z plánu");
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -713,7 +714,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getLoggedUser()).showAndWait();
             addStudyActionResolver(result);
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -724,7 +725,7 @@ public class FXMLGUIController implements Initializable {
                 setAllData();
                 Dialogs.showInfoDialog("Výuková akce " + learningAction + " přidána");
             } catch (Exception e) {
-                Dialogs.showErrorMessage(e);
+                Dialogs.showErrorMessage(e, "Neplatná operace");
             }
         });
     }
@@ -742,7 +743,7 @@ public class FXMLGUIController implements Initializable {
                     mainController.getLoggedUser()).showAndWait();
             updateStudyActionResolver(result);
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -753,7 +754,7 @@ public class FXMLGUIController implements Initializable {
                 setAllData();
                 Dialogs.showInfoDialog("Výuková akce " + learningAction + " upravena");
             } catch (Exception e) {
-                Dialogs.showErrorMessage(e);
+                Dialogs.showErrorMessage(e, "Neplatná operace");
             }
         });
     }
@@ -765,7 +766,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Výuková akce " + name + " smazána");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -773,7 +774,7 @@ public class FXMLGUIController implements Initializable {
         try {
             setPlany();
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
 
     }
@@ -787,11 +788,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Učebna " + room + " přidána");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception ex) {
-            Dialogs.showErrorMessage(ex);
+            Dialogs.showErrorMessage(ex, "Neplatná operace");
         }
     }
 
@@ -806,11 +807,11 @@ public class FXMLGUIController implements Initializable {
                     setAllData();
                     Dialogs.showInfoDialog("Učebna " + room + " upravena");
                 } catch (Exception e) {
-                    Dialogs.showErrorMessage(e);
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
                 }
             });
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -821,7 +822,7 @@ public class FXMLGUIController implements Initializable {
             setAllData();
             Dialogs.showInfoDialog("Učebna " + name + " smazána");
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 
@@ -833,7 +834,20 @@ public class FXMLGUIController implements Initializable {
                         ucebnaChoiceBox.getSelectionModel().getSelectedItem()));
             }
         } catch (Exception e) {
-            Dialogs.showErrorMessage(e);
+            Dialogs.showErrorMessage(e, "Neplatná operace");
+        }
+    }
+
+    public void onImportButtonCLick(ActionEvent actionEvent) {
+        try {
+            File file = Dialogs.getImportDialog().showOpenDialog(null);
+            if (file != null) {
+                mainController.importRooms(file);
+                setAllData();
+                Dialogs.showInfoDialog("Import úspěšný");
+            }
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e, "Neplatná operace");
         }
     }
 }

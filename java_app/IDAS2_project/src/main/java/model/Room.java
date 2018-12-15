@@ -23,6 +23,13 @@ public class Room {
     @Column(name = "ID")
     private String id;
 
+    public Room() {
+    }
+
+    public Room(String popis, String oznaceni) {
+        this.popis = popis;
+        this.oznaceni = oznaceni;
+    }
 
     public String getPopis() {
         return popis;

@@ -3,6 +3,8 @@ package controller;
 import javafx.scene.control.ComboBox;
 import model.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public interface MainControllerInterface {
@@ -318,6 +320,13 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException
      */
     List<LearningAction> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException;
+
+    /**
+     * @param file
+     * @throws IOException
+     * @throws DatabaseAccesException
+     */
+    void importRooms(File file) throws IOException, DatabaseAccesException;
 
 
     class LoginException extends Exception {

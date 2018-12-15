@@ -1,10 +1,14 @@
 package controller;
 
 import controller.libs.DatabaseHelper;
+import controller.libs.IO;
 import model.*;
 
 import javax.persistence.Persistence;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class MainController implements MainControllerInterface {
     private Teacher loggedUser;
@@ -420,6 +424,16 @@ public class MainController implements MainControllerInterface {
     public List<LearningAction> getAllLearningActionsByRoom(Room room) throws DatabaseAccesException {
         try {
             return DatabaseHelper.getAllLearningActionsByRoom(room);
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public void importRooms(File file) throws IOException, DatabaseAccesException {
+        try {
+            for (Room room : IO.importRooms(file)) {
+                DatabaseHelper.addRoom(room, loggedUser.getEmail(), password);
+            }
         } catch (DatabaseHelper.DatabaseException e) {
             throw new DatabaseAccesException(e);
         }

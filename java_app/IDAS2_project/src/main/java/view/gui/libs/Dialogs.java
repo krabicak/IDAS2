@@ -58,8 +58,8 @@ public final class Dialogs {
         alert.showAndWait();
     }
 
-    public static void showErrorMessage(String message) {
-        System.out.println(message);
+    public static void showErrorMessage(Exception e, String message) {
+        System.out.println(e);
         Alert alert = new Alert(Alert.AlertType.ERROR);
         ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
         alert.setTitle("Chyba");
@@ -1037,6 +1037,14 @@ public final class Dialogs {
         };
         dialog.setResultConverter(callback);
         return dialog;
+    }
+
+    public static FileChooser getImportDialog(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Importovat");
+        fileChooser.setInitialDirectory(new File("/"));
+        fileChooser.setInitialFileName("import.csv");
+        return fileChooser;
     }
 
 }
