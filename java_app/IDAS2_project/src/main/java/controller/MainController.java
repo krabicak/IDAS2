@@ -438,4 +438,17 @@ public class MainController implements MainControllerInterface {
             throw new DatabaseAccesException(e);
         }
     }
+
+    public void changePassword(String newPassword) throws DatabaseAccesException {
+        try {
+            DatabaseHelper.changePassword(loggedUser, password, newPassword);
+            password = newPassword;
+        } catch (DatabaseHelper.DatabaseException e) {
+            throw new DatabaseAccesException(e);
+        }
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

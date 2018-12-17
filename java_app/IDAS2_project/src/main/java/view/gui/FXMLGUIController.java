@@ -30,6 +30,8 @@ public class FXMLGUIController implements Initializable {
     public static MainControllerInterface mainController;
 
     @FXML
+    private Button changePasswordButton;
+    @FXML
     private Button importButton;
     @FXML
     private Label nameOfLoggedUser;
@@ -372,6 +374,7 @@ public class FXMLGUIController implements Initializable {
                     button.setText("Info");
                 } else button.setText("Upravit");
             });
+            changePasswordButton.setDisable(!mainController.isUserLogged());
         } catch (Exception e) {
             Dialogs.showErrorMessage(e, "Neplatná operace");
         }
@@ -846,6 +849,22 @@ public class FXMLGUIController implements Initializable {
                 setAllData();
                 Dialogs.showInfoDialog("Import úspěšný");
             }
+        } catch (Exception e) {
+            Dialogs.showErrorMessage(e, "Neplatná operace");
+        }
+    }
+
+    public void onChangePasswordClick(ActionEvent actionEvent) {
+        try {
+            Optional<String> result = Dialogs.changePasswordDialog(mainController.getPassword()).showAndWait();
+            result.ifPresent(s -> {
+                try {
+                    mainController.changePassword(s);
+                    Dialogs.showInfoDialog("Změna hesla úspěšná");
+                } catch (MainControllerInterface.DatabaseAccesException e) {
+                    Dialogs.showErrorMessage(e, "Neplatná operace");
+                }
+            });
         } catch (Exception e) {
             Dialogs.showErrorMessage(e, "Neplatná operace");
         }

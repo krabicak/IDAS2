@@ -122,21 +122,18 @@ public interface MainControllerInterface {
     void deleteWorkplace(Workplace workplace) throws LoginException, DatabaseAccesException;
 
     /**
-     * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
      */
     void addRoom(Room room) throws DatabaseAccesException, LoginException;
 
     /**
-     * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
      */
     void updateRoom(Room room) throws DatabaseAccesException, LoginException;
 
     /**
-     * @param subject
      * @throws DatabaseAccesException
      * @throws LoginException
      */
@@ -327,6 +324,17 @@ public interface MainControllerInterface {
      * @throws DatabaseAccesException
      */
     void importRooms(File file) throws IOException, DatabaseAccesException;
+
+    /**
+     * @param newPassword
+     * @throws DatabaseAccesException
+     */
+    void changePassword(String newPassword) throws DatabaseAccesException;
+
+    /**
+     * @return
+     */
+    String getPassword();
 
 
     class LoginException extends Exception {

@@ -687,9 +687,9 @@ public final class DatabaseHelper {
         try {
             Session session = (Session) em.getDelegate();
             session.doWork(connection -> {
-                CallableStatement stmt = connection.prepareCall("{ call update_room(:1,:2,:3,:4) }");
+                CallableStatement stmt = connection.prepareCall("{ call UPDATE_ROOM(:1,:2,:3,:4,:5) }");
                 stmt = setRoom(stmt, room, email, password);
-                stmt.setString(12, room.getId());
+                stmt.setString(5, room.getId());
                 stmt.execute();
                 stmt.close();
             });
@@ -727,6 +727,22 @@ public final class DatabaseHelper {
             Query query = em.createNamedQuery("get_all_learning_actions_by_room");
             query.setParameter(1, room.getId());
             return query.getResultList();
+        } catch (Exception e) {
+            throw new DatabaseException(e);
+        }
+    }
+
+    public static void changePassword(Teacher teacher, String oldPassword, String newPassword) throws DatabaseException {
+        try {
+            Session session = (Session) em.getDelegate();
+            session.doWork(connection -> {
+                CallableStatement stm = connection.prepareCall("{ call change_password ( :1 , :2 , :3 ) }");
+                stm.setString(1, teacher.getEmail());
+                stm.setString(2, oldPassword);
+                stm.setString(3, newPassword);
+                stm.execute();
+                stm.close();
+            });
         } catch (Exception e) {
             throw new DatabaseException(e);
         }

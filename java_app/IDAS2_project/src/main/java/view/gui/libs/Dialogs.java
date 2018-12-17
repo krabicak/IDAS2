@@ -1039,12 +1039,78 @@ public final class Dialogs {
         return dialog;
     }
 
-    public static FileChooser getImportDialog(){
+    public static FileChooser getImportDialog() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Importovat");
         fileChooser.setInitialDirectory(new File("/"));
         fileChooser.setInitialFileName("import.csv");
         return fileChooser;
+    }
+
+    public static Dialog changePasswordDialog(String password) {
+        // část deklarace polí
+        ButtonType save = new ButtonType(
+                "Uložit",
+                ButtonBar.ButtonData.OK_DONE);
+        ButtonType cancel = new ButtonType(
+                "Zrušit",
+                ButtonBar.ButtonData.CANCEL_CLOSE);
+        PasswordField oldPassword = new PasswordField();
+        PasswordField newPassword = new PasswordField();
+        PasswordField newPasswordAgain = new PasswordField();
+        //kontrola vložených dat
+        Dialog dialog = new Dialog();
+        ((Stage) dialog.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/img/info_icon.png"));
+        InvalidationListener listener = observable -> {
+            try {
+                if (!oldPassword.getText().equals(password)) throw new NullPointerException();
+                if (!newPassword.getText().equals(newPasswordAgain.getText())) throw new NullPointerException();
+                isItNull(newPassword);
+                isItNull(newPasswordAgain);
+                dialog.getDialogPane().lookupButton(save).setDisable(false);
+            } catch (NullPointerException | NumberFormatException e) {
+                dialog.getDialogPane().lookupButton(save).setDisable(true);
+            }
+        };
+
+        // popis prmpt textu
+        oldPassword.setPromptText("Staré heslo");
+        newPassword.setPromptText("Nové heslo");
+        newPasswordAgain.setPromptText("Nové heslo znovu");
+
+        // grid všech polí
+        GridPane grid = new GridPane();
+
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.add(new Label("Zadejte staré heslo:"), 0, 0);
+        grid.add(oldPassword, 1, 0);
+        grid.add(new Label("Zadejte nové heslo:"), 0, 1);
+        grid.add(newPassword, 1, 1);
+        grid.add(new Label("Zadejte nové heslo znovu:"), 0, 2);
+        grid.add(newPasswordAgain, 1, 2);
+        //nastavení dialogu (modal atd)
+        dialog.setTitle("Učebna");
+        dialog.getDialogPane().getButtonTypes().addAll(save, cancel);
+        dialog.getDialogPane().lookupButton(save).setDisable(true);
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.getDialogPane().setContent(grid);
+
+        // nastaveni listeneru pro kontrolu dat na pole
+        oldPassword.textProperty().addListener(listener);
+        newPassword.textProperty().addListener(listener);
+        newPasswordAgain.textProperty().addListener(listener);
+
+        //vraceni objektu
+        Callback<ButtonType, String> callback = (ButtonType dialogButton) -> {
+            if (dialogButton == save) {
+                return newPassword.getText();
+            }
+            return null;
+        };
+        dialog.setResultConverter(callback);
+        return dialog;
     }
 
 }
