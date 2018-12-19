@@ -810,8 +810,8 @@
             </tabs>
         </TabPane>
         <Label fx:id="nameOfLoggedUser" maxWidth="200.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="5.0" />
-        <Button fx:id="importButton" mnemonicParsing="false" onAction="#onImportButtonCLick" text="Importovat data" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="2.0" />
+        <Button fx:id="importButton" mnemonicParsing="false" onAction="#onImportButtonCLick" text="Importovat data" AnchorPane.leftAnchor="620.0" AnchorPane.topAnchor="2.0" />
         <Button fx:id="logButton" mnemonicParsing="false" prefHeight="10.0" text="Přihlásit se" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="2.0" />
-      <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#onChangePasswordClick" text="Změnit heslo" AnchorPane.leftAnchor="890.0" AnchorPane.topAnchor="2.0" />
+      <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#onChangePasswordClick" text="Změnit heslo" AnchorPane.leftAnchor="725.0" AnchorPane.topAnchor="2.0" />
     </children>
 </AnchorPane>
