@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CCEE5843-7DEA-D5AD-3C2F-DFB27D5058A0" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="STUDINI_PLAN">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>862D4F6B-D83E-133D-B257-3ECD677A4E64</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STUDIJNI_OBOR_ID" id="A7AC1A47-6FB5-7F56-DB78-F8DBA708251B">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>98212319-AEA9-0EAA-7AFA-11BF1FA1098F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0E2F985-6183-7376-FB78-73F073FC4650" referredColumn="91813A89-F0B9-265E-AF7A-A6763619F9E5"/>
+</associations>
+</Column>
+<Column name="PREDMET_ID" id="61DD78A6-2B79-48B5-C955-32A2491BD0BC">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>E75AF4EF-59EB-3BE9-387E-AE69EF006159</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="036C23A7-793E-77E1-457C-3F6FB85D9FCB" referredColumn="4F19A1F4-12F0-61D8-88AF-21A2382A760F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B6AD6F6-BF01-A1BE-7899-74CC594856E8" name="STUDINI_PLAN_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>A1586359-4D56-DEAD-D449-AAB27390230E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7AC1A47-6FB5-7F56-DB78-F8DBA708251B"/>
+<colUsage columnID="61DD78A6-2B79-48B5-C955-32A2491BD0BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F21C3FA6-A017-2303-5BC1-F0EEC6D1DB2A" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="STUDINI_PLAN_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D8DCF9AD-28C7-FE05-800A-239134295A12</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7AC1A47-6FB5-7F56-DB78-F8DBA708251B"/>
+<colUsage columnID="61DD78A6-2B79-48B5-C955-32A2491BD0BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="505AEDF2-7521-9709-91EE-43ACFAB1157E" name="STUDINI_PLAN_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61DD78A6-2B79-48B5-C955-32A2491BD0BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E47E9EE-C951-D8DF-BA8D-4DF63444613F" name="STUDINI_PLAN_STUDIJNI_OBOR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7AC1A47-6FB5-7F56-DB78-F8DBA708251B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

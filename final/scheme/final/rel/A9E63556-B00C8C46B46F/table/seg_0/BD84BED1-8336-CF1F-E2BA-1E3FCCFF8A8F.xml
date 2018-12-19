@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BD84BED1-8336-CF1F-E2BA-1E3FCCFF8A8F" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="PRACOVISTE">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>997AD5BC-CB16-AE64-D050-0C3C01A2F519</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5D373ED8-5B3A-0A44-842A-FF6FA7C55AEB">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>A510F281-A101-3706-0D42-EC5636E9F691</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>pracoviste_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>PRACOVISTE_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAZEV" id="E3EF0596-608C-BB86-810D-E50969B916C6">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D570B304-17F3-0323-5C1C-8A06E367EE44</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZKRATKA" id="6F338DD8-DF4D-F9A3-8A8A-FA188AFA474C">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>66B795AA-52CA-A118-FB45-6E3935DBB4F0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FAKULTA_ID" id="965A1FA8-A2FD-CD9C-5A92-B3830F2BD170">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>751D5959-3981-0834-0BCD-321851469896</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37919200-74EF-E4D5-3E33-247851EB4B00" referredColumn="EC13E50F-3DE4-91C9-CB44-F1C54B5A1764"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7978DE72-0CE3-9949-07E1-76C8407DD486" name="PRACOVISTE_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>E1E5CD6E-9C82-1C71-AF7B-BFD2E82A4433</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D373ED8-5B3A-0A44-842A-FF6FA7C55AEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5950C82-356E-7145-3368-D27A0C8D9DC7" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="PRACOVISTE_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>E344DCDB-E8D9-B759-71D6-302B1D88D407</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D373ED8-5B3A-0A44-842A-FF6FA7C55AEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9A0CE9A-626E-B4EF-83F2-326596CC31C2" name="PRACOVISTE_FAKULTA_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="965A1FA8-A2FD-CD9C-5A92-B3830F2BD170"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

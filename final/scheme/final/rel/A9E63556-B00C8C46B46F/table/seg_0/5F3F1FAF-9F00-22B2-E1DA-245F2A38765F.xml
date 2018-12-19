@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F3F1FAF-9F00-22B2-E1DA-245F2A38765F" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FOTKA">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>309475EC-6769-8A11-166C-493027703CF8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OBRAZEK" id="EB606DF5-D2ED-D5C9-32AE-1EB383FAB03F">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>C4CAB52C-D617-A49B-F738-E6C25ED8E62B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<domain>04C2F3B7-44F9-D8D1-055F-7D2E9C2FFD76</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INFO" id="ADCED956-D325-2ABF-24EF-D99E26C5D3C0">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>5AF2AD26-2941-85AC-E6A5-ED173608C07D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>1B5F5EFC-E0A6-EC6A-5E20-AD8677C956F3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRACOVNICI_ID" id="4200D695-7D2D-D413-3394-E06585D96A5F">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D93348D9-D7D5-7EAC-6668-9BCB8D4F25C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="466C7470-2020-60F4-A2D7-F941A2735579" referredColumn="8C3064AC-1265-572B-AEBD-C06D3DEC917D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D7CC7CB5-90FB-D48D-2901-855A036EB42C" name="FOTKA_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>1F2CC641-0B4C-BD55-024C-CA204532F260</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4200D695-7D2D-D413-3394-E06585D96A5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B41B4CFB-E887-03D2-C422-371B212B9C27" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FOTKA__IDX">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>C4133978-F4B9-F355-7733-C5DE68476E59</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4200D695-7D2D-D413-3394-E06585D96A5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10755F69-5D30-B7EA-8960-40ED4F50C09E" name="FOTKA_PRACOVNICI_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4200D695-7D2D-D413-3394-E06585D96A5F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

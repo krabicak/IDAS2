@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D9BB571-A6E9-013A-46D5-3F5EF6FA32AE" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="ROLE">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>2C0DAD9A-FF38-FBC8-2C86-DC01C3FEF808</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ZKRATKA" id="0B8F156E-ADDA-075A-E154-77221DE01012">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>944B16F4-4A32-B6F6-BE09-06F6497D1E06</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>F802606B-11FC-CDD2-AA72-DE683DE7068F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="03783E86-227B-81D5-E2A1-6423CE164E0F" name="ROLE_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>09FEAE62-7135-02B8-71B3-ABB501C6F07B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B8F156E-ADDA-075A-E154-77221DE01012"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23EE02EC-30AA-DA42-E005-6C6B946C4F37" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="ROLE_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>8F2FA609-C802-4731-E360-59563BD69B75</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B8F156E-ADDA-075A-E154-77221DE01012"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

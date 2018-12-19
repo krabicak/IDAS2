@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="final_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_100" id="0033064D-96FF-57ED-3950-A6BC430A7799">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>100</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="BLOB_0_0_0" id="04C2F3B7-44F9-D8D1-055F-7D2E9C2FFD76">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT029</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_45" id="1B5F5EFC-E0A6-EC6A-5E20-AD8677C956F3">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>45</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_*_0_0" id="2F58B666-9287-BEA6-4919-E93D1429FC1E">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>*</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_5" id="9FB0AE74-B534-EDE6-21CB-58805E991A8A">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>5</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_50" id="CA9197DE-025E-551D-55D5-E4A0D737B5CE">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>50</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_10" id="E285FEAB-0645-1348-F51A-C3C55F8A8EA5">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>10</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="F263013D-31B6-E335-821C-4CEEEE5A082C">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NVARCHAR_0_0_20" id="F802606B-11FC-CDD2-AA72-DE683DE7068F">
+         <createdBy>hotov</createdBy>
+         <createdTime>2018-12-19 11:04:58 UTC</createdTime>
+         <ownerDesignName>final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20</dataTypeSize>
+         <fileName>final_Domains</fileName>
+         <logicalDatatype>LOGDT037</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="823C40C7-36DC-DCA0-F60D-D4E965D87201" containerWithKeyObject="C4729020-A76D-9975-0CA0-02618C00FE1E" localFKIndex="AB1EF480-7B56-E58E-91D2-04760D1F55D5" name="PREDMET_DOPORUCENY_ROCNIK_FK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>0DF4A407-8F37-CFA8-B48B-9F437A34E88D</importedID>
+<referredTableLongName>C##ST52512.DOPORUCENY_ROCNIK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6ABCBD88-EB7E-DDEE-AD71-9814B6856FAA</referredTableID>
+<keyObject>FFB2B882-11F0-473A-0F40-3C58E2C1F3E4</keyObject>
+<referredKeyID>FFB2B882-11F0-473A-0F40-3C58E2C1F3E4</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>CISLO_ROCNIKU</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

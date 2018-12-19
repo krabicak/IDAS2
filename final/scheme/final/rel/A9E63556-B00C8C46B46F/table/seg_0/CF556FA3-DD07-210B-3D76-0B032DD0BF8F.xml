@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF556FA3-DD07-210B-3D76-0B032DD0BF8F" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="ZAKONCENI_PREDMETU">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>788CEE81-200E-1103-AD68-CCA0EAFB7BA2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ZKRATKA" id="EC796AFC-4A39-1BF1-F1D0-115CCAD6F9E3">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>AA8490C0-F40F-6314-F1C5-FB198DF88680</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>E285FEAB-0645-1348-F51A-C3C55F8A8EA5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZEV_ZAKONCENI" id="42765F70-648A-BC04-F029-4B60016C652F">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>1B00D324-7F08-5917-196A-FECCBF534727</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B3E88B9-0A46-2E38-E803-6EFC2814E49E" name="ZAKONCENI_PREDMETU_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>F9BBBE88-3068-B04B-2805-42EA8429BE0F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC796AFC-4A39-1BF1-F1D0-115CCAD6F9E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="60CACE93-7FFD-F736-134B-86653D50997C" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="ZAKONCENI_PREDMETU_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>550E9085-32D0-DFC2-55B2-DECDCAFCE773</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC796AFC-4A39-1BF1-F1D0-115CCAD6F9E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

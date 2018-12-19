@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6901C988-8A19-3606-B892-B5B284E6F7FA" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="SEMESTR">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D3683E3A-EF49-9A73-7688-864F117E649A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="52C890FC-74A9-947F-7A9D-6681EF0DECEB">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>50DF5C3A-1C7B-21CD-642E-0397974505AE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>semestr_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>SEMESTR_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAZEV_SEMESTRU" id="C0354D24-A099-0B03-6147-40589AB0130B">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>34121418-C0A1-5A3E-DF40-B8E4D3C7D54E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E47B3E50-E78C-895E-2153-87BB49006AA3" name="SEMESTR_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>4C7FAE4D-A749-49A7-FDA9-EC49DC85D0E6</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52C890FC-74A9-947F-7A9D-6681EF0DECEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1B4B6F54-CCC3-EF22-75A3-E2FF4214FBE6" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="SEMESTR_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>702C3B8C-476C-C795-4F21-B8C709A19EEC</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52C890FC-74A9-947F-7A9D-6681EF0DECEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

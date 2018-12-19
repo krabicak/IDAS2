@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C2335443-75D5-CE25-7E46-FA6894155256" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="UCEBNA">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>CB16E65C-AF9C-8132-A71A-79FF7B65455B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="POPIS" id="1B621BDC-4898-9D61-FC9A-CC11890BAD09">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>C8DAD01B-5052-3D1F-F3AF-6F855FDEFF80</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OZNACENI" id="8EB63D97-8EB8-72C3-B4C5-927B3AAF1406">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>8EE49269-4B12-39B7-691B-255B739EFC4A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="8977432A-97DB-D0B9-27E0-2F7662FAD3EA">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>55F5134A-F38B-1918-C258-7766E0A862E0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>F263013D-31B6-E335-821C-4CEEEE5A082C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>ucebna_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>UCEBNA_ID_TRG</autoIncrementTriggerName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA136B78-8B43-8BCF-F99B-CE2291194D0D" name="UCEBNA_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>AFD285C8-FFA8-E0A0-5DED-5175CD1E6C7E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8977432A-97DB-D0B9-27E0-2F7662FAD3EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9EC9F6F-F098-2DAD-70D3-C5708C081588" name="UCEBNA_OZNACENI_UN">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:09:14 UTC</createdTime>
+<generatorID>4D02953E-0C3E-3B18-D02C-0EBCE09BB147</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EB63D97-8EB8-72C3-B4C5-927B3AAF1406"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8156A3C8-8659-769F-A8EB-58BDE01ECFE3" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="UCEBNA_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>F475FEFF-F1E1-33C1-4FE9-DF740AB848E1</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8977432A-97DB-D0B9-27E0-2F7662FAD3EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

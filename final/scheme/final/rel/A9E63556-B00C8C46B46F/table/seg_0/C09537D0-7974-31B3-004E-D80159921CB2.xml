@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C09537D0-7974-31B3-004E-D80159921CB2" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FORMA_VYUKY">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>94896FE5-3CBC-ECA0-E222-C410CEBBC66E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="DE0019F5-20BC-E4B9-2C19-E374E81EA178">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>8B60C41B-77E2-FEA1-0B2C-A3FFD746BC2B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>forma_vyuky_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>FORMA_VYUKY_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAZEV_FORMY" id="40085456-C2D7-AA8C-01EC-B3C6116B90B1">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>12989D65-B133-B8CB-67CD-3CBCB90698E3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AF0A6E3-0D23-BB30-8EBD-9EAB5E83B1D0" name="FORMA_VYUKY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>3B5EF338-EFF8-1DF0-6C64-0EFDA60E67A8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE0019F5-20BC-E4B9-2C19-E374E81EA178"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45112B17-203A-2C59-8132-B68B3C95E3A4" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FORMA_VYUKY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>C966022D-D563-C44C-6A97-E62D18F7F16C</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE0019F5-20BC-E4B9-2C19-E374E81EA178"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

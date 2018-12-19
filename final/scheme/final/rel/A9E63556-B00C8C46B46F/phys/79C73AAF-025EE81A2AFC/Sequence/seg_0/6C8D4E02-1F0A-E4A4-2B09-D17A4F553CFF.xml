@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="SEMESTR_ID_SEQ" directorySegmentName="seg_0" id="6C8D4E02-1F0A-E4A4-2B09-D17A4F553CFF">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<incrementBy>1</incrementBy>
+<maxValue>9999999999999999999999999999</maxValue>
+<minValue>1</minValue>
+<noCache>YES</noCache>
+<order>YES</order>
+<startWith>3</startWith>
+<user>DC142EB9-5E20-A733-D131-3F30E4F4C44B</user>
+</SequenceOraclev10g>

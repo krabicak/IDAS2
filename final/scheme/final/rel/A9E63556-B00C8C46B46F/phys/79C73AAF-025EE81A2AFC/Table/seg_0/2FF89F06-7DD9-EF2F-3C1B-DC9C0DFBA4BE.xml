@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="STUDIJNI_OBOR" directorySegmentName="seg_0" id="2FF89F06-7DD9-EF2F-3C1B-DC9C0DFBA4BE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE74403F-3209-5A0B-9742-F67DD9D0EF1D</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PRACOVISTE_ID" id="1058E009-CE6A-5B39-75EB-D97069A10BB1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ZKRATKA" id="2F5267E0-5005-7A44-3A4B-207D9F654B57">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="91813A89-F0B9-265E-AF7A-A6763619F9E5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="NAZEV" id="DB281FB7-7F41-1B1D-01D4-ED3295BCD129">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="STUDIJNI_OBOR_PK" id="74D0245A-C999-4196-86C1-2FDE98880CD6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>D45E7A47-90AD-8639-3D13-B028D40FB3B5</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="STUDIJNI_OBOR_PRACOVISTE_FK" id="24D18427-091A-5846-AE21-F08C33E300E2">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STUDIJNI_OBOR_PK" id="FCE66B07-DA30-238F-C06D-8AE0C76FE2B6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<indexSegment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

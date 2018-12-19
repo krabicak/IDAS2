@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="GET_ALL_LEARNING_ACTIONS" directorySegmentName="seg_0" id="FD76ED5A-3151-512F-31D2-31CB68B8A758">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE FUNCTION C##ST52512.GET_ALL_LEARNING_ACTIONS RETURN SYS_REFCURSOR AS&lt;br&gt;    learning_actions   SYS_REFCURSOR;&lt;br&gt;BEGIN&lt;br&gt;    OPEN learning_actions FOR SELECT * FROM&lt;br&gt;        view_learning_action;&lt;br&gt;&lt;br&gt;    RETURN learning_actions;&lt;br&gt;END get_all_learning_actions;</source>
+</FunctionOracle>

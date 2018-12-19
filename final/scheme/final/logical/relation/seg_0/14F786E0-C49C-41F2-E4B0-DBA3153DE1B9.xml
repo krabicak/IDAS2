@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STUDINI_PLAN_PREDMET_FK" directorySegmentName="seg_0" id="14F786E0-C49C-41F2-E4B0-DBA3153DE1B9">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>036C23A7-793E-77E1-457C-3F6FB85D9FCB</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>EC9679CA-EB27-EC31-1D5D-42DCEE3EEB2A</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7915E81C-E6A5-FA4F-2099-B420C5C6D91A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>765953C8-4E09-EC3B-F201-9A0B16AEB3D3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

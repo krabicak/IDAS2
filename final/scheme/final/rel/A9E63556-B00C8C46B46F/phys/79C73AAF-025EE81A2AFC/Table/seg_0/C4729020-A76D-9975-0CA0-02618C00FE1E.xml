@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PREDMET" directorySegmentName="seg_0" id="C4729020-A76D-9975-0CA0-02618C00FE1E">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE74403F-3209-5A0B-9742-F67DD9D0EF1D</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PRACOVNICI_ID" id="16E9B340-DABA-739E-52F7-7350BE77F57D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ROZSAH_HODIN" id="3932C521-F78F-4783-F847-BE5444AA5052">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAZEV" id="46519AFA-E8D8-4520-BDB6-FF855D45B1D6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="4F19A1F4-12F0-61D8-88AF-21A2382A760F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<autoIncrementDDL>TRIGGER</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="DOPORUCENY_ROCNIK_CISLO_ROCNIKU" id="5622B340-DD63-FFC7-31B5-1ADD8EAAA292">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ZAKONCENI_PREDMETU_ZKRATKA" id="5F5EC7CF-7F3F-16BA-80ED-02DEEC3A7E08">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ZKRATKA" id="738623E7-8594-2B45-5290-F0EC3BACD409">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="KATEGORIE_PREDMETU_ZKRATKA" id="911A0D0B-5E4D-2283-7054-5F38DA25CB53">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PREDMET_PK" id="945941AA-A6C0-D45C-E9B1-CAF08AA0BFEB">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>D45E7A47-90AD-8639-3D13-B028D40FB3B5</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PREDMET_KATEGORIE_PREDMETU_FK" id="11A825FD-081C-6B9D-58D1-AB45585838B1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PREDMET_PRACOVNICI_FK" id="47EDE961-BFCF-3BB6-F008-EA333704471D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PREDMET_DOPORUCENY_ROCNIK_FK" id="AB1EF480-7B56-E58E-91D2-04760D1F55D5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PREDMET_ZAKONCENI_PREDMETU_FK" id="C6178AC4-55D5-3787-4271-47F1CF6DDB66">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PREDMET_PK" id="0783322D-4459-96A5-1FF2-605C4B399740">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<indexSegment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="SEM_SEMESTR_FK" directorySegmentName="seg_0" id="179D2CB2-4637-83EF-B5CD-DF56217E2DBF">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>04BD315C-BAB4-9FE5-7926-C2DCBA8E97EE</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>3F93993C-7B9A-496C-A467-13B2AB05AE5A</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>99646B25-F426-59CE-B5FA-F3C815D54767</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FCB7751E-48CC-CA56-7100-6B4DC1A81D97</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

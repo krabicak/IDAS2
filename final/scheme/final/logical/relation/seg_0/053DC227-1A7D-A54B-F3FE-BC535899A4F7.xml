@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FORMY_FORMA_VYUKY_FK" directorySegmentName="seg_0" id="053DC227-1A7D-A54B-F3FE-BC535899A4F7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>950C7CB2-D9AD-115C-9EE1-0AF3B9369B1B</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>CD268AF7-FEB6-0707-3CBE-81264B079456</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7DA6B4BD-84E5-FC3B-7EBD-980F1123372D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>755CFE45-E8E9-8915-E1F0-83345AD61DEF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

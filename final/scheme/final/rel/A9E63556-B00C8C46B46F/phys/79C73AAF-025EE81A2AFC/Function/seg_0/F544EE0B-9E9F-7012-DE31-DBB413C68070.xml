@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="GET_ALL_RECOMMENDED_YEARS" directorySegmentName="seg_0" id="F544EE0B-9E9F-7012-DE31-DBB413C68070">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE FUNCTION C##ST52512.GET_ALL_RECOMMENDED_YEARS RETURN SYS_REFCURSOR AS&lt;br&gt;    recommended_years   SYS_REFCURSOR;&lt;br&gt;BEGIN&lt;br&gt;    OPEN recommended_years FOR SELECT&lt;br&gt;        *&lt;br&gt;                               FROM&lt;br&gt;        doporuceny_rocnik;&lt;br&gt;&lt;br&gt;    RETURN recommended_years;&lt;br&gt;END get_all_recommended_years;</source>
+</FunctionOracle>

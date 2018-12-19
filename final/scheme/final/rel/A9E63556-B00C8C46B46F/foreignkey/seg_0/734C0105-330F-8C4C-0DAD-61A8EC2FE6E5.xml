@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="734C0105-330F-8C4C-0DAD-61A8EC2FE6E5" containerWithKeyObject="C4729020-A76D-9975-0CA0-02618C00FE1E" localFKIndex="11A825FD-081C-6B9D-58D1-AB45585838B1" name="PREDMET_KATEGORIE_PREDMETU_FK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D593044B-11FA-57A4-69C3-13075F2F1C9E</importedID>
+<referredTableLongName>C##ST52512.KATEGORIE_PREDMETU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>09C49D3B-F9BC-2603-9536-4C3444AC06DA</referredTableID>
+<keyObject>83E260F2-A24C-3137-DE60-E90FA12FEECC</keyObject>
+<referredKeyID>83E260F2-A24C-3137-DE60-E90FA12FEECC</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ZKRATKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

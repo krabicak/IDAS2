@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2FF89F06-7DD9-EF2F-3C1B-DC9C0DFBA4BE" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="STUDIJNI_OBOR">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>0B53C573-52CE-112F-66E9-6F613640463D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="91813A89-F0B9-265E-AF7A-A6763619F9E5">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>FF0FA82C-AA9B-F686-5016-7BFEEED415AA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>studijni_obor_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>STUDIJNI_OBOR_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="PRACOVISTE_ID" id="1058E009-CE6A-5B39-75EB-D97069A10BB1">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>BE98DD53-848B-6254-28EF-48B561E507C8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BDF49F38-C493-D121-F6B6-D024B336C99B" referredColumn="5D373ED8-5B3A-0A44-842A-FF6FA7C55AEB"/>
+</associations>
+</Column>
+<Column name="NAZEV" id="DB281FB7-7F41-1B1D-01D4-ED3295BCD129">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>229BED0A-0C7D-A50E-1DC4-C8564DF0C4C4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZKRATKA" id="2F5267E0-5005-7A44-3A4B-207D9F654B57">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D205DE0A-B189-2532-7CF3-8698A61581EA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FCE66B07-DA30-238F-C06D-8AE0C76FE2B6" name="STUDIJNI_OBOR_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>C06809F8-A3FE-DB03-BB1A-23F39138AFBF</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91813A89-F0B9-265E-AF7A-A6763619F9E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74D0245A-C999-4196-86C1-2FDE98880CD6" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="STUDIJNI_OBOR_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>25E89763-8837-0567-68E2-97E062CF322A</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91813A89-F0B9-265E-AF7A-A6763619F9E5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24D18427-091A-5846-AE21-F08C33E300E2" name="STUDIJNI_OBOR_PRACOVISTE_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1058E009-CE6A-5B39-75EB-D97069A10BB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

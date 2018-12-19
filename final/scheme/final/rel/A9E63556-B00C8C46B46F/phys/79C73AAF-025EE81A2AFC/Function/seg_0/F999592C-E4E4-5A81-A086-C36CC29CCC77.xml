@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="GET_LEARNING_ACTIONS_BY_TEACHER" directorySegmentName="seg_0" id="F999592C-E4E4-5A81-A086-C36CC29CCC77">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE FUNCTION C##ST52512.GET_LEARNING_ACTIONS_BY_TEACHER (&lt;br&gt;    p_id VYUKOVA_AKCE.PRACOVNICI_ID%TYPE&lt;br&gt;)&lt;br&gt;RETURN SYS_REFCURSOR AS&lt;br&gt;    learning_actions   SYS_REFCURSOR;&lt;br&gt;BEGIN&lt;br&gt;    OPEN learning_actions FOR SELECT * FROM&lt;br&gt;        view_learning_action WHERE vyucujici=p_id;&lt;br&gt;&lt;br&gt;    RETURN learning_actions;&lt;br&gt;END GET_LEARNING_ACTIONS_BY_TEACHER;</source>
+</FunctionOracle>

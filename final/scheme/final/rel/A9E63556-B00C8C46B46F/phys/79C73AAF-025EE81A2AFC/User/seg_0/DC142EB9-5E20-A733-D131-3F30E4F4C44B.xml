@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="C##ST52512" directorySegmentName="seg_0" id="DC142EB9-5E20-A733-D131-3F30E4F4C44B">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+</UserOraclev10g>

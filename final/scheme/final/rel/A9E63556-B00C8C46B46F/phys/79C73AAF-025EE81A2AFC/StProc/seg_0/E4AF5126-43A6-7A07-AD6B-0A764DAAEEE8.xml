@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="ADD_WORKPLACE" directorySegmentName="seg_0" id="E4AF5126-43A6-7A07-AD6B-0A764DAAEEE8">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE PROCEDURE C##ST52512.ADD_WORKPLACE (&lt;br&gt;  admin_mail PRACOVNICI.EMAIL%TYPE,&lt;br&gt;  admin_heslo PRACOVNICI.HESLO%TYPE,&lt;br&gt;  p_nazev PRACOVISTE.NAZEV%TYPE,&lt;br&gt;  p_zkratka PRACOVISTE.ZKRATKA%TYPE,&lt;br&gt;  p_fakulta PRACOVISTE.FAKULTA_ID%TYPE&lt;br&gt;) AS&lt;br&gt;  operation_not_permitted EXCEPTION;&lt;br&gt;  BEGIN&lt;br&gt;    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN&lt;br&gt;      INSERT INTO PRACOVISTE&lt;br&gt;        VALUES (NULL,p_nazev,p_zkratka,p_fakulta);&lt;br&gt;        COMMIT;&lt;br&gt;      ELSE&lt;br&gt;        RAISE operation_not_permitted;&lt;br&gt;      END IF ;&lt;br&gt;  END ADD_WORKPLACE;</source>
+</StoredProcedureOraclev10g>

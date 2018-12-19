@@ -1,0 +1,2430 @@
+--------------------------------------------------------
+--  File created - Pondìlí-prosince-17-2018   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Sequence FAKULTA_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."FAKULTA_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 2 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence FORMA_VYUKY_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."FORMA_VYUKY_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 4 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence FOTKA_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."FOTKA_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence PRACOVISTE_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."PRACOVISTE_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 10 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence PRACOVNICI_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."PRACOVNICI_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 79 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence PREDMET_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."PREDMET_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 57 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence SEMESTR_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."SEMESTR_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 3 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence SEQ_CUA_ID
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."SEQ_CUA_ID"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence SEQ_CUS_ID
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."SEQ_CUS_ID"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence SEQ_USR_ID
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."SEQ_USR_ID"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence STUDIJNI_OBOR_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."STUDIJNI_OBOR_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 13 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence UCEBNA_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."UCEBNA_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 59 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Sequence VYUKOVA_AKCE_ID_SEQ
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "C##ST52512"."VYUKOVA_AKCE_ID_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 132 NOCACHE  ORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
+--------------------------------------------------------
+--  DDL for Table DNY
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."DNY" 
+   (	"ZKRATKA" NVARCHAR2(5), 
+	"DETAIL" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table DOPORUCENY_ROCNIK
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."DOPORUCENY_ROCNIK" 
+   (	"CISLO_ROCNIKU" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table FAKULTA
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."FAKULTA" 
+   (	"ID" NUMBER(*,0), 
+	"NAZEV" NVARCHAR2(50), 
+	"ZKRATKA" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table FORMA_VYUKY
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."FORMA_VYUKY" 
+   (	"ID" NUMBER(*,0), 
+	"NAZEV_FORMY" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table FORMY
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."FORMY" 
+   (	"STUDIJNI_OBOR_ID" NUMBER(*,0), 
+	"FORMA_VYUKY_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table FOTKA
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."FOTKA" 
+   (	"OBRAZEK" BLOB, 
+	"INFO" NVARCHAR2(45), 
+	"PRACOVNICI_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" 
+ LOB ("OBRAZEK") STORE AS SECUREFILE (
+  TABLESPACE "STUDENTI" ENABLE STORAGE IN ROW CHUNK 8192
+  NOCACHE LOGGING  NOCOMPRESS  KEEP_DUPLICATES 
+  STORAGE(INITIAL 106496 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+--------------------------------------------------------
+--  DDL for Table KATEGORIE_PREDMETU
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."KATEGORIE_PREDMETU" 
+   (	"ZKRATKA" NVARCHAR2(10), 
+	"NAZEV_KATEGORIE" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table PRACOVISTE
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."PRACOVISTE" 
+   (	"ID" NUMBER(*,0), 
+	"NAZEV" NVARCHAR2(50), 
+	"ZKRATKA" NVARCHAR2(50), 
+	"FAKULTA_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table PRACOVNICI
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."PRACOVNICI" 
+   (	"ID" NUMBER(*,0), 
+	"JMENO" NVARCHAR2(50), 
+	"PRIJMENI" NVARCHAR2(50), 
+	"TITUL_PRED" NVARCHAR2(50), 
+	"TITUL_ZA" NVARCHAR2(50), 
+	"TELEFON" NVARCHAR2(50), 
+	"MOBIL" NVARCHAR2(50), 
+	"EMAIL" NVARCHAR2(50), 
+	"PRACOVISTE_ID" NUMBER(*,0), 
+	"HESLO" NVARCHAR2(100), 
+	"ROLE_ZKRATKA" NVARCHAR2(20), 
+	"UVAZEK_TYP" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table PREDMET
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."PREDMET" 
+   (	"ID" NUMBER(*,0), 
+	"NAZEV" NVARCHAR2(50), 
+	"ZKRATKA" NVARCHAR2(50), 
+	"ROZSAH_HODIN" NUMBER(*,0), 
+	"ZAKONCENI_PREDMETU_ZKRATKA" NVARCHAR2(10), 
+	"KATEGORIE_PREDMETU_ZKRATKA" NVARCHAR2(10), 
+	"DOPORUCENY_ROCNIK_CISLO_ROCNIKU" NUMBER(*,0), 
+	"PRACOVNICI_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table ROLE
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."ROLE" 
+   (	"ZKRATKA" NVARCHAR2(20)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table SEM
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."SEM" 
+   (	"SEMESTR_ID" NUMBER(*,0), 
+	"PREDMET_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table SEMESTR
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."SEMESTR" 
+   (	"ID" NUMBER(*,0), 
+	"NAZEV_SEMESTRU" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table STUDIJNI_OBOR
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."STUDIJNI_OBOR" 
+   (	"ID" NUMBER(*,0), 
+	"PRACOVISTE_ID" NUMBER(*,0), 
+	"NAZEV" NVARCHAR2(50), 
+	"ZKRATKA" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table STUDINI_PLAN
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."STUDINI_PLAN" 
+   (	"STUDIJNI_OBOR_ID" NUMBER(*,0), 
+	"PREDMET_ID" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table UCEBNA
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."UCEBNA" 
+   (	"POPIS" NVARCHAR2(50), 
+	"OZNACENI" NVARCHAR2(50), 
+	"ID" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table UVAZEK
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."UVAZEK" 
+   (	"TYP" NVARCHAR2(20)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table VYUKOVA_AKCE
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."VYUKOVA_AKCE" 
+   (	"ID" NUMBER, 
+	"MAX_STUDENTU" NUMBER, 
+	"ZPUSOB_VYUKY_ZKRATA" NVARCHAR2(50), 
+	"PRACOVNICI_ID" NUMBER, 
+	"POCATEK" NVARCHAR2(50), 
+	"KONEC" NVARCHAR2(50), 
+	"DNY_ZKRATKA" NVARCHAR2(5), 
+	"PREDMET_ID" NUMBER, 
+	"UCEBNA_ID" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table ZAKONCENI_PREDMETU
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."ZAKONCENI_PREDMETU" 
+   (	"ZKRATKA" NVARCHAR2(10), 
+	"NAZEV_ZAKONCENI" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Table ZPUSOB_VYUKY
+--------------------------------------------------------
+
+  CREATE TABLE "C##ST52512"."ZPUSOB_VYUKY" 
+   (	"ZKRATA" NVARCHAR2(50), 
+	"NAZEV_ZPUSOBU" NVARCHAR2(50)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for View VIEW_FIELD_OF_STUDY
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "C##ST52512"."VIEW_FIELD_OF_STUDY" ("ID", "PRACOVISTE", "NAZEV", "ZKRATKA") AS 
+  SELECT
+  ID,
+  PRACOVISTE_ID AS "PRACOVISTE",
+  NAZEV,
+  ZKRATKA
+FROM STUDIJNI_OBOR
+;
+--------------------------------------------------------
+--  DDL for View VIEW_LEARNING_ACTION
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "C##ST52512"."VIEW_LEARNING_ACTION" ("ID", "KAPACITA", "ZPUSOB_VYUKY", "VYUCUJICI", "POCATEK", "KONEC", "DEN", "PREDMET", "UCEBNA") AS 
+  SELECT
+  VYUKOVA_AKCE.ID,
+  VYUKOVA_AKCE.MAX_STUDENTU AS "KAPACITA",
+  VYUKOVA_AKCE.ZPUSOB_VYUKY_ZKRATA AS "ZPUSOB_VYUKY",
+  VYUKOVA_AKCE.PRACOVNICI_ID AS "VYUCUJICI",
+  VYUKOVA_AKCE.POCATEK,
+  VYUKOVA_AKCE.KONEC,
+  VYUKOVA_AKCE.DNY_ZKRATKA AS "DEN",
+  VYUKOVA_AKCE.PREDMET_ID AS "PREDMET",
+  VYUKOVA_AKCE.UCEBNA_ID AS "UCEBNA"
+FROM VYUKOVA_AKCE
+;
+--------------------------------------------------------
+--  DDL for View VIEW_SUBJECTS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "C##ST52512"."VIEW_SUBJECTS" ("ID", "NAZEV", "ZKRATKA", "ROZSAH_HODIN", "KATEGORIE", "ZPUSOB_ZAKONCENI", "GARANT", "DOPORUCENY_ROCNIK", "SEMESTR") AS 
+  SELECT
+         PREDMET.ID AS "ID",
+         NAZEV,
+         ZKRATKA,
+         ROZSAH_HODIN,
+         KATEGORIE_PREDMETU_ZKRATKA AS "KATEGORIE",
+         ZAKONCENI_PREDMETU_ZKRATKA AS "ZPUSOB_ZAKONCENI",
+         PRACOVNICI_ID AS "GARANT",
+         DOPORUCENY_ROCNIK_CISLO_ROCNIKU AS "DOPORUCENY_ROCNIK",
+         S.SEMESTR_ID AS "SEMESTR"
+  FROM PREDMET JOIN SEM S on PREDMET.ID = S.PREDMET_ID
+;
+--------------------------------------------------------
+--  DDL for View VIEW_TEACHERS
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "C##ST52512"."VIEW_TEACHERS" ("ID", "TITUL_PRED", "JMENO", "PRIJMENI", "TITUL_ZA", "PRACOVISTE", "UVAZEK", "EMAIL", "TELEFON", "MOBIL", "ROLE") AS 
+  SELECT 
+    id,
+    titul_pred,
+    jmeno,
+    prijmeni,
+    titul_za,
+    pracoviste_id AS "PRACOVISTE",
+    uvazek_typ AS "UVAZEK",
+    email,
+    telefon,
+    mobil,
+    role_zkratka AS "ROLE"
+FROM pracovnici
+;
+--------------------------------------------------------
+--  DDL for View VIEW_WORKPLACE
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE EDITIONABLE VIEW "C##ST52512"."VIEW_WORKPLACE" ("ID", "NAZEV", "ZKRATKA", "FAKULTA") AS 
+  SELECT 
+    id,
+    nazev,
+    zkratka,
+    fakulta_id AS "FAKULTA"
+FROM pracoviste
+;
+--------------------------------------------------------
+--  DDL for Index STUDIJNI_OBOR_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."STUDIJNI_OBOR_PK" ON "C##ST52512"."STUDIJNI_OBOR" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index STUDINI_PLAN_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."STUDINI_PLAN_PK" ON "C##ST52512"."STUDINI_PLAN" ("STUDIJNI_OBOR_ID", "PREDMET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index UCEBNA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."UCEBNA_PK" ON "C##ST52512"."UCEBNA" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index UVAZEK_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."UVAZEK_PK" ON "C##ST52512"."UVAZEK" ("TYP") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index VYUKOVA_AKCE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."VYUKOVA_AKCE_PK" ON "C##ST52512"."VYUKOVA_AKCE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index ZAKONCENI_PREDMETU_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."ZAKONCENI_PREDMETU_PK" ON "C##ST52512"."ZAKONCENI_PREDMETU" ("ZKRATKA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index ZPUSOB_VYUKY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."ZPUSOB_VYUKY_PK" ON "C##ST52512"."ZPUSOB_VYUKY" ("ZKRATA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index DNY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."DNY_PK" ON "C##ST52512"."DNY" ("ZKRATKA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index DOPORUCENY_ROCNIK_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."DOPORUCENY_ROCNIK_PK" ON "C##ST52512"."DOPORUCENY_ROCNIK" ("CISLO_ROCNIKU") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index EMAIL_CONST
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."EMAIL_CONST" ON "C##ST52512"."PRACOVNICI" ("EMAIL") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index FAKULTA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."FAKULTA_PK" ON "C##ST52512"."FAKULTA" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index FORMA_VYUKY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."FORMA_VYUKY_PK" ON "C##ST52512"."FORMA_VYUKY" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index FORMY_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."FORMY_PK" ON "C##ST52512"."FORMY" ("STUDIJNI_OBOR_ID", "FORMA_VYUKY_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index FOTKA__IDX
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."FOTKA__IDX" ON "C##ST52512"."FOTKA" ("PRACOVNICI_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index KATEGORIE_PREDMETU_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."KATEGORIE_PREDMETU_PK" ON "C##ST52512"."KATEGORIE_PREDMETU" ("ZKRATKA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index PRACOVISTE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."PRACOVISTE_PK" ON "C##ST52512"."PRACOVISTE" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index PRACOVNICI_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."PRACOVNICI_PK" ON "C##ST52512"."PRACOVNICI" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index PREDMET_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."PREDMET_PK" ON "C##ST52512"."PREDMET" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index ROLE_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."ROLE_PK" ON "C##ST52512"."ROLE" ("ZKRATKA") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index SEMESTR_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."SEMESTR_PK" ON "C##ST52512"."SEMESTR" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Index SEM_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ST52512"."SEM_PK" ON "C##ST52512"."SEM" ("SEMESTR_ID", "PREDMET_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" ;
+--------------------------------------------------------
+--  DDL for Trigger FAKULTA_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."FAKULTA_ID_TRG" BEFORE
+    INSERT ON c##st52512.fakulta
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.fakulta_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."FAKULTA_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger FORMA_VYUKY_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."FORMA_VYUKY_ID_TRG" BEFORE
+    INSERT ON c##st52512.forma_vyuky
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.forma_vyuky_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."FORMA_VYUKY_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger PRACOVISTE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."PRACOVISTE_ID_TRG" BEFORE
+    INSERT ON c##st52512.pracoviste
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.pracoviste_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."PRACOVISTE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger PRACOVNICI_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."PRACOVNICI_ID_TRG" BEFORE
+    INSERT ON c##st52512.pracovnici
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.pracovnici_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."PRACOVNICI_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger PREDMET_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."PREDMET_ID_TRG" BEFORE
+    INSERT ON c##st52512.predmet
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.predmet_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."PREDMET_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger SEMESTR_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."SEMESTR_ID_TRG" BEFORE
+    INSERT ON c##st52512.semestr
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.semestr_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."SEMESTR_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger STUDIJNI_OBOR_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."STUDIJNI_OBOR_ID_TRG" BEFORE
+    INSERT ON c##st52512.studijni_obor
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.studijni_obor_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."STUDIJNI_OBOR_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger UCEBNA_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."UCEBNA_ID_TRG" BEFORE
+    INSERT ON c##st52512.ucebna
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.ucebna_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."UCEBNA_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger VYUKOVA_AKCE_ID_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "C##ST52512"."VYUKOVA_AKCE_ID_TRG" BEFORE
+    INSERT ON c##st52512.vyukova_akce
+    FOR EACH ROW
+     WHEN ( new.id IS NULL ) BEGIN
+    :new.id := c##st52512.vyukova_akce_id_seq.nextval;
+END;
+
+/
+ALTER TRIGGER "C##ST52512"."VYUKOVA_AKCE_ID_TRG" ENABLE;
+--------------------------------------------------------
+--  DDL for Procedure ADD_FIELD_OF_STUDY
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_FIELD_OF_STUDY" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_pracoviste_id STUDIJNI_OBOR.pracoviste_id%TYPE,
+  p_nazev STUDIJNI_OBOR.nazev%TYPE,
+  p_zkratka STUDIJNI_OBOR.zkratka%TYPE,
+  p_form_pre FORMA_VYUKY.id%TYPE,
+  p_form_kom FORMA_VYUKY.id%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  new_id PREDMET.id%TYPE;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)= TRUE THEN
+      new_id := STUDIJNI_OBOR_ID_SEQ.nextval;
+      INSERT INTO STUDIJNI_OBOR
+        VALUES (
+                   new_id,
+                   p_pracoviste_id,
+                   p_nazev,
+                   p_zkratka
+                   );
+       IF p_form_pre IS NOT NULL THEN
+        INSERT INTO FORMY VALUES (new_id,1);
+        END IF;
+      IF p_form_kom IS NOT NULL THEN
+        INSERT INTO FORMY VALUES (new_id,2);
+      END IF;
+      COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END ADD_FIELD_OF_STUDY;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_LEARNING_ACTION
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_LEARNING_ACTION" (
+  admin_mail             PRACOVNICI.EMAIL%TYPE,
+  admin_heslo            PRACOVNICI.HESLO%TYPE,
+  p_max_studentu         VYUKOVA_AKCE.MAX_STUDENTU%TYPE,
+  p_zpusob_vyuky_zkratka VYUKOVA_AKCE.ZPUSOB_VYUKY_ZKRATA%TYPE,
+  p_pracovnici_id        VYUKOVA_AKCE.PRACOVNICI_ID%TYPE,
+  p_pocatek              VYUKOVA_AKCE.POCATEK%TYPE,
+  p_konec                VYUKOVA_AKCE.KONEC%TYPE,
+  p_dny_zkratka          VYUKOVA_AKCE.DNY_ZKRATKA%TYPE,
+  p_predmet_id           VYUKOVA_AKCE.PREDMET_ID%TYPE,
+  p_ucebna_id            VYUKOVA_AKCE.UCEBNA_ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  v_id pracovnici.id%TYPE;
+  BEGIN
+    v_id := IS_IT_CORRECT_USER(admin_heslo, admin_mail);
+    IF v_id IS NULL
+    THEN
+      RAISE operation_not_permitted;
+    end if;
+    IF IS_ROOM_EMPTY(p_ucebna_id, p_dny_zkratka, p_pocatek, p_konec) != 0
+    THEN RAISE operation_not_permitted;
+    END IF;
+    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE OR v_id = p_pracovnici_id
+    THEN
+      INSERT INTO VYUKOVA_AKCE
+      VALUES (NULL,
+              p_max_studentu,
+              p_zpusob_vyuky_zkratka,
+              p_pracovnici_id,
+              p_pocatek,
+              p_konec,
+              p_dny_zkratka,
+              p_predmet_id,
+              p_ucebna_id);
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF;
+  END ADD_LEARNING_ACTION;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_PHOTO
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_PHOTO" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id FOTKA.PRACOVNICI_ID%TYPE,
+  p_info FOTKA.INFO%TYPE,
+  p_obrazek FOTKA.OBRAZEK%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      INSERT INTO FOTKA
+        VALUES (p_obrazek,p_info,p_id);
+        COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+END ADD_PHOTO;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_ROOM
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_ROOM" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_popis UCEBNA.POPIS%TYPE,
+  p_oznaceni UCEBNA.OZNACENI%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  new_id UCEBNA.id%TYPE;
+BEGIN
+  IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+    new_id := UCEBNA_ID_SEQ.nextval;
+    INSERT INTO UCEBNA
+    VALUES (p_popis,p_oznaceni,new_id);
+    COMMIT;
+  ELSE
+    RAISE operation_not_permitted;
+  END IF ;
+END ADD_ROOM;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_STUDY_PLAN
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_STUDY_PLAN" (
+  admin_mail   PRACOVNICI.EMAIL%TYPE,
+  admin_heslo  PRACOVNICI.HESLO%TYPE,
+  p_obor_id    STUDINI_PLAN.STUDIJNI_OBOR_ID%TYPE,
+  p_predmet_id STUDINI_PLAN.PREDMET_ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE
+    THEN
+      INSERT INTO STUDINI_PLAN VALUES (p_obor_id, p_predmet_id);
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF;
+  END ADD_STUDY_PLAN;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_SUBJECT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_SUBJECT" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_nazev PREDMET.nazev%TYPE,
+  p_zkratka PREDMET.ZKRATKA%TYPE,
+  p_rozsah_hodin PREDMET.rozsah_hodin%TYPE,
+  p_zakonceni_predmetu_zkratka PREDMET.zakonceni_predmetu_zkratka%TYPE,
+  p_kategorie_predmetu_zkratka PREDMET.kategorie_predmetu_zkratka%TYPE,
+  p_doporuceny_rocnik_cislo_rocniku PREDMET.doporuceny_rocnik_cislo_rocniku%TYPE,
+  p_pracovnici PREDMET.pracovnici_id%TYPE,
+  p_sem_zimni SEMESTR.id%TYPE,
+  p_sem_letni SEMESTR.id%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  new_id PREDMET.id%TYPE;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)= TRUE THEN
+      new_id := predmet_id_seq.nextval;
+      INSERT INTO PREDMET
+        VALUES (
+                   new_id,
+                   p_nazev,
+                   p_zkratka,
+                   p_rozsah_hodin,
+                   p_zakonceni_predmetu_zkratka,
+                   p_kategorie_predmetu_zkratka,
+                   p_doporuceny_rocnik_cislo_rocniku,
+                   p_pracovnici
+                   );
+      IF p_sem_zimni IS NOT NULL THEN
+        INSERT INTO SEM
+            VALUES (1,new_id);
+        END IF;
+      IF p_sem_letni IS NOT NULL THEN
+        INSERT INTO SEM
+        VALUES (2,new_id);
+      END IF;
+      COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END ADD_SUBJECT;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_TEACHER
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_TEACHER" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_jmeno PRACOVNICI.JMENO%TYPE,
+  p_prijmeni PRACOVNICI.PRIJMENI%TYPE,
+  p_titul_pred PRACOVNICI.TITUL_PRED%TYPE,
+  p_titul_za PRACOVNICI.TITUL_ZA%TYPE,
+  p_telefon PRACOVNICI.TELEFON%TYPE,
+  p_mobil PRACOVNICI.MOBIL%TYPE,
+  p_email PRACOVNICI.EMAIL%TYPE,
+  p_pracoviste_id PRACOVNICI.PRACOVISTE_ID%TYPE,
+  p_heslo PRACOVNICI.HESLO%TYPE,
+  p_role_zkratka PRACOVNICI.ROLE_ZKRATKA%TYPE,
+  p_uvazek_typ PRACOVNICI.UVAZEK_TYP%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      INSERT INTO PRACOVNICI
+        VALUES (
+                   NULL,
+                   p_jmeno,
+                   p_prijmeni,
+                   p_titul_pred,
+                   p_titul_za,
+                   p_telefon,
+                   p_mobil,
+                   p_email,
+                   p_pracoviste_id,
+                   p_heslo,
+                   p_role_zkratka,
+                   p_uvazek_typ
+                   );
+                   COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END ADD_TEACHER;
+
+/*
+create or replace PROCEDURE ADD_SUBJECT(
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_nazev PREDMET.nazev%TYPE,
+  p_zkratka PREDMET.ZKRATKA%TYPE,
+  p_rozsah_hodin PREDMET.rozsah_hodin%TYPE,
+  p_zakonceni_predmetu_zkratka PREDMET.zakonceni_predmetu_zkratka%TYPE,
+  p_kategorie_predmetu_zkratka PREDMET.kategorie_predmetu_zkratka%TYPE,
+  p_doporuceny_rocnik_cislo_rocniku PREDMET.doporuceny_rocnik_cislo_rocniku%TYPE,
+  p_pracovnici PREDMET.pracovnici_id%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)= TRUE THEN
+      INSERT INTO PREDMET
+        VALUES (
+                   NULL,
+                   p_nazev,
+                   p_zkratka,
+                   p_rozsah_hodin,
+                   p_zakonceni_predmetu_zkratk,
+                   p_kategorie_predmetu_zkratka,
+                   p_doporuceny_rocnik_cislo_rocniku,
+                   p_pracovnici
+                   );
+                   COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END ADD_SUBJECT;
+  */
+
+/
+--------------------------------------------------------
+--  DDL for Procedure ADD_WORKPLACE
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."ADD_WORKPLACE" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_nazev PRACOVISTE.NAZEV%TYPE,
+  p_zkratka PRACOVISTE.ZKRATKA%TYPE,
+  p_fakulta PRACOVISTE.FAKULTA_ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      INSERT INTO PRACOVISTE
+        VALUES (NULL,p_nazev,p_zkratka,p_fakulta);
+        COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END ADD_WORKPLACE;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_FIELD_OF_STUDY
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_FIELD_OF_STUDY" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id STUDIJNI_OBOR.ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      DELETE FROM FORMY WHERE STUDIJNI_OBOR_ID=p_id;
+      DELETE FROM STUDIJNI_OBOR WHERE ID=p_id;
+      COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END DELETE_FIELD_OF_STUDY;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_LEARNING_ACTION
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_LEARNING_ACTION" (
+  admin_mail  PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id        VYUKOVA_AKCE.ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  v_id     pracovnici.id%TYPE;
+  v_old_id pracovnici.id%TYPE;
+  BEGIN
+    v_id := IS_IT_CORRECT_USER(admin_heslo, admin_mail );
+    IF v_id IS NULL
+    THEN
+      RAISE operation_not_permitted;
+    end if;
+    v_old_id := GET_OLD_TEACHER_ID(p_id);
+    IF v_old_id IS NULL
+    THEN
+      RAISE operation_not_permitted;
+    end if;
+    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE OR (v_id = v_old_id)
+    THEN
+      DELETE FROM VYUKOVA_AKCE WHERE ID = p_id;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF;
+  END DELETE_LEARNING_ACTION;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_PHOTO
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_PHOTO" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id FOTKA.PRACOVNICI_ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+        DELETE FROM FOTKA WHERE PRACOVNICI_ID=p_id;
+        COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+END DELETE_PHOTO;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_ROOM
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_ROOM" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id UCEBNA.ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+BEGIN
+  IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+    DELETE FROM UCEBNA WHERE ID=p_id;
+    COMMIT;
+  ELSE
+    RAISE operation_not_permitted;
+  END IF ;
+END DELETE_ROOM;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_STUDY_PLAN
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_STUDY_PLAN" (
+  admin_mail   PRACOVNICI.EMAIL%TYPE,
+  admin_heslo  PRACOVNICI.HESLO%TYPE,
+  p_obor_id    STUDINI_PLAN.STUDIJNI_OBOR_ID%TYPE,
+  p_predmet_id STUDINI_PLAN.PREDMET_ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE
+    THEN
+      DELETE
+      FROM STUDINI_PLAN
+      WHERE STUDINI_PLAN.PREDMET_ID = p_predmet_id
+        and STUDINI_PLAN.STUDIJNI_OBOR_ID = p_obor_id;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF;
+  END DELETE_STUDY_PLAN;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_SUBJECT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_SUBJECT" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id PREDMET.ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      DELETE from SEM WHERE PREDMET_ID=p_id;
+      DELETE FROM PREDMET WHERE ID=p_id;
+      COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END DELETE_SUBJECT;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_TEACHER
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_TEACHER" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id PRACOVNICI.ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      DELETE FROM FOTKA WHERE PRACOVNICI_ID=p_id;
+      DELETE FROM PRACOVNICI WHERE ID=p_id;
+      COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+  END DELETE_TEACHER;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure DELETE_WORKPLACE
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."DELETE_WORKPLACE" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id PRACOVISTE.ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      DELETE FROM PRACOVISTE WHERE ID=p_id;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF ;
+  END DELETE_WORKPLACE;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_FIELD_OF_STUDY
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_FIELD_OF_STUDY" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_pracoviste_id STUDIJNI_OBOR.pracoviste_id%TYPE,
+  p_nazev STUDIJNI_OBOR.nazev%TYPE,
+  p_zkratka STUDIJNI_OBOR.zkratka%TYPE,
+  p_id STUDIJNI_OBOR.id%TYPE,
+  p_form_pre FORMA_VYUKY.id%TYPE,
+  p_form_kom FORMA_VYUKY.id%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      UPDATE STUDIJNI_OBOR
+      SET 
+        PRACOVISTE_ID = p_pracoviste_id,
+        NAZEV = p_nazev,
+        ZKRATKA = p_zkratka
+      WHERE STUDIJNI_OBOR.ID = p_id;
+      DELETE FROM FORMY WHERE STUDIJNI_OBOR_ID=p_id;
+      IF p_form_pre IS NOT NULL THEN
+        INSERT INTO FORMY VALUES (p_id,1);
+        END IF;
+      IF p_form_kom IS NOT NULL THEN
+        INSERT INTO FORMY VALUES (p_id,2);
+      END IF;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF ;
+  END UPDATE_FIELD_OF_STUDY;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_LEARNING_ACTION
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_LEARNING_ACTION" (
+  admin_mail             PRACOVNICI.EMAIL%TYPE,
+  admin_heslo            PRACOVNICI.HESLO%TYPE,
+  p_max_studentu         VYUKOVA_AKCE.MAX_STUDENTU%TYPE,
+  p_zpusob_vyuky_zkratka VYUKOVA_AKCE.ZPUSOB_VYUKY_ZKRATA%TYPE,
+  p_pracovnici_id        VYUKOVA_AKCE.PRACOVNICI_ID%TYPE,
+  p_pocatek              VYUKOVA_AKCE.POCATEK%TYPE,
+  p_konec                VYUKOVA_AKCE.KONEC%TYPE,
+  p_dny_zkratka          VYUKOVA_AKCE.DNY_ZKRATKA%TYPE,
+  p_predmet_id           VYUKOVA_AKCE.PREDMET_ID%TYPE,
+  p_ucebna_id            VYUKOVA_AKCE.UCEBNA_ID%TYPE,
+  p_id                   VYUKOVA_AKCE.ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  v_id     pracovnici.id%TYPE;
+  v_old_id pracovnici.id%TYPE;
+  BEGIN
+    v_id := IS_IT_CORRECT_USER(admin_heslo, admin_mail);
+    IF v_id IS NULL
+    THEN
+      RAISE operation_not_permitted;
+    end if;
+    v_old_id := GET_OLD_TEACHER_ID(p_id);
+    IF v_old_id IS NULL
+    THEN
+      RAISE operation_not_permitted;
+    end if;
+    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE OR (v_id = p_pracovnici_id AND p_pracovnici_id = v_old_id)
+    THEN
+      IF IS_ROOM_EMPTY_WITHOUT(p_ucebna_id, p_dny_zkratka, p_konec, p_konec, p_id) != 0
+      THEN RAISE operation_not_permitted;
+      END IF;
+      UPDATE VYUKOVA_AKCE
+      SET MAX_STUDENTU        = p_max_studentu,
+          ZPUSOB_VYUKY_ZKRATA = p_zpusob_vyuky_zkratka,
+          PRACOVNICI_ID       = p_pracovnici_id,
+          POCATEK             = p_pocatek,
+          KONEC               = p_konec,
+          DNY_ZKRATKA         = p_dny_zkratka,
+          PREDMET_ID          = p_predmet_id,
+          UCEBNA_ID           = p_ucebna_id
+      WHERE ID = p_id;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF;
+  END UPDATE_LEARNING_ACTION;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_PHOTO
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_PHOTO" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_id FOTKA.PRACOVNICI_ID%TYPE,
+  p_info FOTKA.INFO%TYPE,
+  p_obrazek FOTKA.OBRAZEK%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      UPDATE FOTKA
+        SET obrazek=p_obrazek,info=p_info WHERE PRACOVNICI_ID=p_id;
+        COMMIT;
+      ELSE
+        RAISE operation_not_permitted;
+      END IF ;
+END UPDATE_PHOTO;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_ROOM
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_ROOM" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_popis UCEBNA.POPIS%TYPE,
+  p_oznaceni UCEBNA.OZNACENI%TYPE,
+  p_id UCEBNA.id%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+BEGIN
+  IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+    UPDATE UCEBNA
+    SET POPIS = p_popis, OZNACENI = p_oznaceni WHERE ID = p_id;
+    COMMIT;
+  ELSE
+    RAISE operation_not_permitted;
+  END IF ;
+END UPDATE_ROOM;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_SUBJECT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_SUBJECT" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_nazev PREDMET.nazev%TYPE,
+  p_zkratka PREDMET.ZKRATKA%TYPE,
+  p_rozsah_hodin PREDMET.rozsah_hodin%TYPE,
+  p_zakonceni_predmetu_zkratka PREDMET.zakonceni_predmetu_zkratka%TYPE,
+  p_kategorie_predmetu_zkratka PREDMET.kategorie_predmetu_zkratka%TYPE,
+  p_doporuceny_rocnik_cislo_rocniku PREDMET.doporuceny_rocnik_cislo_rocniku%TYPE,
+  p_pracovnici PREDMET.pracovnici_id%TYPE,
+  p_sem_zimni SEMESTR.id%TYPE,
+  p_sem_letni SEMESTR.id%TYPE,
+  p_id PREDMET.id%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      UPDATE PREDMET
+      SET 
+      NAZEV = p_nazev, 
+      ZKRATKA = p_zkratka,
+      ROZSAH_HODIN = p_rozsah_hodin,
+      ZAKONCENI_PREDMETU_ZKRATKA = p_zakonceni_predmetu_zkratka,
+      KATEGORIE_PREDMETU_ZKRATKA = p_kategorie_predmetu_zkratka, 
+      DOPORUCENY_ROCNIK_CISLO_ROCNIKU = p_doporuceny_rocnik_cislo_rocniku,
+      PRACOVNICI_ID = p_pracovnici
+      WHERE PREDMET.ID = p_id;
+      DELETE FROM SEM WHERE PREDMET_ID=p_id;
+      IF p_sem_zimni IS NOT NULL THEN
+        INSERT INTO SEM
+        VALUES (1,p_id);
+      END IF;
+      IF p_sem_letni IS NOT NULL THEN
+        INSERT INTO SEM
+        VALUES (2,p_id);
+      END IF;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF ;
+  END UPDATE_SUBJECT
+;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_TEACHER
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_TEACHER" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_jmeno PRACOVNICI.JMENO%TYPE,
+  p_prijmeni PRACOVNICI.PRIJMENI%TYPE,
+  p_titul_pred PRACOVNICI.TITUL_PRED%TYPE,
+  p_titul_za PRACOVNICI.TITUL_ZA%TYPE,
+  p_telefon PRACOVNICI.TELEFON%TYPE,
+  p_mobil PRACOVNICI.MOBIL%TYPE,
+  p_email PRACOVNICI.EMAIL%TYPE,
+  p_pracoviste_id PRACOVNICI.PRACOVISTE_ID%TYPE,
+  p_heslo PRACOVNICI.HESLO%TYPE,
+  p_role_zkratka PRACOVNICI.ROLE_ZKRATKA%TYPE,
+  p_uvazek_typ PRACOVNICI.UVAZEK_TYP%TYPE,
+  p_id PRACOVNICI.ID%TYPE
+) AS
+  operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+        IF p_heslo IS NULL 
+            THEN 
+            UPDATE PRACOVNICI     
+                SET
+                    jmeno = p_jmeno,
+                    prijmeni = p_prijmeni,
+                    titul_pred = p_titul_pred,
+                    titul_za = p_titul_za,
+                    telefon = p_telefon,
+                    mobil = p_mobil,
+                    email = p_email,
+                    pracoviste_id = p_pracoviste_id,
+                    role_zkratka = p_role_zkratka,
+                    uvazek_typ = p_uvazek_typ
+                WHERE ID=p_id;
+            ELSE
+            UPDATE PRACOVNICI 
+              SET
+                jmeno = p_jmeno,
+                prijmeni = p_prijmeni,
+                titul_pred = p_titul_pred,
+                titul_za = p_titul_za,
+                telefon = p_telefon,
+                mobil = p_mobil,
+                email = p_email,
+                pracoviste_id = p_pracoviste_id,
+                heslo = p_heslo,
+                role_zkratka = p_role_zkratka,
+                uvazek_typ = p_uvazek_typ
+            WHERE ID=p_id;
+            END IF;
+        COMMIT;              
+    ELSE
+        RAISE operation_not_permitted;
+    END IF ;
+  END UPDATE_TEACHER;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure UPDATE_WORKPLACE
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "C##ST52512"."UPDATE_WORKPLACE" (
+  admin_mail PRACOVNICI.EMAIL%TYPE,
+  admin_heslo PRACOVNICI.HESLO%TYPE,
+  p_nazev PRACOVISTE.NAZEV%TYPE,
+  p_zkratka PRACOVISTE.ZKRATKA%TYPE,
+  p_fakulta PRACOVISTE.FAKULTA_ID%TYPE,
+  p_id PRACOVISTE.ID%TYPE
+) AS
+    operation_not_permitted EXCEPTION;
+  BEGIN
+    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN
+      UPDATE PRACOVISTE
+      SET NAZEV = p_nazev, ZKRATKA = p_zkratka, FAKULTA_ID = p_fakulta WHERE ID = p_id;
+      COMMIT;
+    ELSE
+      RAISE operation_not_permitted;
+    END IF ;
+  END UPDATE_WORKPLACE;
+
+/
+--------------------------------------------------------
+--  DDL for Package PCK_SECURITY
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE PACKAGE "C##ST52512"."PCK_SECURITY" AS
+
+PROCEDURE edit_user(p_usr_id NUMBER,
+p_usr_name VARCHAR2, p_usr_pwd VARCHAR2,
+p_valid_from VARCHAR2, p_valid_till VARCHAR2,
+p_result OUT CLOB);
+PROCEDURE login(p_usr_name VARCHAR2, p_usr_pwd VARCHAR2,
+p_result OUT CLOB, p_usr_id OUT NUMBER);
+
+END PCK_SECURITY;
+
+/
+--------------------------------------------------------
+--  DDL for Function ENCRYPT_PASSWORD
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."ENCRYPT_PASSWORD" (p_password VARCHAR2) RETURN VARCHAR2 AS 
+BEGIN
+return standard_hash(p_password, 'SHA256');
+END ENCRYPT_PASSWORD;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_CATEGORIES_OF_SUBJECT
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_CATEGORIES_OF_SUBJECT" RETURN SYS_REFCURSOR AS
+    categories SYS_REFCURSOR;
+BEGIN
+    OPEN categories FOR SELECT * FROM
+        kategorie_predmetu;
+    RETURN categories;
+END get_all_categories_of_subject;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_CONCLUSIONS_OF_SUBJECT
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_CONCLUSIONS_OF_SUBJECT" RETURN SYS_REFCURSOR AS
+    conclusions   SYS_REFCURSOR;
+BEGIN
+    OPEN conclusions FOR SELECT
+        *
+                         FROM
+        zakonceni_predmetu;
+
+    RETURN conclusions;
+END get_all_conclusions_of_subject;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_DAYS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_DAYS" RETURN SYS_REFCURSOR AS
+    days   SYS_REFCURSOR;
+BEGIN
+    OPEN days FOR SELECT
+        *
+                  FROM
+        dny;
+
+    RETURN days;
+END get_all_days;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_FACULTIES
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_FACULTIES" RETURN SYS_REFCURSOR AS
+    faculties   SYS_REFCURSOR;
+BEGIN
+    OPEN faculties FOR SELECT
+        *
+                       FROM
+        fakulta;
+
+    RETURN faculties;
+END get_all_faculties;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_FIELDS_OF_STUDY
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_FIELDS_OF_STUDY" RETURN SYS_REFCURSOR AS
+    fields   SYS_REFCURSOR;
+BEGIN
+    OPEN fields FOR SELECT
+        *
+                    FROM
+        view_field_of_study;
+
+    RETURN fields;
+END get_all_fields_of_study;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_FORMS_OF_STUDY
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_FORMS_OF_STUDY" RETURN SYS_REFCURSOR AS
+    forms   SYS_REFCURSOR;
+BEGIN
+    OPEN forms FOR SELECT
+        *
+                   FROM
+        forma_vyuky;
+
+    RETURN forms;
+END get_all_forms_of_study;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_LEARNING_ACTIONS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_LEARNING_ACTIONS" RETURN SYS_REFCURSOR AS
+    learning_actions   SYS_REFCURSOR;
+BEGIN
+    OPEN learning_actions FOR SELECT * FROM
+        view_learning_action;
+
+    RETURN learning_actions;
+END get_all_learning_actions;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_LEARNING_ACTIONS_BY_ROOM
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_LEARNING_ACTIONS_BY_ROOM" 
+  (p_ucebna_id VYUKOVA_AKCE.UCEBNA_ID%TYPE)
+  RETURN SYS_REFCURSOR AS
+  rooms SYS_REFCURSOR;
+  BEGIN
+    OPEN rooms FOR
+    SELECT * FROM VIEW_LEARNING_ACTION WHERE UCEBNA = p_ucebna_id;
+    RETURN rooms;
+  END GET_ALL_LEARNING_ACTIONS_BY_ROOM;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_METHOD_OF_LEARNING
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_METHOD_OF_LEARNING" RETURN SYS_REFCURSOR AS
+    methods   SYS_REFCURSOR;
+BEGIN
+    OPEN methods FOR SELECT
+        *
+                     FROM
+        zpusob_vyuky;
+
+    RETURN methods;
+END get_all_method_of_learning;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_OBLIGATIONS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_OBLIGATIONS" RETURN SYS_REFCURSOR AS
+    obligations   SYS_REFCURSOR;
+BEGIN
+    OPEN obligations FOR SELECT
+        *
+                         FROM
+        uvazek;
+
+    RETURN obligations;
+END get_all_obligations;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_RECOMMENDED_YEARS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_RECOMMENDED_YEARS" RETURN SYS_REFCURSOR AS
+    recommended_years   SYS_REFCURSOR;
+BEGIN
+    OPEN recommended_years FOR SELECT
+        *
+                               FROM
+        doporuceny_rocnik;
+
+    RETURN recommended_years;
+END get_all_recommended_years;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_ROLE
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_ROLE" RETURN SYS_REFCURSOR AS
+    roles   SYS_REFCURSOR;
+BEGIN
+    OPEN roles FOR SELECT
+        *
+                   FROM
+        role;
+
+    RETURN roles;
+END get_all_role;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_ROOMS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_ROOMS" RETURN SYS_REFCURSOR AS
+  rooms   SYS_REFCURSOR;
+BEGIN
+  OPEN rooms FOR SELECT
+                       *
+                     FROM
+                       UCEBNA;
+
+  RETURN rooms;
+END get_all_rooms;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_SEMESTERS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_SEMESTERS" RETURN SYS_REFCURSOR AS
+    semesters   SYS_REFCURSOR;
+BEGIN
+    OPEN semesters FOR SELECT
+        *
+                       FROM
+        semestr;
+
+    RETURN semesters;
+END get_all_semesters;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_STUDY_PLANS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_STUDY_PLANS" RETURN SYS_REFCURSOR AS 
+    study_plans SYS_REFCURSOR;
+BEGIN
+    OPEN study_plans FOR SELECT * FROM
+        STUDINI_PLAN;
+    RETURN study_plans;
+END GET_ALL_STUDY_PLANS;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_SUBJECTS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_SUBJECTS" RETURN SYS_REFCURSOR AS
+    subjects   SYS_REFCURSOR;
+BEGIN
+    OPEN subjects FOR SELECT
+        * FROM
+        view_subjects;
+    RETURN subjects;
+END get_all_subjects;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_TEACHERS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_TEACHERS" RETURN SYS_REFCURSOR AS
+    teachers   SYS_REFCURSOR;
+BEGIN
+    OPEN teachers FOR SELECT
+        *
+                      FROM
+        view_teachers;
+
+    RETURN teachers;
+END get_all_teachers;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_ALL_WORKPLACES
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_ALL_WORKPLACES" RETURN SYS_REFCURSOR AS
+    workplaces   SYS_REFCURSOR;
+BEGIN
+    OPEN workplaces FOR SELECT
+        *
+                        FROM
+        view_workplace;
+
+    RETURN workplaces;
+END get_all_workplaces;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_LEARNING_ACTIONS_BY_TEACHER
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_LEARNING_ACTIONS_BY_TEACHER" (
+    p_id VYUKOVA_AKCE.PRACOVNICI_ID%TYPE
+)
+RETURN SYS_REFCURSOR AS
+    learning_actions   SYS_REFCURSOR;
+BEGIN
+    OPEN learning_actions FOR SELECT * FROM
+        view_learning_action WHERE vyucujici=p_id;
+
+    RETURN learning_actions;
+END GET_LEARNING_ACTIONS_BY_TEACHER;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_OLD_TEACHER_ID
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_OLD_TEACHER_ID" (
+  p_id VYUKOVA_AKCE.PRACOVNICI_ID%TYPE
+)
+  RETURN NUMBER AS
+  v_id VYUKOVA_AKCE.PRACOVNICI_ID%TYPE := NULL;
+  BEGIN
+    SELECT PRACOVNICI_ID INTO v_id FROM VYUKOVA_AKCE WHERE id = p_id;
+    RETURN v_id;
+  END GET_OLD_TEACHER_ID;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_PHOTO_BY_ID
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_PHOTO_BY_ID" (
+  p_id PRACOVNICI.ID%TYPE
+)
+  RETURN SYS_REFCURSOR AS
+  photos SYS_REFCURSOR;
+  BEGIN
+    OPEN photos FOR SELECT * FROM fotka WHERE PRACOVNICI_ID = p_id;
+    RETURN photos;
+  END GET_PHOTO_BY_ID;
+
+/
+--------------------------------------------------------
+--  DDL for Function GET_STUDY_PLANS_BY_FIELD_OF_STUDY
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."GET_STUDY_PLANS_BY_FIELD_OF_STUDY" GET_STUDY_PLANS_BY_FIELD_OF_STUDY
+  (p_obor_id STUDINI_PLAN.STUDIJNI_OBOR_ID%TYPE)
+  RETURN SYS_REFCURSOR AS
+  study_plans SYS_REFCURSOR;
+  BEGIN
+    OPEN study_plans FOR SELECT * FROM STUDINI_PLAN WHERE STUDIJNI_OBOR_ID = p_obor_id;
+    RETURN study_plans;
+  END ;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_IT_CORRECT_USER
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."IS_IT_CORRECT_USER" (
+  passwordlog IN VARCHAR2,
+  emaillog    IN VARCHAR2
+)
+  RETURN pracovnici.id%TYPE AS
+  v_mail  pracovnici.email%TYPE := NULL;
+  v_heslo pracovnici.heslo%TYPE := NULL;
+  v_id    pracovnici.id%TYPE := NULL;
+  BEGIN
+    SELECT pracovnici.email, pracovnici.heslo, PRACOVNICI.ID
+        INTO v_mail, v_heslo, v_id
+    FROM pracovnici
+    WHERE email = emaillog
+      AND heslo = passwordlog;
+
+    IF
+    v_mail = emaillog AND v_heslo = passwordlog
+    THEN
+      RETURN v_id;
+    ELSE
+      RETURN NULL;
+    END IF;
+
+  END;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_ROOM_EMPTY
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."IS_ROOM_EMPTY" (
+  p_id  UCEBNA.ID%TYPE,
+  p_den VYUKOVA_AKCE.DNY_ZKRATKA%TYPE,
+  p_od  VYUKOVA_AKCE.POCATEK%TYPE,
+  p_do  VYUKOVA_AKCE.KONEC%TYPE
+)
+  RETURN NUMBER AS
+  v_count NUMBER := NULL;
+  BEGIN
+    SELECT count(*) INTO v_count
+    FROM vyukova_akce
+    WHERE p_id = UCEBNA_ID
+      AND DNY_ZKRATKA = p_den
+      AND ((to_timestamp(p_od, 'hh24:mi') >= to_timestamp(POCATEK, 'hh24:mi') and
+            to_timestamp(p_od, 'hh24:mi') < to_timestamp(KONEC, 'hh24:mi')) OR
+           (to_timestamp(p_do, 'hh24:mi') > to_timestamp(POCATEK, 'hh24:mi') and
+            to_timestamp(p_do, 'hh24:mi') <= to_timestamp(KONEC, 'hh24:mi')));
+    return v_count;
+  END IS_ROOM_EMPTY;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_ROOM_EMPTY_WITHOUT
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."IS_ROOM_EMPTY_WITHOUT" (
+  p_id_ucebna UCEBNA.ID%TYPE,
+  p_den       VYUKOVA_AKCE.DNY_ZKRATKA%TYPE,
+  p_od        VYUKOVA_AKCE.POCATEK%TYPE,
+  p_do        VYUKOVA_AKCE.KONEC%TYPE,
+  p_id        VYUKOVA_AKCE.ID%TYPE
+)
+  RETURN NUMBER AS
+  v_count NUMBER := NULL;
+  BEGIN
+    SELECT count(*) INTO v_count
+    FROM vyukova_akce
+    WHERE p_id_ucebna = UCEBNA_ID
+      AND DNY_ZKRATKA = p_den
+      AND ((to_timestamp(p_od, 'hh24:mi') >= to_timestamp(POCATEK, 'hh24:mi') and
+            to_timestamp(p_od, 'hh24:mi') < to_timestamp(KONEC, 'hh24:mi')) OR
+           (to_timestamp(p_do, 'hh24:mi') > to_timestamp(POCATEK, 'hh24:mi') and
+            to_timestamp(p_do, 'hh24:mi') <= to_timestamp(KONEC, 'hh24:mi')))AND ID != p_id;
+    return v_count;
+  END IS_ROOM_EMPTY_WITHOUT;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_USER_ADMIN
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."IS_USER_ADMIN" (
+    mail     IN VARCHAR2,
+    passwd   IN VARCHAR2
+) RETURN BOOLEAN AS
+    v_role   pracovnici.role_zkratka%TYPE := NULL;
+BEGIN
+    SELECT
+        role_zkratka
+    INTO
+        v_role
+    FROM
+        pracovnici
+    WHERE
+        email = mail
+        AND   heslo = passwd;
+
+    IF
+        v_role != 'admin'
+    THEN
+        RETURN false;
+    END IF;
+    RETURN true;
+EXCEPTION
+    WHEN no_data_found THEN
+        RETURN false;
+END is_user_admin;
+
+/
+--------------------------------------------------------
+--  DDL for Function IS_USER_SCHEDULE
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."IS_USER_SCHEDULE" (
+  mail IN VARCHAR2)
+RETURN BOOLEAN AS
+  v_email pracovnici.EMAIL%TYPE := NULL;
+BEGIN
+  SELECT MAIL INTO v_email FROM (SELECT PRACOVNICI.EMAIL FROM PRACOVNICI
+      JOIN VYUKOVA_AKCE
+        ON PRACOVNICI.ID = VYUKOVA_AKCE.PRACOVNICI_ID);
+  IF v_email = mail
+  THEN RETURN true;
+  END IF;
+  RETURN false;
+  EXCEPTION
+  WHEN no_data_found
+  THEN RETURN FALSE;
+END IS_USER_SCHEDULE;
+
+/
+--------------------------------------------------------
+--  DDL for Function LOGIN_USR
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE FUNCTION "C##ST52512"."LOGIN_USR" (
+    mail     IN VARCHAR2,
+    passwd   IN VARCHAR2
+) RETURN SYS_REFCURSOR AS
+    c_usr   SYS_REFCURSOR;
+BEGIN
+    OPEN c_usr FOR SELECT
+        pracovnici.id AS "id",
+        titul_pred AS "titul_pred",
+        jmeno AS "jmeno",
+        prijmeni AS "prijmeni",
+        titul_za AS "titul_za",
+        pracoviste_id AS "pracoviste",
+        uvazek_typ AS "uvazek",
+        email AS "email",
+        telefon AS "telefon",
+        mobil AS "mobil",
+        role_zkratka AS "ROLE"
+                   FROM
+        pracovnici
+                   WHERE
+        email = mail
+        AND   heslo = passwd;
+
+    RETURN c_usr;
+END login_usr;
+
+/
+--------------------------------------------------------
+--  Constraints for Table PRACOVNICI
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PRACOVNICI" ADD CONSTRAINT "EMAIL_CONST" UNIQUE ("EMAIL")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("JMENO" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("PRIJMENI" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("HESLO" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("ROLE_ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" MODIFY ("UVAZEK_TYP" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVNICI" ADD CONSTRAINT "PRACOVNICI_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FOTKA
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FOTKA" MODIFY ("OBRAZEK" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FOTKA" MODIFY ("INFO" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FOTKA" MODIFY ("PRACOVNICI_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FOTKA" ADD CONSTRAINT "FOTKA_PK" PRIMARY KEY ("PRACOVNICI_ID")
+  USING INDEX (CREATE UNIQUE INDEX "C##ST52512"."FOTKA__IDX" ON "C##ST52512"."FOTKA" ("PRACOVNICI_ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI" )  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table VYUKOVA_AKCE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("MAX_STUDENTU" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("ZPUSOB_VYUKY_ZKRATA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("PREDMET_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("UCEBNA_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" MODIFY ("PRACOVNICI_ID" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table KATEGORIE_PREDMETU
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."KATEGORIE_PREDMETU" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."KATEGORIE_PREDMETU" MODIFY ("NAZEV_KATEGORIE" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."KATEGORIE_PREDMETU" ADD CONSTRAINT "KATEGORIE_PREDMETU_PK" PRIMARY KEY ("ZKRATKA")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table PREDMET
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("NAZEV" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("ROZSAH_HODIN" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("ZAKONCENI_PREDMETU_ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" MODIFY ("PRACOVNICI_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PREDMET" ADD CONSTRAINT "PREDMET_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table ROLE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."ROLE" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."ROLE" ADD CONSTRAINT "ROLE_PK" PRIMARY KEY ("ZKRATKA")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FORMA_VYUKY
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FORMA_VYUKY" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FORMA_VYUKY" MODIFY ("NAZEV_FORMY" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FORMA_VYUKY" ADD CONSTRAINT "FORMA_VYUKY_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table SEMESTR
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."SEMESTR" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."SEMESTR" MODIFY ("NAZEV_SEMESTRU" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."SEMESTR" ADD CONSTRAINT "SEMESTR_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FAKULTA
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FAKULTA" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FAKULTA" MODIFY ("NAZEV" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FAKULTA" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FAKULTA" ADD CONSTRAINT "FAKULTA_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table DNY
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."DNY" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."DNY" MODIFY ("DETAIL" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."DNY" ADD CONSTRAINT "DNY_PK" PRIMARY KEY ("ZKRATKA")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table PRACOVISTE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PRACOVISTE" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVISTE" MODIFY ("NAZEV" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVISTE" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVISTE" MODIFY ("FAKULTA_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."PRACOVISTE" ADD CONSTRAINT "PRACOVISTE_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table STUDINI_PLAN
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."STUDINI_PLAN" MODIFY ("STUDIJNI_OBOR_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDINI_PLAN" MODIFY ("PREDMET_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDINI_PLAN" ADD CONSTRAINT "STUDINI_PLAN_PK" PRIMARY KEY ("STUDIJNI_OBOR_ID", "PREDMET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table ZAKONCENI_PREDMETU
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."ZAKONCENI_PREDMETU" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."ZAKONCENI_PREDMETU" MODIFY ("NAZEV_ZAKONCENI" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."ZAKONCENI_PREDMETU" ADD CONSTRAINT "ZAKONCENI_PREDMETU_PK" PRIMARY KEY ("ZKRATKA")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table FORMY
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FORMY" MODIFY ("STUDIJNI_OBOR_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FORMY" MODIFY ("FORMA_VYUKY_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."FORMY" ADD CONSTRAINT "FORMY_PK" PRIMARY KEY ("STUDIJNI_OBOR_ID", "FORMA_VYUKY_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table SEM
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."SEM" MODIFY ("SEMESTR_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."SEM" MODIFY ("PREDMET_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."SEM" ADD CONSTRAINT "SEM_PK" PRIMARY KEY ("SEMESTR_ID", "PREDMET_ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table ZPUSOB_VYUKY
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."ZPUSOB_VYUKY" MODIFY ("ZKRATA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."ZPUSOB_VYUKY" MODIFY ("NAZEV_ZPUSOBU" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."ZPUSOB_VYUKY" ADD CONSTRAINT "ZPUSOB_VYUKY_PK" PRIMARY KEY ("ZKRATA")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table DOPORUCENY_ROCNIK
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."DOPORUCENY_ROCNIK" MODIFY ("CISLO_ROCNIKU" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."DOPORUCENY_ROCNIK" ADD CONSTRAINT "DOPORUCENY_ROCNIK_PK" PRIMARY KEY ("CISLO_ROCNIKU")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table UCEBNA
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."UCEBNA" MODIFY ("OZNACENI" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."UCEBNA" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."UCEBNA" ADD CONSTRAINT "UCEBNA_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table UVAZEK
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."UVAZEK" MODIFY ("TYP" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."UVAZEK" ADD CONSTRAINT "UVAZEK_PK" PRIMARY KEY ("TYP")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Constraints for Table STUDIJNI_OBOR
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" MODIFY ("PRACOVISTE_ID" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" MODIFY ("NAZEV" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" MODIFY ("ZKRATKA" NOT NULL ENABLE);
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" ADD CONSTRAINT "STUDIJNI_OBOR_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "STUDENTI"  ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table FORMY
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FORMY" ADD CONSTRAINT "FORMY_FORMA_VYUKY_FK" FOREIGN KEY ("FORMA_VYUKY_ID")
+	  REFERENCES "C##ST52512"."FORMA_VYUKY" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."FORMY" ADD CONSTRAINT "FORMY_STUDIJNI_OBOR_FK" FOREIGN KEY ("STUDIJNI_OBOR_ID")
+	  REFERENCES "C##ST52512"."STUDIJNI_OBOR" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table FOTKA
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."FOTKA" ADD CONSTRAINT "FOTKA_PRACOVNICI_FK" FOREIGN KEY ("PRACOVNICI_ID")
+	  REFERENCES "C##ST52512"."PRACOVNICI" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table PRACOVISTE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PRACOVISTE" ADD CONSTRAINT "PRACOVISTE_FAKULTA_FK" FOREIGN KEY ("FAKULTA_ID")
+	  REFERENCES "C##ST52512"."FAKULTA" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table PRACOVNICI
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PRACOVNICI" ADD CONSTRAINT "PRACOVNICI_PRACOVISTE_FK" FOREIGN KEY ("PRACOVISTE_ID")
+	  REFERENCES "C##ST52512"."PRACOVISTE" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."PRACOVNICI" ADD CONSTRAINT "PRACOVNICI_UVAZEK_FK" FOREIGN KEY ("UVAZEK_TYP")
+	  REFERENCES "C##ST52512"."UVAZEK" ("TYP") ENABLE;
+  ALTER TABLE "C##ST52512"."PRACOVNICI" ADD CONSTRAINT "PRACOVNICI_ROLE_FK" FOREIGN KEY ("ROLE_ZKRATKA")
+	  REFERENCES "C##ST52512"."ROLE" ("ZKRATKA") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table PREDMET
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."PREDMET" ADD CONSTRAINT "PREDMET_PRACOVNICI_FK" FOREIGN KEY ("PRACOVNICI_ID")
+	  REFERENCES "C##ST52512"."PRACOVNICI" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."PREDMET" ADD CONSTRAINT "PREDMET_KATEGORIE_PREDMETU_FK" FOREIGN KEY ("KATEGORIE_PREDMETU_ZKRATKA")
+	  REFERENCES "C##ST52512"."KATEGORIE_PREDMETU" ("ZKRATKA") ENABLE;
+  ALTER TABLE "C##ST52512"."PREDMET" ADD CONSTRAINT "PREDMET_ZAKONCENI_PREDMETU_FK" FOREIGN KEY ("ZAKONCENI_PREDMETU_ZKRATKA")
+	  REFERENCES "C##ST52512"."ZAKONCENI_PREDMETU" ("ZKRATKA") ENABLE;
+  ALTER TABLE "C##ST52512"."PREDMET" ADD CONSTRAINT "PREDMET_DOPORUCENY_ROCNIK_FK" FOREIGN KEY ("DOPORUCENY_ROCNIK_CISLO_ROCNIKU")
+	  REFERENCES "C##ST52512"."DOPORUCENY_ROCNIK" ("CISLO_ROCNIKU") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table SEM
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."SEM" ADD CONSTRAINT "SEM_PREDMET_FK" FOREIGN KEY ("PREDMET_ID")
+	  REFERENCES "C##ST52512"."PREDMET" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."SEM" ADD CONSTRAINT "SEM_SEMESTR_FK" FOREIGN KEY ("SEMESTR_ID")
+	  REFERENCES "C##ST52512"."SEMESTR" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table STUDIJNI_OBOR
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."STUDIJNI_OBOR" ADD CONSTRAINT "STUDIJNI_OBOR_PRACOVISTE_FK" FOREIGN KEY ("PRACOVISTE_ID")
+	  REFERENCES "C##ST52512"."PRACOVISTE" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table STUDINI_PLAN
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."STUDINI_PLAN" ADD CONSTRAINT "STUDINI_PLAN_PREDMET_FK" FOREIGN KEY ("PREDMET_ID")
+	  REFERENCES "C##ST52512"."PREDMET" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."STUDINI_PLAN" ADD CONSTRAINT "STUDINI_PLAN_STUDIJNI_OBOR_FK" FOREIGN KEY ("STUDIJNI_OBOR_ID")
+	  REFERENCES "C##ST52512"."STUDIJNI_OBOR" ("ID") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table VYUKOVA_AKCE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_DNY_FK" FOREIGN KEY ("DNY_ZKRATKA")
+	  REFERENCES "C##ST52512"."DNY" ("ZKRATKA") ENABLE;
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_PRACOVNICI_FK" FOREIGN KEY ("PRACOVNICI_ID")
+	  REFERENCES "C##ST52512"."PRACOVNICI" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_PREDMET_FK" FOREIGN KEY ("PREDMET_ID")
+	  REFERENCES "C##ST52512"."PREDMET" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_UCEBNA_FK" FOREIGN KEY ("UCEBNA_ID")
+	  REFERENCES "C##ST52512"."UCEBNA" ("ID") ENABLE;
+  ALTER TABLE "C##ST52512"."VYUKOVA_AKCE" ADD CONSTRAINT "VYUKOVA_AKCE_ZPUSOB_VYUKY_FK" FOREIGN KEY ("ZPUSOB_VYUKY_ZKRATA")
+	  REFERENCES "C##ST52512"."ZPUSOB_VYUKY" ("ZKRATA") ENABLE;

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRACOVISTE_FAKULTA_FK" directorySegmentName="seg_0" id="F0820DD0-8B77-5131-7133-19F197769C59">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>37919200-74EF-E4D5-3E33-247851EB4B00</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>5AD94716-6698-7836-4700-CD9E2E246CBD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5A8C1575-D58B-41AF-E226-CBC6DA9BDBBA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4B1EEC35-C26C-93F5-3102-DF1749579DA1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
