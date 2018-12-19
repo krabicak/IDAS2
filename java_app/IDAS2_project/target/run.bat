@@ -1,0 +1,1 @@
+java -jar IDAS2_project-1.0-SNAPSHOT-jar-with-dependencies.jar

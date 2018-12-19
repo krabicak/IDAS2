@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DNY" directorySegmentName="seg_0" id="1E768343-1AB7-C430-6E48-A9DDF6EF29E7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>AE74403F-3209-5A0B-9742-F67DD9D0EF1D</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DETAIL" id="2BF0CC7D-795F-0A6B-5ED9-F5531245C05F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ZKRATKA" id="4862333F-FA3F-FD3D-A49D-D5AC01C1FF10">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="DNY_PK" id="BA882938-0792-7430-6B95-38A61108F3ED">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<schemaObject>22E5E13C-5541-0A86-DCB3-134EA5582562</schemaObject>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>D45E7A47-90AD-8639-3D13-B028D40FB3B5</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="DNY_PK" id="17CD0FB5-8A69-511E-84DE-F6B866A3A44B">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<computeStatistics>YES</computeStatistics>
+<logging></logging>
+<segment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</segment>
+<tableSpace>3636CE5F-359D-615E-4314-33EC3745FD46</tableSpace>
+<indexSegment>DE6FB44A-4FE5-0E12-3BC7-C83961302AE7</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

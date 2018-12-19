@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DAAFB927-B5ED-9FA3-7801-9F426E127935" name="VYUKOVA AKCE">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>E409C69E-41DC-C400-2D42-8C6977D2050C</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="61BBDFBB-833A-4301-7902-1F0A0E87A3A5">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>176CDEE8-CDB5-9134-FA41-0F666D2C804C</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>F263013D-31B6-E335-821C-4CEEEE5A082C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MAX STUDENTU" id="4FE491C9-A6E7-FF25-29C5-86EADD1016D0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>5DC489AD-D1AF-DEFA-39D6-212F45ADE482</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>F263013D-31B6-E335-821C-4CEEEE5A082C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ZPUSOB VYUKY ZKRATA" id="7AB7B133-04E5-D28C-A78A-BF74429C923C">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>F83B5ECF-7B4F-BF1F-763A-2B19AB47E041</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>B6B61150-9AC0-040C-A539-4A80E735538F</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRACOVNICI ID" id="8CBC230E-4EE0-9D06-EE95-2D06B90C1DE3">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>AC0C5C3C-B8E8-07AB-9BDF-D39A5E80A8DA</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>FD12E51B-4A1A-E2F6-FF23-A896756FF575</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="POCATEK" id="F1DF2A01-1324-410E-D34B-C7948C476BA7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>3CCEDE2E-A15F-6FFA-FD74-A3DC7D2FBD9C</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="KONEC" id="96894043-2262-FA87-B7B6-BEFA8036F1D6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>9E49C417-FA9E-0408-36A0-A2D385C864E1</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DNY ZKRATKA" id="99EF446F-3030-DE06-897D-422D292E3605">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>6E3C681C-F398-F347-0327-C99EA4CE41FE</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B7897F7B-7FC5-1C3E-C60E-61666BCC5433</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>9FB0AE74-B534-EDE6-21CB-58805E991A8A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PREDMET ID" id="EA838390-C761-343B-9955-8490C643EFA0">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>741F4A5C-B210-0D0A-A5C7-F3735A777659</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>D29F66F6-7829-E58C-4C55-88DE6FD0C680</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="UCEBNA ID" id="032F2E2D-7CE5-2872-9CED-FDDA28ED0756">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>266D2847-FAD1-8CAE-ECCD-B06B2517C844</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>7C053537-120F-C308-D74C-ECF0910BBE33</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>F263013D-31B6-E335-821C-4CEEEE5A082C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7769363D-71DB-6FCB-FECE-2E95869A66FC" name="VYUKOVA AKCE PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>959A549F-CAB9-3FB4-F938-A66CDDEA5FE9</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>61BBDFBB-833A-4301-7902-1F0A0E87A3A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

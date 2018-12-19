@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33A4AD7E-C443-8E73-C9E4-BC5E10543E92" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FAKULTA">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>51860323-F449-18BA-BFAE-D82B6C7022EF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="EC13E50F-3DE4-91C9-CB44-F1C54B5A1764">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>1F27FD20-3E42-00EE-350C-66D34BB09BF8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>fakulta_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>FAKULTA_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="NAZEV" id="DFE499FA-87DC-4AB0-DA8F-15416186FFDD">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>2EBE6F38-31EF-2B9D-2EBC-76438B7B062F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZKRATKA" id="96C0C710-B498-6C85-7F4C-65DE852AC869">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>758D7E2E-F49C-52F5-EDF4-903376D8FF39</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F1C881AF-3296-F3A8-AF67-27529E2B2B59" name="FAKULTA_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>F9F2CAB4-324D-4F9E-A1A0-8E6D1EC740C4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC13E50F-3DE4-91C9-CB44-F1C54B5A1764"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB4EDC36-FBA2-8398-B62E-068A7A8D8AEC" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FAKULTA_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D5D36DB0-9F00-BAAE-1864-4A91691F5179</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC13E50F-3DE4-91C9-CB44-F1C54B5A1764"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

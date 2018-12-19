@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STUDINI_PLAN_STUDIJNI_OBOR_FK" directorySegmentName="seg_0" id="85463ED7-2271-960B-F090-D846B32F7FEC">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>A0E2F985-6183-7376-FB78-73F073FC4650</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>86ED5480-7D81-1BAA-4470-DF3A3ADED08C</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>676F3A26-A180-1FBA-246B-D28BE9130007</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>765953C8-4E09-EC3B-F201-9A0B16AEB3D3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

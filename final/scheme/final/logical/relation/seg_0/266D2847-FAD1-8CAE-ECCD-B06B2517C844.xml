@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VYUKOVA_AKCE_UCEBNA_FK" directorySegmentName="seg_0" id="266D2847-FAD1-8CAE-ECCD-B06B2517C844">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>AAFDB9D2-642C-ABFC-200F-29004037FD00</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>32131969-9717-5A02-7417-6A23F750C467</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C8CEF0E5-997C-EE2F-E42F-EF0170B6C82F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DAAFB927-B5ED-9FA3-7801-9F426E127935</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

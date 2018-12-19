@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6CC3A2E2-AC17-B48F-C1A8-0FC0B663ECFE" containerWithKeyObject="35A10808-2D7B-0A66-9C09-49200500B751" localFKIndex="1FE44068-DE32-35F0-229A-C5F996AE5A22" name="PRACOVNICI_ROLE_FK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>DE813777-362A-4D09-9261-F148A54B7CF1</importedID>
+<referredTableLongName>C##ST52512.ROLE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8D9BB571-A6E9-013A-46D5-3F5EF6FA32AE</referredTableID>
+<keyObject>03783E86-227B-81D5-E2A1-6423CE164E0F</keyObject>
+<referredKeyID>03783E86-227B-81D5-E2A1-6423CE164E0F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ZKRATKA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

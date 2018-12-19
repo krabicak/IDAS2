@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7915E81C-E6A5-FA4F-2099-B420C5C6D91A" name="PREDMET">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>C4729020-A76D-9975-0CA0-02618C00FE1E</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="D29F66F6-7829-E58C-4C55-88DE6FD0C680">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>4F19A1F4-12F0-61D8-88AF-21A2382A760F</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NAZEV" id="62D73979-36B0-0038-67AB-8DF362FA7FA7">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>46519AFA-E8D8-4520-BDB6-FF855D45B1D6</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ZKRATKA" id="C297A63F-C5AE-24F0-8D87-825379634BFC">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>738623E7-8594-2B45-5290-F0EC3BACD409</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ROZSAH HODIN" id="2359CF72-04D1-E584-A37A-1C0D3C8807C6">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>3932C521-F78F-4783-F847-BE5444AA5052</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ZAKONCENI PREDMETU ZKRATKA" id="3A4976DD-94ED-E94C-044B-BB5DF37E2F7F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>2191EFF9-82A6-DFCC-64F0-B8623FAE1401</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>D6203A49-83D1-8F31-FED0-DC5E72974F67</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>E285FEAB-0645-1348-F51A-C3C55F8A8EA5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="KATEGORIE PREDMETU ZKRATKA" id="B62531DA-EE44-2A83-F124-D539741739AA">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>F1D26F95-EC97-2014-174A-CFEA262C1B3D</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>27A8E60F-F1A9-ABFD-2BA8-76F7032D33CA</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>E285FEAB-0645-1348-F51A-C3C55F8A8EA5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DOPORUCENY ROCNIK CISLO ROCNIKU" id="11DAFF33-0F56-6FD8-65C9-D624DCD4A160">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>19EE754F-F1B1-466D-CE5C-6D3C0CFE883E</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D4984491-7C97-E1CB-452B-9DF9063419D1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRACOVNICI ID" id="64D4DD5B-B38C-DC7A-7472-3D888751A57F">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>A4DAF3EF-3E33-AE81-EB5C-0916E4B81333</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<referedAttribute>FD12E51B-4A1A-E2F6-FF23-A896756FF575</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EC9679CA-EB27-EC31-1D5D-42DCEE3EEB2A" name="PREDMET PK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>0783322D-4459-96A5-1FF2-605C4B399740</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D29F66F6-7829-E58C-4C55-88DE6FD0C680</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B91F2C68-1F2F-9842-C834-A213671FBDD8" containerWithKeyObject="35A10808-2D7B-0A66-9C09-49200500B751" localFKIndex="D0360B1E-12D2-ED75-A5AD-37D3B66E8CC0" name="PRACOVNICI_UVAZEK_FK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>DE2587D3-BCBE-F000-6A40-3B725D7CEED0</importedID>
+<referredTableLongName>C##ST52512.UVAZEK</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A116EE6F-9D16-720E-3DAA-A96438C83134</referredTableID>
+<keyObject>4A4C5029-4F3E-81D2-9A87-9F02A764FB64</keyObject>
+<referredKeyID>4A4C5029-4F3E-81D2-9A87-9F02A764FB64</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>TYP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

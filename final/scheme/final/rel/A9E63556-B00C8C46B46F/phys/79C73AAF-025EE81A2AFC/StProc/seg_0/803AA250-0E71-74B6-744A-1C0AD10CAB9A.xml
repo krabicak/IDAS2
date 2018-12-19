@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="DELETE_TEACHER" directorySegmentName="seg_0" id="803AA250-0E71-74B6-744A-1C0AD10CAB9A">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE PROCEDURE C##ST52512.DELETE_TEACHER (&lt;br&gt;  admin_mail PRACOVNICI.EMAIL%TYPE,&lt;br&gt;  admin_heslo PRACOVNICI.HESLO%TYPE,&lt;br&gt;  p_id PRACOVNICI.ID%TYPE&lt;br&gt;) AS&lt;br&gt;  operation_not_permitted EXCEPTION;&lt;br&gt;  BEGIN&lt;br&gt;    IF IS_USER_ADMIN(admin_mail,admin_heslo)=TRUE THEN&lt;br&gt;      DELETE FROM FOTKA WHERE PRACOVNICI_ID=p_id;&lt;br&gt;      DELETE FROM PRACOVNICI WHERE ID=p_id;&lt;br&gt;      COMMIT;&lt;br&gt;      ELSE&lt;br&gt;        RAISE operation_not_permitted;&lt;br&gt;      END IF ;&lt;br&gt;  END DELETE_TEACHER;</source>
+</StoredProcedureOraclev10g>

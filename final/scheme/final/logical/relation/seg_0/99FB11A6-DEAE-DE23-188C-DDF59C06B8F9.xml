@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRACOVNICI_ROLE_FK" directorySegmentName="seg_0" id="99FB11A6-DEAE-DE23-188C-DDF59C06B8F9">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>6CC3A2E2-AC17-B48F-C1A8-0FC0B663ECFE</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>23DE8843-4893-F99C-0990-8C567E26D153</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>29DA6B7E-F08F-E451-D491-9AF80C9518AC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E806463A-1BE0-E46C-67BF-D4C60F4915D8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

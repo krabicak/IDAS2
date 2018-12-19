@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="699FC498-5466-9D66-06BE-DC0865CC1AB4" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FORMY">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D3776997-374A-3753-656C-88E711AFC32D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STUDIJNI_OBOR_ID" id="4BACF737-F007-875A-5518-46A88955D4C5">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>E3D6C7E8-8D7A-0D04-2D3D-43FD0609FD5F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="27433839-FFD9-4B8F-1A41-7A4788E5AF57" referredColumn="91813A89-F0B9-265E-AF7A-A6763619F9E5"/>
+</associations>
+</Column>
+<Column name="FORMA_VYUKY_ID" id="5689F930-99E3-9696-051A-2E7877B0AAC8">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>FC54A506-1EEC-6E54-4D12-85B7D74C5C70</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="950C7CB2-D9AD-115C-9EE1-0AF3B9369B1B" referredColumn="DE0019F5-20BC-E4B9-2C19-E374E81EA178"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F68A227E-C25B-7142-11DE-7CB06CEB03AD" name="FORMY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>1B5A8968-C73A-8CD5-A2E4-B6ABF2BA2EFD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BACF737-F007-875A-5518-46A88955D4C5"/>
+<colUsage columnID="5689F930-99E3-9696-051A-2E7877B0AAC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21FC657A-0303-3A32-8ECE-F480F008137D" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="FORMY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>01F26E07-B355-4E60-46CE-BA85B6AA9CBE</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BACF737-F007-875A-5518-46A88955D4C5"/>
+<colUsage columnID="5689F930-99E3-9696-051A-2E7877B0AAC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C950E608-0C41-7ACF-39F3-1A7F368FAC0E" name="FORMY_FORMA_VYUKY_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5689F930-99E3-9696-051A-2E7877B0AAC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76F2560A-37AC-AE0D-AEB0-6F6E22D32D0C" name="FORMY_STUDIJNI_OBOR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BACF737-F007-875A-5518-46A88955D4C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

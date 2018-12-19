@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E768343-1AB7-C430-6E48-A9DDF6EF29E7" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="DNY">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>830FCEED-713C-F1DB-D71C-5F0E10EF9906</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ZKRATKA" id="4862333F-FA3F-FD3D-A49D-D5AC01C1FF10">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>E343512C-4153-68A0-6B23-C48005772D7B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>9FB0AE74-B534-EDE6-21CB-58805E991A8A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DETAIL" id="2BF0CC7D-795F-0A6B-5ED9-F5531245C05F">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>9AAF1939-AEEC-EED6-C353-E11D6C888890</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="17CD0FB5-8A69-511E-84DE-F6B866A3A44B" name="DNY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>4980D5AF-229B-DAD4-9AD5-95A3A0ABA984</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4862333F-FA3F-FD3D-A49D-D5AC01C1FF10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA882938-0792-7430-6B95-38A61108F3ED" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="DNY_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>3C531CB2-626B-1C09-7F45-E35BE0480202</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4862333F-FA3F-FD3D-A49D-D5AC01C1FF10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

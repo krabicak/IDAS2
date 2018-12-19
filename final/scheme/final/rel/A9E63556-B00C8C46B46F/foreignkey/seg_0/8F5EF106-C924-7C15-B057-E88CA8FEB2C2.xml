@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8F5EF106-C924-7C15-B057-E88CA8FEB2C2" containerWithKeyObject="C4729020-A76D-9975-0CA0-02618C00FE1E" localFKIndex="47EDE961-BFCF-3BB6-F008-EA333704471D" name="PREDMET_PRACOVNICI_FK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>AB678B13-1ECA-A2AC-B44D-CAA5EE21D35C</importedID>
+<referredTableLongName>C##ST52512.PRACOVNICI</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>35A10808-2D7B-0A66-9C09-49200500B751</referredTableID>
+<keyObject>F34839FD-26F5-5167-493D-3A89BCEC4E3B</keyObject>
+<referredKeyID>F34839FD-26F5-5167-493D-3A89BCEC4E3B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

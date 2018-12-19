@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PREDMET_KATEGORIE_PREDMETU_FK" directorySegmentName="seg_0" id="F1D26F95-EC97-2014-174A-CFEA262C1B3D">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>734C0105-330F-8C4C-0DAD-61A8EC2FE6E5</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>25302B56-4B29-A83A-18E4-BB459B220091</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>53591AB8-962B-2F63-F987-FF0A390FEC73</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7915E81C-E6A5-FA4F-2099-B420C5C6D91A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

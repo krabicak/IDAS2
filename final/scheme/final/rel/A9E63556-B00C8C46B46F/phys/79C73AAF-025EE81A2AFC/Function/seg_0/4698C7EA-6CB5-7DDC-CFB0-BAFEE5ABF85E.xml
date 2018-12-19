@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="IS_ROOM_EMPTY_WITHOUT" directorySegmentName="seg_0" id="4698C7EA-6CB5-7DDC-CFB0-BAFEE5ABF85E">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE FUNCTION C##ST52512.IS_ROOM_EMPTY_WITHOUT (&lt;br&gt;  p_id_ucebna UCEBNA.ID%TYPE,&lt;br&gt;  p_den       VYUKOVA_AKCE.DNY_ZKRATKA%TYPE,&lt;br&gt;  p_od        VYUKOVA_AKCE.POCATEK%TYPE,&lt;br&gt;  p_do        VYUKOVA_AKCE.KONEC%TYPE,&lt;br&gt;  p_id        VYUKOVA_AKCE.ID%TYPE&lt;br&gt;)&lt;br&gt;  RETURN NUMBER AS&lt;br&gt;  v_count NUMBER := NULL;&lt;br&gt;  BEGIN&lt;br&gt;    SELECT count(*) INTO v_count&lt;br&gt;    FROM vyukova_akce&lt;br&gt;    WHERE p_id_ucebna = UCEBNA_ID&lt;br&gt;      AND DNY_ZKRATKA = p_den&lt;br&gt;      AND ((to_timestamp(p_od, &apos;hh24:mi&apos;) &gt;= to_timestamp(POCATEK, &apos;hh24:mi&apos;) and&lt;br&gt;            to_timestamp(p_od, &apos;hh24:mi&apos;) &lt; to_timestamp(KONEC, &apos;hh24:mi&apos;)) OR&lt;br&gt;           (to_timestamp(p_do, &apos;hh24:mi&apos;) &gt; to_timestamp(POCATEK, &apos;hh24:mi&apos;) and&lt;br&gt;            to_timestamp(p_do, &apos;hh24:mi&apos;) &lt;= to_timestamp(KONEC, &apos;hh24:mi&apos;)))AND ID != p_id;&lt;br&gt;    return v_count;&lt;br&gt;  END IS_ROOM_EMPTY_WITHOUT;</source>
+</FunctionOracle>

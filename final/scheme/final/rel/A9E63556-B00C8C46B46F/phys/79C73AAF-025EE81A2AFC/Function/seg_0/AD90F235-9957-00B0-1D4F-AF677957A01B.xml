@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="IS_IT_CORRECT_USER" directorySegmentName="seg_0" id="AD90F235-9957-00B0-1D4F-AF677957A01B">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:41 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE FUNCTION C##ST52512.IS_IT_CORRECT_USER (&lt;br&gt;  passwordlog IN VARCHAR2,&lt;br&gt;  emaillog    IN VARCHAR2&lt;br&gt;)&lt;br&gt;  RETURN pracovnici.id%TYPE AS&lt;br&gt;  v_mail  pracovnici.email%TYPE := NULL;&lt;br&gt;  v_heslo pracovnici.heslo%TYPE := NULL;&lt;br&gt;  v_id    pracovnici.id%TYPE := NULL;&lt;br&gt;  BEGIN&lt;br&gt;    SELECT pracovnici.email, pracovnici.heslo, PRACOVNICI.ID&lt;br&gt;        INTO v_mail, v_heslo, v_id&lt;br&gt;    FROM pracovnici&lt;br&gt;    WHERE email = emaillog&lt;br&gt;      AND heslo = passwordlog;&lt;br&gt;&lt;br&gt;    IF&lt;br&gt;    v_mail = emaillog AND v_heslo = passwordlog&lt;br&gt;    THEN&lt;br&gt;      RETURN v_id;&lt;br&gt;    ELSE&lt;br&gt;      RETURN NULL;&lt;br&gt;    END IF;&lt;br&gt;&lt;br&gt;  END;</source>
+</FunctionOracle>

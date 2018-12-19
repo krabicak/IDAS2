@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A111DCC7-AC34-BF2E-2F0C-9C4AE233E191" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="SEM">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>FA430472-4483-2262-F8C2-02B0A857668F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SEMESTR_ID" id="A54ED4A7-AC21-988D-B79E-67DB4F798720">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>4654E15A-B84F-6EE0-2B8C-A694283124E7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="04BD315C-BAB4-9FE5-7926-C2DCBA8E97EE" referredColumn="52C890FC-74A9-947F-7A9D-6681EF0DECEB"/>
+</associations>
+</Column>
+<Column name="PREDMET_ID" id="016CCAC5-E328-AF8C-769E-211EF491B7CB">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>BDB9D327-F46E-242A-2CBC-49D96A9357D1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3DBDC61-8733-D0F0-3E66-8048D6652863" referredColumn="4F19A1F4-12F0-61D8-88AF-21A2382A760F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="730698FD-52E3-0788-F289-12DE77D95F65" name="SEM_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>66C914B8-FA8A-F4D5-B41D-DC2D26AAD608</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A54ED4A7-AC21-988D-B79E-67DB4F798720"/>
+<colUsage columnID="016CCAC5-E328-AF8C-769E-211EF491B7CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2BF7D67-1ECA-A1DA-69D5-11F9CB4EEF40" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="SEM_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>002165A0-5AC1-983C-D3C6-786B6931D829</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A54ED4A7-AC21-988D-B79E-67DB4F798720"/>
+<colUsage columnID="016CCAC5-E328-AF8C-769E-211EF491B7CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AAC925A2-0C4F-8994-B4AB-899253A3970C" name="SEM_PREDMET_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="016CCAC5-E328-AF8C-769E-211EF491B7CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35D5372A-CB98-1867-2E9D-5AF01830B986" name="SEM_SEMESTR_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A54ED4A7-AC21-988D-B79E-67DB4F798720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

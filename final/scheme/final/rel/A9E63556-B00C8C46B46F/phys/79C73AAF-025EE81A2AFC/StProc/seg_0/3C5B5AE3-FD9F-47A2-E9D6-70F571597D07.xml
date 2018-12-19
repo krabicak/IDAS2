@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="DELETE_STUDY_PLAN" directorySegmentName="seg_0" id="3C5B5AE3-FD9F-47A2-E9D6-70F571597D07">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE PROCEDURE C##ST52512.DELETE_STUDY_PLAN (&lt;br&gt;  admin_mail   PRACOVNICI.EMAIL%TYPE,&lt;br&gt;  admin_heslo  PRACOVNICI.HESLO%TYPE,&lt;br&gt;  p_obor_id    STUDINI_PLAN.STUDIJNI_OBOR_ID%TYPE,&lt;br&gt;  p_predmet_id STUDINI_PLAN.PREDMET_ID%TYPE&lt;br&gt;) AS&lt;br&gt;    operation_not_permitted EXCEPTION;&lt;br&gt;  BEGIN&lt;br&gt;    IF IS_USER_ADMIN(admin_mail, admin_heslo) = TRUE&lt;br&gt;    THEN&lt;br&gt;      DELETE&lt;br&gt;      FROM STUDINI_PLAN&lt;br&gt;      WHERE STUDINI_PLAN.PREDMET_ID = p_predmet_id&lt;br&gt;        and STUDINI_PLAN.STUDIJNI_OBOR_ID = p_obor_id;&lt;br&gt;      COMMIT;&lt;br&gt;    ELSE&lt;br&gt;      RAISE operation_not_permitted;&lt;br&gt;    END IF;&lt;br&gt;  END DELETE_STUDY_PLAN;</source>
+</StoredProcedureOraclev10g>

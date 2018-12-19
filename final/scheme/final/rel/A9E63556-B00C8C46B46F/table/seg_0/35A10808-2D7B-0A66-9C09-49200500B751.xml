@@ -1,0 +1,256 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35A10808-2D7B-0A66-9C09-49200500B751" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="PRACOVNICI">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D1ACAE48-6847-E6DB-74AB-5DB98601550C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8C3064AC-1265-572B-AEBD-C06D3DEC917D">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>754C44FA-8C23-88AA-88DC-30702E351B4B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>pracovnici_id_seq</autoIncrementSequenceName>
+<autoIncrementTriggerName>PRACOVNICI_ID_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="JMENO" id="B8314820-07E5-A841-A2EB-557555FAB18F">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>23B981EF-BDDC-A613-38A3-2D3FCD81B168</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIJMENI" id="F486BD66-4F67-C934-684A-E2502E04CFAC">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>61F61D06-77E4-B58D-BB44-DB8ABC6AF9C0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITUL_PRED" id="1C19C725-F79F-F599-F7BB-AB3785FF53F6">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>F0E1B625-5639-65C3-A928-833F42D79516</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITUL_ZA" id="48846963-6B12-6126-A99E-409466000D5C">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>43DE1FF1-C4EB-21A2-33F6-2B6DB3E19013</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFON" id="BF84576B-066A-C849-368A-8C3E522BF6B3">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>B7E0190A-7627-2A8D-EF75-A9A442049392</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MOBIL" id="34B04696-4679-9B68-C049-97DF5A31046E">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>AEDADAB8-1647-BAF9-4FDE-F6113238CA5D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="106D5B43-49C1-8608-19A0-7730AA5E7E5C">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>A06B6C68-61A4-31BC-0E06-C554E2C4B4D2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRACOVISTE_ID" id="739B42E3-856B-C240-ACE3-F67A965862D2">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>F4873038-373A-A077-2EDE-4FB6DC851071</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>2F58B666-9287-BEA6-4919-E93D1429FC1E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07976F19-43A3-83EF-9DB9-137E5414214D" referredColumn="5D373ED8-5B3A-0A44-842A-FF6FA7C55AEB"/>
+</associations>
+</Column>
+<Column name="HESLO" id="5D545DC5-D363-6444-D7D7-161960D867E0">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D002A7F4-AD8B-749F-1171-4947F3674BF8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>0033064D-96FF-57ED-3950-A6BC430A7799</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ROLE_ZKRATKA" id="173F27AA-B67C-24B7-2BF6-49C66EDEBD73">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>305761D8-35C0-B527-BA88-7D56F1E2F289</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>F802606B-11FC-CDD2-AA72-DE683DE7068F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6CC3A2E2-AC17-B48F-C1A8-0FC0B663ECFE" referredColumn="0B8F156E-ADDA-075A-E154-77221DE01012"/>
+</associations>
+</Column>
+<Column name="UVAZEK_TYP" id="357C6B1D-3770-2FB2-22BE-47872FB8BF32">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>8E4FDE83-3D2C-1C4B-C7F7-4C1D515EF406</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>F802606B-11FC-CDD2-AA72-DE683DE7068F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B91F2C68-1F2F-9842-C834-A213671FBDD8" referredColumn="38B9CC29-17D5-C460-B518-4B3BEF8E7859"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F34839FD-26F5-5167-493D-3A89BCEC4E3B" name="PRACOVNICI_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>527AAD01-AD34-3EF2-8229-A1270603536D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C3064AC-1265-572B-AEBD-C06D3DEC917D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="649E9826-2C96-8F3E-8FCA-2717DBA1FB8E" name="PRACOVNICI_EMAIL_UN">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>FBA76B17-2A17-9E05-C6D9-5A28F84B3610</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="106D5B43-49C1-8608-19A0-7730AA5E7E5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA9CD2F8-14C9-FB71-5611-B3D25E890318" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="EMAIL_CONST">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>7D190D00-D1F8-76FD-0A71-7E0124899064</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="106D5B43-49C1-8608-19A0-7730AA5E7E5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F726657B-40C5-440F-087A-A808B2DE1920" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="PRACOVNICI_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>91F8F9CC-D656-89F6-E321-9C6DDAB050C0</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C3064AC-1265-572B-AEBD-C06D3DEC917D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3173773D-094B-A286-0EDF-9F072DAA986C" name="PRACOVNICI_PRACOVISTE_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="739B42E3-856B-C240-ACE3-F67A965862D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1FE44068-DE32-35F0-229A-C5F996AE5A22" name="PRACOVNICI_ROLE_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="173F27AA-B67C-24B7-2BF6-49C66EDEBD73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0360B1E-12D2-ED75-A5AD-37D3B66E8CC0" name="PRACOVNICI_UVAZEK_FK">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="357C6B1D-3770-2FB2-22BE-47872FB8BF32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

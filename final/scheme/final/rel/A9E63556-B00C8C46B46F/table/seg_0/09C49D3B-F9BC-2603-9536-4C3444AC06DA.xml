@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09C49D3B-F9BC-2603-9536-4C3444AC06DA" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="KATEGORIE_PREDMETU">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>D8F9CD95-4506-D808-A937-6FA27A47D3E7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ZKRATKA" id="9CBC2147-A307-C513-09C2-03926B53568B">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>0A771E4D-486E-69A1-2737-154AB86F1E02</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>E285FEAB-0645-1348-F51A-C3C55F8A8EA5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAZEV_KATEGORIE" id="070EAEA0-6F5A-33AC-B601-8E852114DA73">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>EC100969-8980-4D96-7DA6-E79844EEB45C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>CA9197DE-025E-551D-55D5-E4A0D737B5CE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83E260F2-A24C-3137-DE60-E90FA12FEECC" name="KATEGORIE_PREDMETU_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>93A3D96D-3A39-F8B2-9470-0EAF27D8C30E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CBC2147-A307-C513-09C2-03926B53568B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84C3B6A4-3C49-57E5-7703-2E7E006C5F0F" schemaObject="22E5E13C-5541-0A86-DCB3-134EA5582562" name="KATEGORIE_PREDMETU_PK">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:58 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<importedID>36E7D2F5-C04C-4571-0AA3-E136527609B7</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CBC2147-A307-C513-09C2-03926B53568B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

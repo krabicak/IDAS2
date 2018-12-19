@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FORMY_STUDIJNI_OBOR_FK" directorySegmentName="seg_0" id="C27249F5-D045-276E-73BC-94F4B5F4D8A9">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>27433839-FFD9-4B8F-1A41-7A4788E5AF57</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>86ED5480-7D81-1BAA-4470-DF3A3ADED08C</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>676F3A26-A180-1FBA-246B-D28BE9130007</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>755CFE45-E8E9-8915-E1F0-83345AD61DEF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

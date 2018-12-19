@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRACOVNICI_UVAZEK_FK" directorySegmentName="seg_0" id="C1222CFD-98F1-DDE7-D77A-432AACCCADC1">
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:06:09 UTC</createdTime>
+<generatorID>B91F2C68-1F2F-9842-C834-A213671FBDD8</generatorID>
+<ownerDesignName>final</ownerDesignName>
+<engineerTo>
+<item key="A9E63556-F1E6-EEFA-F679-B00C8C46B46F" value="true"/>
+</engineerTo>
+<sourcePk>C59C6AA0-80FF-5949-9816-36D06AEA1E2F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9390662F-6EC6-C6B6-D3F2-5AFDD0C371AF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E806463A-1BE0-E46C-67BF-D4C60F4915D8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

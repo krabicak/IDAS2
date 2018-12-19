@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="PCK_SECURITY" directorySegmentName="seg_0" id="996ABA08-AC13-30EC-0AEA-004BB10FCC93">
+<sourceDDLFile>final.ddl</sourceDDLFile>
+<createdBy>hotov</createdBy>
+<createdTime>2018-12-19 11:04:40 UTC</createdTime>
+<ownerDesignName>final</ownerDesignName>
+<owner>DC142EB9-5E20-A733-D131-3F30E4F4C44B</owner>
+<source>CREATE OR REPLACE EDITIONABLE PACKAGE C##ST52512.PCK_SECURITY AS&lt;br&gt;&lt;br&gt;PROCEDURE edit_user(p_usr_id NUMBER,&lt;br&gt;p_usr_name VARCHAR2, p_usr_pwd VARCHAR2,&lt;br&gt;p_valid_from VARCHAR2, p_valid_till VARCHAR2,&lt;br&gt;p_result OUT CLOB);&lt;br&gt;PROCEDURE login(p_usr_name VARCHAR2, p_usr_pwd VARCHAR2,&lt;br&gt;p_result OUT CLOB, p_usr_id OUT NUMBER);&lt;br&gt;&lt;br&gt;END PCK_SECURITY;</source>
+</PackageOracle>
